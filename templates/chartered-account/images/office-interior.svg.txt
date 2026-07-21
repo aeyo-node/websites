@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <!-- Premium Slate & Deep Indigo Gradients -->
+    <linearGradient id="wallGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="floorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </linearGradient>
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b45309" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02" />
+    </linearGradient>
+    <filter id="subtleShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="800" height="600" fill="#f8fafc" />
+
+  <!-- Wall perspective (Left and Main back) -->
+  <path d="M0,0 L500,0 L500,450 L0,600 Z" fill="url(#wallGrad)" />
+  <path d="M500,0 L800,0 L800,600 L500,450 Z" fill="#1e293b" />
+
+  <!-- Floor perspective -->
+  <path d="M0,600 L500,450 L800,600 Z" fill="url(#floorGrad)" />
+
+  <!-- Floor plank lines for depth -->
+  <line x1="166" y1="550" x2="500" y2="450" stroke="#cbd5e1" stroke-width="1" />
+  <line x1="333" y1="500" x2="500" y2="450" stroke="#cbd5e1" stroke-width="1" />
+  <line x1="666" y1="530" x2="500" y2="450" stroke="#cbd5e1" stroke-width="1" />
+
+  <!-- Architectural Luxury Window Frame (Back wall) -->
+  <rect x="540" y="40" width="220" height="380" fill="#0f172a" rx="4" />
+  <!-- Window Glass Glare Pane -->
+  <rect x="550" y="50" width="200" height="360" fill="url(#glassGrad)" stroke="#334155" stroke-width="2" />
+  <line x1="650" y1="50" x2="650" y2="410" stroke="#334155" stroke-width="1.5" />
+  <line x1="550" y1="200" x2="750" y2="200" stroke="#334155" stroke-width="1.5" />
+
+  <!-- Abstract Minimal Art Canvas on Left Wall -->
+  <g transform="translate(120, 80) rotate(-5)">
+    <rect x="0" y="0" width="180" height="220" fill="#ffffff" rx="2" filter="url(#subtleShadow)" />
+    <!-- Artwork graphic (Gold charts / mountain shapes to denote growth) -->
+    <path d="M20,180 L80,100 L120,140 L160,60" fill="none" stroke="url(#goldAccent)" stroke-width="4" stroke-linecap="round" />
+    <circle cx="160" cy="60" r="6" fill="#b45309" />
+    <text x="20" y="210" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#94a3b8" letter-spacing="1">PRECISION GROWTH</text>
+  </g>
+
+  <!-- Executive Modern Desk -->
+  <g filter="url(#subtleShadow)">
+    <!-- Table Surface -->
+    <polygon points="150,440 480,410 520,490 120,530" fill="#0f172a" />
+    <!-- Metallic Table Trim -->
+    <polygon points="120,530 520,490 520,495 120,535" fill="#d97706" />
+    <!-- Solid Desk Legs -->
+    <line x1="140" y1="525" x2="140" y2="580" stroke="#1e293b" stroke-width="12" stroke-linecap="round" />
+    <line x1="500" y1="485" x2="500" y2="540" stroke="#1e293b" stroke-width="10" stroke-linecap="round" />
+  </g>
+
+  <!-- High-End Office Leather Chair Silhouette -->
+  <g filter="url(#subtleShadow)" transform="translate(260, 360)">
+    <!-- Backrest -->
+    <path d="M30,20 C30,10 70,10 70,20 L75,75 C75,85 25,85 25,75 Z" fill="#1e293b" />
+    <!-- Lumbar Trim (Gold/Bronze Accent) -->
+    <path d="M25,50 Q50,45 75,50" fill="none" stroke="#b45309" stroke-width="2" />
+    <!-- Seat Cushion -->
+    <path d="M20,75 C20,70 80,70 80,75 L85,90 C85,98 15,98 15,90 Z" fill="#0f172a" />
+    <!-- Stand/Base -->
+    <line x1="50" y1="98" x2="50" y2="150" stroke="#475569" stroke-width="8" />
+    <line x1="20" y1="150" x2="80" y2="150" stroke="#475569" stroke-width="6" stroke-linecap="round" />
+  </g>
+
+  <!-- Glass Vase on Desk with Green Foliage (Denoting prosperity) -->
+  <g transform="translate(440, 380)">
+    <!-- Plant Leaves -->
+    <path d="M15,10 C5,0 0,-20 -5,-30 C5,-20 10,-5 15,10 Z" fill="#047857" opacity="0.8" />
+    <path d="M20,10 C25,-5 20,-25 35,-40 C25,-25 20,-10 20,10 Z" fill="#059669" opacity="0.9" />
+    <!-- Vase -->
+    <ellipse cx="18" cy="20" rx="12" ry="16" fill="url(#glassGrad)" stroke="#94a3b8" stroke-width="1.5" />
+    <ellipse cx="18" cy="8" rx="8" ry="3" fill="none" stroke="#94a3b8" stroke-width="1" />
+  </g>
+
+  <!-- Editorial Warm Lighting Overlay -->
+  <circle cx="500" cy="0" r="300" fill="url(#goldAccent)" style="mix-blend-mode: screen;" />
+</svg>

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="50%" stop-color="#f1f5f9" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </linearGradient>
+    <linearGradient id="buildingGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="goldEntrance" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b45309" />
+      <stop offset="100%" stop-color="#fbbf24" />
+    </linearGradient>
+  </defs>
+
+  <!-- Sky Canvas -->
+  <rect width="1200" height="800" fill="url(#skyGrad)" />
+
+  <!-- Distant Architectural Silhouettes -->
+  <rect x="0" y="300" width="350" height="500" fill="#cbd5e1" opacity="0.5" />
+  <rect x="900" y="250" width="300" height="550" fill="#cbd5e1" opacity="0.5" />
+
+  <!-- Main Corporate Structure -->
+  <!-- Solid Frame Concrete -->
+  <rect x="250" y="100" width="700" height="700" fill="#f8fafc" stroke="#e2e8f0" stroke-width="4" />
+  
+  <!-- Large Architectural Glass Curtain Window Panels -->
+  <rect x="290" y="140" width="180" height="420" fill="url(#buildingGlass)" rx="8" />
+  <rect x="510" y="140" width="180" height="420" fill="url(#buildingGlass)" rx="8" />
+  <rect x="730" y="140" width="180" height="420" fill="url(#buildingGlass)" rx="8" />
+
+  <!-- Glass Panes division lines -->
+  <g stroke="#334155" stroke-width="2" opacity="0.5">
+    <line x1="290" y1="280" x2="470" y2="280" />
+    <line x1="290" y1="420" x2="470" y2="420" />
+    <line x1="510" y1="280" x2="690" y2="280" />
+    <line x1="510" y1="420" x2="690" y2="420" />
+    <line x1="730" y1="280" x2="910" y2="280" />
+    <line x1="730" y1="420" x2="910" y2="420" />
+  </g>
+
+  <!-- Reflection/Glare overlays on glass to look premium and high-gloss -->
+  <path d="M290,140 L450,450 L470,450 L310,140 Z" fill="#ffffff" opacity="0.05" />
+  <path d="M510,140 L670,450 L690,450 L530,140 Z" fill="#ffffff" opacity="0.05" />
+  <path d="M730,140 L890,450 L910,450 L750,140 Z" fill="#ffffff" opacity="0.05" />
+
+  <!-- Luxury Gold Entrance Canopy structure -->
+  <polygon points="200,640 1000,640 960,600 240,600" fill="url(#goldEntrance)" opacity="0.9" />
+  
+  <!-- Support Columns -->
+  <rect x="270" y="640" width="30" height="160" fill="#475569" />
+  <rect x="900" y="640" width="30" height="160" fill="#475569" />
+
+  <!-- Entrance Main Double Glass Doors -->
+  <rect x="480" y="640" width="240" height="160" fill="#0f172a" />
+  <rect x="490" y="645" width="105" height="155" fill="url(#buildingGlass)" stroke="#475569" stroke-width="2" />
+  <rect x="605" y="645" width="105" height="155" fill="url(#buildingGlass)" stroke="#475569" stroke-width="2" />
+
+  <!-- Elegant Lettering on Facade above Canopy -->
+  <text x="600" y="590" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="20" fill="#0f172a" letter-spacing="4" text-anchor="middle">ASHWIN C NAIR &amp; CO.</text>
+  <text x="600" y="615" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="11" fill="#b45309" letter-spacing="2" text-anchor="middle">CHARTERED ACCOUNTANTS</text>
+
+  <!-- Ground Concrete & Street Line -->
+  <rect x="0" y="800" width="1200" height="10" fill="#475569" />
+
+  <!-- Minimalist Decorative Corporate Trees (Foliage) at the side -->
+  <g transform="translate(80, 520)">
+    <circle cx="50" cy="150" r="80" fill="#047857" opacity="0.8" />
+    <circle cx="100" cy="180" r="70" fill="#065f46" opacity="0.9" />
+    <rect x="65" y="210" width="16" height="80" fill="#1e293b" />
+  </g>
+</svg>
