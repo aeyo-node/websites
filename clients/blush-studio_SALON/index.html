@@ -1,0 +1,1526 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blush On - Premium Salon, Bridal Studio & Spa | Vellayambalam, Trivandrum</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Experience elite beauty treatments, professional hair styling, flawless bridal makeovers, and relaxing spa therapies at Blush On Salon & Spa, Vellayambalam, Thiruvananthapuram. Book your premium beauty experience today.">
+    <meta name="keywords" content="Blush On, Salon Trivandrum, Bridal Makeup Trivandrum, Hair Spa Vellayambalam, Best Salon in Kerala, Skin Care, Pedicure, Nail Art, Bridal Studio">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Blush On - Premium Salon, Bridal Studio & Spa">
+    <meta property="og:description" content="Luxurious beauty, skin, hair care, and signature bridal styling near Starbucks, Vellayambalam, Thiruvananthapuram.">
+    <meta property="og:image" content="input_file_1.jpeg">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        luxury: {
+                            50: '#FDFBF7',
+                            100: '#FAF7F0',
+                            200: '#F3EDE0',
+                            300: '#E6DCC8',
+                            400: '#D5C4A9',
+                            500: '#C1AA87',
+                            600: '#AC8F65',
+                            700: '#94764D',
+                            800: '#7B5E39',
+                            900: '#4F3B24',
+                            dark: '#141210',
+                            charcoal: '#1A1816',
+                            gold: '#D4AF37',
+                            bronze: '#AC8E68',
+                            warmBg: '#FAF9F6'
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'fade-in': 'fadeIn 0.6s ease-out forwards',
+                        'scale-in': 'scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'float': 'float 4s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(24px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        scaleIn: {
+                            '0%': { opacity: '0', transform: 'scale(0.97)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-8px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Alpine.js / React dependency standard CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <!-- Babel for on-the-fly JSX transpilation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FDFBF7;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #E6DCC8;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #C1AA87;
+        }
+        
+        .glass-panel {
+            background: rgba(255, 253, 249, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(193, 170, 135, 0.18);
+        }
+
+        .glass-panel-dark {
+            background: rgba(26, 24, 22, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(193, 170, 135, 0.15);
+        }
+        
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #7B5E39 0%, #AC8F65 50%, #C1AA87 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-underline {
+            position: relative;
+        }
+        .gold-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #AC8F65, transparent);
+        }
+        
+        /* Smooth transitions for navigation active state */
+        .nav-link {
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-[#FAF9F6] text-[#1A1816] font-sans antialiased overflow-x-hidden selection:bg-[#E6DCC8] selection:text-[#4F3B24]">
+
+    <div id="root"></div>
+
+    <!-- React Code Component -->
+    <script type="text/babel">
+        const { useState, useEffect, useRef } = React;
+
+        // Custom Lucide Icon Replacements (Sleek Inline SVGs)
+        const Icons = {
+            Phone: () => (
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.387a12.035 12.035 0 01-7.108-7.108c-.115-.441.017-.928.393-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+            ),
+            MapPin: () => (
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+            ),
+            Clock: () => (
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            ),
+            Calendar: () => (
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg>
+            ),
+            Check: () => (
+                <svg className="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+            ),
+            ChevronRight: () => (
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+            ),
+            Star: ({ filled = true }) => (
+                <svg className="w-5 h-5 text-amber-400 fill-amber-400" fill={filled ? "currentColor" : "none"} stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499c.174-.383.72-.383.894 0l1.83 3.717a1 1 0 00.753.547l4.098.588c.424.06.592.583.285.88l-2.965 2.89a1 1 0 00-.287.884l.7 4.083c.073.424-.37.766-.748.567l-3.664-1.928a1 1 0 00-.923 0l-3.664 1.928c-.378.2-.821-.142-.748-.567l.7-4.083a1 1 0 00-.287-.884l-2.965-2.89c-.307-.297-.139-.82.285-.88l4.098-.588a1 1 0 00.753-.547l1.83-3.717z"/>
+                </svg>
+            ),
+            Menu: () => (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+            ),
+            X: () => (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+            ),
+            Heart: () => (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+            ),
+            Sparkles: () => (
+                <svg className="w-5 h-5 text-luxury-600" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 21l-.813-5.096L3.096 15.1l5.096-.813L9 9.187l.813 5.096 5.096.813-5.096.813zM19.031 3l-.406 2.531-2.53 1.015 2.53 1.016L19.031 10.1l.407-2.532 2.53-1.015-2.53-1.016L19.031 3zM14.47 9l-.187 1.171-1.172.469 1.172.47.187 1.171.188-1.171 1.172-.47-1.172-.469L14.47 9z"/></svg>
+            ),
+            User: () => (
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+            ),
+            ChevronDown: () => (
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+            ),
+            ArrowRight: () => (
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+            ),
+            Award: () => (
+                <svg className="w-6 h-6 text-luxury-600" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.504-1.125-1.125-1.125h-6.75a1.125 1.125 0 00-1.125 1.125v3.375m9 0h-9M9 10.5h.008v.008H9V10.5zm3 0h.008v.008H12V10.5zm3 0h.008v.008H15V10.5z"/></svg>
+            )
+        };
+
+        function App() {
+            // States
+            const [isScrolled, setIsScrolled] = useState(false);
+            const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+            const [activeSection, setActiveSection] = useState('home');
+            const [bookingOpen, setBookingOpen] = useState(false);
+            const [promoDismissed, setPromoDismissed] = useState(false);
+            
+            // Filters
+            const [activeServiceTab, setActiveServiceTab] = useState('all');
+            const [activeGalleryTab, setActiveGalleryTab] = useState('all');
+            
+            // Lightbox
+            const [lightboxOpen, setLightboxOpen] = useState(false);
+            const [lightboxIndex, setLightboxIndex] = useState(0);
+
+            // Testimonials slider
+            const [testimonialIndex, setTestimonialIndex] = useState(0);
+
+            // Form inputs with simulated state
+            const [bookingData, setBookingData] = useState({
+                name: '', phone: '', serviceCategory: 'bridal', serviceName: '', date: '', time: '', message: ''
+            });
+            const [bookingSuccess, setBookingSuccess] = useState(false);
+            const [contactSubmitted, setContactSubmitted] = useState(false);
+            const [contactForm, setContactForm] = useState({ name: '', email: '', phone: '', message: '' });
+
+            // Handle scroll changes
+            useEffect(() => {
+                const handleScroll = () => {
+                    setIsScrolled(window.scrollY > 50);
+                    
+                    // Basic scroll spy
+                    const sections = ['home', 'about', 'services', 'bridal', 'gallery', 'reviews', 'contact'];
+                    const current = sections.find(section => {
+                        const el = document.getElementById(section);
+                        if (el) {
+                            const rect = el.getBoundingClientRect();
+                            return rect.top <= 160 && rect.bottom >= 160;
+                        }
+                        return false;
+                    });
+                    if (current) {
+                        setActiveSection(current);
+                    }
+                };
+
+                window.addEventListener('scroll', handleScroll);
+                return () => window.removeEventListener('scroll', handleScroll);
+            }, []);
+
+            // Auto-rotate testimonials
+            useEffect(() => {
+                const interval = setInterval(() => {
+                    setTestimonialIndex(prev => (prev + 1) % testimonials.length);
+                }, 8000);
+                return () => clearInterval(interval);
+            }, []);
+
+            // Data Definitions
+            const services = [
+                // Hair Styling
+                { id: 'h1', category: 'hair', name: 'Premium Hair Cut & Styling', price: '₹999+', desc: 'Master stylist consultation, precision haircut, relaxing massage wash, and elite custom finish blow-dry.', duration: '45 mins' },
+                { id: 'h2', category: 'hair', name: 'Luxury Hair Spa Therapy', price: '₹1,999+', desc: 'Deep nourishment treatment that transforms dry/damaged cuticles into highly lustrous, silky-smooth hair.', duration: '60 mins' },
+                { id: 'h3', category: 'hair', name: 'Professional Blow Dry & Styling', price: '₹599+', desc: 'Red-carpet ready volume, structured waves or poker-straight professional finish.', duration: '30 mins' },
+                { id: 'h4', category: 'hair', name: 'Advanced Color Transformation', price: '₹3,499+', desc: 'Custom balayage, high-definition highlights, or global rich conditioning hair coloring.', duration: '120 mins' },
+
+                // Skin Care
+                { id: 's1', category: 'skin', name: 'Signature Skin Glow Facial', price: '₹2,499+', desc: 'Tailored luxury botanical therapy, enzymatic peeling, and high-performance mask for timeless luminosity.', duration: '75 mins' },
+                { id: 's2', category: 'skin', name: 'Advanced Detan Ritual', price: '₹1,199+', desc: 'Gentle exfoliating, intense antioxidant infusion to restore original radiant skin tone.', duration: '45 mins' },
+                { id: 's3', category: 'skin', name: 'Instant Hydra-Radiance Facial', price: '₹3,200+', desc: 'Intense moisture infusion with deep-acting hyaluronic complexes, leaving the skin supple and glowing.', duration: '60 mins' },
+
+                // Bridal Studio
+                { id: 'b1', category: 'bridal', name: 'Elite Bridal Makeup & Styling', price: 'On Request', desc: 'Flawless high-definition or airbrush makeup custom designed to enhance your authentic features on your grand day.', duration: 'Half Day' },
+                { id: 'b2', category: 'bridal', name: 'Premium Saree Draping & Styling', price: '₹1,499+', desc: 'Impeccable structural pleating and elegant modern or traditional draping that remains flawless.', duration: '40 mins' },
+                { id: 'b3', category: 'bridal', name: 'Party / Guest Elegant Makeover', price: '₹2,499+', desc: 'Sophisticated lightweight makeup, classic hair styling, and styling for special family celebrations.', duration: '90 mins' },
+
+                // Beauty Care
+                { id: 'bc1', category: 'beauty', name: 'Precision Eyebrow Architecture', price: '₹150+', desc: 'Expert threading structured perfectly according to your natural facial proportions.', duration: '15 mins' },
+                { id: 'bc2', category: 'beauty', name: 'Sartorial Pedicure & Foot Spa', price: '₹1,299+', desc: 'Elite sensory cleanse, deep scrub, organic wrap, and relaxing massage in our custom lounge chairs.', duration: '50 mins' },
+                { id: 'bc3', category: 'beauty', name: 'Luxury Gel Nail Extensions', price: '₹1,999+', desc: 'Sculpted extensions, meticulous prep, and high-shine, long-lasting luxury nail color.', duration: '90 mins' }
+            ];
+
+            const testimonials = [
+                {
+                    quote: "Wonderful experience with facial, detan, pedicure, eyebrow threading and hair spa. The attention to detail is exceptional and the ambiance makes you feel completely relaxed.",
+                    author: "Anjali Krishnan",
+                    role: "Regular Premium Client",
+                    rating: 5
+                },
+                {
+                    quote: "My bridal makeup was flawless and exactly how I wanted! Received so many compliments. Thank you to the incredible team at Blush On for making me feel like a queen.",
+                    author: "Gopika S. Nair",
+                    role: "Blush On Bride",
+                    rating: 5
+                },
+                {
+                    quote: "Extremely clean ambience, friendly staff, and professional service. The leather styling chairs are super comfortable. Definitely the finest salon in Trivandrum.",
+                    author: "Dr. Rachel Mathews",
+                    role: "Premium Member",
+                    rating: 5
+                },
+                {
+                    quote: "The hair spa made my hair soft, shiny, and completely manageable. Their therapists genuinely understand scalp and hair textures. Highly recommended!",
+                    author: "Praveena Joseph",
+                    role: "Hair Care Client",
+                    rating: 5
+                }
+            ];
+
+            const galleryItems = [
+                { id: 1, type: 'ambience', image: 'input_file_1.jpeg', title: 'Main Hair Styling Lounge', caption: 'Featuring architectural arched glowing mirrors and Italian leather styling chairs.' },
+                { id: 2, type: 'ambience', image: 'input_file_0.jpeg', title: 'Spa & Hair Wash Oasis', caption: 'Deep relaxation washing stations and luxury foot pedicure therapy.' },
+                { id: 3, type: 'bridal', image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&q=80&w=800', title: 'The Blush On Signature Bride', caption: 'Graceful eyes and flawless skin, detailed wedding makeovers.' },
+                { id: 4, type: 'hair', image: 'https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=800', title: 'Masterful Hair Transformation', caption: 'Perfect blow dry and silk-smooth treatments.' },
+                { id: 5, type: 'treatments', image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=800', title: 'Elite Skin Glow Facial Room', caption: 'Hygienic botanical clinical facials.' },
+                { id: 6, type: 'bridal', image: 'https://images.unsplash.com/photo-1594744803329-e58b31de215f?auto=format&fit=crop&q=80&w=800', title: 'Precision Saree Draping', caption: 'Impeccable structure, timeless traditional style.' }
+            ];
+
+            // Filter services based on tab
+            const filteredServices = activeServiceTab === 'all' 
+                ? services 
+                : services.filter(s => s.category === activeServiceTab);
+
+            // Filter gallery based on tab
+            const filteredGallery = activeGalleryTab === 'all'
+                ? galleryItems
+                : galleryItems.filter(g => g.type === activeGalleryTab);
+
+            const handleBookNow = (serviceName = '', category = 'bridal') => {
+                setBookingData({
+                    ...bookingData,
+                    serviceName: serviceName,
+                    serviceCategory: category
+                });
+                setBookingOpen(true);
+            };
+
+            const submitBooking = (e) => {
+                e.preventDefault();
+                setBookingSuccess(true);
+                setTimeout(() => {
+                    setBookingSuccess(false);
+                    setBookingOpen(false);
+                    // Reset
+                    setBookingData({ name: '', phone: '', serviceCategory: 'bridal', serviceName: '', date: '', time: '', message: '' });
+                }, 3500);
+            };
+
+            const submitContact = (e) => {
+                e.preventDefault();
+                setContactSubmitted(true);
+                setTimeout(() => {
+                    setContactSubmitted(false);
+                    setContactForm({ name: '', email: '', phone: '', message: '' });
+                }, 4000);
+            };
+
+            const triggerWhatsApp = () => {
+                const text = encodeURIComponent("Hello Blush On, I would like to schedule an appointment.");
+                window.open(`https://wa.me/917994912327?text=${text}`, '_blank');
+            };
+
+            return (
+                <div className="relative min-h-screen text-luxury-charcoal">
+                    {/* Top Promos / Announcement Bar */}
+                    {!promoDismissed && (
+                        <div className="bg-luxury-charcoal text-luxury-100 text-xs py-2 px-4 transition-all duration-300 relative flex justify-between items-center z-50 border-b border-luxury-800/20">
+                            <div className="flex items-center gap-2 mx-auto">
+                                <span className="bg-luxury-600 text-white font-semibold px-2 py-0.5 rounded-full text-[10px] uppercase tracking-wider">Special</span>
+                                <span className="font-light tracking-wide">Complimentary Hair consultation with every Luxury Skin Facial.</span>
+                                <button onClick={() => setBookingOpen(true)} className="underline text-luxury-400 hover:text-white transition ml-2 font-medium">Book Today</button>
+                            </div>
+                            <button onClick={() => setPromoDismissed(true)} className="text-luxury-400 hover:text-white absolute right-4">
+                                <Icons.X />
+                            </button>
+                        </div>
+                    )}
+
+                    {/* Navigation Header */}
+                    <header className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
+                        isScrolled 
+                            ? 'glass-panel py-3 shadow-sm' 
+                            : 'bg-transparent py-5'
+                    }`}>
+                        <div className="max-w-[1320px] mx-auto px-6 flex items-center justify-between">
+                            {/* Brand Name */}
+                            <a href="#home" className="flex flex-col items-start select-none group">
+                                <span className="font-serif text-2xl lg:text-3xl font-medium tracking-wider text-luxury-charcoal group-hover:text-luxury-700 transition-colors">
+                                    BLUSH ON
+                                </span>
+                                <span className="text-[9px] uppercase tracking-[0.35em] text-luxury-600 -mt-1 font-semibold">
+                                    Salon & Spa • Bridal Studio
+                                </span>
+                            </a>
+
+                            {/* Desktop Menu */}
+                            <nav className="hidden lg:flex items-center space-x-8">
+                                {[
+                                    { id: 'home', label: 'Home' },
+                                    { id: 'about', label: 'About' },
+                                    { id: 'services', label: 'Services' },
+                                    { id: 'bridal', label: 'Bridal Studio' },
+                                    { id: 'gallery', label: 'Gallery' },
+                                    { id: 'reviews', label: 'Reviews' },
+                                    { id: 'contact', label: 'Contact' }
+                                ].map(link => (
+                                    <a
+                                        key={link.id}
+                                        href={`#${link.id}`}
+                                        className={`text-sm tracking-wide font-medium nav-link relative py-1 transition-colors ${
+                                            activeSection === link.id 
+                                                ? 'text-luxury-800 font-semibold' 
+                                                : 'text-luxury-600 hover:text-luxury-charcoal'
+                                        }`}
+                                    >
+                                        {link.label}
+                                        {activeSection === link.id && (
+                                            <span className="absolute bottom-0 left-0 w-full h-[2px] bg-luxury-600 rounded-full animate-fade-in" />
+                                        )}
+                                    </a>
+                                ))}
+                            </nav>
+
+                            {/* CTAs */}
+                            <div className="hidden lg:flex items-center space-x-4">
+                                <a 
+                                    href="tel:+917994912327" 
+                                    className="text-luxury-600 hover:text-luxury-800 transition p-2 hover:scale-105 transform duration-300"
+                                    title="Call Salon"
+                                >
+                                    <Icons.Phone />
+                                </a>
+                                <button 
+                                    onClick={() => setBookingOpen(true)}
+                                    className="bg-luxury-charcoal hover:bg-luxury-900 text-luxury-50 px-6 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all duration-300 hover:shadow-lg hover:shadow-luxury-900/10 active:scale-95"
+                                >
+                                    BOOK APPOINTMENT
+                                </button>
+                            </div>
+
+                            {/* Mobile Hamburger Button */}
+                            <button 
+                                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                                className="lg:hidden p-2 text-luxury-700 hover:text-luxury-900 focus:outline-none"
+                            >
+                                {mobileMenuOpen ? <Icons.X /> : <Icons.Menu />}
+                            </button>
+                        </div>
+                    </header>
+
+                    {/* Mobile Navigation Drawer */}
+                    <div className={`fixed inset-0 z-30 transform transition-transform duration-500 lg:hidden ${
+                        mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+                    }`}>
+                        {/* Overlay */}
+                        <div className="absolute inset-0 bg-luxury-dark/40 backdrop-blur-sm" onClick={() => setMobileMenuOpen(false)} />
+                        
+                        <div className="absolute right-0 top-0 bottom-0 w-4/5 max-w-[320px] bg-luxury-50 p-8 shadow-2xl flex flex-col justify-between">
+                            <div className="space-y-8">
+                                <div className="flex justify-between items-center">
+                                    <span className="font-serif text-xl tracking-wider text-luxury-charcoal">MENU</span>
+                                    <button onClick={() => setMobileMenuOpen(false)} className="p-2 text-luxury-600">
+                                        <Icons.X />
+                                    </button>
+                                </div>
+                                <nav className="flex flex-col space-y-5">
+                                    {[
+                                        { id: 'home', label: 'Home' },
+                                        { id: 'about', label: 'About' },
+                                        { id: 'services', label: 'Services' },
+                                        { id: 'bridal', label: 'Bridal Studio' },
+                                        { id: 'gallery', label: 'Gallery' },
+                                        { id: 'reviews', label: 'Reviews' },
+                                        { id: 'contact', label: 'Contact' }
+                                    ].map(link => (
+                                        <a
+                                            key={link.id}
+                                            href={`#${link.id}`}
+                                            onClick={() => setMobileMenuOpen(false)}
+                                            className={`text-lg font-medium tracking-wide ${
+                                                activeSection === link.id ? 'text-luxury-800 font-bold' : 'text-luxury-600'
+                                            }`}
+                                        >
+                                            {link.label}
+                                        </a>
+                                    ))}
+                                </nav>
+                            </div>
+
+                            <div className="space-y-4">
+                                <a 
+                                    href="tel:+917994912327"
+                                    className="flex items-center gap-3 justify-center w-full bg-luxury-200 hover:bg-luxury-300 text-luxury-800 py-3 rounded-full text-sm font-semibold transition"
+                                >
+                                    <Icons.Phone /> Call Salon
+                                </a>
+                                <button 
+                                    onClick={() => {
+                                        setMobileMenuOpen(false);
+                                        setBookingOpen(true);
+                                    }}
+                                    className="w-full bg-luxury-charcoal hover:bg-luxury-900 text-white py-3 rounded-full text-sm font-semibold tracking-wider transition"
+                                >
+                                    BOOK APPOINTMENT
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* 1. HERO SECTION */}
+                    <section id="home" className="relative min-h-screen pt-24 lg:pt-0 flex items-center bg-[#FAF7F0] overflow-hidden">
+                        {/* Decorative Abstract luxury gradients */}
+                        <div className="absolute top-[-10%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-gradient-to-br from-luxury-300/30 to-luxury-100/10 blur-[120px] pointer-events-none" />
+                        <div className="absolute bottom-[-10%] left-[-10%] w-[45vw] h-[45vw] rounded-full bg-gradient-to-tr from-luxury-200/30 to-luxury-100/10 blur-[100px] pointer-events-none" />
+
+                        <div className="max-w-[1320px] mx-auto px-6 py-12 lg:py-24 relative z-10 w-full">
+                            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                                
+                                {/* Left Content Column */}
+                                <div className="lg:col-span-6 space-y-8 text-center lg:text-left">
+                                    <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/65 border border-luxury-300/30 rounded-full shadow-sm">
+                                        <Icons.Sparkles />
+                                        <span className="text-[11px] font-bold tracking-[0.2em] uppercase text-luxury-700">Trivandrum's Premier Luxury Haven</span>
+                                    </div>
+
+                                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif text-luxury-charcoal leading-[1.1] font-light">
+                                        Your Beauty, <br className="hidden lg:inline"/>
+                                        Your Confidence, <br />
+                                        <span className="font-normal italic text-luxury-800 gold-underline">Your Moment</span>
+                                    </h1>
+
+                                    <p className="text-base sm:text-lg text-luxury-600 font-light max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                                        Premium hair aesthetics, immaculate bridal studio masterworks, and tranquil luxury spa rituals curated uniquely for your essence.
+                                    </p>
+
+                                    {/* Action Buttons */}
+                                    <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                                        <button 
+                                            onClick={() => setBookingOpen(true)}
+                                            className="bg-luxury-charcoal hover:bg-luxury-900 text-white font-medium text-sm tracking-wider px-8 py-4 rounded-full shadow-lg shadow-luxury-900/10 transition-all transform hover:-translate-y-0.5 duration-300 active:scale-95"
+                                        >
+                                            BOOK APPOINTMENT
+                                        </button>
+                                        <a 
+                                            href="#services"
+                                            className="bg-white/80 hover:bg-white border border-luxury-300/40 text-luxury-800 font-semibold text-sm tracking-wider px-8 py-4 rounded-full shadow-sm hover:shadow transition-all transform hover:-translate-y-0.5 duration-300 text-center flex items-center justify-center gap-1"
+                                        >
+                                            EXPLORE SERVICES
+                                        </a>
+                                    </div>
+
+                                    {/* Mini Highlights */}
+                                    <div className="grid grid-cols-3 gap-4 pt-4 border-t border-luxury-300/20 max-w-lg mx-auto lg:mx-0">
+                                        <div>
+                                            <p className="text-2xl font-serif font-semibold text-luxury-800">4.9★</p>
+                                            <p className="text-[10px] uppercase tracking-wider text-luxury-500 font-bold">Google Rating</p>
+                                        </div>
+                                        <div>
+                                            <p className="text-2xl font-serif font-semibold text-luxury-800">100%</p>
+                                            <p className="text-[10px] uppercase tracking-wider text-luxury-500 font-bold">Premium Products</p>
+                                        </div>
+                                        <div>
+                                            <p className="text-2xl font-serif font-semibold text-luxury-800">5k+</p>
+                                            <p className="text-[10px] uppercase tracking-wider text-luxury-500 font-bold">Happy Clients</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Right Image Grid Column */}
+                                <div className="lg:col-span-6 relative">
+                                    <div className="relative w-full max-w-lg lg:max-w-none mx-auto h-[480px] lg:h-[580px] flex items-center justify-center">
+                                        
+                                        {/* Main Backdrop Glass Card Frame */}
+                                        <div className="absolute inset-4 bg-gradient-to-tr from-luxury-300/20 to-luxury-100/10 rounded-3xl transform rotate-2 pointer-events-none" />
+
+                                        {/* Primary Showcase Image: Salon Interior Station (input_file_1.jpeg) */}
+                                        <div className="absolute w-[80%] h-[75%] top-0 left-0 rounded-2xl overflow-hidden shadow-2xl border border-white/40 transform -rotate-2 hover:rotate-0 transition-transform duration-700 group">
+                                            <img 
+                                                src="blush1.jpg" 
+                                                alt="Blush On Luxury Hair Styling Lounge" 
+                                                className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-700" 
+                                            />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60" />
+                                            <div className="absolute bottom-4 left-4 text-white">
+                                                <p className="text-xs uppercase tracking-wider font-semibold text-luxury-300">Blush On Lounge</p>
+                                                <p className="font-serif text-sm">Main Styling Salon Area</p>
+                                            </div>
+                                        </div>
+
+                                        {/* Secondary Showcase Image: Washing & Spa (input_file_0.jpeg) */}
+                                        <div className="absolute w-[65%] h-[60%] bottom-0 right-0 rounded-2xl overflow-hidden shadow-2xl border border-white/40 transform rotate-3 hover:rotate-0 transition-transform duration-700 group z-10">
+                                            <img 
+                                                src="blush5.jpg" 
+                                                alt="Blush On Luxury Shampoo & Pedicure Lounge" 
+                                                className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-700" 
+                                            />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60" />
+                                            <div className="absolute bottom-4 left-4 text-white">
+                                                <p className="text-xs uppercase tracking-wider font-semibold text-luxury-300">Sensory Escape</p>
+                                                <p className="font-serif text-sm">Spa & Hair Wash Oasis</p>
+                                            </div>
+                                        </div>
+
+                                        {/* Floating Glass Booking Mini-Card */}
+                                        <div className="absolute left-[5%] bottom-[15%] glass-panel rounded-2xl p-4 shadow-xl z-20 max-w-[190px] animate-float pointer-events-none">
+                                            <div className="flex items-center gap-3">
+                                                <div className="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center">
+                                                    <div className="w-3 h-3 rounded-full bg-emerald-500 animate-pulse" />
+                                                </div>
+                                                <div>
+                                                    <p className="text-[10px] text-emerald-800 font-bold uppercase tracking-wider">Now Booking</p>
+                                                    <p className="text-xs text-luxury-700 font-light">Slots open for this week</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Premium Floating Badge */}
+                                        <div className="absolute right-[5%] top-[10%] glass-panel rounded-full px-4 py-2 shadow-md z-20 pointer-events-none">
+                                            <span className="text-[10px] tracking-widest uppercase font-bold text-luxury-800 flex items-center gap-1.5">
+                                                <Icons.Award /> VIP Experience
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* 2. ABOUT BLUSH ON */}
+                    <section id="about" className="py-24 bg-white relative">
+                        <div className="max-w-[1200px] mx-auto px-6">
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                                
+                                {/* Left Side: Beautiful stacked aesthetics */}
+                                <div className="space-y-6">
+                                    <div className="relative">
+                                        <div className="absolute inset-0 bg-[#F4F1EA] rounded-3xl transform translate-x-3 translate-y-3 pointer-events-none" />
+                                        <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-lg border border-luxury-200">
+                                            <img 
+                                                src="blush5.jpg" 
+                                                alt="Our Luxurious Ambience" 
+                                                className="w-full h-full object-cover"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="grid grid-cols-2 gap-6">
+                                        <div className="bg-luxury-50 p-6 rounded-2xl border border-luxury-200/50">
+                                            <p className="text-3xl font-serif text-luxury-800 font-semibold mb-1">100%</p>
+                                            <p className="text-xs uppercase tracking-wider font-bold text-luxury-600">Hygiene Assured</p>
+                                            <p className="text-xs text-luxury-500 mt-2 font-light">Surgical-grade sterilization protocols for all apparatus and treatment beds.</p>
+                                        </div>
+                                        <div className="bg-[#FAF7F0] p-6 rounded-2xl border border-luxury-200/50">
+                                            <p className="text-3xl font-serif text-luxury-800 font-semibold mb-1">Elite</p>
+                                            <p className="text-xs uppercase tracking-wider font-bold text-luxury-600">Expert Stylists</p>
+                                            <p className="text-xs text-luxury-500 mt-2 font-light">Professionals trained in global trends and classical skin science.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Right Side: Authentic Story & Highlights */}
+                                <div className="space-y-8">
+                                    <div className="space-y-3">
+                                        <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-600">Discover Blush On</p>
+                                        <h2 className="text-3xl lg:text-4xl font-serif text-luxury-charcoal font-light leading-tight">
+                                            Where Beauty Meets <br />
+                                            <span className="italic font-normal text-luxury-800">Pure Relaxation</span>
+                                        </h2>
+                                    </div>
+
+                                    <p className="text-luxury-600 leading-relaxed font-light text-base">
+                                        Blush On Salon & Spa creates deeply personalized beauty experiences with masterful professional care, supreme organic and professional-grade products, and a comforting warm-toned sanctuary. We believe that self-care is not a luxury, but a timeless necessity.
+                                    </p>
+
+                                    {/* Bullet Highlights */}
+                                    <div className="space-y-4 pt-4">
+                                        {[
+                                            { title: "Skilled Beauty Professionals", desc: "Our specialists continuously update their craft to deliver modern, immaculate styling." },
+                                            { title: "Hygienic Luxury Environment", desc: "Designed with elegant textures, relaxing lighting, and pristine sanitary standards." },
+                                            { title: "Personalized Tailored Treatments", desc: "We study your hair elasticity, skin tone, and style preferences before recommending services." },
+                                            { title: "Premium Quality Global Products", desc: "Utilizing exclusively genuine, nourishing, and luxury cosmetics for your skin and hair." }
+                                        ].map((item, idx) => (
+                                            <div key={idx} className="flex gap-4 items-start">
+                                                <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-luxury-100 flex items-center justify-center border border-luxury-300/30">
+                                                    <Icons.Check />
+                                                </div>
+                                                <div>
+                                                    <h4 className="text-sm font-semibold text-luxury-charcoal">{item.title}</h4>
+                                                    <p className="text-xs text-luxury-500 mt-0.5 font-light">{item.desc}</p>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    <div className="pt-4 flex flex-col sm:flex-row items-center gap-6">
+                                        <button 
+                                            onClick={() => setBookingOpen(true)}
+                                            className="w-full sm:w-auto bg-luxury-charcoal hover:bg-luxury-900 text-white text-xs font-semibold tracking-wider px-8 py-4 rounded-full transition"
+                                        >
+                                            EXPERIENCE IT TODAY
+                                        </button>
+                                        <div className="text-center sm:text-left">
+                                            <p className="text-xs font-semibold text-luxury-800">Located at Althara Nagar</p>
+                                            <p className="text-xs text-luxury-500 font-light">Right opposite Starbucks, Vellayambalam</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* 3. SIGNATURE EXPERIENCES HIGHLIGHT */}
+                    <section className="py-24 bg-[#FAF7F0] border-t border-b border-luxury-200/50">
+                        <div className="max-w-[1320px] mx-auto px-6">
+                            <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                                <p className="text-xs uppercase tracking-[0.2em] font-bold text-luxury-600">The Ultimate Standard</p>
+                                <h2 className="text-3xl lg:text-4xl font-serif text-luxury-charcoal font-light">
+                                    Designed Around Your <span className="italic">Beauty Journey</span>
+                                </h2>
+                                <p className="text-sm text-luxury-500 font-light">
+                                    Each department is structured as a dedicated lounge, offering bespoke consulting and specialized experts.
+                                </p>
+                            </div>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                                {[
+                                    {
+                                        title: "Bridal Perfection",
+                                        desc: "Flawless cinematic makeup, elegant classical hairstyles, and perfect saree draping styled to perfection.",
+                                        icon: <Icons.Heart />,
+                                        bg: "bg-white",
+                                        linkText: "Bridal Consultation"
+                                    },
+                                    {
+                                        title: "Skin Glow Rituals",
+                                        desc: "Relaxing customized botanical facials and rejuvenating treatments that unleash natural luminance.",
+                                        icon: <Icons.Sparkles />,
+                                        bg: "bg-white",
+                                        linkText: "Explore Facials"
+                                    },
+                                    {
+                                        title: "Hair Transformation",
+                                        desc: "Professional haircutting, deep nourishing spas, and luxury highlights that bring your hair to life.",
+                                        icon: <Icons.Award />,
+                                        bg: "bg-white",
+                                        linkText: "Styling Options"
+                                    },
+                                    {
+                                        title: "Spa Relaxation",
+                                        desc: "Tranquil pedicures, deep massaging wash, and serene atmospheres crafted specifically to help you unwind.",
+                                        icon: <Icons.Clock />,
+                                        bg: "bg-white",
+                                        linkText: "Book Spa Session"
+                                    }
+                                ].map((card, idx) => (
+                                    <div 
+                                        key={idx} 
+                                        className={`${card.bg} border border-luxury-200 rounded-2xl p-8 hover:shadow-xl hover:shadow-luxury-600/5 transition-all duration-300 transform hover:-translate-y-1 flex flex-col justify-between group`}
+                                    >
+                                        <div className="space-y-6">
+                                            <div className="w-12 h-12 rounded-xl bg-[#FAF7F0] flex items-center justify-center text-luxury-700 border border-luxury-300/20">
+                                                {card.icon}
+                                            </div>
+                                            <div className="space-y-3">
+                                                <h3 className="text-lg font-semibold text-luxury-charcoal">{card.title}</h3>
+                                                <p className="text-xs text-luxury-500 font-light leading-relaxed">{card.desc}</p>
+                                            </div>
+                                        </div>
+                                        <button 
+                                            onClick={() => handleBookNow(card.title)}
+                                            className="mt-8 text-xs font-bold tracking-wider text-luxury-700 group-hover:text-luxury-900 transition flex items-center gap-1 hover:translate-x-1 duration-300"
+                                        >
+                                            {card.linkText} <Icons.ArrowRight />
+                                        </button>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* 4. SERVICES SECTION */}
+                    <section id="services" className="py-24 bg-white relative">
+                        <div className="max-w-[1320px] mx-auto px-6">
+                            
+                            {/* Section Header */}
+                            <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                                <div className="space-y-3 max-w-xl">
+                                    <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-600">The Salon Menu</p>
+                                    <h2 className="text-3xl lg:text-4xl font-serif text-luxury-charcoal font-light">
+                                        Signature <span className="italic">Beauty & Spa Services</span>
+                                    </h2>
+                                    <p className="text-sm text-luxury-500 font-light">
+                                        We utilize exclusively genuine professional grade formulations (L'Oreal Professionnel, Schwarzkopf, and luxury clinical skin labels).
+                                    </p>
+                                </div>
+
+                                {/* Filter Tabs */}
+                                <div className="flex flex-wrap gap-2 bg-luxury-100 p-1.5 rounded-full border border-luxury-200">
+                                    {[
+                                        { id: 'all', label: 'All Services' },
+                                        { id: 'hair', label: 'Hair Care' },
+                                        { id: 'skin', label: 'Skin Care' },
+                                        { id: 'bridal', label: 'Bridal Studio' },
+                                        { id: 'beauty', label: 'Beauty & Nails' }
+                                    ].map(tab => (
+                                        <button
+                                            key={tab.id}
+                                            onClick={() => setActiveServiceTab(tab.id)}
+                                            className={`px-4 py-2 rounded-full text-xs font-semibold tracking-wide transition-all ${
+                                                activeServiceTab === tab.id 
+                                                    ? 'bg-luxury-charcoal text-white shadow-sm' 
+                                                    : 'text-luxury-600 hover:text-luxury-charcoal'
+                                            }`}
+                                        >
+                                            {tab.label}
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Service Cards Grid */}
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                {filteredServices.map(service => (
+                                    <div 
+                                        key={service.id} 
+                                        className="bg-[#FAF9F6] border border-luxury-200/60 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
+                                    >
+                                        <div className="space-y-4">
+                                            <div className="flex justify-between items-start gap-4">
+                                                <span className="text-xs uppercase tracking-widest font-bold text-luxury-500 bg-white px-2.5 py-1 rounded border border-luxury-200">
+                                                    {service.category === 'hair' ? 'Hair Styling' : service.category === 'skin' ? 'Skin' : service.category === 'bridal' ? 'Bridal Studio' : 'Beauty Care'}
+                                                </span>
+                                                <span className="text-sm font-semibold text-luxury-800 bg-luxury-200/50 px-3 py-1 rounded-full font-mono">
+                                                    {service.price}
+                                                </span>
+                                            </div>
+
+                                            <h3 className="text-base font-bold text-luxury-charcoal">{service.name}</h3>
+                                            <p className="text-xs text-luxury-500 font-light leading-relaxed">{service.desc}</p>
+                                        </div>
+
+                                        <div className="pt-6 mt-6 border-t border-luxury-200/40 flex items-center justify-between">
+                                            <span className="text-[11px] text-luxury-400 font-medium flex items-center gap-1">
+                                                <Icons.Clock /> {service.duration}
+                                            </span>
+                                            <button 
+                                                onClick={() => handleBookNow(service.name, service.category)}
+                                                className="text-xs font-bold text-luxury-700 hover:text-luxury-900 tracking-wider flex items-center gap-1 group"
+                                            >
+                                                BOOK NOW <Icons.ChevronRight />
+                                            </button>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+
+                            <div className="mt-12 text-center">
+                                <p className="text-xs text-luxury-500 font-light">
+                                    *Custom packages, bridal couture services, and group bookings are available. 
+                                    <button onClick={() => setBookingOpen(true)} className="text-luxury-700 font-bold ml-1 hover:underline">Speak with our Bridal/Beauty Consultant</button>
+                                </p>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    {/* 5. BRIDAL STUDIO SHOWCASE */}
+                    <section id="bridal" className="py-24 bg-luxury-dark text-luxury-100 relative overflow-hidden">
+                        {/* Soft Gold Blur background elements */}
+                        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-luxury-700/10 blur-[100px] pointer-events-none" />
+                        
+                        <div className="max-w-[1320px] mx-auto px-6 relative z-10">
+                            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                                
+                                {/* Text Info Column */}
+                                <div className="lg:col-span-5 space-y-8">
+                                    <div className="space-y-3">
+                                        <div className="inline-flex items-center gap-2 px-3 py-1 bg-luxury-800/40 border border-luxury-700/30 rounded-full">
+                                            <Icons.Sparkles />
+                                            <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-luxury-400">The Wedding Sanctuary</span>
+                                        </div>
+                                        <h2 className="text-3xl lg:text-4xl font-serif font-light leading-tight">
+                                            Signature <span className="italic text-luxury-400">Bridal Beauty Studio</span>
+                                        </h2>
+                                    </div>
+
+                                    <p className="text-sm text-luxury-300 font-light leading-relaxed">
+                                        From your initial premium skin consultation to the breathtaking final bridal unveil, we construct a flawless custom style that honors your unique persona and traditional style.
+                                    </p>
+
+                                    <div className="space-y-4">
+                                        {[
+                                            { title: "Premium HD & Airbrush Makeup", desc: "Long-lasting, non-cakey high definition formulation curated for Malayalam & South-Indian wedding dynamics." },
+                                            { title: "Sartorial Saree Draping Perfection", desc: "Traditional Kerala Kasavu, grand Kanchipuram silk pleating, or modern chic drapes." },
+                                            { title: "Royal Guest & Family Packages", desc: "We style your entire family with matching beauty standards for gorgeous coordination." },
+                                            { title: "Comprehensive Hair Architecture", desc: "Intricate floral braiding, elegant updos, and custom hair extensions." }
+                                        ].map((item, idx) => (
+                                            <div key={idx} className="flex gap-4">
+                                                <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-luxury-800 flex items-center justify-center border border-luxury-700/30">
+                                                    <span className="text-xs font-bold text-luxury-400">{idx+1}</span>
+                                                </div>
+                                                <div>
+                                                    <h4 className="text-xs font-bold text-white tracking-wide uppercase">{item.title}</h4>
+                                                    <p className="text-xs text-luxury-400 mt-1 font-light leading-relaxed">{item.desc}</p>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    <div className="pt-4 flex flex-col sm:flex-row gap-4">
+                                        <button 
+                                            onClick={() => handleBookNow('Bridal Wedding Package', 'bridal')}
+                                            className="bg-luxury-600 hover:bg-luxury-500 text-white font-semibold text-xs tracking-wider px-8 py-4 rounded-full transition-all duration-300 transform hover:-translate-y-0.5"
+                                        >
+                                            RESERVE BRIDAL DATE
+                                        </button>
+                                        <button 
+                                            onClick={triggerWhatsApp}
+                                            className="border border-luxury-700 text-luxury-200 hover:bg-luxury-800/40 text-xs font-semibold tracking-wider px-8 py-4 rounded-full transition"
+                                        >
+                                            WHATSAPP CONSULTATION
+                                        </button>
+                                    </div>
+                                </div>
+
+                                {/* Cinematic Visual Grid Column */}
+                                <div className="lg:col-span-7 grid grid-cols-12 gap-4">
+                                    <div className="col-span-7 space-y-4">
+                                        <div className="rounded-2xl overflow-hidden aspect-[4/5] shadow-2xl border border-luxury-800/40 hover:scale-[1.02] transition duration-500">
+                                            <img 
+                                                src="blush10.jpg" 
+                                                alt="Sartorial Bride Look" 
+                                                className="w-full h-full object-cover" 
+                                            />
+                                        </div>
+                                        <div className="rounded-2xl overflow-hidden aspect-[1/1] shadow-2xl border border-luxury-800/40 hover:scale-[1.02] transition duration-500">
+                                            <img 
+                                                src="blush9.jpg" 
+                                                alt="Our Elegant Salon" 
+                                                className="w-full h-full object-cover" 
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="col-span-5 space-y-4 pt-12">
+                                        <div className="rounded-2xl overflow-hidden aspect-[1/1] shadow-2xl border border-luxury-800/40 hover:scale-[1.02] transition duration-500">
+                                            <img 
+                                                src="blush8.jpg" 
+                                                alt="Serene Spa Station" 
+                                                className="w-full h-full object-cover" 
+                                            />
+                                        </div>
+                                        <div className="rounded-2xl overflow-hidden aspect-[4/5] shadow-2xl border border-luxury-800/40 hover:scale-[1.02] transition duration-500">
+                                            <img 
+                                                src="blush11.jpg" 
+                                                alt="Elegant Saree Prep" 
+                                                className="w-full h-full object-cover" 
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    
+
+                    {/* 7. CUSTOMER REVIEWS (TESTIMONIALS) */}
+                    <section id="reviews" className="py-24 bg-white relative">
+                        <div className="max-w-[1100px] mx-auto px-6">
+                            
+                            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                                
+                                {/* Rating left column */}
+                                <div className="lg:col-span-4 space-y-6 text-center lg:text-left">
+                                    <p className="text-xs uppercase tracking-[0.2em] font-bold text-luxury-600">Client Commendations</p>
+                                    <h2 className="text-3xl lg:text-4xl font-serif text-luxury-charcoal font-light leading-tight">
+                                        Loved By Our <br />
+                                        <span className="italic font-normal text-luxury-800">Esteemed Clients</span>
+                                    </h2>
+                                    
+                                    <div className="bg-luxury-50 p-6 rounded-2xl border border-luxury-200 inline-block w-full max-w-xs text-center">
+                                        <p className="text-5xl font-serif font-bold text-luxury-800">4.9</p>
+                                        <div className="flex justify-center my-2">
+                                            {[...Array(5)].map((_, i) => <Icons.Star key={i} />)}
+                                        </div>
+                                        <p className="text-xs font-bold uppercase tracking-wider text-luxury-600">100+ Authentic Reviews</p>
+                                        <p className="text-[10px] text-luxury-400 mt-1">Verified Google & Walk-in Feedbacks</p>
+                                    </div>
+                                </div>
+
+                                {/* Slideshow right column */}
+                                <div className="lg:col-span-8 relative">
+                                    <div className="glass-panel p-8 sm:p-12 rounded-3xl border border-luxury-200 min-h-[260px] flex flex-col justify-between relative shadow-xl">
+                                        {/* Elegant Quotes Decorative mark */}
+                                        <span className="absolute top-4 right-8 font-serif text-[120px] text-luxury-200/40 pointer-events-none select-none">“</span>
+                                        
+                                        <div className="space-y-6">
+                                            {/* Rating Stars */}
+                                            <div className="flex gap-1 text-amber-400">
+                                                {[...Array(testimonials[testimonialIndex].rating)].map((_, i) => (
+                                                    <Icons.Star key={i} />
+                                                ))}
+                                            </div>
+                                            <p className="text-base sm:text-lg text-luxury-700 italic font-light leading-relaxed">
+                                                "{testimonials[testimonialIndex].quote}"
+                                            </p>
+                                        </div>
+
+                                        <div className="pt-8 border-t border-luxury-200 flex items-center justify-between">
+                                            <div>
+                                                <h4 className="font-bold text-luxury-charcoal text-sm">{testimonials[testimonialIndex].author}</h4>
+                                                <p className="text-xs text-luxury-500 font-light">{testimonials[testimonialIndex].role}</p>
+                                            </div>
+                                            
+                                            {/* Pagination buttons */}
+                                            <div className="flex gap-2">
+                                                {testimonials.map((_, idx) => (
+                                                    <button 
+                                                        key={idx}
+                                                        onClick={() => setTestimonialIndex(idx)}
+                                                        className={`w-2.5 h-2.5 rounded-full transition-all ${
+                                                            testimonialIndex === idx 
+                                                                ? 'bg-luxury-800 w-6' 
+                                                                : 'bg-luxury-300'
+                                                        }`}
+                                                    />
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </section>
+
+                    {/* 8. WHY CHOOSE US */}
+                    <section className="py-24 bg-[#FAF7F0] border-t border-b border-luxury-200">
+                        <div className="max-w-[1200px] mx-auto px-6">
+                            
+                            <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                                <p className="text-xs uppercase tracking-[0.2em] font-bold text-luxury-600">The Blush On Distinction</p>
+                                <h2 className="text-3xl lg:text-4xl font-serif text-luxury-charcoal font-light">
+                                    Why Discerning Clients <span className="italic">Choose Us</span>
+                                </h2>
+                                <p className="text-sm text-luxury-500 font-light">
+                                    We have carefully refined every detail of our operations to offer the supreme luxury beauty experience in Thiruvananthapuram.
+                                </p>
+                            </div>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                {[
+                                    { title: "Luxury Hygienic Space", desc: "Surgical sanitization protocols. Fresh linens, single-use high quality applicator tools, and sterilized glass workstations." },
+                                    { title: "Friendly Professional Staff", desc: "Expert stylers, hair color artists, and makeup specialists committed to hospitality and clear consultation." },
+                                    { title: "Supreme Premium Products", desc: "Absolutely zero cheap generic substitutes. We rely strictly on L'Oreal, Schwarzkopf, and premium safe clinical products." },
+                                    { title: "Personalized Beauty Care", desc: "We study facial structures, hair cuticles, and skin traits meticulously prior to making recommendations." },
+                                    { title: "Relaxing Calming Atmosphere", desc: "Sophisticated wooden panel details, luxurious chairs, warm interior illumination, and peaceful acoustic soundtracks." },
+                                    { title: "Skilled Certified Stylists", desc: "Professionals who hold globally certified makeup and hair grooming credentials, delivering elite transformations." }
+                                ].map((item, idx) => (
+                                    <div key={idx} className="bg-white rounded-2xl p-8 border border-luxury-200/50 hover:shadow-md transition-all duration-300">
+                                        <div className="w-8 h-8 rounded-full bg-luxury-100 flex items-center justify-center mb-4">
+                                            <Icons.Check />
+                                        </div>
+                                        <h3 className="text-sm font-bold text-luxury-charcoal uppercase tracking-wider">{item.title}</h3>
+                                        <p className="text-xs text-luxury-500 mt-2 font-light leading-relaxed">{item.desc}</p>
+                                    </div>
+                                ))}
+                            </div>
+
+                        </div>
+                    </section>
+
+                    {/* 9. OFFERS SECTION */}
+                    <section className="py-20 bg-luxury-charcoal text-white relative overflow-hidden">
+                        {/* Decorative Background */}
+                        <div className="absolute top-[-30%] right-[-20%] w-[450px] h-[450px] rounded-full bg-luxury-600/10 blur-[120px] pointer-events-none" />
+                        <div className="absolute bottom-[-30%] left-[-20%] w-[450px] h-[450px] rounded-full bg-luxury-600/10 blur-[120px] pointer-events-none" />
+
+                        <div className="max-w-[1100px] mx-auto px-6 relative z-10 text-center space-y-8">
+                            <span className="bg-luxury-600/30 border border-luxury-500/20 text-luxury-300 font-bold px-4 py-1.5 rounded-full text-xs uppercase tracking-widest inline-block">
+                                New Client Celebration
+                            </span>
+                            
+                            <h2 className="text-4xl sm:text-5xl font-serif font-light tracking-wide leading-tight">
+                                Enjoy Exclusive Savings On <br />
+                                <span className="italic text-luxury-300">Your First Beauty Session</span>
+                            </h2>
+                            
+                            <p className="text-sm sm:text-base text-luxury-300 font-light max-w-xl mx-auto leading-relaxed">
+                                Experience professional precision and ultimate luxury care. Book any styling, facial, or salon package today to receive a premium introductory surprise.
+                            </p>
+
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                                <button 
+                                    onClick={() => setBookingOpen(true)}
+                                    className="w-full sm:w-auto bg-white hover:bg-luxury-100 text-luxury-dark font-bold text-xs tracking-widest px-8 py-4 rounded-full transition-transform transform hover:-translate-y-0.5 active:scale-95 duration-300"
+                                >
+                                    BOOK YOUR SPECIAL SLOT
+                                </button>
+                                <button 
+                                    onClick={triggerWhatsApp}
+                                    className="w-full sm:w-auto border border-white/20 hover:bg-white/10 text-white font-semibold text-xs tracking-widest px-8 py-4 rounded-full transition duration-300"
+                                >
+                                    CLAIM VIA WHATSAPP
+                                </button>
+                            </div>
+
+                            <p className="text-[11px] text-luxury-400 font-light pt-2">
+                                *Offer valid for first-time walk-in or booked clients in Vellayambalam branch.
+                            </p>
+                        </div>
+                    </section>
+
+                    {/* 10. CONTACT SECTION */}
+                    <section id="contact" className="py-24 bg-white relative">
+                        <div className="max-w-[1320px] mx-auto px-6">
+                            
+                            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                                
+                                {/* Info / Address Column */}
+                                <div className="lg:col-span-5 space-y-8">
+                                    <div className="space-y-3">
+                                        <p className="text-xs uppercase tracking-[0.2em] font-bold text-luxury-600">Plan Your Visit</p>
+                                        <h2 className="text-3xl lg:text-4xl font-serif text-luxury-charcoal font-light">
+                                            Find Your <span className="italic">Sanctuary</span>
+                                        </h2>
+                                        <p className="text-sm text-luxury-500 font-light">
+                                            Centrally positioned opposite Starbucks in Vellayambalam, with safe customer parking.
+                                        </p>
+                                    </div>
+
+                                    {/* Quick Info Cards */}
+                                    <div className="space-y-6">
+                                        <div className="flex gap-4">
+                                            <div className="w-10 h-10 rounded-xl bg-luxury-100 flex items-center justify-center text-luxury-700 flex-shrink-0">
+                                                <Icons.MapPin />
+                                            </div>
+                                            <div>
+                                                <h4 className="text-xs font-bold text-luxury-700 uppercase tracking-widest">Our Location</h4>
+                                                <p className="text-sm text-luxury-800 mt-1 font-light leading-relaxed">
+                                                    Blush On - Salon & Spa<br />
+                                                    Near Starbucks, Althara Nagar, Vellayambalam,<br />
+                                                    Thiruvananthapuram, Kerala 695010
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div className="flex gap-4">
+                                            <div className="w-10 h-10 rounded-xl bg-luxury-100 flex items-center justify-center text-luxury-700 flex-shrink-0">
+                                                <Icons.Phone />
+                                            </div>
+                                            <div>
+                                                <h4 className="text-xs font-bold text-luxury-700 uppercase tracking-widest">Call & Inquire</h4>
+                                                <p className="text-sm text-luxury-800 mt-1 font-light">
+                                                    <a href="tel:+917994912327" className="hover:underline font-semibold text-luxury-charcoal">+91 79949 12327</a>
+                                                </p>
+                                                <p className="text-xs text-luxury-500 mt-0.5 font-light">Call anytime during salon operational hours</p>
+                                            </div>
+                                        </div>
+
+                                        <div className="flex gap-4">
+                                            <div className="w-10 h-10 rounded-xl bg-luxury-100 flex items-center justify-center text-luxury-700 flex-shrink-0">
+                                                <Icons.Clock />
+                                            </div>
+                                            <div>
+                                                <h4 className="text-xs font-bold text-luxury-700 uppercase tracking-widest">Salon Hours</h4>
+                                                <p className="text-sm text-luxury-800 mt-1 font-light">
+                                                    Monday - Sunday: <span className="font-semibold text-luxury-charcoal">9:30 AM – 8:30 PM</span>
+                                                </p>
+                                                <p className="text-xs text-luxury-500 font-light mt-0.5">Open all days of the week, including holidays</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Quick WhatsApp & Call Direct Button Blocks */}
+                                    <div className="flex gap-3 pt-4">
+                                        <a 
+                                            href="tel:+917994912327"
+                                            className="flex-1 bg-luxury-200 hover:bg-luxury-300 text-luxury-800 text-xs font-bold py-3.5 px-6 rounded-full text-center transition flex items-center justify-center gap-1"
+                                        >
+                                            <Icons.Phone /> Call Direct
+                                        </a>
+                                        <button 
+                                            onClick={triggerWhatsApp}
+                                            className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-3.5 px-6 rounded-full text-center transition flex items-center justify-center gap-1.5"
+                                        >
+                                            <svg className="w-4 h-4 fill-white" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.988 4.482-9.988 9.988 0 1.758.459 3.473 1.332 4.982L2 22l5.166-1.355c1.459.796 3.102 1.216 4.786 1.216 5.506 0 9.992-4.482 9.992-9.988 0-2.66-.103-5.158-2.013-7.073C17.913 2.89 15.011 2 12.012 2zm5.727 14.156c-.252.712-1.251 1.295-1.724 1.348-.474.053-.943.253-3.037-.611-2.512-1.036-4.116-3.582-4.241-3.75-.125-.167-1.018-1.353-1.018-2.58s.642-1.83.872-2.08c.229-.25.5-.313.667-.313.167 0 .334.001.479.008.151.008.354-.057.553.421.203.49.692 1.688.75 1.804.059.117.098.253.018.411-.08.158-.121.258-.24.397-.12.139-.25.31-.357.416-.12.118-.245.247-.105.486.14.24.622 1.012 1.329 1.642.91.812 1.674 1.064 1.914 1.182.24.118.379.1.519-.06.14-.16.598-.696.758-.934.16-.238.319-.198.538-.118.219.08 1.391.656 1.63.775.24.119.398.178.458.277.06.099.06.574-.192 1.286z"/></svg> 
+                                            WhatsApp Us
+                                        </button>
+                                    </div>
+                                </div>
+
+                                {/* Form Column */}
+                                <div className="lg:col-span-7 bg-luxury-50 rounded-3xl p-8 sm:p-10 border border-luxury-200">
+                                    <h3 className="text-xl font-serif text-luxury-charcoal font-semibold mb-6">Send Us A Message</h3>
+                                    
+                                    {contactSubmitted ? (
+                                        <div className="bg-emerald-50 border border-emerald-200 text-emerald-800 p-8 rounded-2xl text-center space-y-4 animate-scale-in">
+                                            <div className="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center mx-auto text-emerald-600">
+                                                <Icons.Check />
+                                            </div>
+                                            <h4 className="text-lg font-bold">Message Received Cleanly</h4>
+                                            <p className="text-sm font-light">Thank you. Our executive salon desk will reach back to you within 2-4 business hours.</p>
+                                        </div>
+                                    ) : (
+                                        <form onSubmit={submitContact} className="space-y-6">
+                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                                <div className="space-y-2">
+                                                    <label className="text-xs uppercase tracking-wider font-bold text-luxury-600">Full Name</label>
+                                                    <input 
+                                                        type="text" 
+                                                        required
+                                                        placeholder="Your Name"
+                                                        value={contactForm.name}
+                                                        onChange={(e) => setContactForm({...contactForm, name: e.target.value})}
+                                                        className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition"
+                                                    />
+                                                </div>
+                                                <div className="space-y-2">
+                                                    <label className="text-xs uppercase tracking-wider font-bold text-luxury-600">Phone Number</label>
+                                                    <input 
+                                                        type="tel" 
+                                                        required
+                                                        placeholder="Your Mobile"
+                                                        value={contactForm.phone}
+                                                        onChange={(e) => setContactForm({...contactForm, phone: e.target.value})}
+                                                        className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition"
+                                                    />
+                                                </div>
+                                            </div>
+
+                                            <div className="space-y-2">
+                                                <label className="text-xs uppercase tracking-wider font-bold text-luxury-600">Email Address (Optional)</label>
+                                                <input 
+                                                    type="email" 
+                                                    placeholder="your@email.com"
+                                                    value={contactForm.email}
+                                                    onChange={(e) => setContactForm({...contactForm, email: e.target.value})}
+                                                    className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition"
+                                                />
+                                            </div>
+
+                                            <div className="space-y-2">
+                                                <label className="text-xs uppercase tracking-wider font-bold text-luxury-600">How Can We Serve You?</label>
+                                                <textarea 
+                                                    rows="4"
+                                                    required
+                                                    placeholder="Specify what treatments, bridal makeup schedules, or spa experiences you are looking for..."
+                                                    value={contactForm.message}
+                                                    onChange={(e) => setContactForm({...contactForm, message: e.target.value})}
+                                                    className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition resize-none"
+                                                />
+                                            </div>
+
+                                            <button 
+                                                type="submit"
+                                                className="w-full bg-luxury-charcoal hover:bg-luxury-900 text-white font-semibold text-xs tracking-widest py-4 rounded-xl transition"
+                                            >
+                                                SEND INQUIRY
+                                            </button>
+                                        </form>
+                                    )}
+                                </div>
+
+                            </div>
+
+                            {/* Elegant Interactive Google Maps Container */}
+                            <div className="mt-16 rounded-3xl overflow-hidden border border-luxury-200/60 shadow-md h-[400px] relative bg-luxury-100 group">
+                                <iframe 
+                                    title="Blush On Thiruvananthapuram Map Location"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.748375990234!2d76.9634563!3d8.5141013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05b9789cb4efeb%3A0xc6cbfaae1f4e5bf5!2sBlush%20On%20Salon%20%26%20Spa!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                                    className="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-700" 
+                                    allowFullScreen="" 
+                                    loading="lazy"
+                                ></iframe>
+                                <div className="absolute top-4 left-4 glass-panel p-4 rounded-2xl pointer-events-none max-w-sm shadow-md">
+                                    <p className="text-xs uppercase tracking-wider font-bold text-luxury-800">Direct Directions</p>
+                                    <p className="text-xs text-luxury-600 mt-1">Directly across the street from Starbucks inside Althara Nagar. Dedicated parking in front.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    {/* FOOTER */}
+                    <footer className="bg-luxury-dark text-luxury-300 py-16 border-t border-luxury-800/40">
+                        <div className="max-w-[1320px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                            
+                            <div className="space-y-4">
+                                <span className="font-serif text-2xl tracking-wider text-white">BLUSH ON</span>
+                                <p className="text-xs text-luxury-400 font-light leading-relaxed">
+                                    A premier beauty salon, dedicated custom bridal studio, and therapeutic spa oasis in Vellayambalam, Thiruvananthapuram. Crafted around high-end safety, elegant spaces, and perfect results.
+                                </p>
+                                <div className="flex gap-4 pt-2">
+                                    {/* Social icons */}
+                                    <a href="#" className="w-8 h-8 rounded-full bg-luxury-800 flex items-center justify-center hover:bg-luxury-700 transition">
+                                        <svg className="w-4 h-4 fill-white" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                    </a>
+                                    <a href="#" className="w-8 h-8 rounded-full bg-luxury-800 flex items-center justify-center hover:bg-luxury-700 transition">
+                                        <svg className="w-4 h-4 fill-white" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div className="space-y-4">
+                                <h4 className="text-white text-xs font-bold uppercase tracking-widest">Our Service Wings</h4>
+                                <ul className="space-y-2 text-xs font-light text-luxury-400">
+                                    <li><a href="#services" className="hover:text-white transition">Precision Cut & Advanced Styling</a></li>
+                                    <li><a href="#services" className="hover:text-white transition">Signature Skin Illuminating Facials</a></li>
+                                    <li><a href="#bridal" className="hover:text-white transition">Elite Airbrush & HD Bridal Makeup</a></li>
+                                    <li><a href="#services" className="hover:text-white transition">Nail Extensions & Pedicure Spa</a></li>
+                                </ul>
+                            </div>
+
+                            <div className="space-y-4">
+                                <h4 className="text-white text-xs font-bold uppercase tracking-widest">Navigation</h4>
+                                <ul className="space-y-2 text-xs font-light text-luxury-400">
+                                    <li><a href="#home" className="hover:text-white transition">Home Lounge</a></li>
+                                    <li><a href="#about" className="hover:text-white transition">About Our Philosophy</a></li>
+                                    <li><a href="#services" className="hover:text-white transition">Explore Treatment Menu</a></li>
+                                    <li><a href="#gallery" className="hover:text-white transition">Interactive Gallery</a></li>
+                                    <li><a href="#contact" className="hover:text-white transition">Contact & Safe Parking Map</a></li>
+                                </ul>
+                            </div>
+
+                            <div className="space-y-4">
+                                <h4 className="text-white text-xs font-bold uppercase tracking-widest">Safe Space Notice</h4>
+                                <p className="text-xs text-luxury-400 font-light leading-relaxed">
+                                    We utilize clinical standard sterilization. All products are genuinely sourced. Group consultations for weddings are recommended to be scheduled at least 2 weeks in advance.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div className="max-w-[1320px] mx-auto px-6 mt-16 pt-8 border-t border-luxury-800/30 text-center md:flex md:justify-between md:text-left text-xs text-luxury-500 font-light">
+                            <p>© {new Date().getFullYear()} Blush On - Salon & Spa. All Rights Reserved.</p>
+                            <p className="mt-2 md:mt-0">Vellayambalam, Thiruvananthapuram, Kerala</p>
+                        </div>
+                    </footer>
+
+                    {/* MODAL: PREMIUM BOOKING RESERVATION */}
+                    {bookingOpen && (
+                        <div className="fixed inset-0 z-50 overflow-y-auto flex items-center justify-center p-4">
+                            {/* Overlay */}
+                            <div className="fixed inset-0 bg-luxury-dark/65 backdrop-blur-md transition-opacity" onClick={() => setBookingOpen(false)} />
+
+                            {/* Modal Container */}
+                            <div className="relative bg-[#FAF9F6] rounded-3xl overflow-hidden shadow-2xl border border-luxury-300/30 max-w-lg w-full z-10 animate-scale-in">
+                                
+                                {/* Header */}
+                                <div className="bg-luxury-charcoal text-white p-6 flex justify-between items-center">
+                                    <div>
+                                        <h3 className="text-lg font-serif tracking-wide">Secure Your Luxury Session</h3>
+                                        <p className="text-[10px] text-luxury-300 font-light">Complimentary consultation included with every visit</p>
+                                    </div>
+                                    <button onClick={() => setBookingOpen(false)} className="text-luxury-400 hover:text-white p-1">
+                                        <Icons.X />
+                                    </button>
+                                </div>
+
+                                {/* Body */}
+                                <div className="p-8">
+                                    {bookingSuccess ? (
+                                        <div className="text-center py-12 space-y-4 animate-scale-in">
+                                            <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
+                                                <Icons.Check />
+                                            </div>
+                                            <h4 className="text-xl font-serif text-luxury-charcoal">Appointment Request Sent</h4>
+                                            <p className="text-sm text-luxury-500 font-light max-w-sm mx-auto">
+                                                Thank you. Our luxury concierge desk will contact you shortly on your provided phone number to lock in your final time slot.
+                                            </p>
+                                        </div>
+                                    ) : (
+                                        <form onSubmit={submitBooking} className="space-y-4">
+                                            
+                                            <div className="space-y-1">
+                                                <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Your Full Name</label>
+                                                <input 
+                                                    type="text" 
+                                                    required
+                                                    placeholder="Enter your name"
+                                                    value={bookingData.name}
+                                                    onChange={(e) => setBookingData({...bookingData, name: e.target.value})}
+                                                    className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition"
+                                                />
+                                            </div>
+
+                                            <div className="space-y-1">
+                                                <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Contact Number</label>
+                                                <input 
+                                                    type="tel" 
+                                                    required
+                                                    placeholder="Mobile phone"
+                                                    value={bookingData.phone}
+                                                    onChange={(e) => setBookingData({...bookingData, phone: e.target.value})}
+                                                    className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition"
+                                                />
+                                            </div>
+
+                                            <div className="grid grid-cols-2 gap-4">
+                                                <div className="space-y-1">
+                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Treatment Wing</label>
+                                                    <select 
+                                                        value={bookingData.serviceCategory}
+                                                        onChange={(e) => setBookingData({...bookingData, serviceCategory: e.target.value})}
+                                                        className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition"
+                                                    >
+                                                        <option value="hair">Hair Styling & Spa</option>
+                                                        <option value="skin">Skin Aesthetics</option>
+                                                        <option value="bridal">Bridal & Makeover</option>
+                                                        <option value="beauty">Pedicure & Beauty</option>
+                                                    </select>
+                                                </div>
+
+                                                <div className="space-y-1">
+                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Preferred Date</label>
+                                                    <input 
+                                                        type="date" 
+                                                        required
+                                                        value={bookingData.date}
+                                                        onChange={(e) => setBookingData({...bookingData, date: e.target.value})}
+                                                        className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition"
+                                                    />
+                                                </div>
+                                            </div>
+
+                                            <div className="space-y-1">
+                                                <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Preferred Specific Service (Optional)</label>
+                                                <input 
+                                                    type="text" 
+                                                    placeholder="e.g. Signature Skin Glow, Bridal HD Makeup, Hair Spa"
+                                                    value={bookingData.serviceName}
+                                                    onChange={(e) => setBookingData({...bookingData, serviceName: e.target.value})}
+                                                    className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition"
+                                                />
+                                            </div>
+
+                                            <div className="space-y-1">
+                                                <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Special Notes or Requests (Optional)</label>
+                                                <textarea 
+                                                    rows="2"
+                                                    placeholder="e.g. Specific requirements, skin sensitivity, or wedding timing."
+                                                    value={bookingData.message}
+                                                    onChange={(e) => setBookingData({...bookingData, message: e.target.value})}
+                                                    className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition resize-none"
+                                                />
+                                            </div>
+
+                                            <button 
+                                                type="submit"
+                                                className="w-full bg-luxury-charcoal hover:bg-luxury-900 text-white font-bold text-xs tracking-widest py-4 rounded-xl transition"
+                                            >
+                                                SUBMIT RESERVATION REQUEST
+                                            </button>
+
+                                            <div className="text-center">
+                                                <p className="text-[10px] text-luxury-500">
+                                                    Need immediate service? <a href="tel:+917994912327" className="font-bold underline text-luxury-700">Call +91 79949 12327</a>
+                                                </p>
+                                            </div>
+                                        </form>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* MODAL: LIGHTBOX GALLERY IMAGES */}
+                    {lightboxOpen && (
+                        <div className="fixed inset-0 z-50 bg-luxury-dark/95 backdrop-blur-lg flex items-center justify-center p-4">
+                            <button 
+                                onClick={() => setLightboxOpen(false)} 
+                                className="absolute top-6 right-6 text-white/80 hover:text-white p-2 z-10 bg-white/10 rounded-full"
+                            >
+                                <Icons.X />
+                            </button>
+
+                            <div className="max-w-4xl w-full flex flex-col items-center gap-4 relative animate-scale-in">
+                                <div className="relative rounded-2xl overflow-hidden border border-white/10 max-h-[70vh] aspect-[4/3] bg-black">
+                                    <img 
+                                        src={filteredGallery[lightboxIndex].image} 
+                                        alt={filteredGallery[lightboxIndex].title} 
+                                        className="w-full h-full object-contain"
+                                    />
+                                </div>
+                                <div className="text-center text-white space-y-1 px-4">
+                                    <h4 className="font-serif text-xl">{filteredGallery[lightboxIndex].title}</h4>
+                                    <p className="text-xs text-luxury-300 font-light">{filteredGallery[lightboxIndex].caption}</p>
+                                </div>
+
+                                {/* Navigation Arrows */}
+                                <div className="absolute left-2 right-2 top-1/2 -translate-y-1/2 flex justify-between pointer-events-none px-4">
+                                    <button 
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            setLightboxIndex(prev => (prev - 1 + filteredGallery.length) % filteredGallery.length);
+                                        }}
+                                        className="p-3 rounded-full bg-white/10 text-white hover:bg-white/20 pointer-events-auto transition"
+                                    >
+                                        <svg className="w-5 h-5 rotate-180" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+                                    </button>
+                                    <button 
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            setLightboxIndex(prev => (prev + 1) % filteredGallery.length);
+                                        }}
+                                        className="p-3 rounded-full bg-white/10 text-white hover:bg-white/20 pointer-events-auto transition"
+                                    >
+                                        <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+                </div>
+            );
+        }
+
+        // Render standard react DOM 18 app setup
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>
