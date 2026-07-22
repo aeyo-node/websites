@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ashwin C Nair & Co. | Chartered Accountants & Business Advisors</title>
+  <title>{{SEO_PAGE_TITLE}}</title>
   
-  <meta name="description" content="Ashwin C Nair & Co. is a premium Chartered Accountancy firm in Thiruvananthapuram, Kerala. Specializing in high-end Tax Planning, Corporate Audit, GST Compliance, & Startup Advisory.">
-  <meta name="keywords" content="Chartered Accountant Trivandrum, Tax Consultant Kerala, Corporate Auditor Trivandrum, GST compliance, Startup advisor Trivandrum, Ashwin C Nair, CA Kerala">
+  <meta name="description" content="{{SEO_META_DESCRIPTION}}">
+  <meta name="keywords" content="{{SEO_META_KEYWORDS}}">
   
   <!-- Open Graph -->
-  <meta property="og:title" content="Ashwin C Nair & Co. | Chartered Accountants">
-  <meta property="og:description" content="High-precision financial services and trusted corporate advisory designed for modern businesses.">
+  <meta property="og:title" content="{{SEO_OG_TITLE}}">
+  <meta property="og:description" content="{{SEO_OG_DESCRIPTION}}">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_IN">
   
@@ -46,24 +46,24 @@
   {
     "@context": "https://schema.org",
     "@type": "AccountingService",
-    "name": "Ashwin C Nair & Co.",
+    "name": "{{BUSINESS_NAME}}",
     "image": "images/office-exterior.svg", 
     "@id": "",
-    "url": "https://ashwincnair.com",
-    "telephone": "+917012027628",
+    "url": "{{BUSINESS_WEBSITE_URL}}",
+    "telephone": "{{BUSINESS_PHONE_UNFORMATTED}}",
     "priceRange": "$$$",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Palayam Airport Road, Near AKG Centre, Kunnukuzhy",
-      "addressLocality": "Thiruvananthapuram",
-      "addressRegion": "Kerala",
-      "postalCode": "695035",
-      "addressCountry": "IN"
+      "streetAddress": "{{BUSINESS_STREET_ADDRESS}}",
+      "addressLocality": "{{BUSINESS_CITY}}",
+      "addressRegion": "{{BUSINESS_STATE}}",
+      "postalCode": "{{BUSINESS_ZIP_CODE}}",
+      "addressCountry": "{{BUSINESS_COUNTRY}}"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 8.5065,
-      "longitude": 76.9442
+      "latitude": {{BUSINESS_LATITUDE}},
+      "longitude": {{BUSINESS_LONGITUDE}}
     },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
@@ -92,8 +92,8 @@
   <nav class="fixed top-0 left-0 w-full z-50 glass-nav py-5 px-6 md:px-12">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       <a href="#" class="flex flex-col select-none">
-        <span class="text-lg md:text-xl font-extrabold tracking-tight text-corporate-900 uppercase">Ashwin C Nair & Co.</span>
-        <span class="text-[9px] md:text-[10px] tracking-widest text-slate-500 uppercase font-semibold">Chartered Accountants & Business Advisors</span>
+        <span class="text-lg md:text-xl font-extrabold tracking-tight text-corporate-900 uppercase">{{BUSINESS_NAME}}</span>
+        <span class="text-[9px] md:text-[10px] tracking-widest text-slate-500 uppercase font-semibold">{{NAV_TAGLINE}}</span>
       </a>
       
       <!-- Desktop Menu Links -->
@@ -110,7 +110,7 @@
 
       <div class="hidden lg:block">
         <a href="#contact" class="btn-primary text-xs font-semibold uppercase tracking-wider py-3 px-6 rounded-full inline-block">
-          Book Consultation
+          {{NAV_CTA_BUTTON_TEXT}}
         </a>
       </div>
 
@@ -130,7 +130,7 @@
       <a href="#testimonials" class="mobile-link text-base font-medium text-slate-700 hover:text-corporate-900">Testimonials</a>
       <a href="#faq" class="mobile-link text-base font-medium text-slate-700 hover:text-corporate-900">FAQ</a>
       <a href="#contact" class="mobile-link text-base font-medium text-slate-700 hover:text-corporate-900">Contact</a>
-      <a href="#contact" class="mobile-link btn-primary text-center text-sm font-semibold uppercase py-3 rounded-xl">Book Consultation</a>
+      <a href="#contact" class="mobile-link btn-primary text-center text-sm font-semibold uppercase py-3 rounded-xl">{{NAV_CTA_BUTTON_TEXT}}</a>
     </div>
   </nav>
 
@@ -142,42 +142,42 @@
       <div class="lg:col-span-7 space-y-6 md:space-y-8">
         <div class="inline-flex items-center space-x-2 bg-slate-100 border border-slate-200/50 py-1.5 px-4 rounded-full">
           <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
-          <span class="text-xs font-semibold text-slate-600 tracking-wider uppercase">Active Advisory Practice</span>
+          <span class="text-xs font-semibold text-slate-600 tracking-wider uppercase">{{HERO_BADGE_TEXT}}</span>
         </div>
         
         <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-corporate-900 leading-[1.1]">
-          Beyond Compliance.<br>
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-corporate-900 to-slate-600">Building Financial Confidence.</span>
+          {{HERO_HEADLINE_LINE_1}}<br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-corporate-900 to-slate-600">{{HERO_HEADLINE_LINE_2}}</span>
         </h1>
         
         <p class="text-slate-600 text-base md:text-lg max-w-xl leading-relaxed">
-          Trusted Chartered Accountants helping businesses, startups, professionals, and individuals navigate complex taxation, internal audit, statutory compliance, and strategic financial growth with modern precision.
+          {{HERO_SUBHEADLINE_DESCRIPTION}}
         </p>
 
         <div class="flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4">
           <a href="#contact" class="btn-primary text-center text-sm font-bold tracking-wide uppercase py-4 px-8 rounded-full">
-            Book Consultation
+            {{HERO_PRIMARY_CTA_TEXT}}
           </a>
           <a href="#services" class="btn-secondary text-center text-sm font-bold tracking-wide uppercase py-4 px-8 rounded-full">
-            Explore Services
+            {{HERO_SECONDARY_CTA_TEXT}}
           </a>
         </div>
 
         <!-- Floating Premium Stats -->
         <div class="pt-8 grid grid-cols-3 gap-6 border-t border-slate-200 max-w-lg">
           <div>
-            <div class="text-3xl font-extrabold text-corporate-900">13+</div>
-            <div class="text-xs text-slate-500 font-medium mt-1">Verified Client Reviews</div>
+            <div class="text-3xl font-extrabold text-corporate-900">{{HERO_STAT_1_NUMBER}}</div>
+            <div class="text-xs text-slate-500 font-medium mt-1">{{HERO_STAT_1_LABEL}}</div>
           </div>
           <div>
             <div class="text-3xl font-extrabold text-corporate-900 flex items-center">
-              4.7<span class="text-amber-500 text-xl ml-1">★</span>
+              {{HERO_STAT_2_NUMBER}}<span class="text-amber-500 text-xl ml-1">★</span>
             </div>
-            <div class="text-xs text-slate-500 font-medium mt-1">Google Business Rating</div>
+            <div class="text-xs text-slate-500 font-medium mt-1">{{HERO_STAT_2_LABEL}}</div>
           </div>
           <div>
-            <div class="text-3xl font-extrabold text-corporate-900">100%</div>
-            <div class="text-xs text-slate-500 font-medium mt-1">Confidential Guarantee</div>
+            <div class="text-3xl font-extrabold text-corporate-900">{{HERO_STAT_3_NUMBER}}</div>
+            <div class="text-xs text-slate-500 font-medium mt-1">{{HERO_STAT_3_LABEL}}</div>
           </div>
         </div>
       </div>
@@ -186,7 +186,7 @@
       <div class="lg:col-span-5 relative mt-8 lg:mt-0">
         <div class="relative w-full rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] bg-slate-300">
           <!-- Fallback local image or structural placeholder graphic -->
-          <img src="images/office-interior.svg" alt="Ashwin C Nair & Co Office Interior" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200';">
+          <img src="images/office-interior.svg" alt="{{HERO_IMAGE_ALT_TEXT}}" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200';">
           <div class="absolute inset-0 bg-gradient-to-t from-corporate-900/40 to-transparent"></div>
         </div>
 
@@ -196,9 +196,9 @@
             <span class="p-2 bg-emerald-100 text-emerald-800 rounded-lg">
               <i data-lucide="shield" class="w-5 h-5"></i>
             </span>
-            <span class="text-xs font-bold text-slate-800">Secure & Confidential</span>
+            <span class="text-xs font-bold text-slate-800">{{HERO_FLOAT_CARD_1_TITLE}}</span>
           </div>
-          <p class="text-[11px] text-slate-500">Every workflow operates on institutional-grade security infrastructure.</p>
+          <p class="text-[11px] text-slate-500">{{HERO_FLOAT_CARD_1_DESC}}</p>
         </div>
 
         <!-- Float Accent Card 2 -->
@@ -207,9 +207,9 @@
             <span class="p-2 bg-blue-100 text-blue-800 rounded-lg">
               <i data-lucide="award" class="w-5 h-5"></i>
             </span>
-            <span class="text-xs font-bold text-slate-800">Expertise first</span>
+            <span class="text-xs font-bold text-slate-800">{{HERO_FLOAT_CARD_2_TITLE}}</span>
           </div>
-          <p class="text-[11px] text-slate-500">Adhering to ICAI standards.</p>
+          <p class="text-[11px] text-slate-500">{{HERO_FLOAT_CARD_2_DESC}}</p>
         </div>
       </div>
 
@@ -221,19 +221,19 @@
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         <div>
-          <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">About The Firm</span>
+          <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">{{ABOUT_SECTION_BADGE}}</span>
           <h2 class="text-3xl md:text-4xl font-extrabold text-corporate-900 mt-2 mb-6">
-            Modern Accounting.<br><span class="font-serif-editorial italic text-slate-600 font-normal">Trusted Advisory.</span>
+            {{ABOUT_HEADLINE_LINE_1}}<br><span class="font-serif-editorial italic text-slate-600 font-normal">{{ABOUT_HEADLINE_LINE_2}}</span>
           </h2>
           <div class="space-y-6 text-slate-600 leading-relaxed text-base">
             <p>
-              <strong>Ashwin C Nair & Co.</strong> is a leading Chartered Accountancy firm providing premium professional services in corporate taxation, modern financial auditing, tax compliance, and commercial structural planning.
+              <strong>{{BUSINESS_NAME}}</strong> {{ABOUT_PARAGRAPH_1}}
             </p>
             <p>
-              Strategically headquartered near the AKG Centre in Thiruvananthapuram, our practice integrates deep regulatory technical expertise with an empathetic, client-first consulting perspective. We guide businesses and high-net-worth individuals through ever-evolving legislative frameworks with clarity.
+              {{ABOUT_PARAGRAPH_2}}
             </p>
             <p>
-              Whether structuring a new startup liability model, planning multi-state GST distributions, or assuring external compliance frameworks, our clients rely on our rigorous precision and complete data confidentiality.
+              {{ABOUT_PARAGRAPH_3}}
             </p>
           </div>
 
@@ -242,8 +242,8 @@
               <i data-lucide="signature" class="w-6 h-6 text-slate-800"></i>
             </div>
             <div>
-              <p class="text-xs font-semibold text-slate-400 uppercase">Founder & Managing Partner</p>
-              <p class="text-base font-bold text-corporate-900">Ashwin C Nair, FCA</p>
+              <p class="text-xs font-semibold text-slate-400 uppercase">{{ABOUT_LEADER_TITLE}}</p>
+              <p class="text-base font-bold text-corporate-900">{{ABOUT_LEADER_NAME}}</p>
             </div>
           </div>
         </div>
@@ -251,12 +251,12 @@
         <div class="relative">
           <div class="rounded-3xl overflow-hidden shadow-xl aspect-square bg-slate-100 border border-slate-200">
             <!-- Fallback Team/Office/Credential image -->
-            <img src="images/team-photo.svg" alt="Ashwin C Nair Team and Office Group" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1606857521015-7f9fcf423740?auto=format&fit=crop&q=80&w=1200';">
+            <img src="images/team-photo.svg" alt="{{ABOUT_IMAGE_ALT_TEXT}}" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1606857521015-7f9fcf423740?auto=format&fit=crop&q=80&w=1200';">
           </div>
           <div class="absolute -bottom-8 -right-4 md:right-8 glass-panel p-6 rounded-2xl shadow-xl max-w-sm border border-white/60">
-            <h4 class="text-sm font-bold text-corporate-900 mb-1">Our Commitment</h4>
+            <h4 class="text-sm font-bold text-corporate-900 mb-1">{{ABOUT_COMMITMENT_TITLE}}</h4>
             <p class="text-xs text-slate-600 leading-relaxed">
-              "We strive to transform traditional corporate accounting from a transactional necessity into an elegant, value-driven strategy."
+              "{{ABOUT_COMMITMENT_QUOTE}}"
             </p>
           </div>
         </div>
@@ -268,9 +268,9 @@
   <section id="services" class="py-20 md:py-32 px-6 md:px-12 bg-slate-50 reveal">
     <div class="max-w-7xl mx-auto">
       <div class="text-center max-w-3xl mx-auto mb-16 md:mb-24">
-        <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">Service Portfolio</span>
-        <h2 class="text-3xl md:text-5xl font-extrabold text-corporate-900 mt-2 mb-4">Precision-Guided Services</h2>
-        <p class="text-slate-600 text-base">Comprehensive legal advisory, precise direct-indirect tax compliance, and rigorous auditing parameters tailored to modern business requirements.</p>
+        <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">{{SERVICES_SECTION_BADGE}}</span>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-corporate-900 mt-2 mb-4">{{SERVICES_SECTION_HEADLINE}}</h2>
+        <p class="text-slate-600 text-base">{{SERVICES_SECTION_SUBHEADLINE}}</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -281,11 +281,11 @@
             <div class="p-3 bg-blue-50 text-blue-700 rounded-xl w-12 h-12 flex items-center justify-center mb-6">
               <i data-lucide="scale" class="w-6 h-6"></i>
             </div>
-            <h3 class="text-xl font-bold text-corporate-900 mb-3">Tax Planning</h3>
-            <p class="text-slate-500 text-sm leading-relaxed mb-6">Optimized commercial structuring and deep statutory evaluations designed to maximize business margins while remaining fully aligned with tax regulations.</p>
+            <h3 class="text-xl font-bold text-corporate-900 mb-3">{{SERVICE_1_TITLE}}</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">{{SERVICE_1_DESC}}</p>
           </div>
           <a href="#contact" class="inline-flex items-center text-xs font-bold text-corporate-900 hover:text-blue-700 transition-colors">
-            Consult Service <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
+            {{SERVICES_GENERAL_CTA_TEXT}} <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
           </a>
         </div>
 
@@ -295,11 +295,11 @@
             <div class="p-3 bg-blue-50 text-blue-700 rounded-xl w-12 h-12 flex items-center justify-center mb-6">
               <i data-lucide="file-text" class="w-6 h-6"></i>
             </div>
-            <h3 class="text-xl font-bold text-corporate-900 mb-3">Income Tax Filing</h3>
-            <p class="text-slate-500 text-sm leading-relaxed mb-6">Accurate computation, validation, and on-time processing of corporate and individual direct tax returns to minimize query potential.</p>
+            <h3 class="text-xl font-bold text-corporate-900 mb-3">{{SERVICE_2_TITLE}}</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">{{SERVICE_2_DESC}}</p>
           </div>
           <a href="#contact" class="inline-flex items-center text-xs font-bold text-corporate-900 hover:text-blue-700 transition-colors">
-            Consult Service <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
+            {{SERVICES_GENERAL_CTA_TEXT}} <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
           </a>
         </div>
 
@@ -309,11 +309,11 @@
             <div class="p-3 bg-blue-50 text-blue-700 rounded-xl w-12 h-12 flex items-center justify-center mb-6">
               <i data-lucide="layers" class="w-6 h-6"></i>
             </div>
-            <h3 class="text-xl font-bold text-corporate-900 mb-3">GST Registration & Compliance</h3>
-            <p class="text-slate-500 text-sm leading-relaxed mb-6">Complete management of multi-jurisdictional GST registers, direct filing routines, regular transaction reconciliations, and audit representation.</p>
+            <h3 class="text-xl font-bold text-corporate-900 mb-3">{{SERVICE_3_TITLE}}</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">{{SERVICE_3_DESC}}</p>
           </div>
           <a href="#contact" class="inline-flex items-center text-xs font-bold text-corporate-900 hover:text-blue-700 transition-colors">
-            Consult Service <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
+            {{SERVICES_GENERAL_CTA_TEXT}} <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
           </a>
         </div>
 
@@ -323,11 +323,11 @@
             <div class="p-3 bg-blue-50 text-blue-700 rounded-xl w-12 h-12 flex items-center justify-center mb-6">
               <i data-lucide="book-open" class="w-6 h-6"></i>
             </div>
-            <h3 class="text-xl font-bold text-corporate-900 mb-3">Accounting & Bookkeeping</h3>
-            <p class="text-slate-500 text-sm leading-relaxed mb-6">Streamlined electronic accounting models producing ready balance sheets, dynamic statements, and complete ledger records.</p>
+            <h3 class="text-xl font-bold text-corporate-900 mb-3">{{SERVICE_4_TITLE}}</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">{{SERVICE_4_DESC}}</p>
           </div>
           <a href="#contact" class="inline-flex items-center text-xs font-bold text-corporate-900 hover:text-blue-700 transition-colors">
-            Consult Service <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
+            {{SERVICES_GENERAL_CTA_TEXT}} <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
           </a>
         </div>
 
@@ -337,11 +337,11 @@
             <div class="p-3 bg-blue-50 text-blue-700 rounded-xl w-12 h-12 flex items-center justify-center mb-6">
               <i data-lucide="shield-check" class="w-6 h-6"></i>
             </div>
-            <h3 class="text-xl font-bold text-corporate-900 mb-3">Audit & Assurance</h3>
-            <p class="text-slate-500 text-sm leading-relaxed mb-6">Independent, objective, and legally sound validation of systems, metrics, and operations according to prevailing ICAI standards.</p>
+            <h3 class="text-xl font-bold text-corporate-900 mb-3">{{SERVICE_5_TITLE}}</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">{{SERVICE_5_DESC}}</p>
           </div>
           <a href="#contact" class="inline-flex items-center text-xs font-bold text-corporate-900 hover:text-blue-700 transition-colors">
-            Consult Service <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
+            {{SERVICES_GENERAL_CTA_TEXT}} <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
           </a>
         </div>
 
@@ -351,11 +351,11 @@
             <div class="p-3 bg-blue-50 text-blue-700 rounded-xl w-12 h-12 flex items-center justify-center mb-6">
               <i data-lucide="rocket" class="w-6 h-6"></i>
             </div>
-            <h3 class="text-xl font-bold text-corporate-900 mb-3">Startup Advisory</h3>
-            <p class="text-slate-500 text-sm leading-relaxed mb-6">Comprehensive services covering incorporation, structural advisory, capitalization models, regulatory registration, and tax filings.</p>
+            <h3 class="text-xl font-bold text-corporate-900 mb-3">{{SERVICE_6_TITLE}}</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">{{SERVICE_6_DESC}}</p>
           </div>
           <a href="#contact" class="inline-flex items-center text-xs font-bold text-corporate-900 hover:text-blue-700 transition-colors">
-            Consult Service <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
+            {{SERVICES_GENERAL_CTA_TEXT}} <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
           </a>
         </div>
 
@@ -365,11 +365,11 @@
             <div class="p-3 bg-blue-50 text-blue-700 rounded-xl w-12 h-12 flex items-center justify-center mb-6">
               <i data-lucide="briefcase" class="w-6 h-6"></i>
             </div>
-            <h3 class="text-xl font-bold text-corporate-900 mb-3">Corporate Consulting</h3>
-            <p class="text-slate-500 text-sm leading-relaxed mb-6">Business structuring and governance policies aligned with corporate expansion, investments, and transactional targets.</p>
+            <h3 class="text-xl font-bold text-corporate-900 mb-3">{{SERVICE_7_TITLE}}</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">{{SERVICE_7_DESC}}</p>
           </div>
           <a href="#contact" class="inline-flex items-center text-xs font-bold text-corporate-900 hover:text-blue-700 transition-colors">
-            Consult Service <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
+            {{SERVICES_GENERAL_CTA_TEXT}} <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
           </a>
         </div>
 
@@ -379,11 +379,11 @@
             <div class="p-3 bg-blue-50 text-blue-700 rounded-xl w-12 h-12 flex items-center justify-center mb-6">
               <i data-lucide="building-2" class="w-6 h-6"></i>
             </div>
-            <h3 class="text-xl font-bold text-corporate-900 mb-3">ROC Compliance</h3>
-            <p class="text-slate-500 text-sm leading-relaxed mb-6">Professional representation and legal corporate filing processes under the Ministry of Corporate Affairs requirements.</p>
+            <h3 class="text-xl font-bold text-corporate-900 mb-3">{{SERVICE_8_TITLE}}</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">{{SERVICE_8_DESC}}</p>
           </div>
           <a href="#contact" class="inline-flex items-center text-xs font-bold text-corporate-900 hover:text-blue-700 transition-colors">
-            Consult Service <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
+            {{SERVICES_GENERAL_CTA_TEXT}} <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
           </a>
         </div>
 
@@ -393,11 +393,11 @@
             <div class="p-3 bg-blue-50 text-blue-700 rounded-xl w-12 h-12 flex items-center justify-center mb-6">
               <i data-lucide="globe" class="w-6 h-6"></i>
             </div>
-            <h3 class="text-xl font-bold text-corporate-900 mb-3">Regulatory Compliance</h3>
-            <p class="text-slate-500 text-sm leading-relaxed mb-6">Integrated solutions for complex labor, financial, structural, and state-level registration legalities.</p>
+            <h3 class="text-xl font-bold text-corporate-900 mb-3">{{SERVICE_9_TITLE}}</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">{{SERVICE_9_DESC}}</p>
           </div>
           <a href="#contact" class="inline-flex items-center text-xs font-bold text-corporate-900 hover:text-blue-700 transition-colors">
-            Consult Service <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
+            {{SERVICES_GENERAL_CTA_TEXT}} <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
           </a>
         </div>
 
@@ -411,18 +411,18 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
         <div class="lg:col-span-5 space-y-6">
-          <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">The Firm Distinction</span>
-          <h2 class="text-3xl md:text-4xl font-extrabold text-corporate-900">Why Modern Ventures Partner With Us</h2>
+          <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">{{WHY_US_SECTION_BADGE}}</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-corporate-900">{{WHY_US_SECTION_HEADLINE}}</h2>
           <p class="text-slate-600 text-base leading-relaxed">
-            Financial compliance is more than just calculations; it is about building trust. Our services focus on maintaining high standards of data security, compliance tracking, and reliable advisory services.
+            {{WHY_US_SECTION_SUBHEADLINE}}
           </p>
           <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 flex items-start space-x-4">
             <span class="p-3 bg-emerald-50 text-emerald-800 rounded-xl">
               <i data-lucide="lock" class="w-6 h-6"></i>
             </span>
             <div>
-              <h4 class="text-sm font-bold text-corporate-900">Confidentiality Assured</h4>
-              <p class="text-xs text-slate-500 mt-1">We maintain the highest security standards for all client financial documents, records, and communication.</p>
+              <h4 class="text-sm font-bold text-corporate-900">{{WHY_US_FEATURE_MAIN_TITLE}}</h4>
+              <p class="text-xs text-slate-500 mt-1">{{WHY_US_FEATURE_MAIN_DESC}}</p>
             </div>
           </div>
         </div>
@@ -433,32 +433,32 @@
             <span class="p-2.5 bg-white text-slate-800 shadow-sm rounded-xl inline-block">
               <i data-lucide="user-check" class="w-5 h-5"></i>
             </span>
-            <h3 class="text-lg font-bold text-corporate-900">Experienced Professionals</h3>
-            <p class="text-xs text-slate-500 leading-relaxed">Continuous analysis of shifting central, direct, and indirect tax codes to optimize operations.</p>
+            <h3 class="text-lg font-bold text-corporate-900">{{WHY_US_FEATURE_1_TITLE}}</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">{{WHY_US_FEATURE_1_DESC}}</p>
           </div>
 
           <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 space-y-4">
             <span class="p-2.5 bg-white text-slate-800 shadow-sm rounded-xl inline-block">
               <i data-lucide="clock" class="w-5 h-5"></i>
             </span>
-            <h3 class="text-lg font-bold text-corporate-900">Timely Compliance</h3>
-            <p class="text-xs text-slate-500 leading-relaxed">Robust scheduled tracking matrices eliminate delayed document penalties completely.</p>
+            <h3 class="text-lg font-bold text-corporate-900">{{WHY_US_FEATURE_2_TITLE}}</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">{{WHY_US_FEATURE_2_DESC}}</p>
           </div>
 
           <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 space-y-4">
             <span class="p-2.5 bg-white text-slate-800 shadow-sm rounded-xl inline-block">
               <i data-lucide="sliders" class="w-5 h-5"></i>
             </span>
-            <h3 class="text-lg font-bold text-corporate-900">Personalized Advisory</h3>
-            <p class="text-xs text-slate-500 leading-relaxed">Tailored tax advisory plans matching your operational flow and commercial goals.</p>
+            <h3 class="text-lg font-bold text-corporate-900">{{WHY_US_FEATURE_3_TITLE}}</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">{{WHY_US_FEATURE_3_DESC}}</p>
           </div>
 
           <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 space-y-4">
             <span class="p-2.5 bg-white text-slate-800 shadow-sm rounded-xl inline-block">
               <i data-lucide="cpu" class="w-5 h-5"></i>
             </span>
-            <h3 class="text-lg font-bold text-corporate-900">Technology Driven</h3>
-            <p class="text-xs text-slate-500 leading-relaxed">We utilize modern digital accounting systems for simplified document transfer.</p>
+            <h3 class="text-lg font-bold text-corporate-900">{{WHY_US_FEATURE_4_TITLE}}</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">{{WHY_US_FEATURE_4_DESC}}</p>
           </div>
 
         </div>
@@ -474,61 +474,61 @@
     
     <div class="max-w-7xl mx-auto relative z-10">
       <div class="max-w-3xl mb-16">
-        <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">Expertise Across Sectors</span>
-        <h2 class="text-3xl md:text-5xl font-extrabold text-white mt-2 mb-4">Tailored Sector Intelligence</h2>
-        <p class="text-slate-400 text-sm md:text-base">We provide tax advisory and auditing services across a range of business sizes and industries.</p>
+        <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">{{INDUSTRIES_SECTION_BADGE}}</span>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-white mt-2 mb-4">{{INDUSTRIES_SECTION_HEADLINE}}</h2>
+        <p class="text-slate-400 text-sm md:text-base">{{INDUSTRIES_SECTION_SUBHEADLINE}}</p>
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
         
         <div class="p-6 bg-white/5 border border-white/10 rounded-2xl flex flex-col justify-between hover:bg-white/10 transition-all">
           <i data-lucide="rocket" class="w-6 h-6 text-slate-300 mb-8"></i>
-          <span class="text-sm font-bold">Startups</span>
+          <span class="text-sm font-bold">{{INDUSTRY_1_NAME}}</span>
         </div>
 
         <div class="p-6 bg-white/5 border border-white/10 rounded-2xl flex flex-col justify-between hover:bg-white/10 transition-all">
           <i data-lucide="store" class="w-6 h-6 text-slate-300 mb-8"></i>
-          <span class="text-sm font-bold">Small Businesses</span>
+          <span class="text-sm font-bold">{{INDUSTRY_2_NAME}}</span>
         </div>
 
         <div class="p-6 bg-white/5 border border-white/10 rounded-2xl flex flex-col justify-between hover:bg-white/10 transition-all">
           <i data-lucide="building" class="w-6 h-6 text-slate-300 mb-8"></i>
-          <span class="text-sm font-bold">Pvt Ltd Companies</span>
+          <span class="text-sm font-bold">{{INDUSTRY_3_NAME}}</span>
         </div>
 
         <div class="p-6 bg-white/5 border border-white/10 rounded-2xl flex flex-col justify-between hover:bg-white/10 transition-all">
           <i data-lucide="briefcase" class="w-6 h-6 text-slate-300 mb-8"></i>
-          <span class="text-sm font-bold">LLPs</span>
+          <span class="text-sm font-bold">{{INDUSTRY_4_NAME}}</span>
         </div>
 
         <div class="p-6 bg-white/5 border border-white/10 rounded-2xl flex flex-col justify-between hover:bg-white/10 transition-all">
           <i data-lucide="users" class="w-6 h-6 text-slate-300 mb-8"></i>
-          <span class="text-sm font-bold">Professionals</span>
+          <span class="text-sm font-bold">{{INDUSTRY_5_NAME}}</span>
         </div>
 
         <div class="p-6 bg-white/5 border border-white/10 rounded-2xl flex flex-col justify-between hover:bg-white/10 transition-all">
           <i data-lucide="shopping-cart" class="w-6 h-6 text-slate-300 mb-8"></i>
-          <span class="text-sm font-bold">Retail Businesses</span>
+          <span class="text-sm font-bold">{{INDUSTRY_6_NAME}}</span>
         </div>
 
         <div class="p-6 bg-white/5 border border-white/10 rounded-2xl flex flex-col justify-between hover:bg-white/10 transition-all">
           <i data-lucide="activity" class="w-6 h-6 text-slate-300 mb-8"></i>
-          <span class="text-sm font-bold">Healthcare</span>
+          <span class="text-sm font-bold">{{INDUSTRY_7_NAME}}</span>
         </div>
 
         <div class="p-6 bg-white/5 border border-white/10 rounded-2xl flex flex-col justify-between hover:bg-white/10 transition-all">
           <i data-lucide="coffee" class="w-6 h-6 text-slate-300 mb-8"></i>
-          <span class="text-sm font-bold">Hospitality</span>
+          <span class="text-sm font-bold">{{INDUSTRY_8_NAME}}</span>
         </div>
 
         <div class="p-6 bg-white/5 border border-white/10 rounded-2xl flex flex-col justify-between hover:bg-white/10 transition-all">
           <i data-lucide="monitor" class="w-6 h-6 text-slate-300 mb-8"></i>
-          <span class="text-sm font-bold">IT Companies</span>
+          <span class="text-sm font-bold">{{INDUSTRY_9_NAME}}</span>
         </div>
 
         <div class="p-6 bg-white/5 border border-white/10 rounded-2xl flex flex-col justify-between hover:bg-white/10 transition-all">
           <i data-lucide="factory" class="w-6 h-6 text-slate-300 mb-8"></i>
-          <span class="text-sm font-bold">Manufacturing</span>
+          <span class="text-sm font-bold">{{INDUSTRY_10_NAME}}</span>
         </div>
 
       </div>
@@ -539,9 +539,9 @@
   <section id="process" class="py-20 md:py-32 px-6 md:px-12 bg-white reveal">
     <div class="max-w-7xl mx-auto">
       <div class="text-center max-w-2xl mx-auto mb-16 md:mb-24">
-        <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">The Method</span>
-        <h2 class="text-3xl md:text-4xl font-extrabold text-corporate-900 mt-2 mb-4">A Systematic Advisory Flow</h2>
-        <p class="text-slate-600 text-sm md:text-base">An organized five-step process designed to simplify compliance and structure your financial planning.</p>
+        <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">{{PROCESS_SECTION_BADGE}}</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-corporate-900 mt-2 mb-4">{{PROCESS_SECTION_HEADLINE}}</h2>
+        <p class="text-slate-600 text-sm md:text-base">{{PROCESS_SECTION_SUBHEADLINE}}</p>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 relative z-10">
@@ -551,9 +551,9 @@
           <div class="text-5xl font-extrabold text-slate-100">01</div>
           <div class="flex items-center space-x-3">
             <span class="w-2.5 h-2.5 rounded-full bg-slate-900"></span>
-            <h4 class="text-base font-bold text-corporate-900">Consultation</h4>
+            <h4 class="text-base font-bold text-corporate-900">{{PROCESS_STEP_1_TITLE}}</h4>
           </div>
-          <p class="text-xs text-slate-500 leading-relaxed">Initial discussion to evaluate your operational profile, direct compliance needs, and commercial structural goals.</p>
+          <p class="text-xs text-slate-500 leading-relaxed">{{PROCESS_STEP_1_DESC}}</p>
         </div>
 
         <!-- Step 2 -->
@@ -561,9 +561,9 @@
           <div class="text-5xl font-extrabold text-slate-100">02</div>
           <div class="flex items-center space-x-3">
             <span class="w-2.5 h-2.5 rounded-full bg-slate-400"></span>
-            <h4 class="text-base font-bold text-corporate-900">Assessment</h4>
+            <h4 class="text-base font-bold text-corporate-900">{{PROCESS_STEP_2_TITLE}}</h4>
           </div>
-          <p class="text-xs text-slate-500 leading-relaxed">Detailed analysis of historical files, ledger histories, tax filings, and potential compliance liabilities.</p>
+          <p class="text-xs text-slate-500 leading-relaxed">{{PROCESS_STEP_2_DESC}}</p>
         </div>
 
         <!-- Step 3 -->
@@ -571,9 +571,9 @@
           <div class="text-5xl font-extrabold text-slate-100">03</div>
           <div class="flex items-center space-x-3">
             <span class="w-2.5 h-2.5 rounded-full bg-slate-400"></span>
-            <h4 class="text-base font-bold text-corporate-900">Strategy</h4>
+            <h4 class="text-base font-bold text-corporate-900">{{PROCESS_STEP_3_TITLE}}</h4>
           </div>
-          <p class="text-xs text-slate-500 leading-relaxed">Structuring a customized tax optimization, compliance roadmap, and financial verification process.</p>
+          <p class="text-xs text-slate-500 leading-relaxed">{{PROCESS_STEP_3_DESC}}</p>
         </div>
 
         <!-- Step 4 -->
@@ -581,9 +581,9 @@
           <div class="text-5xl font-extrabold text-slate-100">04</div>
           <div class="flex items-center space-x-3">
             <span class="w-2.5 h-2.5 rounded-full bg-slate-400"></span>
-            <h4 class="text-base font-bold text-corporate-900">Execution</h4>
+            <h4 class="text-base font-bold text-corporate-900">{{PROCESS_STEP_4_TITLE}}</h4>
           </div>
-          <p class="text-xs text-slate-500 leading-relaxed">Timely execution and filing of required documents, tax returns, and corporate reports.</p>
+          <p class="text-xs text-slate-500 leading-relaxed">{{PROCESS_STEP_4_DESC}}</p>
         </div>
 
         <!-- Step 5 -->
@@ -591,9 +591,9 @@
           <div class="text-5xl font-extrabold text-slate-100">05</div>
           <div class="flex items-center space-x-3">
             <span class="w-2.5 h-2.5 rounded-full bg-emerald-600"></span>
-            <h4 class="text-base font-bold text-corporate-900">Ongoing Support</h4>
+            <h4 class="text-base font-bold text-corporate-900">{{PROCESS_STEP_5_TITLE}}</h4>
           </div>
-          <p class="text-xs text-slate-500 leading-relaxed">Regular updates, monitoring, and advisory support for changing state or federal regulations.</p>
+          <p class="text-xs text-slate-500 leading-relaxed">{{PROCESS_STEP_5_DESC}}</p>
         </div>
 
       </div>
@@ -605,8 +605,8 @@
     <div class="max-w-7xl mx-auto">
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
         <div>
-          <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">Client Feedback</span>
-          <h2 class="text-3xl md:text-4xl font-extrabold text-corporate-900 mt-2">Client Testimonials</h2>
+          <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">{{TESTIMONIALS_SECTION_BADGE}}</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-corporate-900 mt-2">{{TESTIMONIALS_SECTION_HEADLINE}}</h2>
         </div>
         <div class="flex items-center space-x-3 mt-4 md:mt-0">
           <button id="prev-test" class="p-3 bg-white border border-slate-200 hover:border-slate-400 text-slate-800 rounded-full transition-all" aria-label="Previous Testimonial">
@@ -634,12 +634,12 @@
                   <i data-lucide="star" class="w-4 h-4 fill-current"></i>
                 </div>
                 <p class="text-slate-600 text-sm leading-relaxed mb-8 italic">
-                  "Ashwin C Nair & Co. guided us through our private limited company registration and tax filing processes. Highly recommended for tax advisory and corporate planning in Trivandrum."
+                  "{{TESTIMONIAL_1_QUOTE}}"
                 </p>
               </div>
               <div class="border-t border-slate-100 pt-4">
-                <h4 class="font-bold text-sm text-corporate-900">Arun J.</h4>
-                <p class="text-[11px] text-slate-500">Managing Director, TechVentures Kerala</p>
+                <h4 class="font-bold text-sm text-corporate-900">{{TESTIMONIAL_1_NAME}}</h4>
+                <p class="text-[11px] text-slate-500">{{TESTIMONIAL_1_TITLE}}</p>
               </div>
             </div>
           </div>
@@ -656,12 +656,12 @@
                   <i data-lucide="star" class="w-4 h-4 fill-current"></i>
                 </div>
                 <p class="text-slate-600 text-sm leading-relaxed mb-8 italic">
-                  "The firm handles our direct compliance, GST returns, and internal audit procedures. Their thoroughness is impressive, ensuring accurate returns every month."
+                  "{{TESTIMONIAL_2_QUOTE}}"
                 </p>
               </div>
               <div class="border-t border-slate-100 pt-4">
-                <h4 class="font-bold text-sm text-corporate-900">Sona Mathew</h4>
-                <p class="text-[11px] text-slate-500">Co-Founder, BlueCraft Design</p>
+                <h4 class="font-bold text-sm text-corporate-900">{{TESTIMONIAL_2_NAME}}</h4>
+                <p class="text-[11px] text-slate-500">{{TESTIMONIAL_2_TITLE}}</p>
               </div>
             </div>
           </div>
@@ -678,12 +678,12 @@
                   <i data-lucide="star" class="w-4 h-4 fill-current"></i>
                 </div>
                 <p class="text-slate-600 text-sm leading-relaxed mb-8 italic">
-                  "I engaged Ashwin C Nair & Co for personal wealth tax advisory. Their approach is direct, logical, and fully aligned with current regulatory codes."
+                  "{{TESTIMONIAL_3_QUOTE}}"
                 </p>
               </div>
               <div class="border-t border-slate-100 pt-4">
-                <h4 class="font-bold text-sm text-corporate-900">Dr. Rajesh Kumar</h4>
-                <p class="text-[11px] text-slate-500">Consultant Cardiologist</p>
+                <h4 class="font-bold text-sm text-corporate-900">{{TESTIMONIAL_3_NAME}}</h4>
+                <p class="text-[11px] text-slate-500">{{TESTIMONIAL_3_TITLE}}</p>
               </div>
             </div>
           </div>
@@ -700,12 +700,12 @@
                   <i data-lucide="star" class="w-4 h-4 fill-current"></i>
                 </div>
                 <p class="text-slate-600 text-sm leading-relaxed mb-8 italic">
-                  "Their attention to detail with corporate ROC requirements and filings has saved our firm significant management time. Outstanding advisors."
+                  "{{TESTIMONIAL_4_QUOTE}}"
                 </p>
               </div>
               <div class="border-t border-slate-100 pt-4">
-                <h4 class="font-bold text-sm text-corporate-900">Deepak Nair</h4>
-                <p class="text-[11px] text-slate-500">COO, Apex Logistics Services</p>
+                <h4 class="font-bold text-sm text-corporate-900">{{TESTIMONIAL_4_NAME}}</h4>
+                <p class="text-[11px] text-slate-500">{{TESTIMONIAL_4_TITLE}}</p>
               </div>
             </div>
           </div>
@@ -719,9 +719,9 @@
   <section id="faq" class="py-20 md:py-32 px-6 md:px-12 bg-white reveal">
     <div class="max-w-4xl mx-auto">
       <div class="text-center max-w-2xl mx-auto mb-16">
-        <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">Information Bureau</span>
-        <h2 class="text-3xl md:text-4xl font-extrabold text-corporate-900 mt-2 mb-4">Frequently Asked Questions</h2>
-        <p class="text-slate-500 text-sm md:text-base">Quick guides and transparent answers regarding our service delivery models.</p>
+        <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">{{FAQ_SECTION_BADGE}}</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-corporate-900 mt-2 mb-4">{{FAQ_SECTION_HEADLINE}}</h2>
+        <p class="text-slate-500 text-sm md:text-base">{{FAQ_SECTION_SUBHEADLINE}}</p>
       </div>
 
       <div class="space-y-4">
@@ -729,12 +729,12 @@
         <!-- Accordion 1 -->
         <div class="border border-slate-200 rounded-xl overflow-hidden accordion-item transition-all duration-300">
           <button class="w-full flex items-center justify-between p-6 text-left font-bold text-slate-800 focus:outline-none" onclick="toggleAccordion(this)">
-            <span>How do I register a business?</span>
+            <span>{{FAQ_1_QUESTION}}</span>
             <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 accordion-icon transition-transform"></i>
           </button>
           <div class="accordion-content px-6 bg-slate-50">
             <p class="py-4 text-xs text-slate-600 leading-relaxed">
-              We help you determine the most suitable business structure (such as LLC, LLP, or Private Limited) based on your funding goals. We handle the complete process, including getting your name approved, obtaining digital signature certificates (DSC), preparing the Memorandum of Association, and securing final incorporation certificates from the Registrar of Companies (ROC).
+              {{FAQ_1_ANSWER}}
             </p>
           </div>
         </div>
@@ -742,12 +742,12 @@
         <!-- Accordion 2 -->
         <div class="border border-slate-200 rounded-xl overflow-hidden accordion-item transition-all duration-300">
           <button class="w-full flex items-center justify-between p-6 text-left font-bold text-slate-800 focus:outline-none" onclick="toggleAccordion(this)">
-            <span>Do you provide GST services?</span>
+            <span>{{FAQ_2_QUESTION}}</span>
             <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 accordion-icon transition-transform"></i>
           </button>
           <div class="accordion-content px-6 bg-slate-50">
             <p class="py-4 text-xs text-slate-600 leading-relaxed">
-              Yes, we provide end-to-end GST support, including initial registration, monthly and quarterly filing (GSTR-1, GSTR-3B), annual reconciliations (GSTR-9), and input tax credit optimization and audits.
+              {{FAQ_2_ANSWER}}
             </p>
           </div>
         </div>
@@ -755,12 +755,12 @@
         <!-- Accordion 3 -->
         <div class="border border-slate-200 rounded-xl overflow-hidden accordion-item transition-all duration-300">
           <button class="w-full flex items-center justify-between p-6 text-left font-bold text-slate-800 focus:outline-none" onclick="toggleAccordion(this)">
-            <span>Can you help with tax planning?</span>
+            <span>{{FAQ_3_QUESTION}}</span>
             <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 accordion-icon transition-transform"></i>
           </button>
           <div class="accordion-content px-6 bg-slate-50">
             <p class="py-4 text-xs text-slate-600 leading-relaxed">
-              Absolutely. Our team designs long-term direct and indirect tax strategies that align your commercial actions with statutory deductions, exemptions, and investment credits, helping to manage your tax burden efficiently.
+              {{FAQ_3_ANSWER}}
             </p>
           </div>
         </div>
@@ -768,12 +768,12 @@
         <!-- Accordion 4 -->
         <div class="border border-slate-200 rounded-xl overflow-hidden accordion-item transition-all duration-300">
           <button class="w-full flex items-center justify-between p-6 text-left font-bold text-slate-800 focus:outline-none" onclick="toggleAccordion(this)">
-            <span>Do you assist startups?</span>
+            <span>{{FAQ_4_QUESTION}}</span>
             <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 accordion-icon transition-transform"></i>
           </button>
           <div class="accordion-content px-6 bg-slate-50">
             <p class="py-4 text-xs text-slate-600 leading-relaxed">
-              Yes, startup advisory is a key practice area. We help early-stage ventures register for Kerala Startup Mission initiatives, file for DPIIT recognition, secure structural certifications, and manage regulatory compliance for investors.
+              {{FAQ_4_ANSWER}}
             </p>
           </div>
         </div>
@@ -781,12 +781,12 @@
         <!-- Accordion 5 -->
         <div class="border border-slate-200 rounded-xl overflow-hidden accordion-item transition-all duration-300">
           <button class="w-full flex items-center justify-between p-6 text-left font-bold text-slate-800 focus:outline-none" onclick="toggleAccordion(this)">
-            <span>How often should accounts be audited?</span>
+            <span>{{FAQ_5_QUESTION}}</span>
             <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 accordion-icon transition-transform"></i>
           </button>
           <div class="accordion-content px-6 bg-slate-50">
             <p class="py-4 text-xs text-slate-600 leading-relaxed">
-              Statutory audits are typically required annually under the Companies Act and Income Tax Act (when exceeding legal transaction limits). However, we recommend regular internal or management reviews to maintain clear operational records throughout the year.
+              {{FAQ_5_ANSWER}}
             </p>
           </div>
         </div>
@@ -804,13 +804,13 @@
         <div class="lg:col-span-7 bg-white p-8 md:p-12 rounded-3xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
           <div class="space-y-6">
             <div>
-              <span class="text-xs font-bold text-slate-400 tracking-widest uppercase font-mono">Consultation Office</span>
-              <h2 class="text-3xl font-extrabold text-corporate-900 mt-2">Connect With An Expert Advisor</h2>
-              <p class="text-slate-500 text-xs md:text-sm mt-1">Book an appointment or submit an inquiry, and a senior consultant will reach out shortly.</p>
+              <span class="text-xs font-bold text-slate-400 tracking-widest uppercase font-mono">{{CONTACT_SECTION_BADGE}}</span>
+              <h2 class="text-3xl font-extrabold text-corporate-900 mt-2">{{CONTACT_SECTION_HEADLINE}}</h2>
+              <p class="text-slate-500 text-xs md:text-sm mt-1">{{CONTACT_SECTION_SUBHEADLINE}}</p>
             </div>
 
             <!-- Booking/Contact Form -->
-            <form action="#" class="space-y-4" onsubmit="event.preventDefault(); alert('Thank you for reaching out. A consultant from Ashwin C Nair & Co. will contact you shortly.');">
+            <form action="#" class="space-y-4" onsubmit="event.preventDefault(); alert('{{CONTACT_FORM_SUCCESS_MESSAGE}}');">
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label class="block text-[11px] font-bold text-slate-500 uppercase tracking-wide mb-1">Full Name</label>
@@ -830,11 +830,11 @@
                 <div>
                   <label class="block text-[11px] font-bold text-slate-500 uppercase tracking-wide mb-1">Service Required</label>
                   <select class="w-full bg-slate-50 border border-slate-200 focus:border-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none transition-all text-slate-600">
-                    <option>Corporate Tax Planning</option>
-                    <option>GST Compliance Audit</option>
-                    <option>Startup Registration</option>
-                    <option>Accounting & Bookkeeping</option>
-                    <option>Assurance & Statutory Audit</option>
+                    <option>{{CONTACT_FORM_DROPDOWN_OPTION_1}}</option>
+                    <option>{{CONTACT_FORM_DROPDOWN_OPTION_2}}</option>
+                    <option>{{CONTACT_FORM_DROPDOWN_OPTION_3}}</option>
+                    <option>{{CONTACT_FORM_DROPDOWN_OPTION_4}}</option>
+                    <option>{{CONTACT_FORM_DROPDOWN_OPTION_5}}</option>
                   </select>
                 </div>
               </div>
@@ -845,30 +845,30 @@
               </div>
 
               <button type="submit" class="w-full btn-primary text-sm font-bold uppercase py-4 rounded-xl tracking-wide">
-                Submit Consultation Request
+                {{CONTACT_FORM_SUBMIT_CTA}}
               </button>
             </form>
           </div>
 
           <!-- Phone & WhatsApp Immediate Contact Rows -->
           <div class="mt-8 pt-8 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <a href="tel:+917012027628" class="flex items-center space-x-3 p-4 bg-slate-50 border border-slate-100 rounded-xl hover:border-slate-300 transition-all">
+            <a href="tel:{{BUSINESS_PHONE_UNFORMATTED}}" class="flex items-center space-x-3 p-4 bg-slate-50 border border-slate-100 rounded-xl hover:border-slate-300 transition-all">
               <span class="p-2.5 bg-blue-100 text-blue-800 rounded-lg">
                 <i data-lucide="phone-call" class="w-5 h-5"></i>
               </span>
               <div>
-                <p class="text-[10px] text-slate-400 uppercase font-bold">Call Senior Partner</p>
-                <p class="text-sm font-bold text-slate-800">+91 70120 27628</p>
+                <p class="text-[10px] text-slate-400 uppercase font-bold">{{CONTACT_PHONE_LABEL}}</p>
+                <p class="text-sm font-bold text-slate-800">{{BUSINESS_PHONE_FORMATTED}}</p>
               </div>
             </a>
             
-            <a href="https://wa.me/917012027628" target="_blank" class="flex items-center space-x-3 p-4 bg-slate-50 border border-slate-100 rounded-xl hover:border-emerald-300 transition-all">
+            <a href="https://wa.me/{{BUSINESS_WHATSAPP_UNFORMATTED}}" target="_blank" class="flex items-center space-x-3 p-4 bg-slate-50 border border-slate-100 rounded-xl hover:border-emerald-300 transition-all">
               <span class="p-2.5 bg-emerald-100 text-emerald-800 rounded-lg">
                 <i data-lucide="message-square" class="w-5 h-5"></i>
               </span>
               <div>
-                <p class="text-[10px] text-slate-400 uppercase font-bold">WhatsApp Direct</p>
-                <p class="text-sm font-bold text-slate-800">Chat Instantly</p>
+                <p class="text-[10px] text-slate-400 uppercase font-bold">{{CONTACT_WHATSAPP_LABEL}}</p>
+                <p class="text-sm font-bold text-slate-800">{{CONTACT_WHATSAPP_ACTION_TEXT}}</p>
               </div>
             </a>
           </div>
@@ -879,42 +879,42 @@
         <div class="lg:col-span-5 flex flex-col space-y-6">
           
           <div class="bg-corporate-900 text-white p-8 rounded-3xl space-y-6 flex-1">
-            <h3 class="text-xl font-bold">Office Directory</h3>
+            <h3 class="text-xl font-bold">{{CONTACT_DIRECTORY_TITLE}}</h3>
             
             <div class="space-y-4">
               <div class="flex items-start space-x-3">
                 <i data-lucide="map-pin" class="w-5 h-5 text-slate-400 shrink-0 mt-1"></i>
                 <p class="text-xs text-slate-300 leading-relaxed">
-                  Ashwin C Nair & Co.<br>
-                  Palayam Airport Road, Near AKG Centre,<br>
-                  Kunnukuzhy, Thiruvananthapuram,<br>
-                  Kerala 695035
+                  {{BUSINESS_NAME}}<br>
+                  {{BUSINESS_ADDRESS_LINE_1}}<br>
+                  {{BUSINESS_ADDRESS_LINE_2}}<br>
+                  {{BUSINESS_ADDRESS_LINE_3}}
                 </p>
               </div>
 
               <div class="flex items-center space-x-3">
                 <i data-lucide="mail" class="w-5 h-5 text-slate-400"></i>
-                <p class="text-xs text-slate-300">office@ashwincnair.com</p>
+                <p class="text-xs text-slate-300">{{BUSINESS_EMAIL}}</p>
               </div>
 
               <div class="flex items-center space-x-3">
                 <i data-lucide="clock" class="w-5 h-5 text-slate-400"></i>
-                <p class="text-xs text-slate-300">Mon - Sat: 09:00 AM - 06:00 PM</p>
+                <p class="text-xs text-slate-300">{{BUSINESS_WORKING_HOURS}}</p>
               </div>
             </div>
 
             <!-- Embed Static Google Map Container with Fallback Direction link -->
             <div class="h-60 rounded-2xl overflow-hidden border border-white/10 relative">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m12!1m3!1m2!1s0x3b05b33d00000001%3A0xe543dc52f0b7df!2sAshwin%20C%20Nair%20%26%20Co!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+              <iframe src="{{BUSINESS_GOOGLE_MAPS_EMBED_URL}}" 
                 class="w-full h-full border-0 grayscale opacity-80 hover:opacity-100 transition-opacity" 
                 allowfullscreen="" 
                 loading="lazy" 
                 referrerpolicy="no-referrer-when-downgrade"
-                title="Ashwin C Nair & Co Location Map"></iframe>
+                title="Office Location Map"></iframe>
             </div>
             
-            <a href="https://maps.google.com/?q=Ashwin+C+Nair+Co+Palayam+Airport+Road+Trivandrum" target="_blank" class="w-full bg-white/10 hover:bg-white/20 text-center text-xs font-bold uppercase tracking-wider py-3 rounded-xl inline-block transition-all">
-              Open with Google Maps <i data-lucide="external-link" class="w-3.5 h-3.5 inline ml-1"></i>
+            <a href="{{BUSINESS_GOOGLE_MAPS_EXTERNAL_URL}}" target="_blank" class="w-full bg-white/10 hover:bg-white/20 text-center text-xs font-bold uppercase tracking-wider py-3 rounded-xl inline-block transition-all">
+              {{MAP_EXTERNAL_LINK_TEXT}} <i data-lucide="external-link" class="w-3.5 h-3.5 inline ml-1"></i>
             </a>
           </div>
 
@@ -930,33 +930,33 @@
       
       <div class="lg:col-span-5 space-y-6">
         <a href="#" class="flex flex-col select-none">
-          <span class="text-xl font-extrabold tracking-tight text-white uppercase">Ashwin C Nair & Co.</span>
-          <span class="text-[9px] tracking-widest text-slate-400 uppercase font-semibold">Chartered Accountants & Business Advisors</span>
+          <span class="text-xl font-extrabold tracking-tight text-white uppercase">{{BUSINESS_NAME}}</span>
+          <span class="text-[9px] tracking-widest text-slate-400 uppercase font-semibold">{{FOOTER_TAGLINE}}</span>
         </a>
         <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
-          A registered partnership firm of Chartered Accountants, structured under ICAI regulation codes to practice across the Republic of India.
+          {{FOOTER_ABOUT_COMPANY_TEXT}}
         </p>
       </div>
 
       <div class="lg:col-span-3 space-y-4">
-        <h4 class="text-xs font-bold text-slate-300 uppercase tracking-widest">Our Practice Areas</h4>
+        <h4 class="text-xs font-bold text-slate-300 uppercase tracking-widest">{{FOOTER_LINKS_TITLE_1}}</h4>
         <ul class="space-y-2 text-xs text-slate-400">
-          <li><a href="#services" class="hover:text-white transition-colors">Corporate Tax Structuring</a></li>
-          <li><a href="#services" class="hover:text-white transition-colors">Audit & Internal Assurance</a></li>
-          <li><a href="#services" class="hover:text-white transition-colors">GST Compliance Strategy</a></li>
-          <li><a href="#services" class="hover:text-white transition-colors">Startup DPIIT Advisory</a></li>
-          <li><a href="#services" class="hover:text-white transition-colors">Regulatory Filing & Incorporation</a></li>
+          <li><a href="#services" class="hover:text-white transition-colors">{{FOOTER_LINK_1}}</a></li>
+          <li><a href="#services" class="hover:text-white transition-colors">{{FOOTER_LINK_2}}</a></li>
+          <li><a href="#services" class="hover:text-white transition-colors">{{FOOTER_LINK_3}}</a></li>
+          <li><a href="#services" class="hover:text-white transition-colors">{{FOOTER_LINK_4}}</a></li>
+          <li><a href="#services" class="hover:text-white transition-colors">{{FOOTER_LINK_5}}</a></li>
         </ul>
       </div>
 
       <div class="lg:col-span-4 space-y-4">
-        <h4 class="text-xs font-bold text-slate-300 uppercase tracking-widest">Offices & Enquiries</h4>
+        <h4 class="text-xs font-bold text-slate-300 uppercase tracking-widest">{{FOOTER_LINKS_TITLE_2}}</h4>
         <p class="text-xs text-slate-400 leading-relaxed">
-          Palayam Airport Road, Near AKG Centre, Kunnukuzhy, Thiruvananthapuram, Kerala 695035
+          {{BUSINESS_ADDRESS_SINGLE_LINE}}
         </p>
         <p class="text-xs text-slate-400">
-          Phone: +91 70120 27628<br>
-          Email: office@ashwincnair.com
+          Phone: {{BUSINESS_PHONE_FORMATTED}}<br>
+          Email: {{BUSINESS_EMAIL}}
         </p>
       </div>
 
@@ -965,7 +965,7 @@
     <!-- Bottom Legals -->
     <div class="max-w-7xl mx-auto pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between text-[11px] text-slate-500">
       <div class="mb-4 md:mb-0">
-        &copy; <span id="current-year"></span> Ashwin C Nair & Co. All Rights Reserved. Designed in compliance with ICAI regulatory guidelines.
+        &copy; <span id="current-year"></span> {{FOOTER_COPYRIGHT_COMPANY_NAME}}. {{FOOTER_COPYRIGHT_SUFFIX}}
       </div>
       <div class="flex space-x-6">
         <a href="#about" class="hover:text-slate-300 transition-colors">Legal Disclaimer</a>
