@@ -1,0 +1,29 @@
+{
+  "businessName": "JUSTIN AND UNNI CHARTERED ACCOUNTANTS",
+  "category": "Certified public accountant",
+  "slug": "justin-and-unni-chartered-accountants",
+  "workflowVersion": "1.0.0",
+  "schemaVersion": "1.0.0",
+  "promptVersions": {
+    "research": "research-v1",
+    "businessJson": "business-json-v1",
+    "schemaMapper": "schema-mapper-v1"
+  },
+  "templateVersion": "1.0.0",
+  "generationEngine": "n8n Workflow 1 (Serper + OpenRouter + Gemini)",
+  "generationTimestamp": "2026-07-22T19:50:24.804Z",
+  "generationDurationMs": 1465563,
+  "confidenceScore": 35.22,
+  "googleSheetRowNumber": 2,
+  "gitCommitSha": null,
+  "geminiModel": "gemini-2.5-flash",
+  "openrouterModel": "meta-llama/llama-3.3-70b-instruct:free",
+  "generationStatus": "Generated",
+  "futureWebsiteUrl": "https://example.com/certified-public-accountant/justin-and-unni-chartered-accountants",
+  "aiMetrics": {
+    "generationDurationMs": 1465563,
+    "openrouterTokens": 2075,
+    "geminiTokens": 5088,
+    "estimatedCost": null
+  }
+}

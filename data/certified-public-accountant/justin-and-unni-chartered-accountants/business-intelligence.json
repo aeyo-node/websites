@@ -1,0 +1,156 @@
+{
+  "business": {
+    "name": "JUSTIN AND UNNI CHARTERED ACCOUNTANTS",
+    "category": "Certified public accountant",
+    "tagline": "",
+    "description": "Justin & Unni Chartered Accountants is a professional CA practice located on Pipeline Road in the Manchadi‑Moodu area of Thiruvananthapuram. The firm offers a range of financial services including accounting, auditing, taxation, and financial advisory. It is recognized as a trusted advisor for both individuals and enterprises seeking compliant and strategic financial solutions.",
+    "tone": "Professional, courteous, and client‑focused.",
+    "primaryColor": "",
+    "secondaryColor": ""
+  },
+  "seo": {
+    "title": "",
+    "description": "",
+    "keywords": []
+  },
+  "contact": {
+    "phone": "094004 30420",
+    "whatsapp": "",
+    "email": "",
+    "website": "",
+    "address": "Pipeline Road, Manchadi‑Moodu, Thiruvananthapuram, Kerala",
+    "city": "Thiruvananthapuram",
+    "state": "Kerala",
+    "country": "",
+    "workingHours": "",
+    "mapsEmbed": "",
+    "mapsUrl": ""
+  },
+  "hero": {
+    "badge": "",
+    "headline": "",
+    "subheadline": "",
+    "ctaPrimary": "",
+    "ctaSecondary": "",
+    "stats": [
+      {
+        "value": "4.4",
+        "label": "Overall Rating"
+      },
+      {
+        "value": "2,948",
+        "label": "Client Reviews"
+      }
+    ]
+  },
+  "about": {
+    "headline": "",
+    "paragraphs": [
+      "Justin & Unni Chartered Accountants is a professional CA practice located on Pipeline Road in the Manchadi‑Moodu area of Thiruvananthapuram. The firm offers a range of financial services including accounting, auditing, taxation, and financial advisory. It is recognized as a trusted advisor for both individuals and enterprises seeking compliant and strategic financial solutions."
+    ]
+  },
+  "services": [
+    {
+      "title": "Accounting & Bookkeeping",
+      "description": "",
+      "icon": ""
+    },
+    {
+      "title": "Auditing & Assurance",
+      "description": "",
+      "icon": ""
+    },
+    {
+      "title": "Taxation (Income Tax, GST, TDS)",
+      "description": "",
+      "icon": ""
+    },
+    {
+      "title": "Financial & Management Advisory",
+      "description": "",
+      "icon": ""
+    },
+    {
+      "title": "Compliance & Regulatory Consulting",
+      "description": "",
+      "icon": ""
+    }
+  ],
+  "whyChooseUs": [
+    {
+      "title": "Experienced Chartered Accountants",
+      "description": "Experienced Chartered Accountants with extensive industry knowledge"
+    },
+    {
+      "title": "Comprehensive Service Portfolio",
+      "description": "Comprehensive service portfolio covering all aspects of finance and taxation"
+    },
+    {
+      "title": "Strong Reputation",
+      "description": "Strong reputation backed by high client ratings and repeat business"
+    },
+    {
+      "title": "Regulatory Expertise",
+      "description": "Thorough understanding of local and national tax regulations"
+    },
+    {
+      "title": "Attention to Detail",
+      "description": "Attention to detail in audit and compliance work"
+    },
+    {
+      "title": "Friendly and Approachable Staff",
+      "description": "Friendly and approachable staff"
+    },
+    {
+      "title": "Timely and Cost-Effective Solutions",
+      "description": "Ability to provide timely and cost‑effective solutions"
+    }
+  ],
+  "industries": [],
+  "process": [],
+  "testimonials": [
+    {
+      "name": "",
+      "text": "Clients frequently praise the firm's professionalism, responsiveness, and accurate financial guidance. Positive mentions of personalized service and reliable advisory support.",
+      "rating": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What services do Justin & Unni Chartered Accountants offer?",
+      "answer": "Accounting, auditing, tax compliance (income tax, GST, TDS), and financial advisory services."
+    },
+    {
+      "question": "How can I contact the firm for a consultation?",
+      "answer": "Contact details are not listed in the provided search results."
+    },
+    {
+      "question": "Is the firm experienced in handling GST matters?",
+      "answer": "Yes, GST services are part of the firm's listed service portfolio."
+    },
+    {
+      "question": "Are there any client reviews that highlight the firm's reliability?",
+      "answer": "Reviewers frequently commend the firm's professionalism, accuracy, and timely advisory support, giving it a strong overall rating."
+    }
+  ],
+  "footer": {
+    "tagline": "",
+    "about": ""
+  },
+  "sources": {
+    "business.name": "Raw Business Data",
+    "business.category": "Raw Business Data",
+    "business.description": "Research Notes",
+    "business.tone": "Research Notes",
+    "contact.phone": "Raw Business Data",
+    "contact.address": "Research Notes",
+    "contact.city": "Raw Business Data",
+    "contact.state": "Research Notes",
+    "hero.stats": "Research Notes (Google Reviews)",
+    "about.paragraphs": "Research Notes",
+    "services": "Research Notes",
+    "whyChooseUs": "Research Notes",
+    "testimonials": "Research Notes (Google Reviews)",
+    "faqs": "Research Notes"
+  }
+}
