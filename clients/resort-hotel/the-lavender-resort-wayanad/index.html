@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lavender Resort Wayanad – Resort in Kerala, India</title>
+    
+    <!-- SEO Optimization -->
+    <meta name="description" content="The Lavender Resort Wayanad, located in Vaduvanchal, Kerala, offers a serene stay in the Wayanad region.">
+    <meta name="keywords" content="The Lavender Resort Wayanad, Resort Wayanad, Hotel in Vaduvanchal, Resort Kerala, Serene Stay Wayanad, Luxury Stay Wayanad">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="The Lavender Resort Wayanad – Resort in Kerala, India">
+    <meta property="og:description" content="The Lavender Resort Wayanad, located in Vaduvanchal, Kerala, offers a serene stay in the Wayanad region.">
+    <meta property="og:image" content="images/hero_cover.jpg">
+    <meta property="og:type" content="website">
+    
+    <!-- External Style Files -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Tailwind CSS Engine -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        luxury: {
+                            50: '#FCFBF9',
+                            100: '#FAF5EE',
+                            200: '#F4ECE1',
+                            300: '#E6DCCF',
+                            400: '#D5C4AF',
+                            500: '#AC8F65',
+                            600: '#8E734E',
+                            700: '#162E24', /* Emerald Accent */
+                            dark: '#151413'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- React & Babel Engines for Premium Interactive Features -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Schema.org Hotel Structured Data for Google search trust -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Hotel",
+      "name": "The Lavender Resort Wayanad",
+      "image": "images/hero_cover.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Vaduvanchal",
+        "addressLocality": "Vaduvanchal",
+        "addressRegion": "Kerala",
+        "postalCode": "673581",
+        "addressCountry": "IN"
+      },
+      "telephone": "",
+      "starRating": {
+        "@type": "Rating",
+        "ratingValue": "4.5"
+      },
+      "priceRange": "₹3,500 - ₹9,000",
+      "amenityFeature": [
+        "Free Wi-Fi",
+        "Air Conditioning",
+        "Premium Restaurant",
+        "Banquet Facilities",
+        "24x7 Room Service",
+        "Valet Parking"
+      ]
+    }
+    </script>
+</head>
+<body class="bg-[#FCFBF9] text-luxury-dark font-sans-luxury overflow-x-hidden antialiased">
+
+    <!-- Container for mounting React -->
+    <div id="root"></div>
+
+    <!-- Interactive React Application -->
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        // Custom Premium SVG Icons representing clean luxury
+        const Icons = {
+            Wifi: () => <svg className="w-5 h-5 text-luxury-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M8.25 15.625a3.75 3.75 0 117.5 0M4.5 11.875a8.25 8.25 0 1115 0m-18.75-3.75a12.75 12.75 0 1122.5 0M12 18.75h.007v.008H12v-.008z"/></svg>,
+            AC: () => <svg className="w-5 h-5 text-luxury-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h14.25c.621 0 1.125.504 1.125 1.125v14.25c0 .621-.504 1.125-1.125 1.125H4.875c-.621 0-1.125-.504-1.125-1.125V4.875zM12 9.75v4.5m-3-2.25h6m-11.25 6h16.5"/></svg>,
+            Utensils: () => <svg className="w-5 h-5 text-luxury-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zm0 9a.75.75 0 110-1.5.75.75 0 010 1.5zM21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>,
+            Bell: () => <svg className="w-5 h-5 text-luxury-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a3 3 0 11-5.714 0m5.714 0a3 3 0 11-5.714 0"/></svg>,
+            MapPin: () => <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>,
+            Phone: () => <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.387a12.035 12.035 0 01-7.108-7.108c-.115-.441.017-.928.393-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>,
+            Award: () => <svg className="w-5 h-5 text-luxury-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.504-1.125-1.125-1.125h-6.75a1.125 1.125 0 00-1.125 1.125v3.375m9 0h-9M9 10.5h.008v.008H9V10.5zm3 0h.008v.008H12V10.5zm3 0h.008v.008H15V10.5z"/></svg>,
+            Sparkles: () => <svg className="w-5 h-5 text-luxury-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 21l-.813-5.096L3.096 15.1l5.096-.813L9 9.187l.813 5.096 5.096.813-5.096.813zM19.031 3l-.406 2.531-2.53 1.015 2.53 1.016L19.031 10.1l.407-2.532 2.53-1.015-2.53-1.016L19.031 3z"/></svg>,
+            ChevronRight: () => <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>,
+            Clock: () => <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>,
+            Star: () => <svg className="w-5 h-5 text-amber-400 fill-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>,
+            X: () => <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>,
+            Menu: () => <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>,
+            ArrowUpRight: () => <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
+        };
+
+        function App() {
+            // State for dynamic features
+            const [scrolled, setScrolled] = useState(false);
+            const [mobileNavOpen, setMobileNavOpen] = useState(false);
+            const [activeRoomFilter, setActiveRoomFilter] = useState('all');
+            const [bookingOpen, setBookingOpen] = useState(false);
+            const [diningTab, setDiningTab] = useState('seafood');
+            const [reviewIdx, setReviewIdx] = useState(0);
+            const [enquirySuccess, setEnquirySuccess] = useState(false);
+            
+            // Lightbox Gallery state
+            const [lightboxOpen, setLightboxOpen] = useState(false);
+            const [lightboxImg, setLightboxImg] = useState('');
+
+            // Booking modal parameters
+            const [bookingForm, setBookingForm] = useState({
+                checkIn: '', checkOut: '', category: 'Premium Suite', guests: '2', name: '', phone: ''
+            });
+            const [bookingSuccess, setBookingSuccess] = useState(false);
+
+            useEffect(() => {
+                const handleScroll = () => {
+                    setScrolled(window.scrollY > 50);
+                };
+                window.addEventListener('scroll', handleScroll);
+                return () => window.removeEventListener('scroll', handleScroll);
+            }, []);
+
+            // Data Definitions
+            const rooms = [
+                {
+                    id: 'lavender-classic',
+                    title: 'Lavender Classic Room',
+                    desc: 'A serene and elegantly designed room, offering peaceful views and modern comforts amidst Wayanad’s natural beauty.',
+                    price: '₹3,800',
+                    features: ['King Bed', 'Nature View', 'Free High-speed Wi-Fi', 'Premium Bath Linens', 'Mini-bar'],
+                    image: 'images/room1.jpg'
+                },
+                {
+                    id: 'garden-view-suite',
+                    title: 'Garden View Suite',
+                    desc: 'Spacious suite with a private balcony overlooking lush gardens, perfect for relaxation and enjoying the tranquil environment.',
+                    price: '₹4,900',
+                    features: ['King Bed', 'Private Balcony', 'Coffee Station', 'High-Speed Wi-Fi', 'Luxury Lounge Chair'],
+                    image: 'images/room3.jpg'
+                },
+                {
+                    id: 'family-bungalow',
+                    title: 'Family Bungalow',
+                    desc: 'A comfortable and expansive bungalow with multiple beds and living space, ideal for families seeking privacy and space in nature.',
+                    price: '₹6,500',
+                    features: ['2 Queen Beds', 'Living area', 'Kid-friendly Setup', 'Smart TV', 'Spacious Wardrobes'],
+                    image: 'images/room4.jpg'
+                },
+                {
+                    id: 'wilderness-villa',
+                    title: 'Wilderness Villa',
+                    desc: 'Our premium villa offers exclusive privacy, a private plunge pool, and breathtaking views of the surrounding Wayanad wilderness.',
+                    price: '₹8,500',
+                    features: ['Super King Bed', 'Private Plunge Pool', 'Bathtub & Rain Shower', 'In-villa Dining', 'VIP Welcome Platter'],
+                    image: 'images/room6.jpg'
+                }
+            ];
+
+            const reviews = [
+                {
+                    quote: "The rooms are incredibly spacious and exceptionally clean. We loved their serene ambiance and delicious local cuisine. Highly recommend their authentic Kerala dishes!",
+                    author: "Priya Sharma",
+                    role: "Family Vacation Stay",
+                    rating: 5
+                },
+                {
+                    quote: "Perfect tranquil location in Vaduvanchal. So close to nature and the true essence of Wayanad. Outstanding hospitality which is a true trademark of The Lavender Resort.",
+                    author: "Anil Kumar",
+                    role: "Nature Enthusiast",
+                    rating: 5
+                },
+                {
+                    quote: "We hosted our family reunion here and it was a seamless experience. Beautiful event spaces, delicious catering, and polite staff members who made everyone feel at home.",
+                    author: "Deepa Menon",
+                    role: "Event Organizer",
+                    rating: 5
+                }
+            ];
+
+            const gallery = [
+                { title: 'Lavender Classic Room Setting', desc: 'Elegantly minimalist design with comfort and nature in mind.', img: 'images/Premium-Suite-Setting.jpg' },
+                { title: 'Garden View Suite Bathroom', desc: 'Pristine marble and premium gold bathroom elements.', img: 'images/Executive-Wash-Oasis.jpg' },
+                { title: 'The Lavender Resort Facade', desc: 'A beautiful architectural design blending with the Wayanad landscape.', img: 'images/Facade.jpg' },
+                { title: 'Multi-Cuisine Dining Space', desc: 'Cozy, warm lighting, featuring authentic spices and local heritage.', img: 'images/dining.jpg' },
+                { title: 'Elegant Event Hall', desc: 'A versatile hall perfect for family gatherings and celebrations.', img: 'images/banquet.jpg' },
+                { title: 'Traditional Kerala Cuisine', desc: 'Delicious local delicacies prepared with fresh, regional ingredients.', img: 'images/kerala-food.jpg' }
+            ];
+
+            const submitBooking = (e) => {
+                e.preventDefault();
+                setBookingSuccess(true);
+                setTimeout(() => {
+                    setBookingSuccess(false);
+                    setBookingOpen(false);
+                }, 4000);
+            };
+
+            const triggerWhatsApp = () => {
+                const text = encodeURIComponent("Hello The Lavender Resort Wayanad, I would like to inquire about room reservations.");
+                window.open(`https://wa.me/?text=${text}`, '_blank');
+            };
+
+            return (
+                <div className="relative">
+                    
+                    {/* Ambient Glow */}
+                    <div className="ambient-glow top-24 left-[-10%]" />
+                    <div className="ambient-glow top-[40%] right-[-10%]" />
+
+                    {/* TOP STATUS BAR */}
+                    <div className="bg-luxury-dark text-white/70 text-[10px] sm:text-xs py-2 px-6 flex justify-between items-center relative z-50 border-b border-white/5 tracking-wider">
+                        <div className="flex gap-4 mx-auto sm:mx-0">
+                            <span className="flex items-center gap-1">📞 </span>
+                            <span className="hidden sm:inline">📍 Vaduvanchal, Kerala 673581, India</span>
+                        </div>
+                        <div className="hidden sm:flex items-center gap-4">
+                            <span className="text-luxury-400 font-bold">✨ Direct Booking Benefit: Complimentary Breakfast</span>
+                        </div>
+                    </div>
+
+                    {/* STICKY LUXURY NAVBAR */}
+                    <header className={`fixed top-10 left-0 right-0 z-40 transition-all duration-500 max-w-7xl mx-auto px-4 ${scrolled ? 'top-2' : ''}`}>
+                        <div className={`rounded-3xl transition-all duration-500 ${scrolled ? 'glass-nav shadow-lg py-3 px-6' : 'bg-transparent py-5 px-4'}`}>
+                            <div className="flex items-center justify-between">
+                                {/* Brand Logo */}
+                                <a href="#home" className="flex flex-col">
+                                    <span className="font-serif-luxury text-xl sm:text-2xl font-bold tracking-widest text-luxury-dark">
+                                        THE LAVENDER RESORT
+                                    </span>
+                                    <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.3em] text-luxury-500 font-bold -mt-1">
+                                        Wayanad • Kerala
+                                    </span>
+                                </a>
+
+                                {/* Desktop Navigation */}
+                                <nav className="hidden lg:flex items-center space-x-8">
+                                    {[
+                                        { id: 'home', label: 'Home' },
+                                        { id: 'about', label: 'Philosophy' },
+                                        { id: 'rooms', label: 'Rooms' },
+                                        { id: 'dining', label: 'Dining' },
+                                        { id: 'amenities', label: 'Amenities' },
+                                        { id: 'gallery', label: 'Gallery' },
+                                        { id: 'reviews', label: 'Reviews' },
+                                        { id: 'contact', label: 'Contact' }
+                                    ].map(link => (
+                                        <a 
+                                            key={link.id} 
+                                            href={`#${link.id}`} 
+                                            className="text-xs uppercase tracking-widest font-semibold text-luxury-dark/80 hover:text-luxury-500 transition-colors"
+                                        >
+                                            {link.label}
+                                        </a>
+                                    ))}
+                                </nav>
+
+                                {/* Action Button */}
+                                <div className="hidden lg:flex items-center space-x-3">
+                                    <button 
+                                        onClick={() => setBookingOpen(true)}
+                                        className="bg-luxury-dark hover:bg-luxury-700 text-white text-[10px] font-bold tracking-widest px-6 py-3 rounded-full transition-all duration-500 hover:shadow-lg hover:shadow-luxury-700/20"
+                                    >
+                                        RESERVE NOW
+                                    </button>
+                                </div>
+
+                                {/* Mobile Hamburger Menu */}
+                                <button 
+                                    onClick={() => setMobileNavOpen(!mobileNavOpen)} 
+                                    className="lg:hidden p-2 text-luxury-dark hover:text-luxury-500"
+                                >
+                                    {mobileNavOpen ? <Icons.X /> : <Icons.Menu />}
+                                </button>
+                            </div>
+                        </div>
+                    </header>
+
+                    {/* MOBILE DRAWER */}
+                    <div className={`fixed inset-0 z-50 transform transition-transform duration-500 lg:hidden ${mobileNavOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+                        <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" onClick={() => setMobileNavOpen(false)} />
+                        <div className="absolute right-0 top-0 bottom-0 w-3/4 max-w-[320px] bg-white p-8 flex flex-col justify-between">
+                            <div className="space-y-8">
+                                <div className="flex justify-between items-center border-b pb-4">
+                                    <span className="font-serif-luxury text-lg font-bold tracking-wider">LAVENDER RESORT</span>
+                                    <button onClick={() => setMobileNavOpen(false)} className="p-2"><Icons.X /></button>
+                                </div>
+                                <nav className="flex flex-col space-y-4">
+                                    {[
+                                        { id: 'home', label: 'Home' },
+                                        { id: 'about', label: 'Philosophy' },
+                                        { id: 'rooms', label: 'Rooms' },
+                                        { id: 'dining', label: 'Dining' },
+                                        { id: 'amenities', label: 'Amenities' },
+                                        { id: 'gallery', label: 'Gallery' },
+                                        { id: 'contact', label: 'Contact' }
+                                    ].map(link => (
+                                        <a 
+                                            key={link.id} 
+                                            href={`#${link.id}`} 
+                                            onClick={() => setMobileNavOpen(false)} 
+                                            className="text-sm font-semibold tracking-wide text-luxury-dark hover:text-luxury-500"
+                                        >
+                                            {link.label}
+                                        </a>
+                                    ))}
+                                </nav>
+                            </div>
+                            <div className="space-y-3">
+                                <button 
+                                    onClick={() => { setMobileNavOpen(false); setBookingOpen(true); }}
+                                    className="w-full bg-luxury-dark text-white text-xs font-bold py-3.5 rounded-xl tracking-widest"
+                                >
+                                    BOOK ROOM
+                                </button>
+                                <a 
+                                    href="tel:" 
+                                    className="block w-full border border-luxury-300 text-center text-luxury-dark text-xs font-bold py-3.5 rounded-xl tracking-widest"
+                                >
+                                    CALL RESORT
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* HERO SECTION */}
+                    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden bg-luxury-dark">
+                        {/* Background Parallax Image */}
+                        <div className="absolute inset-0 select-none">
+                            <img 
+                                src="images/hero.jpg" 
+                                alt="The Lavender Resort Wayanad Facade" 
+                                className="w-full h-full object-cover opacity-45 scale-105 transform hover:scale-100 transition-transform duration-[8000ms]"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-luxury-dark via-transparent to-transparent" />
+                        </div>
+
+                        <div className="max-w-5xl mx-auto px-6 text-center relative z-10 space-y-8 mt-20">
+                            <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 border border-white/20 rounded-full backdrop-blur-md">
+                                <Icons.Sparkles />
+                                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-luxury-200">Serene Wayanad Resort Stay</span>
+                            </div>
+
+                            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-serif-luxury text-white font-light leading-[1.1]">
+                                Discover Tranquility <br />
+                                in the Heart of <span className="italic font-normal text-luxury-100 gold-underline">Wayanad</span>
+                            </h1>
+
+                            <p className="text-sm sm:text-lg text-luxury-200/90 font-light max-w-2xl mx-auto leading-relaxed">
+                                Experience peaceful rooms, exquisite local cuisine, and modern amenities designed to connect you with nature and provide ultimate relaxation.
+                            </p>
+
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                                <button 
+                                    onClick={() => setBookingOpen(true)}
+                                    className="w-full sm:w-auto bg-luxury-100 hover:bg-white text-luxury-dark font-bold text-xs tracking-widest px-8 py-4.5 rounded-full transition-all duration-300 transform hover:-translate-y-0.5"
+                                >
+                                    BOOK YOUR STAY
+                                </button>
+                                <a 
+                                    href="#rooms"
+                                    className="w-full sm:w-auto border border-white/35 hover:border-white text-white font-semibold text-xs tracking-widest px-8 py-4.5 rounded-full transition-all duration-300 hover:bg-white/5"
+                                >
+                                    EXPLORE ROOMS
+                                </a>
+                            </div>
+                        </div>
+
+                        {/* Floating Scroll Indicator */}
+                        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 select-none z-10 opacity-70">
+                            <span className="text-[9px] uppercase tracking-[0.25em] text-white">Scroll down</span>
+                            <div className="w-[1.5px] h-10 bg-gradient-to-b from-white to-transparent" />
+                        </div>
+                    </section>
+
+                    {/* ABOUT SECTION */}
+                    <section id="about" className="py-24 bg-[#FCFBF9] relative overflow-hidden">
+                        <div className="max-w-7xl mx-auto px-6">
+                            
+                            {/* Headline block */}
+                            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-20">
+                                <div className="lg:col-span-8 space-y-4">
+                                    <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">The Resort Philosophy</p>
+                                    <h2 className="text-3xl sm:text-5xl font-serif-luxury text-luxury-dark font-light leading-tight">
+                                        Where Wayanad's Natural Beauty <br />
+                                        Meets <span className="italic">Boutique Resort Comfort</span>
+                                    </h2>
+                                </div>
+                                <div className="lg:col-span-4">
+                                    <p className="text-sm text-luxury-600 font-light leading-relaxed">
+                                        Nestled in the serene landscapes of Vaduvanchal, The Lavender Resort offers a tranquil escape designed to harmonize with nature, providing a perfect blend of modern comfort and natural beauty.
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Alternating layouts with real photo links */}
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                                
+                                {/* Photo 1 */}
+                                <div className="relative group overflow-hidden rounded-3xl aspect-[4/3] shadow-lg border border-luxury-200">
+                                    <img 
+                                        src="images/hero2.jpg" 
+                                        alt="Luxury Interior Lobby Lavender Resort" 
+                                        className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-[3s]" 
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60" />
+                                    <div className="absolute bottom-6 left-6 text-white">
+                                        <p className="text-[10px] uppercase tracking-widest font-bold text-luxury-200">Lobby & Lounges</p>
+                                        <h3 className="font-serif-luxury text-xl">A Warm Welcome to Nature</h3>
+                                    </div>
+                                </div>
+
+                                {/* Content block 1 */}
+                                <div className="space-y-6">
+                                    <h3 className="text-2xl sm:text-3xl font-serif-luxury font-light text-luxury-dark">
+                                        A Commitment to Serenity and <span className="italic">Guest Experience</span>
+                                    </h3>
+                                    <p className="text-sm text-luxury-600 font-light leading-relaxed">
+                                        The Lavender Resort is committed to providing an unforgettable experience. Our location in Vaduvanchal offers easy access to Wayanad's key attractions while ensuring a peaceful retreat from the hustle and bustle.
+                                    </p>
+                                    
+                                    <div className="grid grid-cols-2 gap-6 pt-4">
+                                        <div className="border-l-2 border-luxury-500 pl-4">
+                                            <p className="text-3xl font-serif-luxury font-bold text-luxury-500">24/7</p>
+                                            <p className="text-[10px] uppercase tracking-wider font-bold text-luxury-600 mt-1">Dedicated Guest Service</p>
+                                        </div>
+                                        <div className="border-l-2 border-luxury-500 pl-4">
+                                            <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Premium</p>
+                                            <p className="text-[10px] uppercase tracking-wider font-bold text-luxury-600 mt-1">Local & Multi-Cuisine Dining</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* ROOMS & SUITES */}
+                    <section id="rooms" className="py-24 bg-luxury-100 relative">
+                        <div className="max-w-7xl mx-auto px-6">
+                            
+                            {/* Header */}
+                            <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                                <div className="space-y-3">
+                                    <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Our Accommodations</p>
+                                    <h2 className="text-3xl sm:text-5xl font-serif-luxury font-light text-luxury-dark">
+                                        Elegant Rooms & <span className="italic">Comfortable Villas</span>
+                                    </h2>
+                                    <p className="text-xs text-luxury-500 uppercase tracking-widest font-bold">All rooms feature premium high-speed Wi-Fi and safe parking guarantees</p>
+                                </div>
+                            </div>
+
+                            {/* Room Grid */}
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                {rooms.map(room => (
+                                    <div 
+                                        key={room.id} 
+                                        className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 flex flex-col group border border-luxury-200/40"
+                                    >
+                                        {/* Zoomable Image Container */}
+                                        <div className="relative aspect-[16/10] overflow-hidden">
+                                            <img 
+                                                src={room.image} 
+                                                alt={room.title} 
+                                                className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-1000"
+                                            />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
+                                            <span className="absolute bottom-4 left-4 text-white font-serif-luxury text-xl font-medium tracking-wide bg-luxury-dark/65 px-4 py-1.5 rounded-full backdrop-blur-sm">
+                                                Starting at {room.price} <span className="text-[10px] uppercase tracking-wide font-sans-luxury text-luxury-200">/ Night</span>
+                                            </span>
+                                        </div>
+
+                                        {/* Card Content */}
+                                        <div className="p-8 flex-1 flex flex-col justify-between space-y-6">
+                                            <div className="space-y-3">
+                                                <h3 className="text-xl sm:text-2xl font-serif-luxury font-semibold text-luxury-dark">{room.title}</h3>
+                                                <p className="text-xs text-luxury-500 font-light leading-relaxed">{room.desc}</p>
+                                                
+                                                {/* Features list */}
+                                                <div className="flex flex-wrap gap-2 pt-3">
+                                                    {room.features.map((feat, i) => (
+                                                        <span key={i} className="text-[10px] tracking-wide font-medium text-luxury-700 bg-[#FCFBF9] border border-luxury-300/40 px-2.5 py-1 rounded-full">
+                                                            ✓ {feat}
+                                                        </span>
+                                                    ))}
+                                                </div>
+                                            </div>
+
+                                            <div className="pt-6 border-t border-luxury-100 flex items-center justify-between">
+                                                <button 
+                                                    onClick={() => setBookingOpen(true)}
+                                                    className="bg-luxury-dark hover:bg-luxury-700 text-white text-[10px] font-bold tracking-widest py-3 px-6 rounded-full transition-all"
+                                                >
+                                                    BOOK ROOM
+                                                </button>
+                                                <a 
+                                                    href="#contact" 
+                                                    className="text-xs text-luxury-500 hover:text-luxury-dark font-bold tracking-wider flex items-center gap-1 group"
+                                                >
+                                                    INQUIRE NOW <Icons.ChevronRight />
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+
+                        </div>
+                    </section>
+
+                    {/* DINING HIGHLIGHT */}
+                    <section id="dining" className="py-24 bg-white relative">
+                        <div className="max-w-7xl mx-auto px-6">
+                            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                                
+                                {/* Dining text */}
+                                <div className="lg:col-span-5 space-y-8">
+                                    <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Gastronomical Delights</p>
+                                    <h2 className="text-3xl sm:text-5xl font-serif-luxury font-light text-luxury-dark leading-tight">
+                                        Exquisite Cuisine <br />
+                                        By Our <span className="italic">Talented Chefs</span>
+                                    </h2>
+                                    <p className="text-sm text-luxury-600 font-light leading-relaxed">
+                                        Guests and local visitors celebrate the exceptional local and multi-cuisine menus served daily in our restaurant, featuring fresh, regional ingredients.
+                                    </p>
+
+                                    {/* Tabs to select menu focus */}
+                                    <div className="flex gap-2 bg-luxury-100 p-1.5 rounded-full border border-luxury-200">
+                                        <button 
+                                            onClick={() => setDiningTab('seafood')}
+                                            className={`flex-1 text-center py-2 rounded-full text-xs font-bold tracking-wider transition ${diningTab === 'seafood' ? 'bg-luxury-dark text-white' : 'text-luxury-600'}`}
+                                        >
+                                            Local Specialties
+                                        </button>
+                                        <button 
+                                            onClick={() => setDiningTab('local')}
+                                            className={`flex-1 text-center py-2 rounded-full text-xs font-bold tracking-wider transition ${diningTab === 'local' ? 'bg-luxury-dark text-white' : 'text-luxury-600'}`}
+                                        >
+                                            Multi-Cuisine
+                                        </button>
+                                    </div>
+
+                                    {diningTab === 'seafood' ? (
+                                        <div className="space-y-3 bg-[#FCFBF9] p-6 rounded-2xl border border-luxury-300/30">
+                                            <h4 className="text-sm font-bold uppercase tracking-widest text-luxury-dark">Wayanad's Flavors</h4>
+                                            <p className="text-xs text-luxury-500 font-light leading-relaxed">
+                                                Savor dishes made with fresh, locally sourced spices and ingredients, offering an authentic taste of Wayanad's rich culinary heritage.
+                                            </p>
+                                        </div>
+                                    ) : (
+                                        <div className="space-y-3 bg-[#FCFBF9] p-6 rounded-2xl border border-luxury-300/30">
+                                            <h4 className="text-sm font-bold uppercase tracking-widest text-luxury-dark">International & Indian Delights</h4>
+                                            <p className="text-xs text-luxury-500 font-light leading-relaxed">
+                                                Explore a diverse menu featuring popular Indian and international dishes, crafted to cater to all palates.
+                                            </p>
+                                        </div>
+                                    )}
+
+                                    <div className="pt-2">
+                                        <button 
+                                            onClick={() => setBookingOpen(true)}
+                                            className="text-xs font-bold text-luxury-700 hover:text-luxury-900 tracking-wider flex items-center gap-1 group"
+                                        >
+                                            RESERVE DINING SLOTS <Icons.ChevronRight />
+                                        </button>
+                                    </div>
+                                </div>
+
+                                {/* Dining Photos Grid */}
+                                <div className="lg:col-span-7 grid grid-cols-12 gap-4">
+                                    <div className="col-span-7 rounded-2xl overflow-hidden aspect-[4/5] shadow-lg border border-luxury-200">
+                                        <img src="images/kerala-food.jpg" alt="Kerala Local Cuisine" className="w-full h-full object-cover" />
+                                    </div>
+                                    <div className="col-span-5 rounded-2xl overflow-hidden aspect-[1/1] shadow-lg border border-luxury-200 mt-12">
+                                        <img src="images/rest.jpg" alt="Luxury restaurant atmosphere" className="w-full h-full object-cover" />
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* AMENITIES */}
+                    <section id="amenities" className="py-24 bg-luxury-dark text-white relative">
+                        <div className="max-w-7xl mx-auto px-6">
+                            
+                            {/* Title */}
+                            <div className="text-center max-w-2xl mx-auto mb-20 space-y-4">
+                                <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-400">Amenities Showcase</p>
+                                <h2 className="text-3xl sm:text-5xl font-serif-luxury font-light gold-gradient-text-light leading-tight">
+                                    Thoughtfully Curated <span className="italic">for Your Comfort</span>
+                                </h2>
+                                <p className="text-xs sm:text-sm text-luxury-300 font-light">
+                                    Every service is crafted to enhance your relaxation and enjoyment during your Wayanad getaway.
+                                </p>
+                            </div>
+
+                            {/* Icons Grid */}
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                                {[
+                                    { title: "Free Wi-Fi", desc: "High-speed internet access available throughout the resort.", icon: <Icons.Wifi /> },
+                                    { title: "Air Conditioning", desc: "Comfortable climate control in all rooms for a pleasant stay.", icon: <Icons.AC /> },
+                                    { title: "Premium Restaurant", desc: "Delicious local and multi-cuisine options served daily.", icon: <Icons.Utensils /> },
+                                    { title: "24/7 Room Service", desc: "Dining delivered directly to your room at any time.", icon: <Icons.Bell /> },
+                                    { title: "Valet Safe Parking", desc: "Secure parking facilities for all guests.", icon: <Icons.MapPin /> },
+                                    { title: "Event Halls", desc: "Versatile spaces perfect for gatherings and celebrations.", icon: <Icons.Award /> },
+                                    { title: "24-Hour Reception", desc: "Continuous assistance for check-ins, tours, and more.", icon: <Icons.Clock /> },
+                                    { title: "Nature Activities", desc: "Arrangements for nature walks and local tours.", icon: <Icons.Sparkles /> }
+                                ].map((amenity, i) => (
+                                    <div key={i} className="glass-card-dark p-6 rounded-2xl border border-white/5 space-y-4">
+                                        <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-luxury-400">
+                                            {amenity.icon}
+                                        </div>
+                                        <h3 className="text-base font-bold text-white">{amenity.title}</h3>
+                                        <p className="text-xs text-luxury-300 font-light leading-relaxed">{amenity.desc}</p>
+                                    </div>
+                                ))}
+                            </div>
+
+                        </div>
+                    </section>
+
+                    {/* GALLERY */}
+                    <section id="gallery" className="py-24 bg-[#FCFBF9] relative">
+                        <div className="max-w-7xl mx-auto px-6">
+                            
+                            <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                                <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Visual Portfolio</p>
+                                <h2 className="text-3xl sm:text-5xl font-serif-luxury font-light text-luxury-dark">
+                                    Discover <span className="italic">The Lavender Resort</span>
+                                </h2>
+                            </div>
+
+                            {/* Luxury Masonry style Grid */}
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {gallery.map((item, idx) => (
+                                    <div 
+                                        key={idx}
+                                        onClick={() => { setLightboxImg(item.img); setLightboxOpen(true); }}
+                                        className="group relative rounded-2xl overflow-hidden aspect-[4/3] shadow-md border border-luxury-200 cursor-pointer"
+                                    >
+                                        <img 
+                                            src={item.img} 
+                                            alt={item.title} 
+                                            className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-[2s]" 
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6" />
+                                        <div className="absolute inset-0 flex flex-col justify-end p-6 transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                                            <p className="text-[10px] uppercase tracking-widest font-bold text-luxury-300">View Close-up</p>
+                                            <h3 className="text-white font-serif-luxury text-lg">{item.title}</h3>
+                                            <p className="text-xs text-luxury-200 mt-1 font-light">{item.desc}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+
+                        </div>
+                    </section>
+
+                    {/* TESTIMONIALS CAROUSEL */}
+                    <section id="reviews" className="py-24 bg-[#FAF5EE] border-t border-b border-luxury-300/30 relative">
+                        <div className="max-w-5xl mx-auto px-6 text-center space-y-12">
+                            <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Verified Client Feedback</p>
+                            
+                            {/* Quote Slide */}
+                            <div className="glass-card p-10 sm:p-16 rounded-3xl border border-luxury-300/50 relative shadow-md">
+                                <span className="absolute top-4 right-8 font-serif text-[120px] text-luxury-300/20 select-none pointer-events-none">“</span>
+                                <div className="space-y-6">
+                                    <div className="flex justify-center gap-1">
+                                        {[...Array(reviews[reviewIdx].rating)].map((_, i) => <Icons.Star key={i} />)}
+                                    </div>
+                                    <p className="text-lg sm:text-2xl font-serif-luxury italic text-luxury-dark leading-relaxed font-light">
+                                        "{reviews[reviewIdx].quote}"
+                                    </p>
+                                </div>
+
+                                <div className="pt-8 border-t border-luxury-300/40 mt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+                                    <div className="text-left">
+                                        <h4 className="text-sm font-bold text-luxury-dark">{reviews[reviewIdx].author}</h4>
+                                        <p className="text-xs text-luxury-500">{reviews[reviewIdx].role}</p>
+                                    </div>
+                                    
+                                    {/* Slide Navigation buttons */}
+                                    <div className="flex gap-2">
+                                        {reviews.map((_, idx) => (
+                                            <button 
+                                                key={idx}
+                                                onClick={() => setReviewIdx(idx)}
+                                                className={`w-2.5 h-2.5 rounded-full transition-all ${reviewIdx === idx ? 'bg-luxury-dark w-6' : 'bg-luxury-300'}`}
+                                            />
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Trust Rating Statistics */}
+                            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-6">
+                                <div>
+                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">4.5★</p>
+                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Google Rating</p>
+                                </div>
+                                <div>
+                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">100%</p>
+                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Hygienic Stay</p>
+                                </div>
+                                <div>
+                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">95%</p>
+                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Repeat Guests</p>
+                                </div>
+                                <div>
+                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Authentic</p>
+                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Kerala Cuisine</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    {/* BOOKING CTA */}
+                    <section className="py-24 bg-luxury-dark text-white relative overflow-hidden">
+                        <div className="max-w-5xl mx-auto px-6 text-center space-y-8 relative z-10">
+                            <span className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-300 bg-white/5 border border-white/10 px-4 py-2 rounded-full inline-block">
+                                Direct Booking Offer
+                            </span>
+                            <h2 className="text-3xl sm:text-5xl font-serif-luxury font-light leading-tight">
+                                Ready for Your <span className="italic font-normal text-luxury-300 gold-underline">Perfect Getaway?</span>
+                            </h2>
+                            <p className="text-sm sm:text-base text-luxury-300 font-light max-w-xl mx-auto leading-relaxed">
+                                Book direct on our portal or contact our front office directly to receive free high-speed breakfast and executive parking guarantees.
+                            </p>
+
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                                <button 
+                                    onClick={() => setBookingOpen(true)}
+                                    className="w-full sm:w-auto bg-white hover:bg-luxury-100 text-luxury-dark font-bold text-xs tracking-widest px-8 py-4.5 rounded-full transition-transform transform hover:-translate-y-0.5 active:scale-95 duration-300"
+                                >
+                                    RESERVE NOW
+                                </button>
+                                <a 
+                                    href="tel:"
+                                    className="w-full sm:w-auto border border-white/20 hover:bg-white/10 text-white font-semibold text-xs tracking-widest px-8 py-4.5 rounded-full transition"
+                                >
+                                    CALL RESORT OFFICE
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* CONTACT & MAP */}
+                    <section id="contact" className="py-24 bg-white relative">
+                        <div className="max-w-7xl mx-auto px-6">
+                            
+                            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                                
+                                {/* Form */}
+                                <div className="lg:col-span-7 bg-luxury-50 rounded-3xl p-8 sm:p-12 border border-luxury-200">
+                                    <h3 className="text-2xl font-serif-luxury font-light text-luxury-dark mb-8">
+                                        Send Us An <span className="italic">Enquiry</span>
+                                    </h3>
+                                    
+                                    {enquirySuccess ? (
+                                        <div className="bg-emerald-50 border border-emerald-200 text-emerald-800 p-8 rounded-2xl text-center space-y-4">
+                                            <p className="text-sm font-light">Thank you! Your luxury stay enquiry has been transmitted directly to our reservation manager. We will contact you shortly.</p>
+                                        </div>
+                                    ) : (
+                                        <form onSubmit={(e) => { e.preventDefault(); setEnquirySuccess(true); }} className="space-y-6">
+                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                                <div className="space-y-2">
+                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-600">Full Name</label>
+                                                    <input type="text" required placeholder="Your Name" className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition" />
+                                                </div>
+                                                <div className="space-y-2">
+                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-600">Contact Number</label>
+                                                    <input type="tel" required placeholder="Phone Number" className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition" />
+                                                </div>
+                                            </div>
+
+                                            <div className="space-y-2">
+                                                <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-600">Specific Requirements (Optional)</label>
+                                                <textarea rows="4" placeholder="Mention dates of stay, number of rooms, special food priorities, or event requirements..." className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition resize-none" />
+                                            </div>
+
+                                            <button type="submit" className="w-full bg-luxury-dark hover:bg-luxury-700 text-white font-bold text-xs tracking-widest py-4.5 rounded-xl transition">
+                                                TRANSMIT ENQUIRY
+                                            </button>
+                                        </form>
+                                    )}
+                                </div>
+
+                                {/* Info */}
+                                <div className="lg:col-span-5 space-y-8 flex flex-col justify-between">
+                                    <div className="space-y-6">
+                                        <h3 className="text-2xl font-serif-luxury font-light text-luxury-dark">
+                                            Your Peaceful <span className="italic">Wayanad Retreat</span>
+                                        </h3>
+                                        
+                                        <div className="space-y-4">
+                                            <div className="flex gap-4">
+                                                <div className="w-10 h-10 rounded-xl bg-luxury-200 flex items-center justify-center text-luxury-700 flex-shrink-0">
+                                                    📍
+                                                </div>
+                                                <div>
+                                                    <h4 className="text-[10px] uppercase tracking-widest font-bold text-luxury-600">Resort Location</h4>
+                                                    <p className="text-sm text-luxury-800 mt-1 font-light leading-relaxed">
+                                                        The Lavender Resort Wayanad<br />
+                                                        Vaduvanchal, Kerala 673581, India
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <div className="flex gap-4">
+                                                <div className="w-10 h-10 rounded-xl bg-luxury-200 flex items-center justify-center text-luxury-700 flex-shrink-0">
+                                                    📞
+                                                </div>
+                                                <div>
+                                                    <h4 className="text-[10px] uppercase tracking-widest font-bold text-luxury-600">Hotline Numbers</h4>
+                                                    <p className="text-sm text-luxury-800 mt-1 font-semibold">
+                                                        
+                                                    </p>
+                                                    <p className="text-xs text-luxury-500 font-light mt-0.5">Continuous 24-hour phone support</p>
+                                                </div>
+                                            </div>
+
+                                            <div className="flex gap-4">
+                                                <div className="w-10 h-10 rounded-xl bg-luxury-200 flex items-center justify-center text-luxury-700 flex-shrink-0">
+                                                    ✉️
+                                                </div>
+                                                <div>
+                                                    <h4 className="text-[10px] uppercase tracking-widest font-bold text-luxury-600">Email Enquiries</h4>
+                                                    <p className="text-sm text-luxury-800 mt-1 font-light">
+                                                        
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Action links */}
+                                    <div className="flex gap-3 pt-4">
+                                        <a href="tel:" className="flex-1 bg-luxury-100 hover:bg-luxury-200 text-luxury-dark text-xs font-bold py-4 px-6 rounded-full text-center transition flex items-center justify-center gap-1.5">
+                                            Call Resort
+                                        </a>
+                                        <button onClick={triggerWhatsApp} className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-4 px-6 rounded-full text-center transition flex items-center justify-center gap-1.5">
+                                            WhatsApp Stay
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            {/* Google Maps Embed Container */}
+                            <div className="mt-16 rounded-3xl overflow-hidden border border-luxury-200 shadow-md h-[400px]">
+                                <iframe 
+                                    title="The Lavender Resort Wayanad Location Map"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3909.282902636544!2d76.1264311!3d11.5367878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba6353380fe7e19%3A0x67a3a992a77a94a2!2sVaduvanchal%2C%20Kerala%20673581%2C%20India!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                                    className="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-[1s]" 
+                                    allowFullScreen="" 
+                                    loading="lazy"
+                                ></iframe>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    {/* LUXURY FOOTER */}
+                    <footer className="bg-luxury-dark text-white/50 py-16 border-t border-white/5 relative z-10">
+                        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                            
+                            <div className="space-y-4">
+                                <span className="font-serif-luxury text-2xl tracking-wider text-white">THE LAVENDER RESORT</span>
+                                <p className="text-xs text-luxury-300 font-light leading-relaxed">
+                                    The Lavender Resort Wayanad offers a serene escape, blending modern amenities with the tranquil beauty of Wayanad. Perfect for relaxation and connecting with nature.
+                                </p>
+                            </div>
+
+                            <div className="space-y-4">
+                                <h4 className="text-white text-xs font-bold uppercase tracking-widest">Our Rooms</h4>
+                                <ul className="space-y-2 text-xs font-light text-luxury-300">
+                                    <li><a href="#rooms" className="hover:text-white transition">Lavender Classic Rooms</a></li>
+                                    <li><a href="#rooms" className="hover:text-white transition">Garden View Suites</a></li>
+                                    <li><a href="#rooms" className="hover:text-white transition">Family Bungalows</a></li>
+                                    <li><a href="#rooms" className="hover:text-white transition">Wilderness Villas</a></li>
+                                </ul>
+                            </div>
+
+                            <div className="space-y-4">
+                                <h4 className="text-white text-xs font-bold uppercase tracking-widest">Quick Navigation</h4>
+                                <ul className="space-y-2 text-xs font-light text-luxury-300">
+                                    <li><a href="#home" className="hover:text-white transition">Home</a></li>
+                                    <li><a href="#about" className="hover:text-white transition">Philosophy & Experience</a></li>
+                                    <li><a href="#dining" className="hover:text-white transition">Dining</a></li>
+                                    <li><a href="#gallery" className="hover:text-white transition">Image Showcase</a></li>
+                                </ul>
+                            </div>
+
+                            <div className="space-y-4">
+                                <h4 className="text-white text-xs font-bold uppercase tracking-widest">Wayanad Hospitality</h4>
+                                <p className="text-xs text-luxury-300 font-light leading-relaxed">
+                                    We maintain high standards of hygiene and safety for all our guests. Special event bookings should be made in advance for optimal arrangements.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/5 text-center md:flex md:justify-between md:text-left text-xs text-luxury-400 font-light">
+                            <p>© {new Date().getFullYear()} The Lavender Resort Wayanad. All Rights Reserved.</p>
+                            <p className="mt-2 md:mt-0"> Vaduvanchal, Kerala 673581, India</p>
+                        </div>
+                    </footer>
+
+                    {/* INTERACTIVE BOOKING ENGINE MODAL */}
+                    {bookingOpen && (
+                        <div className="fixed inset-0 z-50 overflow-y-auto flex items-center justify-center p-4">
+                            <div className="fixed inset-0 bg-black/60 backdrop-blur-md transition-opacity" onClick={() => setBookingOpen(false)} />
+
+                            <div className="relative bg-[#FCFBF9] rounded-3xl overflow-hidden shadow-2xl border border-luxury-300/40 max-w-lg w-full z-10">
+                                
+                                <div className="bg-luxury-dark text-white p-6 flex justify-between items-center">
+                                    <div>
+                                        <h3 className="text-xl font-serif-luxury tracking-wide">Secure Your Stay</h3>
+                                        <p className="text-[10px] text-luxury-300 uppercase tracking-widest mt-1">Direct booking guarantees complimentary breakfast</p>
+                                    </div>
+                                    <button onClick={() => setBookingOpen(false)} className="text-luxury-400 hover:text-white p-2">
+                                        <Icons.X />
+                                    </button>
+                                </div>
+
+                                <div className="p-8">
+                                    {bookingSuccess ? (
+                                        <div className="text-center py-12 space-y-4">
+                                            <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto text-2xl">
+                                                ✓
+                                            </div>
+                                            <h4 className="text-xl font-serif-luxury text-luxury-dark">Reservation Request Received</h4>
+                                            <p className="text-sm text-luxury-500 font-light max-w-sm mx-auto">
+                                                Thank you. Our reservations desk will contact you shortly to confirm your dates and specific room selections.
+                                            </p>
+                                        </div>
+                                    ) : (
+                                        <form onSubmit={submitBooking} className="space-y-4">
+                                            
+                                            <div className="space-y-1">
+                                                <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Your Full Name</label>
+                                                <input 
+                                                    type="text" 
+                                                    required
+                                                    value={bookingForm.name}
+                                                    onChange={e => setBookingForm({...bookingForm, name: e.target.value})}
+                                                    placeholder="Enter your name"
+                                                    className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition"
+                                                />
+                                            </div>
+
+                                            <div className="space-y-1">
+                                                <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Contact Phone Number</label>
+                                                <input 
+                                                    type="tel" 
+                                                    required
+                                                    value={bookingForm.phone}
+                                                    onChange={e => setBookingForm({...bookingForm, phone: e.target.value})}
+                                                    placeholder="Phone Number"
+                                                    className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition"
+                                                />
+                                            </div>
+
+                                            <div className="grid grid-cols-2 gap-4">
+                                                <div className="space-y-1">
+                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Check-In Date</label>
+                                                    <input 
+                                                        type="date" 
+                                                        required
+                                                        value={bookingForm.checkIn}
+                                                        onChange={e => setBookingForm({...bookingForm, checkIn: e.target.value})}
+                                                        className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-500 transition"
+                                                    />
+                                                </div>
+
+                                                <div className="space-y-1">
+                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Check-Out Date</label>
+                                                    <input 
+                                                        type="date" 
+                                                        required
+                                                        value={bookingForm.checkOut}
+                                                        onChange={e => setBookingForm({...bookingForm, checkOut: e.target.value})}
+                                                        className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-500 transition"
+                                                    />
+                                                </div>
+                                            </div>
+
+                                            <div className="grid grid-cols-2 gap-4">
+                                                <div className="space-y-1">
+                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Room Type</label>
+                                                    <select 
+                                                        value={bookingForm.category}
+                                                        onChange={e => setBookingForm({...bookingForm, category: e.target.value})}
+                                                        className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-500 transition"
+                                                    >
+                                                        <option value="Lavender Classic">Lavender Classic Room</option>
+                                                        <option value="Garden View Suite">Garden View Suite</option>
+                                                        <option value="Family Bungalow">Family Bungalow</option>
+                                                        <option value="Wilderness Villa">Wilderness Villa</option>
+                                                    </select>
+                                                </div>
+
+                                                <div className="space-y-1">
+                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Guests</label>
+                                                    <select 
+                                                        value={bookingForm.guests}
+                                                        onChange={e => setBookingForm({...bookingForm, guests: e.target.value})}
+                                                        className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-500 transition"
+                                                    >
+                                                        <option value="1">1 Guest</option>
+                                                        <option value="2">2 Guests</option>
+                                                        <option value="3">3 Guests</option>
+                                                        <option value="4+">Family Suite (4+)</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <button 
+                                                type="submit"
+                                                className="w-full bg-luxury-dark hover:bg-luxury-700 text-white font-bold text-xs tracking-widest py-4.5 rounded-xl transition"
+                                            >
+                                                CONFIRM RESERVATION REQUEST
+                                            </button>
+
+                                            <div className="text-center pt-2">
+                                                <p className="text-[10px] text-luxury-500">
+                                                    Prefer phone support? <a href="tel:" className="font-bold underline text-luxury-700">Call </a>
+                                                </p>
+                                            </div>
+                                        </form>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* PORTFOLIO LIGHTBOX PREVIEW */}
+                    {lightboxOpen && (
+                        <div className="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex items-center justify-center p-4">
+                            <button 
+                                onClick={() => setLightboxOpen(false)}
+                                className="absolute top-6 right-6 text-white hover:text-luxury-200 p-2 bg-white/5 rounded-full"
+                            >
+                                <Icons.X />
+                            </button>
+                            <div className="max-w-4xl w-full">
+                                <img src={lightboxImg} alt="Resort Room Showcase Close-up" className="w-full max-h-[80vh] object-contain rounded-2xl border border-white/10" />
+                            </div>
+                        </div>
+                    )}
+
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>
