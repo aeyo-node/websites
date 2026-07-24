@@ -1,0 +1,94 @@
+```html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Thomas Inn (Fort Kochi) | Luxury Boutique Resort in Kerala</title>
+
+    <!-- SEO Optimization -->
+    <meta name="description" content="Experience the charm of Fort Kochi at The Thomas Inn, a luxurious boutique resort offering comfortable rooms, delicious food, and warm hospitality. Book now and explore the historic town!">
+    <meta name="keywords" content="The Thomas Inn, Luxury Resort Fort Kochi, Boutique Hotel Kochi, Comfortable Rooms Kerala, Local Cuisine Restaurant, Tour Desk Assistance">
+
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="The Thomas Inn (Fort Kochi) | Luxury Boutique Resort in Kerala">
+    <meta property="og:description" content="Experience the best of Fort Kochi at The Thomas Inn, a luxurious boutique resort offering comfortable rooms, delicious food, and warm hospitality. Book now and explore the historic town!">
+    <meta property="og:image" content="images/hero_cover.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- External Style Files -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind CSS Engine -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        luxury: {
+                            50: '#FCFBF9',
+                            100: '#FAF5EE',
+                            200: '#F4ECE1',
+                            300: '#E6DCCF',
+                            400: '#D5C4AF',
+                            500: '#AC8F65',
+                            600: '#8E734E',
+                            700: '#162E24', /* Emerald Accent */
+                            dark: '#151413'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- React & Babel Engines for Premium Interactive Features -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Schema.org Hotel Structured Data for Google search trust -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Hotel",
+      "name": "The Thomas Inn (Fort Kochi)",
+      "image": "images/hero_cover.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Fort Kochi, Kochi, Ernakulam, Kerala, India",
+        "addressLocality": "Kochi",
+        "addressRegion": "Kerala",
+        "postalCode": "682001",
+        "addressCountry": "IN"
+      },
+      "telephone": "+914842211555",
+      "starRating": {
+        "@type": "Rating",
+        "ratingValue": "4.5"
+      },
+      "priceRange": "₹2,500 - ₹8,000",
+      "amenityFeature": [
+        "Free Wi-Fi",
+        "Room Service",
+        "24-hour Front Desk",
+        "Laundry Service",
+        "Parking"
+      ]
+    }
+    </script>
+</head>
+<body class="bg-[#FCFBF9] text-luxury-dark font-sans-luxury overflow-x-hidden antialiased">
+    <div id="root"></div>
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        const Icons = {
+            Wifi: () => <svg className="w-5 h-5 text-luxury-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M8.25 15.625a3.75 3.75 0 117.5 0M4.5 11.875a8.25 8.25 0 1115 0m-18.75-3.75a12.75 12.75 0 1122.5 0M12 18.75h.007v.008H12v-.008z"/></svg>,
+            AC: () => <svg className="w-5 h-5 text-luxury-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h14.25c.621 0 1.125.504 1.125 1.125v14.25c0 .621-.504 1.125-1.125 1.125H4.875c-.621 0-1.125-.504-1.125-1.125V4.875zM12 9.75v4.5m-3-2.25h6m-11.25 6h16.5"/></svg>,
+            Utensils: () => <svg className="w-5 h-5 text-luxury-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zm0 9a.75.75 0 110-1.5.75.75 0 010 1.5zM21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>,
+            Bell: () => <svg className="w-5 h-5 text-luxury-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 113 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.504-1.125-1.125-1.125h-6.75a1.125 1.125 0 00-1.125 1.125v3.375m9 0h-9M9 10.5h.008v.008H9V10.5zm3 0h.008v.008H12V10.5zm3 0h.008v.008H15V10.5z"/></svg>,
+            MapPin: () => <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>,
+            Phone: () => <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.387a12.035 12.035 0 01-7.108-7.108c-.115-.441.017-.928.393-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>,
+            Award: () => <svg className="w-5 h-5 text-luxury-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 113 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.504-1.125-1.125-1.125h-6.75a1.125 1.125 0 00-1
