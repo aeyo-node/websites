@@ -1,1 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rendezvous Jungle Resort – Luxury Jungle Retreat in Wayanad, Kerala</title>
+  
+  <meta name="description" content="Experience the ultimate peaceful escape at Rendezvous Jungle Resort in Sultan Bathery, Kerala. Luxurious rooms, attentive service, and stunning natural surroundings await. Book your stay today.">
+  <meta name="keywords" content="Luxury Jungle Retreat, Wayanad, Kerala, peaceful escape, luxurious rooms, attentive service, natural surroundings, booking, resort, Sultan Bathery">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Rendezvous Jungle Resort – Luxury Jungle Retreat in Wayanad, Kerala">
+  <meta property="og:description" content="Experience the ultimate peaceful escape at Rendezvous Jungle Resort in Sultan Bathery, Kerala. Luxurious rooms, attentive service, and stunning natural surroundings await. Book your stay today.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_IN">
+  
+  <!-- CSS imports -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Lucide Icon Loader -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Tailwind Configuration customization -->
+  <script>
+    tailwind.config = {\n      theme: {\n        extend: {\n          colors: {\n            corporate: {\n              50: '#f8fafc',\n              100: '#f1f5f9',\n              800: '#1e293b',\n              900: '#0f172a',\n              gold: '#b45309',\n              blue: '#1d4ed8'\n            }\n          }\n        }\n      }\n    }\n  </script>
 
+  <!-- Schema.org Professional Service JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AccountingService",
+    "name": "Rendezvous Jungle Resort",
+    "image": "images/office-exterior.svg", 
+    "@id": "",
+    "url": "{{BUSINESS_WEBSITE_URL}}",
+    "telephone": "{{BUSINESS_PHONE_UNFORMATTED}}",
+    "priceRange": "$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Sultan Bathery",
+      "addressLocality": "Sultan Bathery",
+      "addressRegion": "Kerala",
+      "postalCode": "{{BUSINESS_ZIP_CODE}}",
+      "addressCountry": "India"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": {{BUSINESS_LATITUDE}},
+      "longitude": {{BUSINESS_LONGITUDE}}
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],\n      "opens": "09:00",
+      "closes": "18:00"
+    }
+  }
+  </script>
+</head>
+<body class="bg-corporate-50 antialiased selection:bg-corporate-900 selection:text-white">
+
+  <!-- Background Decorative Blur Nodes -->
+  <div class="bg-blur-node bg-blue-200 top-20 left-10"></div>
+  <div class="bg-blur-node bg-amber-100 top-1/3 right-10"></div>
+  <div class="bg-blur-node bg-blue-100 bottom-1/4 left-1/4"></div>
+
+  <!-- STICKY GLASS NAVIGATION -->
+  <nav class="fixed top-0 left-0 w-full z-50 glass-nav py-5 px-6 md:px-12">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="#" class="flex flex-col select-none">
+        <span class="text-lg md:text-xl font-extrabold tracking-tight text-corporate-900 uppercase">Rendezvous Jungle Resort</span>
+        <span class="text-[9px] md:text-[10px] tracking-widest text-slate-500 uppercase font-semibold">Luxury Jungle Escape</span>
+      </a>
+      
+      <!-- Desktop Menu Links -->
+      <div class="hidden lg:flex items-center space-x-8 text-sm font-medium text-slate-600">
+        <a href="#about" class="hover:text-corporate-900 transition-colors">About</a>
+        <a href="#services" class="hover:text-corporate-900 transition-colors">Services</a>
+        <a href="#industries" class="hover:text-corporate-900 transition-colors">Highlights</a>
+        <a href="#why-choose-us" class="hover:text-corporate-900 transition-colors">Why Choose Us</a>
+        <a href="#process" class="hover:text-corporate-900 transition-colors">Our Journey</a>
+        <a href="#testimonials" class="hover:text-corporate-900 transition-colors">Testimonials</a>
+        <a href="#faq" class="hover:text-corporate-900 transition-colors">FAQ</a>
+        <a href="#contact" class="hover:text-corporate-900 transition-colors">Contact</a>
+      </div>
+
+      <div class="hidden lg:block">
+        <a href="#contact" class="btn-primary text-xs font-semibold uppercase tracking-wider py-3 px-6 rounded-full inline-block">
+          Book Your Stay
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="lg:hidden text-corporate-900 focus:outline-none" id="mobile-menu-toggle" aria-label="Toggle Menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Overlay -->
+    <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white border-b border-slate-200 px-6 py-8 flex-col space-y-4 shadow-xl z-40">
+      <a href="#about" class="mobile-link text-base font-medium text-slate-700 hover:text-corporate-900">About</a>
+      <a href="#services" class="mobile-link text-base font-medium text-slate-700 hover:text-corporate-900">Services</a>
+      <a href="#industries" class="mobile-link text-base font-medium text-slate-700 hover:text-corporate-900">Highlights</a>
+      <a href="#why-choose-us" class="mobile-link text-base font-medium text-slate-700 hover:text-corporate-900">Why Choose Us</a>
+      <a href="#process" class="mobile-link text-base font-medium text-slate-700 hover:text-corporate-900">Our Journey</a>
+      <a href="#testimonials" class="mobile-link text-base font-medium text-slate-700 hover:text-corporate-900">Testimonials</a>
+      <a href="#faq" class="mobile-link text-base font-medium text-slate-700 hover:text-corporate-900">FAQ</a>
+      <a href="#contact" class="mobile-link text-base font-medium text-slate-700 hover:text-corporate-900">Contact</a>
+      <a href="#contact" class="mobile-link btn-primary text-center text-sm font-semibold uppercase py-3 rounded-xl">Book Your Stay</a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="relative pt-36 md:pt-48 pb-20 md:pb-32 px-6 md:px-12 overflow-hidden">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Hero Copy -->
+      <div class="lg:col-span-7 space-y-6 md:space-y-8">
+        <div class="inline-flex items-center space-x-2 bg-slate-100 border border-slate-200/50 py-1.5 px-4 rounded-full">
+          <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+          <span class="text-xs font-semibold text-slate-600 tracking-wider uppercase">Experience Tranquility</span>
+        </div>
+        
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-corporate-900 leading-[1.1]">
+          Find Your Peace in the Heart of Wayanad.<br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-corporate-900 to-slate-600">Where Luxury Meets Serenity</span>
+        </h1>
+        
+        <p class="text-slate-600 text-base md:text-lg max-w-xl leading-relaxed">
+          A secluded jungle resort where modern luxury blends seamlessly with the untouched beauty of nature, inviting you to breathe, unwind, and be enveloped by mist-kissed forest views and comforting hospitality.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4">
+          <a href="#contact" class="btn-primary text-center text-sm font-bold tracking-wide uppercase py-4 px-8 rounded-full">
+            Book Your Stay
+          </a>
+          <a href="#services" class="btn-secondary text-center text-sm font-bold tracking-wide uppercase py-4 px-8 rounded-full">
+            Discover the Resort
+          </a>
+        </div>
+
+        <!-- Floating Premium Stats -->
+        <div class="pt-8 grid grid-cols-3 gap-6 border-t border-slate-200 max-w-lg">
+          <div>
+            <div class="text-3xl font-extrabold text-corporate-900">{{HERO_STAT_1_NUMBER}}</div>
+            <div class="text-xs text-slate-500 font-medium mt-1">{{HERO_STAT_1_LABEL}}</div>
+          </div>
+          <div>
+            <div class="text-3xl font-extrabold text-corporate-900 flex items-center">
+              {{HERO_STAT_2_NUMBER}}<span class="text-amber-500 text-xl ml-1">★</span>
+            </div>
+            <div class="text-xs text-slate-500 font-medium mt-1">{{HERO_STAT_2_LABEL}}</div>
+          </div>
+          <div>
+            <div class="text-3xl font-extrabold text-corporate-900">{{HERO_STAT_3_NUMBER}}</div>
+            <div class="text-xs text-slate-500 font-medium mt-1">{{HERO_STAT_3_LABEL}}</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Frame with Glassmorphic Elements -->
+      <div class="lg:col-span-5 relative mt-8 lg:mt-0">
+        <div class="relative w-full rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] bg-slate-300">
+          <!-- Fallback local image or structural placeholder graphic -->
+          <img src="images/office-interior.svg" alt="Misty jungle resort interior with a view" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200';">
+          <div class="absolute inset-0 bg-gradient-to-t from-corporate-900/40 to-transparent"></div>
+        </div>
+
+        <!-- Float Accent Card 1 -->
+        <div class="absolute -bottom-6 -left-6 glass-panel p-5 rounded-2xl shadow-xl border border-white/50 max-w-[240px] hidden sm:block">
+          <div class="flex items-center space-x-3 mb-2">
+            <span class="p-2 bg-emerald-100 text-emerald-800 rounded-lg">
+              <i data-lucide="shield" class="w-5 h-5"></i>
+            </span>
+            <span class="text-xs font-bold text-slate-800">Immersive Nature</span>
+          </div>
+          <p class="text-[11px] text-slate-500">Experience true tranquility amidst Wayanad's lush forests.</p>
+        </div>
+
+        <!-- Float Accent Card 2 -->
+        <div class="absolute -top-6 -right-6 glass-panel p-5 rounded-2xl shadow-xl border border-white/50 max-w-[200px] hidden sm:block">
+          <div class="flex items-center space-x-3 mb-2">
+            <span class="p-2 bg-blue-100 text-blue-800 rounded-lg">
+              <i data-lucide="award" class="w-5 h-5"></i>
+            </span>
+            <span class="text-xs font-bold text-slate-800">Exceptional Service</span>
+          </div>
+          <p class="text-[11px] text-slate-500">Heartfelt hospitality, attentive to every detail.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="py-20 md:py-28 px-6 md:px-12 bg-white reveal">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div>
+          <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">Our Story</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-corporate-900 mt-2 mb-6">
+            Creating Your Sanctuary<br><span class="font-serif-editorial italic text-slate-600 font-normal">Where Luxury Meets Nature</span>
+          </h2>
+          <div class="space-y-6 text-slate-600 leading-relaxed text-base">
+            <p>
+              <strong>Rendezvous Jungle Resort</strong> is a sanctuary crafted to harmoniously blend modern luxury with the untouched beauty of Wayanad’s forests. Our vision is to offer a peaceful escape where guests can truly rejuvenate.
+            </p>
+            <p>
+              We are committed to environmental stewardship, ensuring our thoughtful design respects and enhances the natural surroundings. Every detail is meticulously attended to, from the pristine rooms to the soothing ambiance.
+            </p>
+            <p>
+              Our dedicated staff delivers genuine, warm hospitality, making every stay an unforgettable and restorative experience. We invite you to reconnect with nature and create lasting, positive memories.
+            </p>
+          </div>
+
+          <div class="mt-8 flex items-center space-x-4">
+            <div class="p-3 bg-slate-100 rounded-full">
+              <i data-lucide="signature" class="w-6 h-6 text-slate-800"></i>
+            </div>
+            <div>
+              <p class="text-xs font-semibold text-slate-400 uppercase">Founder & Visionary</p>
+              <p class="text-base font-bold text-corporate-900">The Rendezvous Team</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="rounded-3xl overflow-hidden shadow-xl aspect-square bg-slate-100 border border-slate-200">
+            <!-- Fallback Team/Office/Credential image -->
+            <img src="images/team-photo.svg" alt="Serene resort lobby with natural light" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1606857521015-7f9fcf423740?auto=format&fit=crop&q=80&w=1200';">
+          </div>
+          <div class="absolute -bottom-8 -right-4 md:right-8 glass-panel p-6 rounded-2xl shadow-xl max-w-sm border border-white/60">
+            <h4 class="text-sm font-bold text-corporate-900 mb-1">Our Promise to You</h4>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              "To deliver a luxurious, tranquil stay, meticulously clean and comfortable, wrapped in heartfelt hospitality amidst nature's embrace."
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section id="services" class="py-20 md:py-32 px-6 md:px-12 bg-slate-50 reveal">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16 md:mb-24">
+        <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">Our Offerings</span>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-corporate-900 mt-2 mb-4">Experience Elevated Comfort and Nature</h2>
+        <p class="text-slate-600 text-base">Indulge in a range of premium services designed to enhance your peaceful escape and immerse you in the beauty of Wayanad.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        
+        <!-- Service 1 -->
+        <div class="bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm interactive-card flex flex-col justify-between">
+          <div>
+            <div class="p-3 bg-blue-50 text-blue-700 rounded-xl w-12 h-12 flex items-center justify-center mb-6">
+              <i data-lucide="scale" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-corporate-900 mb-3">Luxury Accommodation</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">Stay in elegant rooms designed with natural textures, plush bedding, and expansive windows framing stunning forest vistas for ultimate comfort.</p>
+          </div>
+          <a href="#contact" class="inline-flex items-center text-xs font-bold text-corporate-900 hover:text-blue-700 transition-colors">
+            Learn More <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
+          </a>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm interactive-card flex flex-col justify-between">
+          <div>
+            <div class="p-3 bg-blue-50 text-blue-700 rounded-xl w-12 h-12 flex items-center justify-center mb-6">
+              <i data-lucide="file-text" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-corporate-900 mb-3">Spa & Wellness</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">Rejuvenate your senses with private treatments using organic ingredients and serene yoga or meditation sessions in outdoor settings.</p>
+          </div>
+          <a href="#contact" class="inline-flex items-center text-xs font-bold text-corporate-900 hover:text-blue-700 transition-colors">
+            Learn More <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
+          </a>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm interactive-card flex flex-col justify-between">
+          <div>
+            <div class="p-3 bg-blue-50 text-blue-700 rounded-xl w-12 h-12 flex items-center justify-center mb-6">
+              <i data-lucide="layers" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-corporate-900 mb-3">Fine Dining Experiences</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">Savor farm-to-table cuisine showcasing Kerala’s authentic flavors, served in an elegant ambiance that mirrors the surrounding greenery.</p>
+          </div>
+          <a href="#contact" class="inline-flex items-center text-xs font-bold text-corporate-900 hover:text-blue-700 transition-colors">
+            Learn More <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
+          </a>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm interactive-card flex flex-col justify-between">
+          <div>
+            <div class="p-3 bg-blue-50 text-blue-700 rounded-xl w-12 h-12 flex items-center justify-center mb-6">
+              <i data-lucide="book-open" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-corporate-900 mb-3">Guided Nature Walks</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">Explore the jungle’s hidden treasures with curated eco-tours and guided walks, connecting you deeply with Wayanad's biodiversity.</p>
+          </div>
+          <a href="#contact" class="inline-flex items-center text-xs font-bold text-corporate-900 hover:text-blue-700 transition-colors">
+            Learn More <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
+          </a>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm interactive-card flex flex-col justify-between">
+          <div>
+            <div class="p-3 bg-blue-50 text-blue-700 rounded-xl w-12 h-12 flex items-center justify-center mb-6">
+              <i data-lucide="shield-check" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-corporate-900 mb-3">Event & Conference Spaces</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">Host sophisticated, intimate gatherings or business conferences in our versatile venues, thoughtfully set amidst inspiring natural beauty.</p>
+          </div>
+          <a href="#contact" class="inline-flex items-center text-xs font-bold text-corporate-900 hover:text-blue-700 transition-colors">
+            Learn More <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
+          </a>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm interactive-card flex flex-col justify-between">
+          <div>
+            <div class="p-3 bg-blue-50 text-blue-700 rounded-xl w-12 h-12 flex items-center justify-center mb-6">
+              <i data-lucide="rocket" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-corporate-900 mb-3">Airport Transfers</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">Enjoy seamless, personalized assistance from your arrival to departure with our convenient and comfortable airport transfer services.</p>
+          </div>
+          <a href="#contact" class="inline-flex items-center text-xs font-bold text-corporate-900 hover:text-blue-700 transition-colors">
+            Learn More <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
+          </a>
+        </div>
+
+        <!-- Service 7 -->
+        <div class="bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm interactive-card flex flex-col justify-between">
+          <div>
+            <div class="p-3 bg-blue-50 text-blue-700 rounded-xl w-12 h-12 flex items-center justify-center mb-6">
+              <i data-lucide="briefcase" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-corporate-900 mb-3">Concierge Services</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">Our dedicated concierge team provides personalized assistance to ensure every aspect of your stay is perfect and stress-free.</p>
+          </div>
+          <a href="#contact" class="inline-flex items-center text-xs font-bold text-corporate-900 hover:text-blue-700 transition-colors">
+            Learn More <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
+          </a>
+        </div>
+
+        <!-- Service 8 -->
+        <div class="bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm interactive-card flex flex-col justify-between">
+          <div>
+            <div class="p-3 bg-blue-50 text-blue-700 rounded-xl w-12 h-12 flex items-center justify-center mb-6">
+              <i data-lucide="building-2" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-corporate-900 mb-3">{{SERVICE_8_TITLE}}</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">{{SERVICE_8_DESC}}</p>
+          </div>
+          <a href="#contact" class="inline-flex items-center text-xs font-bold text-corporate-900 hover:text-blue-700 transition-colors">
+            Learn More <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
+          </a>
+        </div>
+
+        <!-- Service 9 -->
+        <div class="bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm interactive-card flex flex-col justify-between">
+          <div>
+            <div class="p-3 bg-blue-50 text-blue-700 rounded-xl w-12 h-12 flex items-center justify-center mb-6">
+              <i data-lucide="globe" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-corporate-900 mb-3">{{SERVICE_9_TITLE}}</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">{{SERVICE_9_DESC}}</p>
+          </div>
+          <a href="#contact" class="inline-flex items-center text-xs font-bold text-corporate-900 hover:text-blue-700 transition-colors">
+            Learn More <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section id="why-choose-us" class="py-20 md:py-32 px-6 md:px-12 bg-white reveal">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-5 space-y-6">
+          <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">Our Commitment</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-corporate-900">Why Choose Rendezvous Jungle Resort?</h2>
+          <p class="text-slate-600 text-base leading-relaxed">
+            We stand out by seamlessly blending high-end comfort with immersive jungle surroundings, ensuring every guest experiences unparalleled tranquility and luxury.
+          </p>
+          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 flex items-start space-x-4">
+            <span class="p-3 bg-emerald-50 text-emerald-800 rounded-xl">
+              <i data-lucide="lock" class="w-6 h-6"></i>
+            </span>
+            <div>
+              <h4 class="text-sm font-bold text-corporate-900">Genuine Hospitality</h4>
+              <p class="text-xs text-slate-500 mt-1">Our attentive, detail-oriented staff are dedicated to making you feel truly at home and cared for.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          
+          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 space-y-4">
+            <span class="p-2.5 bg-white text-slate-800 shadow-sm rounded-xl inline-block">
+              <i data-lucide="user-check" class="w-5 h-5"></i>
+            </span>
+            <h3 class="text-lg font-bold text-corporate-900">Pristine Comfort</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">Enjoy meticulously clean, comfortable, and well-maintained rooms for a relaxing stay.</p>
+          </div>
+
+          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 space-y-4">
+            <span class="p-2.5 bg-white text-slate-800 shadow-sm rounded-xl inline-block">
+              <i data-lucide="clock" class="w-5 h-5"></i>
+            </span>
+            <h3 class="text-lg font-bold text-corporate-900">Serene Ambiance</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">Wake up to panoramic misty forest views and the soothing sounds of nature.</p>
+          </div>
+
+          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 space-y-4">
+            <span class="p-2.5 bg-white text-slate-800 shadow-sm rounded-xl inline-block">
+              <i data-lucide="sliders" class="w-5 h-5"></i>
+            </span>
+            <h3 class="text-lg font-bold text-corporate-900">Nature Integration</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">Our design thoughtfully respects and enhances the natural environment, blending luxury with the jungle.</p>
+          </div>
+
+          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 space-y-4">
+            <span class="p-2.5 bg-white text-slate-800 shadow-sm rounded-xl inline-block">
+              <i data-lucide="cpu" class="w-5 h-5"></i>
+            </span>
+            <h3 class="text-lg font-bold text-corporate-900">Unforgettable Escape</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">Create lasting positive memories in a unique, tranquil, nature-luxury setting.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES WE SERVE -->
+  <section id="industries" class="py-20 md:py-32 px-6 md:px-12 bg-slate-900 text-white relative overflow-hidden">
+    <!-- Accent Dark Glow -->
+    <div class="absolute -top-40 -left-40 w-96 h-96 bg-blue-900/40 rounded-full filter blur-[120px]"></div>
+    
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="max-w-3xl mb-16">
+        <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">Our Highlights</span>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-white mt-2 mb-4">Immersive Resort Experiences</h2>
+        <p class="text-slate-400 text-sm md:text-base">Discover the unique elements that make Rendezvous Jungle Resort an unparalleled escape into nature's luxury.</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        
+        <div class="p-6 bg-white/5 border border-white/10 rounded-2xl flex flex-col justify-between hover:bg-white/10 transition-all">
+          <i data-lucide="rocket" class="w-6 h-6 text-slate-300 mb-8"></i>
+          <span class="text-sm font-bold">Misty Forest Views</span>
+        </div>
+
+        <div class="p-6 bg-white/5 border border-white/10 rounded-2xl flex flex-col justify-between hover:bg-white/10 transition-all">
+          <i data-lucide="store" class="w-6 h-6 text-slate-300 mb-8"></i>
+          <span class="text-sm font-bold">Plush Accommodations</span>
+        </div>
+
+        <div class="p-6 bg-white/5 border border-white/10 rounded-2xl flex flex-col justify-between hover:bg-white/10 transition-all">
+          <i data-lucide="building" class="w-6 h-6 text-slate-300 mb-8"></i>
+          <span class="text-sm font-bold">Harmonious Design</span>
+        </div>
+
+        <div class="p-6 bg-white/5 border border-white/10 rounded-2xl flex flex-col justify-between hover:bg-white/10 transition-all">
+          <i data-lucide="briefcase" class="w-6 h-6 text-slate-300 mb-8"></i>
+          <span class="text-sm font-bold">Attentive Staff</span>
+        </div>
+
+        <div class="p-6 bg-white/5 border border-white/10 rounded-2xl flex flex-col justify-between hover:bg-white/10 transition-all">
+          <i data-lucide="users" class="w-6 h-6 text-slate-300 mb-8"></i>
+          <span class="text-sm font-bold">Peaceful Retreats</span>
+        </div>
+
+        <div class="p-6 bg-white/5 border border-white/10 rounded-2xl flex flex-col justify-between hover:bg-white/10 transition-all">
+          <i data-lucide="shopping-cart" class="w-6 h-6 text-slate-300 mb-8"></i>
+          <span class="text-sm font-bold">Authentic Cuisine</span>
+        </div>
+
+        <div class="p-6 bg-white/5 border border-white/10 rounded-2xl flex flex-col justify-between hover:bg-white/10 transition-all">
+          <i data-lucide="activity" class="w-6 h-6 text-slate-300 mb-8"></i>
+          <span class="text-sm font-bold">Wellness Journeys</span>
+        </div>
+
+        <div class="p-6 bg-white/5 border border-white/10 rounded-2xl flex flex-col justify-between hover:bg-white/10 transition-all">
+          <i data-lucide="coffee" class="w-6 h-6 text-slate-300 mb-8"></i>
+          <span class="text-sm font-bold">Nature Exploration</span>
+        </div>
+
+        <div class="p-6 bg-white/5 border border-white/10 rounded-2xl flex flex-col justify-between hover:bg-white/10 transition-all">
+          <i data-lucide="monitor" class="w-6 h-6 text-slate-300 mb-8"></i>
+          <span class="text-sm font-bold">Relaxing Ambiance</span>
+        </div>
+
+        <div class="p-6 bg-white/5 border border-white/10 rounded-2xl flex flex-col justify-between hover:bg-white/10 transition-all">
+          <i data-lucide="factory" class="w-6 h-6 text-slate-300 mb-8"></i>
+          <span class="text-sm font-bold">Secluded Location</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK PROCESS -->
+  <section id="process" class="py-20 md:py-32 px-6 md:px-12 bg-white reveal">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-16 md:mb-24">
+        <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">Your Journey</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-corporate-900 mt-2 mb-4">Your Rendezvous Journey</h2>
+        <p class="text-slate-600 text-sm md:text-base">From the moment you arrive, we ensure every step of your stay is seamless, relaxing, and tailored for an unforgettable escape.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 relative z-10">
+        
+        <!-- Step 1 -->
+        <div class="timeline-step relative space-y-4">
+          <div class="text-5xl font-extrabold text-slate-100">01</div>
+          <div class="flex items-center space-x-3">
+            <span class="w-2.5 h-2.5 rounded-full bg-slate-900"></span>
+            <h4 class="text-base font-bold text-corporate-900">Arrival & Welcome</h4>
+          </div>
+          <p class="text-xs text-slate-500 leading-relaxed">Begin your tranquil escape with a warm greeting and seamless check-in, setting the tone for your stay.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="timeline-step relative space-y-4">
+          <div class="text-5xl font-extrabold text-slate-100">02</div>
+          <div class="flex items-center space-x-3">
+            <span class="w-2.5 h-2.5 rounded-full bg-slate-400"></span>
+            <h4 class="text-base font-bold text-corporate-900">Settle Into Comfort</h4>
+          </div>
+          <p class="text-xs text-slate-500 leading-relaxed">Unwind in your meticulously prepared room, designed for luxury and immersed in nature's peace.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="timeline-step relative space-y-4">
+          <div class="text-5xl font-extrabold text-slate-100">03</div>
+          <div class="flex items-center space-x-3">
+            <span class="w-2.5 h-2.5 rounded-full bg-slate-400"></span>
+            <h4 class="text-base font-bold text-corporate-900">Explore & Indulge</h4>
+          </div>
+          <p class="text-xs text-slate-500 leading-relaxed">Discover our amenities, from fine dining to wellness, or embark on a guided nature walk.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="timeline-step relative space-y-4">
+          <div class="text-5xl font-extrabold text-slate-100">04</div>
+          <div class="flex items-center space-x-3">
+            <span class="w-2.5 h-2.5 rounded-full bg-slate-400"></span>
+            <h4 class="text-base font-bold text-corporate-900">Personalized Service</h4>
+          </div>
+          <p class="text-xs text-slate-500 leading-relaxed">Our attentive staff is always on hand to cater to your needs, ensuring a worry-free experience.</p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="timeline-step relative space-y-4">
+          <div class="text-5xl font-extrabold text-slate-100">05</div>
+          <div class="flex items-center space-x-3">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-600"></span>
+            <h4 class="text-base font-bold text-corporate-900">Cherish Memories</h4>
+          </div>
+          <p class="text-xs text-slate-500 leading-relaxed">Depart feeling rejuvenated, carrying cherished memories of your luxurious jungle retreat.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section id="testimonials" class="py-20 md:py-32 px-6 md:px-12 bg-slate-50 reveal">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+        <div>
+          <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">Guest Experiences</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-corporate-900 mt-2">What Our Guests Say</h2>
+        </div>
+        <div class="flex items-center space-x-3 mt-4 md:mt-0">
+          <button id="prev-test" class="p-3 bg-white border border-slate-200 hover:border-slate-400 text-slate-800 rounded-full transition-all" aria-label="Previous Testimonial">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </button>
+          <button id="next-test" class="p-3 bg-white border border-slate-200 hover:border-slate-400 text-slate-800 rounded-full transition-all" aria-label="Next Testimonial">
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Testimonial Carousel Wrapper -->
+      <div class="overflow-hidden">
+        <div class="flex transition-transform duration-500 ease-out" id="testimonial-track" style="transform: translateX(0%);">
+          
+          <!-- Testimonial Card 1 -->
+          <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
+            <div class="bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm h-full flex flex-col justify-between">
+              <div>
+                <div class="flex items-center space-x-1 text-amber-500 mb-6">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <p class="text-slate-600 text-sm leading-relaxed mb-8 italic">
+                  "The staff made us feel at home with their attentive, friendly service."
+                </p>
+              </div>
+              <div class="border-t border-slate-100 pt-4">
+                <h4 class="font-bold text-sm text-corporate-900">A Happy Guest</h4>
+                <p class="text-[11px] text-slate-500">Traveler</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial Card 2 -->
+          <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
+            <div class="bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm h-full flex flex-col justify-between">
+              <div>
+                <div class="flex items-center space-x-1 text-amber-500 mb-6">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <p class="text-slate-600 text-sm leading-relaxed mb-8 italic">
+                  "Waking up to misty forest views was pure bliss."
+                </p>
+              </div>
+              <div class="border-t border-slate-100 pt-4">
+                <h4 class="font-bold text-sm text-corporate-900">Nature Lover</h4>
+                <p class="text-[11px] text-slate-500">Visitor</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial Card 3 -->
+          <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
+            <div class="bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm h-full flex flex-col justify-between">
+              <div>
+                <div class="flex items-center space-x-1 text-amber-500 mb-6">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <p class="text-slate-600 text-sm leading-relaxed mb-8 italic">
+                  "A stay that feels like a peaceful escape from the world."
+                </p>
+              </div>
+              <div class="border-t border-slate-100 pt-4">
+                <h4 class="font-bold text-sm text-corporate-900">Relaxation Seeker</h4>
+                <p class="text-[11px] text-slate-500">Guest</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial Card 4 -->
+          <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
+            <div class="bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm h-full flex flex-col justify-between">
+              <div>
+                <div class="flex items-center space-x-1 text-amber-500 mb-6">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <p class="text-slate-600 text-sm leading-relaxed mb-8 italic">
+                  "Clean, comfortable rooms set the perfect tone for relaxation."
+                </p>
+              </div>
+              <div class="border-t border-slate-100 pt-4">
+                <h4 class="font-bold text-sm text-corporate-900">Comfort Aficionado</h4>
+                <p class="text-[11px] text-slate-500">Traveler</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section id="faq" class="py-20 md:py-32 px-6 md:px-12 bg-white reveal">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">Quick Answers</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-corporate-900 mt-2 mb-4">Frequently Asked Questions</h2>
+        <p class="text-slate-500 text-sm md:text-base">Find quick answers to common questions about your stay at Rendezvous Jungle Resort.</p>
+      </div>
+
+      <div class="space-y-4">
+        
+        <!-- Accordion 1 -->
+        <div class="border border-slate-200 rounded-xl overflow-hidden accordion-item transition-all duration-300">
+          <button class="w-full flex items-center justify-between p-6 text-left font-bold text-slate-800 focus:outline-none" onclick="toggleAccordion(this)">
+            <span>What are the check-in and check-out times?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 accordion-icon transition-transform"></i>
+          </button>
+          <div class="accordion-content px-6 bg-slate-50">
+            <p class="py-4 text-xs text-slate-600 leading-relaxed">
+              Check-in is at 3:00 PM, and check-out is at 11:00 AM. Early check-in or late check-out may be available upon request and subject to availability.
+            </p>
+          </div>
+        </div>
+
+        <!-- Accordion 2 -->
+        <div class="border border-slate-200 rounded-xl overflow-hidden accordion-item transition-all duration-300">
+          <button class="w-full flex items-center justify-between p-6 text-left font-bold text-slate-800 focus:outline-none" onclick="toggleAccordion(this)">
+            <span>Are pets allowed on the property?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 accordion-icon transition-transform"></i>
+          </button>
+          <div class="accordion-content px-6 bg-slate-50">
+            <p class="py-4 text-xs text-slate-600 leading-relaxed">
+              To ensure the comfort of all our guests and due to the natural environment, we unfortunately cannot accommodate pets at this time.
+            </p>
+          </div>
+        </div>
+
+        <!-- Accordion 3 -->
+        <div class="border border-slate-200 rounded-xl overflow-hidden accordion-item transition-all duration-300">
+          <button class="w-full flex items-center justify-between p-6 text-left font-bold text-slate-800 focus:outline-none" onclick="toggleAccordion(this)">
+            <span>What dining options are available, and do you offer vegetarian/vegan meals?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 accordion-icon transition-transform"></i>
+          </button>
+          <div class="accordion-content px-6 bg-slate-50">
+            <p class="py-4 text-xs text-slate-600 leading-relaxed">
+              Our resort features a fine dining restaurant offering farm-to-table cuisine. We are happy to cater to dietary preferences, including vegetarian and vegan meals, with advance notice.
+            </p>
+          </div>
+        </div>
+
+        <!-- Accordion 4 -->
+        <div class="border border-slate-200 rounded-xl overflow-hidden accordion-item transition-all duration-300">
+          <button class="w-full flex items-center justify-between p-6 text-left font-bold text-slate-800 focus:outline-none" onclick="toggleAccordion(this)">
+            <span>Is Wi-Fi provided, and what is the speed?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 accordion-icon transition-transform"></i>
+          </button>
+          <div class="accordion-content px-6 bg-slate-50">
+            <p class="py-4 text-xs text-slate-600 leading-relaxed">
+              Complimentary Wi-Fi is available throughout the resort. While we aim for reliable connectivity, please note that internet speeds can vary due to our secluded jungle location.
+            </p>
+          </div>
+        </div>
+
+        <!-- Accordion 5 -->
+        <div class="border border-slate-200 rounded-xl overflow-hidden accordion-item transition-all duration-300">
+          <button class="w-full flex items-center justify-between p-6 text-left font-bold text-slate-800 focus:outline-none" onclick="toggleAccordion(this)">
+            <span>Are there activities suitable for children?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 accordion-icon transition-transform"></i>
+          </button>
+          <div class="accordion-content px-6 bg-slate-50">
+            <p class="py-4 text-xs text-slate-600 leading-relaxed">
+              We offer guided nature walks suitable for families and can arrange other child-friendly activities upon request, ensuring a memorable experience for all ages.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT & LOCATION SECTION -->
+  <section id="contact" class="py-20 md:py-32 px-6 md:px-12 bg-slate-50 reveal">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+        
+        <!-- Left: Details & Form -->
+        <div class="lg:col-span-7 bg-white p-8 md:p-12 rounded-3xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
+          <div class="space-y-6">
+            <div>
+              <span class="text-xs font-bold text-slate-400 tracking-widest uppercase font-mono">Connect With Us</span>
+              <h2 class="text-3xl font-extrabold text-corporate-900 mt-2">Plan Your Tranquil Escape</h2>
+              <p class="text-slate-500 text-xs md:text-sm mt-1">Reach out to our team for bookings, inquiries, or to tailor your perfect jungle resort experience.</p>
+            </div>
+
+            <!-- Booking/Contact Form -->
+            <form action="#" class="space-y-4" onsubmit="event.preventDefault(); alert('Thank you for your inquiry! We\'ll be in touch shortly to help plan your perfect stay at Rendezvous Jungle Resort.');">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-[11px] font-bold text-slate-500 uppercase tracking-wide mb-1">Full Name</label>
+                  <input type="text" required class="w-full bg-slate-50 border border-slate-200 focus:border-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none transition-all" placeholder="Enter full name">
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold text-slate-500 uppercase tracking-wide mb-1">Email Address</label>
+                  <input type="email" required class="w-full bg-slate-50 border border-slate-200 focus:border-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none transition-all" placeholder="Enter email address">
+                </div>
+              </div>
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-[11px] font-bold text-slate-500 uppercase tracking-wide mb-1">Phone Number</label>
+                  <input type="tel" required class="w-full bg-slate-50 border border-slate-200 focus:border-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none transition-all" placeholder="Enter phone number">
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold text-slate-500 uppercase tracking-wide mb-1">Service Required</label>
+                  <select class="w-full bg-slate-50 border border-slate-200 focus:border-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none transition-all text-slate-600">
+                    <option>Book a Room</option>
+                    <option>Spa & Wellness Inquiry</option>
+                    <option>Dining Reservation</option>
+                    <option>Event Planning</option>
+                    <option>General Inquiry</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-[11px] font-bold text-slate-500 uppercase tracking-wide mb-1">Message / Notes</label>
+                <textarea rows="4" class="w-full bg-slate-50 border border-slate-200 focus:border-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none transition-all resize-none" placeholder="Briefly describe your requirements..."></textarea>
+              </div>
+
+              <button type="submit" class="w-full btn-primary text-sm font-bold uppercase py-4 rounded-xl tracking-wide">
+                Send Your Inquiry
+              </button>
+            </form>
+          </div>
+
+          <!-- Phone & WhatsApp Immediate Contact Rows -->
+          <div class="mt-8 pt-8 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <a href="tel:{{BUSINESS_PHONE_UNFORMATTED}}" class="flex items-center space-x-3 p-4 bg-slate-50 border border-slate-100 rounded-xl hover:border-slate-300 transition-all">
+              <span class="p-2.5 bg-blue-100 text-blue-800 rounded-lg">
+                <i data-lucide="phone-call" class="w-5 h-5"></i>
+              </span>
+              <div>
+                <p class="text-[10px] text-slate-400 uppercase font-bold">Call Us Anytime</p>
+                <p class="text-sm font-bold text-slate-800">{{BUSINESS_PHONE_FORMATTED}}</p>
+              </div>
+            </a>
+            
+            <a href="https://wa.me/{{BUSINESS_WHATSAPP_UNFORMATTED}}" target="_blank" class="flex items-center space-x-3 p-4 bg-slate-50 border border-slate-100 rounded-xl hover:border-emerald-300 transition-all">
+              <span class="p-2.5 bg-emerald-100 text-emerald-800 rounded-lg">
+                <i data-lucide="message-square" class="w-5 h-5"></i>
+              </span>
+              <div>
+                <p class="text-[10px] text-slate-400 uppercase font-bold">Message Us on WhatsApp</p>
+                <p class="text-sm font-bold text-slate-800">Start a Chat</p>
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right: Maps & Core Directory Details -->
+        <div class="lg:col-span-5 flex flex-col space-y-6">
+          
+          <div class="bg-corporate-900 text-white p-8 rounded-3xl space-y-6 flex-1">
+            <h3 class="text-xl font-bold">Our Location & Details</h3>
+            
+            <div class="space-y-4">
+              <div class="flex items-start space-x-3">
+                <i data-lucide="map-pin" class="w-5 h-5 text-slate-400 shrink-0 mt-1"></i>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                  Rendezvous Jungle Resort<br>
+                  Sultan Bathery<br>
+                  Wayanad<br>
+                  Kerala, India
+                </p>
+              </div>
+
+              <div class="flex items-center space-x-3">
+                <i data-lucide="mail" class="w-5 h-5 text-slate-400"></i>
+                <p class="text-xs text-slate-300">{{BUSINESS_EMAIL}}</p>
+              </div>
+
+              <div class="flex items-center space-x-3">
+                <i data-lucide="clock" class="w-5 h-5 text-slate-400"></i>
+                <p class="text-xs text-slate-300">{{BUSINESS_WORKING_HOURS}}</p>
+              </div>
+            </div>
+
+            <!-- Embed Static Google Map Container with Fallback Direction link -->
+            <div class="h-60 rounded-2xl overflow-hidden border border-white/10 relative">
+              <iframe src="{{BUSINESS_GOOGLE_MAPS_EMBED_URL}}" 
+                class="w-full h-full border-0 grayscale opacity-80 hover:opacity-100 transition-opacity" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Office Location Map"></iframe>
+            </div>
+            
+            <a href="{{BUSINESS_GOOGLE_MAPS_EXTERNAL_URL}}" target="_blank" class="w-full bg-white/10 hover:bg-white/20 text-center text-xs font-bold uppercase tracking-wider py-3 rounded-xl inline-block transition-all">
+              Get Directions <i data-lucide="external-link" class="w-3.5 h-3.5 inline ml-1"></i>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LUXURY MINIMAL FOOTER -->
+  <footer class="bg-corporate-900 text-white border-t border-slate-800 pt-20 pb-12 px-6 md:px-12 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16">
+      
+      <div class="lg:col-span-5 space-y-6">
+        <a href="#" class="flex flex-col select-none">
+          <span class="text-xl font-extrabold tracking-tight text-white uppercase">Rendezvous Jungle Resort</span>
+          <span class="text-[9px] tracking-widest text-slate-400 uppercase font-semibold">Your Serene Jungle Escape</span>
+        </a>
+        <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
+          Rendezvous Jungle Resort offers a luxurious and tranquil retreat in Wayanad, where modern comfort meets the breathtaking serenity of nature, delivered with heartfelt hospitality.
+        </p>
+      </div>
+
+      <div class="lg:col-span-3 space-y-4">
+        <h4 class="text-xs font-bold text-slate-300 uppercase tracking-widest">Quick Links</h4>
+        <ul class="space-y-2 text-xs text-slate-400">
+          <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+          <li><a href="#services" class="hover:text-white transition-colors">Our Rooms</a></li>
+          <li><a href="#services" class="hover:text-white transition-colors">Dining</a></li>
+          <li><a href="#services" class="hover:text-white transition-colors">Activities</a></li>
+          <li><a href="#services" class="hover:text-white transition-colors">Gallery</a></li>
+        </ul>
+      </div>
+
+      <div class="lg:col-span-4 space-y-4">
+        <h4 class="text-xs font-bold text-slate-300 uppercase tracking-widest">Contact Info</h4>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Rendezvous Jungle Resort, Sultan Bathery, Wayanad, Kerala, India
+        </p>
+        <p class="text-xs text-slate-400">
+          Phone: {{BUSINESS_PHONE_FORMATTED}}<br>
+          Email: {{BUSINESS_EMAIL}}
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Bottom Legals -->
+    <div class="max-w-7xl mx-auto pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between text-[11px] text-slate-500">
+      <div class="mb-4 md:mb-0">
+        &copy; <span id="current-year"></span> Rendezvous Jungle Resort. All rights reserved.
+      </div>
+      <div class="flex space-x-6">
+        <a href="#about" class="hover:text-slate-300 transition-colors">Legal Disclaimer</a>
+        <a href="#about" class="hover:text-slate-300 transition-colors">Confidentiality Policy</a>
+        <a href="#contact" class="hover:text-slate-300 transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CAROUSEL & ACCORDION CUSTOM INTERACTIVE SCRIPT -->
+  <script>
+    // Set dynamic current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Lucide Icons Initialization
+    lucide.createIcons();
+
+    // Sticky transparent to frosted glass header transition
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 20) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }\n    });
+
+    // Mobile Drawer Navigation Toggle
+    const toggleBtn = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    toggleBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('flex');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('flex');
+      });
+    });
+
+    // Smooth Scroll Reveal Engine (Intersection Observer)
+    const reveals = document.querySelectorAll('.reveal');
+    const revealOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {\n        if (entry.isIntersecting) {\n          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }\n      });
+    }, { threshold: 0.1 });
+
+    reveals.forEach(element => {
+      revealOnScroll.observe(element);
+    });
+
+    // Premium Interactive Custom Accordion Function
+    function toggleAccordion(button) {
+      const item = button.parentElement;
+      const isActive = item.classList.contains('accordion-active');
+      
+      // Close all accordion items
+      document.querySelectorAll('.accordion-item').forEach(i => {
+        i.classList.remove('accordion-active');
+      });
+
+      if (!isActive) {
+        item.classList.add('accordion-active');
+      }\n    }
+
+    // Dynamic Testimonials Slider Implementation
+    const track = document.getElementById('testimonial-track');
+    const prevBtn = document.getElementById('prev-test');
+    const nextBtn = document.getElementById('next-test');
+    
+    let currentIndex = 0;
+    
+    function getVisibleCards() {
+      if (window.innerWidth >= 1024) return 3;
+      if (window.innerWidth >= 768) return 2;
+      return 1;
+    }
+
+    function updateCarousel() {
+      const visibleCount = getVisibleCards();
+      const totalCards = track.children.length;
+      const maxIndex = totalCards - visibleCount;
+      
+      if (currentIndex > maxIndex) currentIndex = maxIndex;
+      if (currentIndex < 0) currentIndex = 0;
+      
+      const cardWidth = 100 / visibleCount;
+      const offset = -(currentIndex * cardWidth);
+      track.style.transform = `translateX(${offset}%)`;
+    }
+
+    nextBtn.addEventListener('click', () => {
+      const maxIndex = track.children.length - getVisibleCards();
+      if (currentIndex < maxIndex) {
+        currentIndex++;
+      } else {
+        currentIndex = 0; // Wrap around smoothly
+      }\n      updateCarousel();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+      } else {
+        currentIndex = track.children.length - getVisibleCards(); // Wrap to end
+      }\n      updateCarousel();
+    });
+
+    // Handle screen resize adjustment for slider
+    window.addEventListener('resize', updateCarousel);
+    updateCarousel();
+  </script>
+</body>
+</html>
