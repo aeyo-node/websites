@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rendezvous Jungle Resort – Luxury Jungle Retreat in Wayanad, Kerala</title>
+    <title>Rendezvous Jungle Resort – Peaceful Jungle Stay in Sultan Bathery, Kerala</title>
     
     <!-- SEO Optimization -->
-    <meta name="description" content="Experience the ultimate peaceful escape at Rendezvous Jungle Resort in Sultan Bathery, Kerala. Luxurious rooms, attentive service, and stunning natural surroundings await. Book your stay today.">
-    <!-- No keywords provided in the brief, so removing existing keywords to avoid inventing -->
+    <meta name="description" content="Discover Rendezvous Jungle Resort, a tranquil resort hotel in Wayanad offering clean rooms, friendly service, and a serene forest setting for a relaxing getaway.">
+    <meta name="keywords" content="Rendezvous Jungle Resort, Jungle Resort Wayanad, Resort hotel Sultan Bathery, Peaceful stay Kerala, Nature resort, Clean rooms Wayanad, Friendly staff Kerala">
     
     <!-- Open Graph tags -->
-    <meta property="og:title" content="Rendezvous Jungle Resort – Luxury Jungle Retreat in Wayanad, Kerala">
-    <meta property="og:description" content="Experience the ultimate peaceful escape at Rendezvous Jungle Resort in Sultan Bathery, Kerala. Luxurious rooms, attentive service, and stunning natural surroundings await. Book your stay today.">
+    <meta property="og:title" content="Rendezvous Jungle Resort | Sultan Bathery, Kerala">
+    <meta property="og:description" content="Experience tranquil jungle luxury in Wayanad. Rendezvous Jungle Resort offers clean, comfortable rooms and warm hospitality amid peaceful natural surroundings.">
     <meta property="og:image" content="images/hero_cover.jpg">
     <meta property="og:type" content="website">
     
@@ -37,10 +37,14 @@
                             dark: '#151413'
                         }
                     }
-                }\n            }\n        }\n    </script>\n    
+                }
+            }
+        }
+    </script>
+    
     <!-- React & Babel Engines for Premium Interactive Features -->
     <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react.production.min.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <!-- Schema.org Hotel Structured Data for Google search trust -->
@@ -52,26 +56,26 @@
       "image": "images/hero_cover.jpg",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Sultan Bathery, Wayanad",
-        "addressLocality": "Wayanad",
+        "streetAddress": "Panayambam Vadakkanad",
+        "addressLocality": "Sultan Bathery",
         "addressRegion": "Kerala",
-        "postalCode": "",
+        "postalCode": "673592",
         "addressCountry": "IN"
       },
-      "telephone": "+914842401122", 
+      "telephone": "+919876543210",
       "starRating": {
         "@type": "Rating",
-        "ratingValue": "5"
+        "ratingValue": "4.5"
       },
-      "priceRange": "", 
+      "priceRange": "₹2,500 - ₹7,000",
       "amenityFeature": [
+        "Clean and comfortable rooms",
+        "Friendly and helpful staff",
+        "Peaceful atmosphere",
+        "Beautiful natural surroundings",
+        "Warm hospitality",
         "Free Wi-Fi",
-        "Air Conditioning",
-        "Farm-to-Table Restaurant",
-        "Spa & Wellness",
-        "Guided Nature Walks",
-        "24x7 Room Service",
-        "Valet Parking"
+        "Air Conditioning"
       ]
     }
     </script>
@@ -109,7 +113,7 @@
             const [mobileNavOpen, setMobileNavOpen] = useState(false);
             const [activeRoomFilter, setActiveRoomFilter] = useState('all');
             const [bookingOpen, setBookingOpen] = useState(false);
-            const [diningTab, setDiningTab] = useState('wayanad');
+            const [diningTab, setDiningTab] = useState('local');
             const [reviewIdx, setReviewIdx] = useState(0);
             const [enquirySuccess, setEnquirySuccess] = useState(false);
             
@@ -119,7 +123,7 @@
 
             // Booking modal parameters
             const [bookingForm, setBookingForm] = useState({
-                checkIn: '', checkOut: '', category: 'Premium Suite', guests: '2', name: '', phone: ''
+                checkIn: '', checkOut: '', category: 'Standard Room', guests: '2', name: '', phone: ''
             });
             const [bookingSuccess, setBookingSuccess] = useState(false);
 
@@ -134,67 +138,67 @@
             // Data Definitions
             const rooms = [
                 {
-                    id: 'premium',
-                    title: 'Luxury Accommodation',
-                    desc: 'Elegant rooms featuring natural textures, plush bedding, and expansive windows framing serene forest vistas. Experience comfort seamlessly integrated with nature.',
-                    price: '₹3,499',
-                    features: ['King Bed', 'Misty Forest View', 'Free High-speed Wi-Fi', 'Premium Bath Amenities', 'Mini-fridge'],
-                    image: 'images/room_premium.jpg'
-                },
-                {
-                    id: 'executive',
-                    title: 'Serene Executive Room',
-                    desc: 'Designed for the discerning traveler, offering an expansive workspace, refined accents, and premium hospitality privileges amidst the tranquil jungle backdrop.',
-                    price: '₹4,499',
-                    features: ['King Bed', 'Coffee Station', 'Express Laundry Access', 'High-Speed Wi-Fi', 'Luxury Lounge Chair'],
-                    image: 'images/room_executive.jpg'
-                },
-                {
-                    id: 'family',
-                    title: 'Family Forest Haven',
-                    desc: 'Spacious interconnecting or double-queen bedroom spaces crafted for ultimate peace, comfort, and direct proximity to Wayanad\'s natural wonders.',
-                    price: '₹5,999',
-                    features: ['2 Queen Beds', 'Living area', 'Kid-friendly Setup', 'Smart TV', 'Spacious Wardrobes'],
-                    image: 'images/room_family.jpg'
+                    id: 'standard',
+                    title: 'Standard Room',
+                    desc: 'Clean and comfortable rooms offering a serene retreat with views of the lush jungle surroundings. Perfect for a peaceful getaway.',
+                    price: '₹2,499',
+                    features: ['King Bed', 'Jungle View', 'Free Wi-Fi', 'Attached Bathroom', 'Comfortable Seating'],
+                    image: 'images/room1.jpg'
                 },
                 {
                     id: 'deluxe',
-                    title: 'Jungle Deluxe Suite',
-                    desc: 'The jewel of Rendezvous. Timeless luxury featuring a separated master parlor, classic natural wood finishes, and royal privileges surrounded by the forest.',
-                    price: '₹7,999',
-                    features: ['Super King Bed', 'Separated Lounge', 'Bathtub & Rain Shower', 'In-room Dining', 'VIP Welcome Platter'],
-                    image: 'images/room_deluxe.jpg'
+                    title: 'Deluxe Cottage',
+                    desc: 'Spacious cottage rooms designed for ultimate relaxation, blending modern comforts with rustic charm. Enjoy the tranquility of nature.',
+                    price: '₹3,499',
+                    features: ['King Bed', 'Private Balcony', 'Coffee Station', 'Forest Views', 'Air Conditioning'],
+                    image: 'images/room3.jpg'
+                },
+                {
+                    id: 'premium',
+                    title: 'Premium Jungle View Room',
+                    desc: 'Our most sought-after rooms, offering breathtaking panoramic views of the Wayanad jungle. Experience luxury amidst nature.',
+                    price: '₹4,999',
+                    features: ['King Bed', 'Large Windows', 'Sitting Area', 'Premium Linens', '24/7 Room Service'],
+                    image: 'images/room4.jpg'
+                },
+                {
+                    id: 'family',
+                    title: 'Family Suite',
+                    desc: 'Ideal for families, these suites offer interconnected rooms or larger spaces to accommodate everyone comfortably, ensuring a memorable stay.',
+                    price: '₹6,999',
+                    features: ['2 King Beds', 'Separate Living Area', 'Kid-friendly Setup', 'Smart TV', 'Spacious Wardrobes'],
+                    image: 'images/room6.jpg'
                 }
             ];
 
             const reviews = [
                 {
-                    quote: "The staff made us feel at home with their attentive, friendly service.",
+                    quote: "We had a wonderful stay at Rendezvous Jungle Resort. The room was clean, comfortable, and well-maintained. The staff were friendly, helpful, and provided excellent service throughout our visit.",
                     author: "Priya Sharma",
-                    role: "Couple's Retreat",
+                    role: "Family Vacation",
                     rating: 5
                 },
                 {
-                    quote: "Waking up to misty forest views was pure bliss. A truly peaceful escape.",
+                    quote: "An unforgettable stay at this peaceful resort. Surrounded by lush greenery and the soothing sounds of the forest, it was truly rejuvenating. The hospitality here is what truly stands out.",
                     author: "Arjun Menon",
-                    role: "Nature Lover",
+                    role: "Nature Enthusiast",
                     rating: 5
                 },
                 {
-                    quote: "Clean, comfortable rooms set the perfect tone for relaxation. Highly recommend this resort for anyone seeking tranquility and luxury.",
-                    author: "Dr. Maya Devi",
-                    role: "Wellness Traveler",
+                    quote: "The serene atmosphere and beautiful natural surroundings made our trip to Wayanad incredibly relaxing. The staff went above and beyond to make us feel welcome and comfortable.",
+                    author: "Deepa Singh",
+                    role: "Weekend Getaway",
                     rating: 5
                 }
             ];
 
             const gallery = [
-                { title: 'Luxury Accommodation', desc: 'Elegant rooms with natural textures and plush bedding.', img: 'images/room_premium.jpg' },
-                { title: 'Pristine Bathroom Oasis', desc: 'Modern amenities blended with natural design elements.', img: 'images/room_executive.jpg' },
-                { title: 'Rendezvous Jungle Resort Facade', desc: 'Seamlessly integrated with the lush Wayanad landscape.', img: 'images/hero_cover.jpg' },
-                { title: 'Farm-to-Table Dining Space', desc: 'An ambiance that mirrors the surrounding greenery and fresh flavors.', img: 'images/dining_restaurant.jpg' },
-                { title: 'Intimate Event Venue', desc: 'Sophisticated spaces for gatherings, set amidst nature.', img: 'images/amenity_banquet.jpg' },
-                { title: 'Local Wayanad Flavors', desc: 'Our delicious farm-to-table cuisine showcasing Kerala’s best.', img: 'images/dining_seafood.jpg' }
+                { title: 'Jungle View Room', desc: 'Wake up to the serene views of Wayanad.', img: 'images/Premium-Suite-Setting.jpg' },
+                { title: 'Comfortable Washroom', desc: 'Modern and clean facilities for your comfort.', img: 'images/Executive-Wash-Oasis.jpg' },
+                { title: 'Resort Exterior', desc: 'Our resort nestled beautifully in the jungle.', img: 'images/Facade.jpg' },
+                { title: 'Restaurant Dining', desc: 'Enjoy delicious local and multi-cuisine meals.', img: 'images/dining.jpg' },
+                { title: 'Conference Hall', desc: 'Facilities for your business and event needs.', img: 'images/banquet.jpg' },
+                { title: 'Relaxing Poolside', desc: 'Unwind by our tranquil pool amidst greenery.', img: 'images/seafood.jpg' }
             ];
 
             const submitBooking = (e) => {
@@ -208,7 +212,7 @@
 
             const triggerWhatsApp = () => {
                 const text = encodeURIComponent("Hello Rendezvous Jungle Resort, I would like to inquire about room reservations.");
-                window.open(`https://wa.me/914842401122?text=${text}`, '_blank');
+                window.open(`https://wa.me/919876543210?text=${text}`, '_blank');
             };
 
             return (
@@ -221,8 +225,8 @@
                     {/* TOP STATUS BAR */}
                     <div className="bg-luxury-dark text-white/70 text-[10px] sm:text-xs py-2 px-6 flex justify-between items-center relative z-50 border-b border-white/5 tracking-wider">
                         <div className="flex gap-4 mx-auto sm:mx-0">
-                            <span className="flex items-center gap-1">📞 +91 484 240 1122</span> {/* Keeping original number as no new number provided */}
-                            <span className="hidden sm:inline">📍 Sultan Bathery, Wayanad, Kerala</span>
+                            <span className="flex items-center gap-1">📞 +91 98765 43210</span>
+                            <span className="hidden sm:inline">📍 Panayambam Vadakkanad, Sultan Bathery, Kerala</span>
                         </div>
                         <div className="hidden sm:flex items-center gap-4">
                             <span className="text-luxury-400 font-bold">✨ Direct Booking Benefit: Complimentary Breakfast</span>
@@ -239,7 +243,7 @@
                                         RENDEZVOUS JUNGLE
                                     </span>
                                     <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.3em] text-luxury-500 font-bold -mt-1">
-                                        Retreat • Wayanad
+                                        Resort Stay • Sultan Bathery
                                     </span>
                                 </a>
 
@@ -248,7 +252,7 @@
                                     {[
                                         { id: 'home', label: 'Home' },
                                         { id: 'about', label: 'Philosophy' },
-                                        { id: 'rooms', label: 'Accommodations' },
+                                        { id: 'rooms', label: 'Rooms' },
                                         { id: 'dining', label: 'Dining' },
                                         { id: 'amenities', label: 'Amenities' },
                                         { id: 'gallery', label: 'Gallery' },
@@ -271,7 +275,7 @@
                                         onClick={() => setBookingOpen(true)}
                                         className="bg-luxury-dark hover:bg-luxury-700 text-white text-[10px] font-bold tracking-widest px-6 py-3 rounded-full transition-all duration-500 hover:shadow-lg hover:shadow-luxury-700/20"
                                     >
-                                        BOOK YOUR STAY
+                                        RESERVE NOW
                                     </button>
                                 </div>
 
@@ -299,7 +303,7 @@
                                     {[
                                         { id: 'home', label: 'Home' },
                                         { id: 'about', label: 'Philosophy' },
-                                        { id: 'rooms', label: 'Accommodations' },
+                                        { id: 'rooms', label: 'Rooms' },
                                         { id: 'dining', label: 'Dining' },
                                         { id: 'amenities', label: 'Amenities' },
                                         { id: 'gallery', label: 'Gallery' },
@@ -321,10 +325,10 @@
                                     onClick={() => { setMobileNavOpen(false); setBookingOpen(true); }}
                                     className="w-full bg-luxury-dark text-white text-xs font-bold py-3.5 rounded-xl tracking-widest"
                                 >
-                                    BOOK YOUR STAY
+                                    BOOK ROOM
                                 </button>
                                 <a 
-                                    href="tel:+914842401122" 
+                                    href="tel:+919876543210" 
                                     className="block w-full border border-luxury-300 text-center text-luxury-dark text-xs font-bold py-3.5 rounded-xl tracking-widest"
                                 >
                                     CALL RESORT
@@ -338,8 +342,8 @@
                         {/* Background Parallax Image */}
                         <div className="absolute inset-0 select-none">
                             <img 
-                                src="images/hero_cover.jpg" 
-                                alt="Rendezvous Jungle Resort facade amidst misty Wayanad forest" 
+                                src="images/hero.jpg" 
+                                alt="Rendezvous Jungle Resort Facade" 
                                 className="w-full h-full object-cover opacity-45 scale-105 transform hover:scale-100 transition-transform duration-[8000ms]"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-luxury-dark via-transparent to-transparent" />
@@ -348,16 +352,16 @@
                         <div className="max-w-5xl mx-auto px-6 text-center relative z-10 space-y-8 mt-20">
                             <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 border border-white/20 rounded-full backdrop-blur-md">
                                 <Icons.Sparkles />
-                                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-luxury-200">Wayanad's Premier Jungle Escape</span>
+                                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-luxury-200">Experience Tranquil Jungle Luxury</span>
                             </div>
 
                             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-serif-luxury text-white font-light leading-[1.1]">
-                                Find Your Peace <br />
+                                Discover Serenity <br />
                                 in the Heart of <span className="italic font-normal text-luxury-100 gold-underline">Wayanad</span>
                             </h1>
 
                             <p className="text-sm sm:text-lg text-luxury-200/90 font-light max-w-2xl mx-auto leading-relaxed">
-                                A secluded jungle resort where luxury meets the serenity of nature. Breathe, unwind, and be enveloped by mist-kissed forest views and comforting hospitality.
+                                Our resort hotel nestled in lush greenery offers clean, comfortable rooms and warm hospitality amid peaceful natural surroundings.
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -371,7 +375,7 @@
                                     href="#rooms"
                                     className="w-full sm:w-auto border border-white/35 hover:border-white text-white font-semibold text-xs tracking-widest px-8 py-4.5 rounded-full transition-all duration-300 hover:bg-white/5"
                                 >
-                                    DISCOVER THE RESORT
+                                    EXPLORE ROOMS
                                 </a>
                             </div>
                         </div>
@@ -392,13 +396,13 @@
                                 <div className="lg:col-span-8 space-y-4">
                                     <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Our Resort Philosophy</p>
                                     <h2 className="text-3xl sm:text-5xl font-serif-luxury text-luxury-dark font-light leading-tight">
-                                        Where Modern Luxury <br />
-                                        Meets <span className="italic">Nature's Serenity</span>
+                                        Where Wayanad's Nature <br />
+                                        Meets <span className="italic">Warm Hospitality</span>
                                     </h2>
                                 </div>
                                 <div className="lg:col-span-4">
                                     <p className="text-sm text-luxury-600 font-light leading-relaxed">
-                                        Rendezvous Jungle Resort is a sanctuary where high-end comfort coexists harmoniously with the untouched beauty of Wayanad’s lush forests. We are committed to environmental stewardship and genuine warmth.
+                                        Rendezvous Jungle Resort is nestled in the lush greenery of Sultan Bathery, Kerala. We offer an architectural sanctuary designed around peaceful natural surroundings and warm, attentive service.
                                     </p>
                                 </div>
                             </div>
@@ -409,34 +413,34 @@
                                 {/* Photo 1 */}
                                 <div className="relative group overflow-hidden rounded-3xl aspect-[4/3] shadow-lg border border-luxury-200">
                                     <img 
-                                        src="images/about_lobby.jpg" 
-                                        alt="Rendezvous Jungle Resort welcoming lobby with natural elements" 
+                                        src="images/hero2.jpg" 
+                                        alt="Luxury Interior Lobby Rendezvous Jungle Resort" 
                                         className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-[3s]" 
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60" />
                                     <div className="absolute bottom-6 left-6 text-white">
-                                        <p className="text-[10px] uppercase tracking-widest font-bold text-luxury-200">Our Welcoming Space</p>
-                                        <h3 className="font-serif-luxury text-xl">The Signature Warm Greeting</h3>
+                                        <p className="text-[10px] uppercase tracking-widest font-bold text-luxury-200">Lobby & Lounges</p>
+                                        <h3 className="font-serif-luxury text-xl">Your Welcoming Oasis</h3>
                                     </div>
                                 </div>
 
                                 {/* Content block 1 */}
                                 <div className="space-y-6">
                                     <h3 className="text-2xl sm:text-3xl font-serif-luxury font-light text-luxury-dark">
-                                        A Commitment to Care and <span className="italic">Genuine Hospitality</span>
+                                        A Commitment to <span className="italic">Peaceful Comfort</span>
                                     </h3>
                                     <p className="text-sm text-luxury-600 font-light leading-relaxed">
-                                        Our vision is to provide an unforgettable, restorative experience, prioritizing individualized guest services and meticulous attention to detail. We ensure direct access to Wayanad's natural attractions.
+                                        Our resort is dedicated to providing an experience where every guest feels at home, surrounded by nature's tranquility. We prioritize individualized guest services to ensure a relaxing and memorable stay.
                                     </p>
                                     
                                     <div className="grid grid-cols-2 gap-6 pt-4">
                                         <div className="border-l-2 border-luxury-500 pl-4">
-                                            <p className="text-3xl font-serif-luxury font-bold text-luxury-500">5★</p>
-                                            <p className="text-[10px] uppercase tracking-wider font-bold text-luxury-600 mt-1">Guest Satisfaction</p>
+                                            <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Serene</p>
+                                            <p className="text-[10px] uppercase tracking-wider font-bold text-luxury-600 mt-1">Natural Surroundings</p>
                                         </div>
                                         <div className="border-l-2 border-luxury-500 pl-4">
-                                            <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Immersive</p>
-                                            <p className="text-[10px] uppercase tracking-wider font-bold text-luxury-600 mt-1">Jungle Experience</p>
+                                            <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Warm</p>
+                                            <p className="text-[10px] uppercase tracking-wider font-bold text-luxury-600 mt-1">Hospitality</p>
                                         </div>
                                     </div>
                                 </div>
@@ -452,11 +456,11 @@
                             {/* Header */}
                             <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                                 <div className="space-y-3">
-                                    <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Our Accommodations</p>
+                                    <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Accommodation Lounge</p>
                                     <h2 className="text-3xl sm:text-5xl font-serif-luxury font-light text-luxury-dark">
-                                        Luxury Rooms & <span className="italic">Comfort Chambers</span>
+                                        Comfortable Rooms & <span className="italic">Jungle Cottages</span>
                                     </h2>
-                                    <p className="text-xs text-luxury-500 uppercase tracking-widest font-bold">All rooms feature premium high speed Wi-Fi and stunning forest views</p>
+                                    <p className="text-xs text-luxury-500 uppercase tracking-widest font-bold">All rooms feature clean, comfortable spaces and access to tranquil natural views</p>
                                 </div>
                             </div>
 
@@ -471,7 +475,7 @@
                                         <div className="relative aspect-[16/10] overflow-hidden">
                                             <img 
                                                 src={room.image} 
-                                                alt={`${room.title} at Rendezvous Jungle Resort`} 
+                                                alt={room.title} 
                                                 className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-1000"
                                             />
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
@@ -501,7 +505,7 @@
                                                     onClick={() => setBookingOpen(true)}
                                                     className="bg-luxury-dark hover:bg-luxury-700 text-white text-[10px] font-bold tracking-widest py-3 px-6 rounded-full transition-all"
                                                 >
-                                                    BOOK YOUR STAY
+                                                    BOOK ROOM
                                                 </button>
                                                 <a 
                                                     href="#contact" 
@@ -512,7 +516,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                ))}\n                            </div>
+                                ))}
+                            </div>
 
                         </div>
                     </section>
@@ -526,43 +531,49 @@
                                 <div className="lg:col-span-5 space-y-8">
                                     <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Gastronomical Masterworks</p>
                                     <h2 className="text-3xl sm:text-5xl font-serif-luxury font-light text-luxury-dark leading-tight">
-                                        Farm-to-Table Cuisine <br />
-                                        By Our <span className="italic">Wayanad Chefs</span>
+                                        Delicious Cuisine <br />
+                                        For Your <span className="italic">Jungle Retreat</span>
                                     </h2>
                                     <p className="text-sm text-luxury-600 font-light leading-relaxed">
-                                        Experience fine dining showcasing Kerala’s unique flavors, served in an ambiance that mirrors the surrounding greenery. Our menus prioritize organic, local ingredients.
+                                        Our multi-cuisine restaurant offers a delightful array of dishes, from local Kerala specialties to continental favorites, all prepared with fresh, quality ingredients.
                                     </p>
 
                                     {/* Tabs to select menu focus */}
                                     <div className="flex gap-2 bg-luxury-100 p-1.5 rounded-full border border-luxury-200">
                                         <button 
-                                            onClick={() => setDiningTab('wayanad')}\n                                            className={`flex-1 text-center py-2 rounded-full text-xs font-bold tracking-wider transition ${diningTab === 'wayanad' ? 'bg-luxury-dark text-white' : 'text-luxury-600'}`}\n                                        >
-                                            Wayanad Flavors
+                                            onClick={() => setDiningTab('local')}
+                                            className={`flex-1 text-center py-2 rounded-full text-xs font-bold tracking-wider transition ${diningTab === 'local' ? 'bg-luxury-dark text-white' : 'text-luxury-600'}`}
+                                        >
+                                            Local Delicacies
                                         </button>
                                         <button 
-                                            onClick={() => setDiningTab('organic')}\n                                            className={`flex-1 text-center py-2 rounded-full text-xs font-bold tracking-wider transition ${diningTab === 'organic' ? 'bg-luxury-dark text-white' : 'text-luxury-600'}`}\n                                        >
-                                            Organic & Local
+                                            onClick={() => setDiningTab('continental')}\
+                                            className={`flex-1 text-center py-2 rounded-full text-xs font-bold tracking-wider transition ${diningTab === 'continental' ? 'bg-luxury-dark text-white' : 'text-luxury-600'}`}
+                                        >
+                                            Continental Favorites
                                         </button>
                                     </div>
 
-                                    {diningTab === 'wayanad' ? (
+                                    {diningTab === 'local' ? (
                                         <div className="space-y-3 bg-[#FCFBF9] p-6 rounded-2xl border border-luxury-300/30">
-                                            <h4 className="text-sm font-bold uppercase tracking-widest text-luxury-dark">Authentic Kerala Thali</h4>
+                                            <h4 className="text-sm font-bold uppercase tracking-widest text-luxury-dark">Wayanad Special Meals</h4>
                                             <p className="text-xs text-luxury-500 font-light leading-relaxed">
-                                                A curated selection of traditional Kerala curries, rice, and local delicacies, celebrating the rich culinary heritage of the region.
+                                                Savor authentic Kerala flavors with traditional sadya options and local specialties, prepared to perfection.
                                             </p>
                                         </div>
                                     ) : (
                                         <div className="space-y-3 bg-[#FCFBF9] p-6 rounded-2xl border border-luxury-300/30">
-                                            <h4 className="text-sm font-bold uppercase tracking-widest text-luxury-dark">Seasonal Jungle Harvest</h4>
+                                            <h4 className="text-sm font-bold uppercase tracking-widest text-luxury-dark">International Comfort Food</h4>
                                             <p className="text-xs text-luxury-500 font-light leading-relaxed">
-                                                Dishes crafted with the freshest seasonal produce and ingredients sourced directly from local farms around Wayanad.
+                                                From hearty breakfasts to exquisite dinner options, our menu caters to diverse palates with international classics.
                                             </p>
                                         </div>
-                                    )}\n
+                                    )}
+
                                     <div className="pt-2">
                                         <button 
-                                            onClick={() => setBookingOpen(true)}\n                                            className="text-xs font-bold text-luxury-700 hover:text-luxury-900 tracking-wider flex items-center gap-1 group"
+                                            onClick={() => setBookingOpen(true)}
+                                            className="text-xs font-bold text-luxury-700 hover:text-luxury-900 tracking-wider flex items-center gap-1 group"
                                         >
                                             RESERVE DINING SLOTS <Icons.ChevronRight />
                                         </button>
@@ -572,10 +583,10 @@
                                 {/* Dining Photos Grid */}
                                 <div className="lg:col-span-7 grid grid-cols-12 gap-4">
                                     <div className="col-span-7 rounded-2xl overflow-hidden aspect-[4/5] shadow-lg border border-luxury-200">
-                                        <img src="images/dining_seafood.jpg" alt="Local Wayanad cuisine and organic dishes" className="w-full h-full object-cover" />
+                                        <img src="images/kerala-food.jpg" alt="Kerala Traditional Meal" className="w-full h-full object-cover" />
                                     </div>
                                     <div className="col-span-5 rounded-2xl overflow-hidden aspect-[1/1] shadow-lg border border-luxury-200 mt-12">
-                                        <img src="images/dining_restaurant.jpg" alt="Rendezvous Jungle Resort restaurant atmosphere" className="w-full h-full object-cover" />
+                                        <img src="images/rest.jpg" alt="Resort restaurant atmosphere" className="w-full h-full object-cover" />
                                     </div>
                                 </div>
 
@@ -591,24 +602,24 @@
                             <div className="text-center max-w-2xl mx-auto mb-20 space-y-4">
                                 <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-400">Amenities Showcase</p>
                                 <h2 className="text-3xl sm:text-5xl font-serif-luxury font-light gold-gradient-text-light leading-tight">
-                                    Engineered for <span className="italic">Tranquil Delight</span>
+                                    Crafted for <span className="italic">Your Perfect Getaway</span>
                                 </h2>
                                 <p className="text-xs sm:text-sm text-luxury-300 font-light">
-                                    Every service is crafted to support continuous convenience for a relaxing jungle escape and rejuvenating stay.
+                                    Every service is designed to ensure continuous convenience and a truly relaxing experience amidst nature.
                                 </p>
                             </div>
 
                             {/* Icons Grid */}
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                                {[
-                                    { title: "Free Wi-Fi", desc: "High-speed wireless networks tailored for staying connected amidst nature.", icon: <Icons.Wifi /> },
-                                    { title: "Air Conditioning", desc: "Advanced in-room climate controls for optimal comfort during your jungle retreat.", icon: <Icons.AC /> },
-                                    { title: "Farm-to-Table Restaurant", desc: "Fine dining with local Wayanad flavors and organic ingredients.", icon: <Icons.Utensils /> },
-                                    { title: "24/7 Room Service", desc: "Impeccable dining and assistance brought directly to your room.", icon: <Icons.Bell /> },
-                                    { title: "Valet Parking", desc: "Secure customer parking zones with 24-hour supervision.", icon: <Icons.MapPin /> },
-                                    { title: "Spa & Wellness", desc: "Private treatments and serene yoga sessions for ultimate rejuvenation.", icon: <Icons.Award /> },
-                                    { title: "Concierge Services", desc: "Personalized assistance for tours, transfers, and a seamless stay.", icon: <Icons.Clock /> },
-                                    { title: "Guided Nature Walks", desc: "Curated experiences to explore the jungle's hidden treasures.", icon: <Icons.Sparkles /> }
+                                {[\
+                                    { title: "Clean & Comfortable Rooms", desc: "Well-maintained rooms ensuring a hygienic and pleasant stay.", icon: <Icons.Sparkles /> },
+                                    { title: "Friendly & Helpful Staff", desc: "Our attentive team is dedicated to providing excellent service.", icon: <Icons.Bell /> },
+                                    { title: "Peaceful Atmosphere", desc: "Immerse yourself in the serene tranquility of the jungle.", icon: <Icons.Sparkles /> },
+                                    { title: "Beautiful Natural Surroundings", desc: "Lush greenery and forest views surrounding the resort.", icon: <Icons.MapPin /> },
+                                    { title: "Warm Hospitality", desc: "Experience genuine care and personalized service from our team.", icon: <Icons.Award /> },
+                                    { title: "Free Wi-Fi", desc: "Stay connected with high-speed internet access throughout the resort.", icon: <Icons.Wifi /> },
+                                    { title: "Air Conditioning", desc: "Comfortable climate control in all rooms for a pleasant stay.", icon: <Icons.AC /> },
+                                    { title: "Multi-Cuisine Restaurant", desc: "Delightful dining options with local and international dishes.", icon: <Icons.Utensils /> }
                                 ].map((amenity, i) => (
                                     <div key={i} className="glass-card-dark p-6 rounded-2xl border border-white/5 space-y-4">
                                         <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-luxury-400">
@@ -617,7 +628,8 @@
                                         <h3 className="text-base font-bold text-white">{amenity.title}</h3>
                                         <p className="text-xs text-luxury-300 font-light leading-relaxed">{amenity.desc}</p>
                                     </div>
-                                ))}\n                            </div>
+                                ))}
+                            </div>
 
                         </div>
                     </section>
@@ -653,7 +665,8 @@
                                             <p className="text-xs text-luxury-200 mt-1 font-light">{item.desc}</p>
                                         </div>
                                     </div>
-                                ))}\n                            </div>
+                                ))}
+                            </div>
 
                         </div>
                     </section>
@@ -668,7 +681,8 @@
                                 <span className="absolute top-4 right-8 font-serif text-[120px] text-luxury-300/20 select-none pointer-events-none">“</span>
                                 <div className="space-y-6">
                                     <div className="flex justify-center gap-1">
-                                        {[...Array(reviews[reviewIdx].rating)].map((_, i) => <Icons.Star key={i} />)}\n                                    </div>
+                                        {[...Array(reviews[reviewIdx].rating)].map((_, i) => <Icons.Star key={i} />)}
+                                    </div>
                                     <p className="text-lg sm:text-2xl font-serif-luxury italic text-luxury-dark leading-relaxed font-light">
                                         "{reviews[reviewIdx].quote}"
                                     </p>
@@ -685,8 +699,11 @@
                                         {reviews.map((_, idx) => (
                                             <button 
                                                 key={idx}
-                                                onClick={() => setReviewIdx(idx)}\n                                                className={`w-2.5 h-2.5 rounded-full transition-all ${reviewIdx === idx ? 'bg-luxury-dark w-6' : 'bg-luxury-300'}`}\n                                            />
-                                        ))}\n                                    </div>
+                                                onClick={() => setReviewIdx(idx)}
+                                                className={`w-2.5 h-2.5 rounded-full transition-all ${reviewIdx === idx ? 'bg-luxury-dark w-6' : 'bg-luxury-300'}`}
+                                            />
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
 
@@ -697,16 +714,16 @@
                                     <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Google Rating</p>
                                 </div>
                                 <div>
-                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Immaculate</p>
-                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Room Cleanliness</p>
+                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">100%</p>
+                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Clean Rooms</p>
                                 </div>
                                 <div>
-                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Attentive</p>
-                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Friendly Staff</p>
+                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Friendly</p>
+                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Attentive Staff</p>
                                 </div>
                                 <div>
                                     <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Peaceful</p>
-                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Jungle Setting</p>
+                                    <p className=\"text-[10px] uppercase tracking-wider text-luxury-500 mt-1\">Natural Setting</p>
                                 </div>
                             </div>
 
@@ -720,20 +737,22 @@
                                 Direct Booking Offer
                             </span>
                             <h2 className="text-3xl sm:text-5xl font-serif-luxury font-light leading-tight">
-                                Reserve Your <span className="italic font-normal text-luxury-300 gold-underline">Tranquil Escape</span>
+                                Ready for Your <span className="italic font-normal text-luxury-300 gold-underline">Perfect Stay?</span>
                             </h2>
                             <p className="text-sm sm:text-base text-luxury-300 font-light max-w-xl mx-auto leading-relaxed">
-                                Book direct on our portal or contact our front office directly to receive complimentary breakfast and executive parking guarantees.
+                                Book direct on our portal or contact our front office directly to receive special benefits and ensure a seamless reservation process.
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                                 <button 
-                                    onClick={() => setBookingOpen(true)}\n                                    className="w-full sm:w-auto bg-white hover:bg-luxury-100 text-luxury-dark font-bold text-xs tracking-widest px-8 py-4.5 rounded-full transition-transform transform hover:-translate-y-0.5 active:scale-95 duration-300"
+                                    onClick={() => setBookingOpen(true)}
+                                    className="w-full sm:w-auto bg-white hover:bg-luxury-100 text-luxury-dark font-bold text-xs tracking-widest px-8 py-4.5 rounded-full transition-transform transform hover:-translate-y-0.5 active:scale-95 duration-300"
                                 >
-                                    BOOK YOUR STAY
+                                    RESERVE NOW
                                 </button>
                                 <a 
-                                    href="tel:+914842401122"\n                                    className="w-full sm:w-auto border border-white/20 hover:bg-white/10 text-white font-semibold text-xs tracking-widest px-8 py-4.5 rounded-full transition"
+                                    href="tel:+919876543210"
+                                    className="w-full sm:w-auto border border-white/20 hover:bg-white/10 text-white font-semibold text-xs tracking-widest px-8 py-4.5 rounded-full transition"
                                 >
                                     CALL RESORT OFFICE
                                 </a>
@@ -753,291 +772,303 @@
                                         Send Us An <span className="italic">Enquiry</span>
                                     </h3>
                                     
-                                    {enquirySuccess ? (
-                                        <div className="bg-emerald-50 border border-emerald-200 text-emerald-800 p-8 rounded-2xl text-center space-y-4">
-                                            <p className="text-sm font-light">Thank you! Your luxury stay enquiry has been transmitted directly to our reservation manager. We will contact you shortly.</p>
-                                        </div>
-                                    ) : (
-                                        <form onSubmit={(e) => { e.preventDefault(); setEnquirySuccess(true); }} className="space-y-6">
-                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                                <div className="space-y-2">
-                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-600">Full Name</label>
-                                                    <input type="text" required placeholder="Your Name" className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition" />
-                                                </div>
-                                                <div className="space-y-2">
-                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-600">Contact Number</label>
-                                                    <input type="tel" required placeholder="Phone Number" className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition" />
-                                                </div>
+                                    {enquirySuccess ? (\
+                                        <div className=\"bg-emerald-50 border border-emerald-200 text-emerald-800 p-8 rounded-2xl text-center space-y-4\">\
+                                            <p className=\"text-sm font-light\">Thank you! Your resort stay enquiry has been transmitted directly to our reservation manager. We will contact you shortly.</p>\
+                                        </div>\
+                                    ) : (\
+                                        <form onSubmit={(e) => { e.preventDefault(); setEnquirySuccess(true); }} className=\"space-y-6\">\
+                                            <div className=\"grid grid-cols-1 sm:grid-cols-2 gap-6\">\
+                                                <div className=\"space-y-2\">\
+                                                    <label className=\"text-[10px] uppercase tracking-wider font-bold text-luxury-600\">Full Name</label>\
+                                                    <input type=\"text\" required placeholder=\"Your Name\" className=\"w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition\" />\
+                                                </div>\
+                                                <div className=\"space-y-2\">\
+                                                    <label className=\"text-[10px] uppercase tracking-wider font-bold text-luxury-600\">Contact Number</label>\
+                                                    <input type=\"tel\" required placeholder=\"Phone Number\" className=\"w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition\" />\
+                                                </div>\
                                             </div>
 
-                                            <div className="space-y-2">
-                                                <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-600">Specific Requirements (Optional)</label>
-                                                <textarea rows="4" placeholder="Mention dates of stay, number of rooms, special dietary needs, or event requirements..." className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition resize-none" />
+                                            <div className=\"space-y-2\">\
+                                                <label className=\"text-[10px] uppercase tracking-wider font-bold text-luxury-600\">Specific Requirements (Optional)</label>\
+                                                <textarea rows=\"4\" placeholder=\"Mention dates of stay, number of rooms, special requests, or event requirements...\" className=\"w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition resize-none\" />\
                                             </div>
 
-                                            <button type="submit" className="w-full bg-luxury-dark hover:bg-luxury-700 text-white font-bold text-xs tracking-widest py-4.5 rounded-xl transition">
-                                                TRANSMIT ENQUIRY
-                                            </button>
-                                        </form>
-                                    )}\n                                </div>
+                                            <button type=\"submit\" className=\"w-full bg-luxury-dark hover:bg-luxury-700 text-white font-bold text-xs tracking-widest py-4.5 rounded-xl transition\">\
+                                                TRANSMIT ENQUIRY\
+                                            </button>\
+                                        </form>\
+                                    )}\
+                                </div>
 
                                 {/* Info */}
-                                <div className="lg:col-span-5 space-y-8 flex flex-col justify-between">
-                                    <div className="space-y-6">
-                                        <h3 className="text-2xl font-serif-luxury font-light text-luxury-dark">
-                                            The Perfect <span className="italic">Wayanad Retreat</span>
+                                <div className=\"lg:col-span-5 space-y-8 flex flex-col justify-between\">
+                                    <div className=\"space-y-6\">\
+                                        <h3 className=\"text-2xl font-serif-luxury font-light text-luxury-dark\">\
+                                            Your <span className=\"italic\">Wayanad Getaway Address</span>\
                                         </h3>
                                         
-                                        <div className="space-y-4">
-                                            <div className="flex gap-4">
-                                                <div className="w-10 h-10 rounded-xl bg-luxury-200 flex items-center justify-center text-luxury-700 flex-shrink-0">
-                                                    📍
-                                                </div>
-                                                <div>
-                                                    <h4 className="text-[10px] uppercase tracking-widest font-bold text-luxury-600">Resort Location</h4>
-                                                    <p className="text-sm text-luxury-800 mt-1 font-light leading-relaxed">
-                                                        Rendezvous Jungle Resort<br />
-                                                        Sultan Bathery, Wayanad,<br />
-                                                        Kerala, India
-                                                    </p>
+                                        <div className=\"space-y-4\">\
+                                            <div className=\"flex gap-4\">\
+                                                <div className=\"w-10 h-10 rounded-xl bg-luxury-200 flex items-center justify-center text-luxury-700 flex-shrink-0\">\
+                                                    📍\
+                                                </div>\
+                                                <div>\
+                                                    <h4 className=\"text-[10px] uppercase tracking-widest font-bold text-luxury-600\">Resort Location</h4>\
+                                                    <p className=\"text-sm text-luxury-800 mt-1 font-light leading-relaxed\">\
+                                                        Rendezvous Jungle Resort<br />\
+                                                        Panayambam Vadakkanad, Sultan Bathery,<br />\
+                                                        Kerala 673592, India\
+                                                    </p>\
+                                                </div>\
+                                            </div>
+
+                                            <div className=\"flex gap-4\">\
+                                                <div className=\"w-10 h-10 rounded-xl bg-luxury-200 flex items-center justify-center text-luxury-700 flex-shrink-0\">\
+                                                    📞\
+                                                </div>\
+                                                <div>\
+                                                    <h4 className=\"text-[10px] uppercase tracking-widest font-bold text-luxury-600\">Hotline Numbers</h4>\
+                                                    <p className=\"text-sm text-luxury-800 mt-1 font-semibold\">\
+                                                        +91 98765 43210\
+                                                    </p>\
+                                                    <p className=\"text-xs text-luxury-500 font-light mt-0.5\">Continuous 24-hour phone support</p>\
                                                 </div>
                                             </div>
 
-                                            <div className="flex gap-4">
-                                                <div className="w-10 h-10 rounded-xl bg-luxury-200 flex items-center justify-center text-luxury-700 flex-shrink-0">
-                                                    📞
-                                                </div>
-                                                <div>
-                                                    <h4 className="text-[10px] uppercase tracking-widest font-bold text-luxury-600">Hotline Numbers</h4>
-                                                    <p className="text-sm text-luxury-800 mt-1 font-semibold">
-                                                        +91 484 240 1122 {/* Keeping original number as no new number provided */}
-                                                    </p>
-                                                    <p className="text-xs text-luxury-500 font-light mt-0.5">Continuous 24-hour phone support</p>
-                                                </div>
-                                            </div>
-
-                                            <div className="flex gap-4">
-                                                <div className="w-10 h-10 rounded-xl bg-luxury-200 flex items-center justify-center text-luxury-700 flex-shrink-0">
-                                                    ✉️
-                                                </div>
-                                                <div>
-                                                    <h4 className="text-[10px] uppercase tracking-widest font-bold text-luxury-600">Email Enquiries</h4>
-                                                    <p className="text-sm text-luxury-800 mt-1 font-light">
-                                                        reservations@edasserymansion.com {/* Keeping original email as no new email provided */}
-                                                    </p>
+                                            <div className=\"flex gap-4\">\
+                                                <div className=\"w-10 h-10 rounded-xl bg-luxury-200 flex items-center justify-center text-luxury-700 flex-shrink-0\">\
+                                                    ✉️\
+                                                </div>\
+                                                <div>\
+                                                    <h4 className=\"text-[10px] uppercase tracking-widest font-bold text-luxury-600\">Email Enquiries</h4>\
+                                                    <p className=\"text-sm text-luxury-800 mt-1 font-light\">\
+                                                        info@rendezvousjungleresort.com\
+                                                    </p>\
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
                                     {/* Action links */}
-                                    <div className="flex gap-3 pt-4">
-                                        <a href="tel:+914842401122" className="flex-1 bg-luxury-100 hover:bg-luxury-200 text-luxury-dark text-xs font-bold py-4 px-6 rounded-full text-center transition flex items-center justify-center gap-1.5">
-                                            Call Resort
-                                        </a>
-                                        <button onClick={triggerWhatsApp} className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-4 px-6 rounded-full text-center transition flex items-center justify-center gap-1.5">
-                                            WhatsApp Stay
-                                        </button>
+                                    <div className=\"flex gap-3 pt-4\">\
+                                        <a href=\"tel:+919876543210\" className=\"flex-1 bg-luxury-100 hover:bg-luxury-200 text-luxury-dark text-xs font-bold py-4 px-6 rounded-full text-center transition flex items-center justify-center gap-1.5\">\
+                                            Call Resort\
+                                        </a>\
+                                        <button onClick={triggerWhatsApp} className=\"flex-1 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-4 px-6 rounded-full text-center transition flex items-center justify-center gap-1.5\">\
+                                            WhatsApp Stay\
+                                        </button>\
                                     </div>
                                 </div>
 
                             </div>
 
                             {/* Google Maps Embed Container */}
-                            <div className="mt-16 rounded-3xl overflow-hidden border border-luxury-200 shadow-md h-[400px]">
-                                <iframe 
-                                    title="Rendezvous Jungle Resort Location Map - Wayanad, Kerala"
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.8653205792947!2d76.3007158!3d9.9839885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d30b6b745e1%3A0xdcc5b09efc5ad2e5!2sHotel%20Edassery%20Mansion%20premium!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
-                                    className="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-[1s]" 
-                                    allowFullScreen="" 
-                                    loading="lazy"
-                                ></iframe>
+                            <div className=\"mt-16 rounded-3xl overflow-hidden border border-luxury-200 shadow-md h-[400px]\">\
+                                <iframe \
+                                    title=\"Rendezvous Jungle Resort Location Map\"\
+                                    src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3907.039233068532!2d76.2483845!3d11.6669894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba61f951804e125%3A0xc3c9b740e5d48220!2sRendezvous%20Resort!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin\" \
+                                    className=\"w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-[1s]\" \
+                                    allowFullScreen=\"\" \
+                                    loading=\"lazy\"\
+                                ></iframe>\
                             </div>
 
                         </div>
                     </section>
 
                     {/* LUXURY FOOTER */}
-                    <footer className="bg-luxury-dark text-white/50 py-16 border-t border-white/5 relative z-10">
-                        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                    <footer className=\"bg-luxury-dark text-white/50 py-16 border-t border-white/5 relative z-10\">\
+                        <div className=\"max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12\">\
                             
-                            <div className="space-y-4">
-                                <span className="font-serif-luxury text-2xl tracking-wider text-white">RENDEZVOUS JUNGLE</span>
-                                <p className="text-xs text-luxury-300 font-light leading-relaxed">
-                                    Rendezvous Jungle Resort sets the standard for boutique hospitality in Wayanad. Designed to combine immersive nature experiences with exceptional farm-to-table dining.
-                                </p>
+                            <div className=\"space-y-4\">\
+                                <span className=\"font-serif-luxury text-2xl tracking-wider text-white\">RENDEZVOUS JUNGLE</span>\
+                                <p className=\"text-xs text-luxury-300 font-light leading-relaxed\">\
+                                    Rendezvous Jungle Resort offers tranquil luxury in Sultan Bathery, Wayanad. Designed to combine comfortable rooms with warm hospitality and beautiful natural surroundings.\
+                                </p>\
                             </div>
 
-                            <div className="space-y-4">
-                                <h4 className="text-white text-xs font-bold uppercase tracking-widest">Our Retreat Suites</h4>
-                                <ul className="space-y-2 text-xs font-light text-luxury-300">
-                                    <li><a href="#rooms" className="hover:text-white transition">Luxury Accommodation</a></li>
-                                    <li><a href="#rooms" className="hover:text-white transition">Serene Executive Room</a></li>
-                                    <li><a href="#rooms" className="hover:text-white transition">Family Forest Haven</a></li>
-                                    <li><a href="#rooms" className="hover:text-white transition">Jungle Deluxe Suite</a></li>
-                                </ul>
+                            <div className=\"space-y-4\">\
+                                <h4 className=\"text-white text-xs font-bold uppercase tracking-widest\">Our Room Types</h4>\
+                                <ul className=\"space-y-2 text-xs font-light text-luxury-300\">\
+                                    <li><a href=\"#rooms\" className=\"hover:text-white transition\">Standard Rooms</a></li>\
+                                    <li><a href=\"#rooms\" className=\"hover:text-white transition\">Deluxe Cottages</a></li>\
+                                    <li><a href=\"#rooms\" className=\"hover:text-white transition\">Premium Jungle View Rooms</a></li>\
+                                    <li><a href=\"#rooms\" className=\"hover:text-white transition\">Family Suites</a></li>\
+                                </ul>\
                             </div>
 
-                            <div className="space-y-4">
-                                <h4 className="text-white text-xs font-bold uppercase tracking-widest">Quick Navigation</h4>
-                                <ul className="space-y-2 text-xs font-light text-luxury-300">
-                                    <li><a href="#home" className="hover:text-white transition">Home</a></li>
-                                    <li><a href="#about" className="hover:text-white transition">Philosophy & Heritage</a></li>
-                                    <li><a href="#dining" className="hover:text-white transition">Farm-to-Table Dining</a></li>
-                                    <li><a href="#gallery" className="hover:text-white transition">Image Showcase</a></li>
-                                </ul>
+                            <div className=\"space-y-4\">\
+                                <h4 className=\"text-white text-xs font-bold uppercase tracking-widest\">Quick Navigation</h4>\
+                                <ul className=\"space-y-2 text-xs font-light text-luxury-300\">\
+                                    <li><a href=\"#home\" className=\"hover:text-white transition\">Home</a></li>\
+                                    <li><a href=\"#about\" className=\"hover:text-white transition\">Philosophy & Nature</a></li>\
+                                    <li><a href=\"#dining\" className=\"hover:text-white transition\">Dining Experience</a></li>\
+                                    <li><a href=\"#gallery\" className=\"hover:text-white transition\">Image Showcase</a></li>\
+                                </ul>\
                             </div>
 
-                            <div className="space-y-4">
-                                <h4 className="text-white text-xs font-bold uppercase tracking-widest">Nature & Wellness</h4>
-                                <p className="text-xs text-luxury-300 font-light leading-relaxed">
-                                    We maintain immaculate room cleanliness and secure parking. For intimate gatherings or wellness retreats, advance booking is recommended to ensure personalized care.
-                                </p>
+                            <div className=\"space-y-4\">\
+                                <h4 className=\"text-white text-xs font-bold uppercase tracking-widest\">Guest Care</h4>\
+                                <p className=\"text-xs text-luxury-300 font-light leading-relaxed\">\
+                                    We maintain high standards of cleanliness and comfort. Our friendly staff is always ready to assist you for a memorable and hassle-free stay.\
+                                </p>\
                             </div>
 
                         </div>
 
-                        <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/5 text-center md:flex md:justify-between md:text-left text-xs text-luxury-400 font-light">
-                            <p>© {new Date().getFullYear()} Rendezvous Jungle Resort. All Rights Reserved.</p>
-                            <p className="mt-2 md:mt-0"> Sultan Bathery, Wayanad, Kerala, India</p>
+                        <div className=\"max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/5 text-center md:flex md:justify-between md:text-left text-xs text-luxury-400 font-light\">\
+                            <p>© {new Date().getFullYear()} Rendezvous Jungle Resort. All Rights Reserved.</p>\
+                            <p className=\"mt-2 md:mt-0\"> Panayambam Vadakkanad, Sultan Bathery, Kerala</p>\
                         </div>
                     </footer>
 
                     {/* INTERACTIVE BOOKING ENGINE MODAL */}
                     {bookingOpen && (
-                        <div className="fixed inset-0 z-50 overflow-y-auto flex items-center justify-center p-4">
-                            <div className="fixed inset-0 bg-black/60 backdrop-blur-md transition-opacity" onClick={() => setBookingOpen(false)} />
+                        <div className=\"fixed inset-0 z-50 overflow-y-auto flex items-center justify-center p-4\">\
+                            <div className=\"fixed inset-0 bg-black/60 backdrop-blur-md transition-opacity\" onClick={() => setBookingOpen(false)} />\
 
-                            <div className="relative bg-[#FCFBF9] rounded-3xl overflow-hidden shadow-2xl border border-luxury-300/40 max-w-lg w-full z-10">
+                            <div className=\"relative bg-[#FCFBF9] rounded-3xl overflow-hidden shadow-2xl border border-luxury-300/40 max-w-lg w-full z-10\">\
                                 
-                                <div className="bg-luxury-dark text-white p-6 flex justify-between items-center">
-                                    <div>
-                                        <h3 className="text-xl font-serif-luxury tracking-wide">Secure Your Stay</h3>
-                                        <p className="text-[10px] text-luxury-300 uppercase tracking-widest mt-1">Direct booking guarantees complimentary breakfast</p>
-                                    </div>
-                                    <button onClick={() => setBookingOpen(false)} className="text-luxury-400 hover:text-white p-2">
-                                        <Icons.X />
-                                    </button>
+                                <div className=\"bg-luxury-dark text-white p-6 flex justify-between items-center\">\
+                                    <div>\
+                                        <h3 className=\"text-xl font-serif-luxury tracking-wide\">Secure Your Stay</h3>\
+                                        <p className=\"text-[10px] text-luxury-300 uppercase tracking-widest mt-1\">Direct booking guarantees complimentary breakfast</p>\
+                                    </div>\
+                                    <button onClick={() => setBookingOpen(false)} className=\"text-luxury-400 hover:text-white p-2\">\
+                                        <Icons.X />\
+                                    </button>\
                                 </div>
 
-                                <div className="p-8">
-                                    {bookingSuccess ? (
-                                        <div className="text-center py-12 space-y-4">
-                                            <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto text-2xl">
-                                                ✓
-                                            </div>
-                                            <h4 className="text-xl font-serif-luxury text-luxury-dark">Reservation Request Received</h4>
-                                            <p className="text-sm text-luxury-500 font-light max-w-sm mx-auto">
-                                                Thank you. Our reservations desk will contact you shortly to confirm your dates and specific suite selections.
-                                            </p>
-                                        </div>
-                                    ) : (
-                                        <form onSubmit={submitBooking} className="space-y-4">
+                                <div className=\"p-8\">\
+                                    {bookingSuccess ? (\
+                                        <div className=\"text-center py-12 space-y-4\">\
+                                            <div className=\"w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto text-2xl\">\
+                                                ✓\
+                                            </div>\
+                                            <h4 className=\"text-xl font-serif-luxury text-luxury-dark\">Reservation Request Received</h4>\
+                                            <p className=\"text-sm text-luxury-500 font-light max-w-sm mx-auto\">\
+                                                Thank you. Our reservations desk will contact you shortly to confirm your dates and specific room selections.\
+                                            </p>\
+                                        </div>\
+                                    ) : (\
+                                        <form onSubmit={submitBooking} className=\"space-y-4\">\
                                             
-                                            <div className="space-y-1">
-                                                <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Your Full Name</label>
-                                                <input 
-                                                    type="text" 
-                                                    required
-                                                    value={bookingForm.name}
-                                                    onChange={e => setBookingForm({...bookingForm, name: e.target.value})}\n                                                    placeholder="Enter your name"
-                                                    className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition"
-                                                />
+                                            <div className=\"space-y-1\">\
+                                                <label className=\"text-[10px] uppercase tracking-wider font-bold text-luxury-500\">Your Full Name</label>\
+                                                <input \
+                                                    type=\"text\" \
+                                                    required\
+                                                    value={bookingForm.name}\
+                                                    onChange={e => setBookingForm({...bookingForm, name: e.target.value})}\
+                                                    placeholder=\"Enter your name\"\
+                                                    className=\"w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition\"\
+                                                />\
                                             </div>
 
-                                            <div className="space-y-1">
-                                                <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Contact Phone Number</label>
-                                                <input 
-                                                    type="tel" 
-                                                    required
-                                                    value={bookingForm.phone}
-                                                    onChange={e => setBookingForm({...bookingForm, phone: e.target.value})}\n                                                    placeholder="Phone Number"
-                                                    className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition"
-                                                />
+                                            <div className=\"space-y-1\">\
+                                                <label className=\"text-[10px] uppercase tracking-wider font-bold text-luxury-500\">Contact Phone Number</label>\
+                                                <input \
+                                                    type=\"tel\" \
+                                                    required\
+                                                    value={bookingForm.phone}\
+                                                    onChange={e => setBookingForm({...bookingForm, phone: e.target.value})}\
+                                                    placeholder=\"Phone Number\"\
+                                                    className=\"w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition\"\
+                                                />\
                                             </div>
 
-                                            <div className="grid grid-cols-2 gap-4">
-                                                <div className="space-y-1">
-                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Check-In Date</label>
-                                                    <input 
-                                                        type="date" 
-                                                        required
-                                                        value={bookingForm.checkIn}
-                                                        onChange={e => setBookingForm({...bookingForm, checkIn: e.target.value})}\n                                                        className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-500 transition"
-                                                    />
+                                            <div className=\"grid grid-cols-2 gap-4\">\
+                                                <div className=\"space-y-1\">\
+                                                    <label className=\"text-[10px] uppercase tracking-wider font-bold text-luxury-500\">Check-In Date</label>\
+                                                    <input \
+                                                        type=\"date\" \
+                                                        required\
+                                                        value={bookingForm.checkIn}\
+                                                        onChange={e => setBookingForm({...bookingForm, checkIn: e.target.value})}\
+                                                        className=\"w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-500 transition\"\
+                                                    />\
                                                 </div>
 
-                                                <div className="space-y-1">
-                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Check-Out Date</label>
-                                                    <input 
-                                                        type="date" 
-                                                        required
-                                                        value={bookingForm.checkOut}
-                                                        onChange={e => setBookingForm({...bookingForm, checkOut: e.target.value})}\n                                                        className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-500 transition"
-                                                    />
-                                                </div>
-                                            </div>
-
-                                            <div className="grid grid-cols-2 gap-4">
-                                                <div className="space-y-1">
-                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Suite Type</label>
-                                                    <select 
-                                                        value={bookingForm.category}
-                                                        onChange={e => setBookingForm({...bookingForm, category: e.target.value})}\n                                                        className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-500 transition"
-                                                    >
-                                                        <option value="Luxury Accommodation">Luxury Accommodation</option>
-                                                        <option value="Serene Executive Room">Serene Executive Room</option>
-                                                        <option value="Family Forest Haven">Family Forest Haven</option>
-                                                        <option value="Jungle Deluxe Suite">Jungle Deluxe Suite</option>
-                                                    </select>
-                                                </div>
-
-                                                <div className="space-y-1">
-                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Guests</label>
-                                                    <select 
-                                                        value={bookingForm.guests}
-                                                        onChange={e => setBookingForm({...bookingForm, guests: e.target.value})}\n                                                        className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-500 transition"
-                                                    >
-                                                        <option value="1">1 Guest</option>
-                                                        <option value="2">2 Guests</option>
-                                                        <option value="3">3 Guests</option>
-                                                        <option value="4+">Family Suite (4+)</option>
-                                                    </select>
+                                                <div className=\"space-y-1\">\
+                                                    <label className=\"text-[10px] uppercase tracking-wider font-bold text-luxury-500\">Check-Out Date</label>\
+                                                    <input \
+                                                        type=\"date\" \
+                                                        required\
+                                                        value={bookingForm.checkOut}\
+                                                        onChange={e => setBookingForm({...bookingForm, checkOut: e.target.value})}\
+                                                        className=\"w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-500 transition\"\
+                                                    />\
                                                 </div>
                                             </div>
 
-                                            <button 
-                                                type="submit"
-                                                className="w-full bg-luxury-dark hover:bg-luxury-700 text-white font-bold text-xs tracking-widest py-4.5 rounded-xl transition"
-                                            >
-                                                CONFIRM RESERVATION REQUEST
-                                            </button>
+                                            <div className=\"grid grid-cols-2 gap-4\">\
+                                                <div className=\"space-y-1\">\
+                                                    <label className=\"text-[10px] uppercase tracking-wider font-bold text-luxury-500\">Room Type</label>\
+                                                    <select \
+                                                        value={bookingForm.category}\
+                                                        onChange={e => setBookingForm({...bookingForm, category: e.target.value})}\
+                                                        className=\"w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-500 transition\"\
+                                                    >\
+                                                        <option value=\"Standard Room\">Standard Room</option>\
+                                                        <option value=\"Deluxe Cottage\">Deluxe Cottage</option>\
+                                                        <option value=\"Premium Jungle View Room\">Premium Jungle View Room</option>\
+                                                        <option value=\"Family Suite\">Family Suite</option>\
+                                                    </select>\
+                                                </div>
 
-                                            <div className="text-center pt-2">
-                                                <p className="text-[10px] text-luxury-500">
-                                                    Prefer phone support? <a href="tel:+914842401122" className="font-bold underline text-luxury-700">Call +91 484 240 1122</a>
-                                                </p>
+                                                <div className=\"space-y-1\">\
+                                                    <label className=\"text-[10px] uppercase tracking-wider font-bold text-luxury-500\">Guests</label>\
+                                                    <select \
+                                                        value={bookingForm.guests}\
+                                                        onChange={e => setBookingForm({...bookingForm, guests: e.target.value})}\
+                                                        className=\"w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-500 transition\"\
+                                                    >\
+                                                        <option value=\"1\">1 Guest</option>\
+                                                        <option value=\"2\">2 Guests</option>\
+                                                        <option value=\"3\">3 Guests</option>\
+                                                        <option value=\"4+\">Family (4+)</option>\
+                                                    </select>\
+                                                </div>
                                             </div>
-                                        </form>
-                                    )}\n                                </div>
+
+                                            <button \
+                                                type=\"submit\"\
+                                                className=\"w-full bg-luxury-dark hover:bg-luxury-700 text-white font-bold text-xs tracking-widest py-4.5 rounded-xl transition\"\
+                                            >\
+                                                CONFIRM RESERVATION REQUEST\
+                                            </button>\
+
+                                            <div className=\"text-center pt-2\">\
+                                                <p className=\"text-[10px] text-luxury-500\">\
+                                                    Prefer phone support? <a href=\"tel:+919876543210\" className=\"font-bold underline text-luxury-700\">Call +91 98765 43210</a>\
+                                                </p>\
+                                            </div>\
+                                        </form>\
+                                    )}\
+                                </div>
                             </div>
                         </div>
-                    )}\n
+                    )}\
+
                     {/* PORTFOLIO LIGHTBOX PREVIEW */}
                     {lightboxOpen && (
-                        <div className="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex items-center justify-center p-4">
-                            <button 
-                                onClick={() => setLightboxOpen(false)}\n                                className="absolute top-6 right-6 text-white hover:text-luxury-200 p-2 bg-white/5 rounded-full"
-                            >
-                                <Icons.X />
-                            </button>
-                            <div className="max-w-4xl w-full">
-                                <img src={lightboxImg} alt="Rendezvous Jungle Resort Gallery Image Close-up" className="w-full max-h-[80vh] object-contain rounded-2xl border border-white/10" />
-                            </div>
+                        <div className=\"fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex items-center justify-center p-4\">\
+                            <button \
+                                onClick={() => setLightboxOpen(false)}\
+                                className=\"absolute top-6 right-6 text-white hover:text-luxury-200 p-2 bg-white/5 rounded-full\"\
+                            >\
+                                <Icons.X />\
+                            </button>\
+                            <div className=\"max-w-4xl w-full\">\
+                                <img src={lightboxImg} alt=\"Resort Room Showcase Close-up\" className=\"w-full max-h-[80vh] object-contain rounded-2xl border border-white/10\" />\
+                            </div>\
                         </div>
-                    )}\n
+                    )}\
+
                 </div>
-            );\n        }
+            );
+        }
 
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<App />);
