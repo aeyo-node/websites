@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uniro Hotels & Appartments | Comfortable Stay in Ernakulam</title>
+    <title>Uniro Hotels & Appartments | Comfortable stay in the heart of Ernakulam</title>
 
     <!-- SEO Optimization -->
-    <meta name="description" content="Uniro Hotels & Appartments offers resort-style accommodation with modern amenities in Ernakulam, Kerala. Book your stay with us for a comfortable and convenient experience in the heart of Kochi, Kerala.">
-    <meta name="keywords" content="Uniro Hotels & Appartments, Resort Hotel Ernakulam, Comfortable Stay Kochi, Affordable Accommodation Kerala, Ernakulam Hotels, Kerala Hotels">
+    <meta name="description" content="Uniro Hotels & Appartments offers resort-style accommodation with modern amenities in Ernakulam, Kerala. The property features well-appointed rooms and apartments suitable for both short and extended stays.">
+    <meta name="keywords" content="Uniro Hotels & Appartments, Ernakulam, Resort Hotel Kerala, Comfortable stay Kochi, Accommodation Kerala India, Hotel in Kochi, Ernakulam resort hotel, Uniro Hotels, Uniro Appartments">
 
     <!-- Open Graph tags -->
     <meta property="og:title" content="Uniro Hotels & Appartments | Ernakulam, Kerala">
-    <meta property="og:description" content="Experience a comfortable stay in the heart of Ernakulam with Uniro Hotels & Appartments. Our resort-style accommodation offers modern amenities and great value in Kochi, Kerala.">
+    <meta property="og:description" content="Experience comfortable resort-style accommodation in Ernakulam, Kerala. Book your stay at Uniro Hotels & Appartments for a great value in Kochi, Kerala.">
     <meta property="og:image" content="images/hero_cover.jpg">
     <meta property="og:type" content="website">
 
@@ -56,24 +56,24 @@
       "image": "images/hero_cover.jpg",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "",
-        "addressLocality": "Ernakulam",
+        "streetAddress": "Not available",
+        "addressLocality": "Ernakulam (Kochi)",
         "addressRegion": "Kerala",
-        "postalCode": "",
+        "postalCode": "Not available",
         "addressCountry": "IN"
       },
-      "telephone": "",
+      "telephone": "+91 Not available",
       "starRating": {
         "@type": "Rating",
-        "ratingValue": "4.5"
+        "ratingValue": "Not available"
       },
-      "priceRange": "₹3,500 - ₹9,000",
+      "priceRange": "₹ Not available",
       "amenityFeature": [
         "Free Wi-Fi",
-        "Air Conditioning",
-        "Restaurant/Dining",
         "Parking facility",
-        "Room service"
+        "Room service",
+        "Accommodation (rooms & apartments)",
+        "Restaurant/Dining"
       ]
     }
     </script>
@@ -87,126 +87,12 @@
     <script type="text/babel">
         const { useState, useEffect } = React;
 
-        function App() {
-            // State for dynamic features
-            const [scrolled, setScrolled] = useState(false);
-            const [mobileNavOpen, setMobileNavOpen] = useState(false);
-            const [activeRoomFilter, setActiveRoomFilter] = useState('all');
-            const [bookingOpen, setBookingOpen] = useState(false);
-            const [diningTab, setDiningTab] = useState('seafood');
-            const [reviewIdx, setReviewIdx] = useState(0);
-            const [enquirySuccess, setEnquirySuccess] = useState(false);
-
-            // Lightbox Gallery state
-            const [lightboxOpen, setLightboxOpen] = useState(false);
-            const [lightboxImg, setLightboxImg] = useState('');
-
-            // Booking modal parameters
-            const [bookingForm, setBookingForm] = useState({
-                name: '',
-                phone: '',
-                checkIn: '',
-                checkOut: '',
-                category: 'Premium Suite',
-                guests: '2'
-            });
-            const [bookingSuccess, setBookingSuccess] = useState(false);
-
-            useEffect(() => {
-                const handleScroll = () => {
-                    setScrolled(window.scrollY > 50);
-                };
-                window.addEventListener('scroll', handleScroll);
-                return () => window.removeEventListener('scroll', handleScroll);
-            }, []);
-
-            // Data Definitions
-            const rooms = [
-                {
-                    id: 'premium',
-                    title: 'Premium Room',
-                    desc: 'A stylishly appointed room offering spacious modern living zones, rich leather furnishings, and a premium workspace layout.',
-                    price: '₹3,499',
-                    features: ['King Bed', 'City View', 'Free High-speed Wi-Fi', 'Premium Bath Linens', 'Mini-fridge'],
-                    image: 'images/room1.jpg'
-                },
-                {
-                    id: 'executive',
-                    title: 'Executive Room',
-                    desc: 'Designed specifically for the corporate traveler. Includes an expansive high-tech workspace, refined accents, and premium hospitality privileges.',
-                    price: '₹4,499',
-                    features: ['King Bed', 'Coffee Station', 'Express Laundry Access', 'High-Speed Wi-Fi', 'Luxury Lounge Chair'],
-                    image: 'images/room3.jpg'
-                },
-                {
-                    id: 'family',
-                    title: 'Family Room',
-                    desc: 'Spacious interconnecting or double-queen bedroom spaces crafted for ultimate peace, comfort, and direct proximity to Kochi family spots.',
-                    price: '₹5,999',
-                    features: ['2 Queen Beds', 'Living area', 'Kid-friendly Setup', 'Smart TV', 'Spacious Wardrobes'],
-                    image: 'images/room4.jpg'
-                },
-                {
-                    id: 'deluxe',
-                    title: 'Deluxe Suite',
-                    desc: 'The jewel of Edassery Mansion. Timeless luxury featuring a separated master parlor, classic Kerala wooden art finishes, and royal privileges.',
-                    price: '₹7,999',
-                    features: ['Super King Bed', 'Separated Lounge', 'Bathtub & Rain Shower', 'In-room Dining', 'VIP Welcome Platter'],
-                    image: 'images/room6.jpg'
-                }
-            ];
-
-            const reviews = [
-                {
-                    quote: "Good location and comfortable rooms",
-                    author: "John Doe",
-                    role: "Business Traveler",
-                    rating: 4
-                },
-                {
-                    quote: "Helpful staff and decent facilities",
-                    author: "Jane Smith",
-                    role: "Family Vacation Stay",
-                    rating: 4
-                },
-                {
-                    quote: "Suitable for business and leisure stays",
-                    author: "Bob Johnson",
-                    role: "Leisure Traveler",
-                    rating: 4
-                }
-            ];
-
-            const gallery = [
-                { title: 'Premium Suite Setting', desc: 'Crafted with elegant minimalist palettes and designer furniture.', img: 'images/Premium-Suite-Setting.jpg' },
-                { title: 'Executive Wash Oasis', desc: 'Pristine marble and premium gold bathroom elements.', img: 'images/Executive-Wash-Oasis.jpg' },
-                { title: 'The Uniro Hotels & Appartments Facade', desc: 'A premier architectural landmark on the Ernakulam corridor.', img: 'images/facade.jpg' },
-                { title: 'Multi-Cuisine Dining Space', desc: 'Featuring cozy warm lighting, authentic spices, and local heritage.', img: 'images/dining.jpg' },
-                { title: 'Elegant Wedding Banquet', desc: 'A vast, high-ceiling ballroom perfect for royal local wedding rituals.', img: 'images/banquet.jpg' },
-                { title: 'Traditional Seafood Treat', desc: 'Our legendary fresh pearl spot fish prepared with traditional red masalas.', img: 'images/seafood.jpg' }
-            ];
-
-            const submitBooking = (e) => {
-                e.preventDefault();
-                setBookingSuccess(true);
-                setTimeout(() => {
-                    setBookingSuccess(false);
-                    setBookingOpen(false);
-                }, 4000);
-            };
-
-            const triggerWhatsApp = () => {
-                const text = encodeURIComponent("Hello Uniro Hotels & Appartments, I would like to inquire about room reservations.");
-                window.open(`https://wa.me/914842401122?text=${text}`, '_blank');
-            };
-
-            return (
-                <div className="relative">
-
-                    {/* Ambient Glow */}
-
-                    {/* TOP STATUS BAR */}
-                    <div className="bg-luxury-dark text-white/70 text-[10px] sm:text-xs py-2 px-6 flex justify-between items-center relative z-50 border-b border-white/5 tracking-wider">
-                        <div className="flex gap-4 mx-auto sm:mx-0">
-                            <span className="flex items-center gap-1">📞 +91 484 240 1122</span>
-                            <span className="hidden sm
+        // Custom Premium SVG Icons representing clean luxury
+        const Icons = {
+            Wifi: () => <svg className="w-5 h-5 text-luxury-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M8.25 15.625a3.75 3.75 0 117.5 0M4.5 11.875a8.25 8.25 0 1115 0m-18.75-3.75a12.75 12.75 0 1122.5 0M12 18.75h.007v.008H12v-.008z"/></svg>,
+            AC: () => <svg className="w-5 h-5 text-luxury-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h14.25c.621 0 1.125.504 1.125 1.125v14.25c0 .621-.504 1.125-1.125 1.125H4.875c-.621 0-1.125-.504-1.125-1.125V4.875zM12 9.75v4.5m-3-2.25h6m-11.25 6h16.5"/></svg>,
+            Utensils: () => <svg className="w-5 h-5 text-luxury-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zm0 9a.75.75 0 110-1.5.75.75 0 010 1.5zM21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>,
+            Bell: () => <svg className="w-5 h-5 text-luxury-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 21l-.813-5.096L3.096 15.1l5.096-.813L9 9.187l.813 5.096 5.096.813-5.096.813zM19.031 3l-.406 2.531-2.53 1.015 2.53 1.016L19.031 10.1l.407-2.532 2.53-1.015-2.53-1.016L19.031 3z"/></svg>,
+            MapPin: () => <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 116 0z"/><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>,
+            Phone: () => <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.387a12.035 12.035 0 01-7.108-7.108c-.115-.441.017-.928.393-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>,
+            Award: () => <svg className="w-5 h-5 text-luxury-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15
