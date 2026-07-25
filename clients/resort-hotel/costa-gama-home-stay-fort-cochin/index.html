@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Costa Gama Home Stay – Boutique Heritage Resort Hotel in Fort Cochin, Kerala</title>
+    <title>Costa Gama Home Stay Fort Cochin | Luxury Hotel in Kochi, Ernakulam</title>
     
     <!-- SEO Optimization -->
-    <meta name="description" content="Experience Kerala’s riverfront charm at Costa Gama Home Stay – a boutique resort in Fort Cochin offering authentic rooms, homestyle cuisine, and personalized service. Book your tranquil retreat today.">
-    <meta name="keywords" content="Costa Gama Home Stay, Heritage Resort Fort Cochin, River View Kerala, Homely Hospitality, Fort Cochin Accommodation, Local Cuisine">
+    <meta name="description" content="Immerse yourself in timeless luxury and authentic Kerala hospitality at Costa Gama Home Stay Fort Cochin, Post office Rd, Fort Kochi, Kochi, Kerala 682001, India. Elegant suites, multi-cuisine dining, and modern amenities await.">
+    <meta name="keywords" content="Costa Gama Home Stay Fort Cochin, Luxury Hotel Kochi, Hotel in Ernakulam, Business Hotel Kerala, Premium Stay Kochi, Kerala Seafood Restaurant">
     
     <!-- Open Graph tags -->
-    <meta property="og:title" content="Costa Gama Home Stay – Boutique Heritage Resort Hotel in Fort Cochin, Kerala">
-    <meta property="og:description" content="Cozy Heritage by the River">
+    <meta property="og:title" content="Costa Gama Home Stay Fort Cochin | Ernakulam, Kerala">
+    <meta property="og:description" content="Experience high-end hospitality, exquisite dining, and premium rooms in the center of Kochi.">
     <meta property="og:image" content="images/hero_cover.jpg">
     <meta property="og:type" content="website">
     
@@ -56,27 +56,25 @@
       "image": "images/hero_cover.jpg",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Backwater Avenue, Fort Cochin",
-        "addressLocality": "Ernakulam",
+        "streetAddress": "Kochi - Kadavanthra Road, Kochi, Kochi",
+        "addressLocality": "Ernakulam, Kochi",
         "addressRegion": "Kerala",
-        "postalCode": "682016",
+        "postalCode": "682017",
         "addressCountry": "IN"
       },
-      "telephone": "+91-480-272-7610",
+      "telephone": "+914842401122",
       "starRating": {
         "@type": "Rating",
         "ratingValue": "4.5"
       },
+      "priceRange": "₹3,500 - ₹9,000",
       "amenityFeature": [
-        "Heritage Grenoble Rooms with River View",
-        "On-site Restaurant Serving Local Cuisine",
-        "Private Garden & Terrace",
-        "Free Wi-Fi and Daily House-keeping",
-        "Concierge & Laundry Services",
-        "Air conditioning",
-        "Bath & shower",
-        "Television",
-        "Room service"
+        "Free Wi-Fi",
+        "Air Conditioning",
+        "Premium Seafood Restaurant",
+        "Banquet Facilities",
+        "24x7 Room Service",
+        "Valet Parking"
       ]
     }
     </script>
@@ -114,7 +112,7 @@
             const [mobileNavOpen, setMobileNavOpen] = useState(false);
             const [activeRoomFilter, setActiveRoomFilter] = useState('all');
             const [bookingOpen, setBookingOpen] = useState(false);
-            const [diningTab, setDiningTab] = useState('breakfast');
+            const [diningTab, setDiningTab] = useState('seafood');
             const [reviewIdx, setReviewIdx] = useState(0);
             const [enquirySuccess, setEnquirySuccess] = useState(false);
             
@@ -124,7 +122,7 @@
 
             // Booking modal parameters
             const [bookingForm, setBookingForm] = useState({
-                checkIn: '', checkOut: '', category: 'Standard Room', guests: '2', name: '', phone: ''
+                checkIn: '', checkOut: '', category: 'Premium Suite', guests: '2', name: '', phone: ''
             });
             const [bookingSuccess, setBookingSuccess] = useState(false);
 
@@ -139,59 +137,67 @@
             // Data Definitions
             const rooms = [
                 {
-                    id: 'standard',
-                    title: 'Standard Room',
-                    desc: 'Our Standard Rooms offer a comfortable and authentic heritage experience with essential amenities.',
-                    price: 'On Request',
-                    features: ['Heritage Decor', 'River View (select rooms)', 'Free Wi-Fi', 'Attached Bathroom', 'Daily House-keeping'],
+                    id: 'premium',
+                    title: 'Premium Room',
+                    desc: 'A stylishly appointed room offering spacious modern living zones, rich leather furnishings, and a premium workspace layout.',
+                    price: '₹3,499',
+                    features: ['King Bed', 'City View', 'Free High-speed Wi-Fi', 'Premium Bath Linens', 'Mini-fridge'],
                     image: 'images/room1.jpg'
                 },
                 {
-                    id: 'deluxe',
-                    title: 'Deluxe Room',
-                    desc: 'Spacious Deluxe Rooms designed with traditional Kerala charm, perfect for a relaxing stay.',
-                    price: 'On Request',
-                    features: ['King Bed', 'River View (select rooms)', 'Free Wi-Fi', 'Concierge Service', 'Television'],
+                    id: 'executive',
+                    title: 'Executive Room',
+                    desc: 'Designed specifically for the corporate traveler. Includes an expansive high-tech workspace, refined accents, and premium hospitality privileges.',
+                    price: '₹4,499',
+                    features: ['King Bed', 'Coffee Station', 'Express Laundry Access', 'High-Speed Wi-Fi', 'Luxury Lounge Chair'],
                     image: 'images/room3.jpg'
                 },
                 {
-                    id: 'suite',
-                    title: 'Suite',
-                    desc: 'Enjoy elevated comfort in our suites, featuring extra space and a truly immersive Fort Cochin experience.',
-                    price: 'On Request',
-                    features: ['King Bed', 'Panoramic River View', 'Private Garden/Terrace Access', 'Room Service', 'Air Conditioning'],
+                    id: 'family',
+                    title: 'Family Room',
+                    desc: 'Spacious interconnecting or double-queen bedroom spaces crafted for ultimate peace, comfort, and direct proximity to Kochi family spots.',
+                    price: '₹5,999',
+                    features: ['2 Queen Beds', 'Living area', 'Kid-friendly Setup', 'Smart TV', 'Spacious Wardrobes'],
+                    image: 'images/room4.jpg'
+                },
+                {
+                    id: 'deluxe',
+                    title: 'Deluxe Suite',
+                    desc: 'The jewel of Costa Gama Home Stay Fort Cochin. Timeless luxury featuring a separated master parlor, classic Kerala wooden art finishes, and royal privileges.',
+                    price: '₹7,999',
+                    features: ['Super King Bed', 'Separated Lounge', 'Bathtub & Rain Shower', 'In-room Dining', 'VIP Welcome Platter'],
                     image: 'images/room6.jpg'
                 }
             ];
 
             const reviews = [
                 {
-                    quote: "Stellar hospitality, cozy rooms and great location.",
-                    author: "A Happy Guest",
-                    role: "Traveler",
+                    quote: "The rooms are incredibly spacious and exceptionally clean. We loved their traditional Kerala seafood at the restaurant. Highly recommend their authentic Karimeen Pollichathu!",
+                    author: "Ramesh Kumar",
+                    role: "Family Vacation Stay",
                     rating: 5
                 },
                 {
-                    quote: "Loved the local breakfast and friendly staff.",
-                    author: "Frequent Visitor",
-                    role: "Explorer",
+                    quote: "Perfect central location in Kochi at Kochi. Close to both Kochi and Kadavanthra. Outstanding hospitality which is a true trademark of the Costa Gama Home Stay Fort Cochin heritage.",
+                    author: "Dr. Merlyn Jose",
+                    role: "Medical Conference Delegate",
                     rating: 5
                 },
                 {
-                    quote: "Perfect spot for a relaxed river-view getaway.",
-                    author: "Family Vacationer",
-                    role: "Family Guest",
+                    quote: "We hosted our corporate regional meetup in their banquet hall and it was a seamless experience. Flawless audio-visuals, delicious catering, and polite executive helpers.",
+                    author: "Abhinav Sharma",
+                    role: "Operations Director, TechCorp",
                     rating: 5
                 }
             ];
 
             const gallery = [
-                { title: 'Standard Room Setting', desc: 'Crafted with elegant minimalist palettes and designer furniture.', img: 'images/Premium-Suite-Setting.jpg' },
-                { title: 'Deluxe Wash Oasis', desc: 'Pristine marble and premium gold bathroom elements.', img: 'images/Executive-Wash-Oasis.jpg' },
-                { title: 'The Costa Gama Facade', desc: 'A charming architectural landmark in Fort Cochin.', img: 'images/Facade.jpg' },
-                { title: 'On-site Restaurant Space', desc: 'Featuring cozy warm lighting, authentic spices, and local heritage.', img: 'images/dining.jpg' },
-                { title: 'Private Garden & Terrace', desc: 'A tranquil space to relax and enjoy the river breeze.', img: 'images/banquet.jpg' },
-                { title: 'Traditional Breakfast Treat', desc: 'Our legendary home-cooked breakfast prepared with local ingredients.', img: 'images/seafood.jpg' }
+                { title: 'Premium Suite Setting', desc: 'Crafted with elegant minimalist palettes and designer furniture.', img: 'images/Premium-Suite-Setting.jpg' },
+                { title: 'Executive Wash Oasis', desc: 'Pristine marble and premium gold bathroom elements.', img: 'images/Executive-Wash-Oasis.jpg' },
+                { title: 'The Costa Gama Home Stay Fort Cochin Facade', desc: 'A premier architectural landmark on the Kochi-Kadavanthra corridor.', img: 'images/facade.jpg' },
+                { title: 'Multi-Cuisine Dining Space', desc: 'Featuring cozy warm lighting, authentic spices, and local heritage.', img: 'images/dining.jpg' },
+                { title: 'Elegant Wedding Banquet', desc: 'A vast, high-ceiling ballroom perfect for royal local wedding rituals.', img: 'images/banquet.jpg' },
+                { title: 'Traditional Seafood Treat', desc: 'Our legendary fresh pearl spot fish prepared with traditional red masalas.', img: 'images/seafood.jpg' }
             ];
 
             const submitBooking = (e) => {
@@ -204,8 +210,8 @@
             };
 
             const triggerWhatsApp = () => {
-                const text = encodeURIComponent("Hello Costa Gama Home Stay Fort Cochin, I would like to inquire about room reservations.");
-                window.open(`https://wa.me/914802727610?text=${text}`, '_blank');
+                const text = encodeURIComponent("Hello Costa Gama Home Stay Fort Cochin Premium, I would like to inquire about room reservations.");
+                window.open(`https://wa.me/914842401122?text=${text}`, '_blank');
             };
 
             return (
@@ -218,8 +224,8 @@
                     {/* TOP STATUS BAR */}
                     <div className="bg-luxury-dark text-white/70 text-[10px] sm:text-xs py-2 px-6 flex justify-between items-center relative z-50 border-b border-white/5 tracking-wider">
                         <div className="flex gap-4 mx-auto sm:mx-0">
-                            <span className="flex items-center gap-1">📞 +91 480 272 7610</span>
-                            <span className="hidden sm:inline">📍 Backwater Avenue, Fort Cochin, Ernakulam – 682016, Kerala, India</span>
+                            <span className="flex items-center gap-1">📞 +919995583333</span>
+                            <span className="hidden sm:inline">📍 Kochi - Kadavanthra Rd, Post office Rd, Fort Kochi, Kochi, Kerala 682001, India</span>
                         </div>
                         <div className="hidden sm:flex items-center gap-4">
                             <span className="text-luxury-400 font-bold">✨ Direct Booking Benefit: Complimentary Breakfast</span>
@@ -233,10 +239,10 @@
                                 {/* Brand Logo */}
                                 <a href="#home" className="flex flex-col">
                                     <span className="font-serif-luxury text-xl sm:text-2xl font-bold tracking-widest text-luxury-dark">
-                                        COSTA GAMA
+                                        COSTA GAMA HOME STAY FORT COCHIN
                                     </span>
                                     <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.3em] text-luxury-500 font-bold -mt-1">
-                                        Heritage Stay • Fort Cochin
+                                        Premium Stay • Kochi
                                     </span>
                                 </a>
 
@@ -245,7 +251,7 @@
                                     {[
                                         { id: 'home', label: 'Home' },
                                         { id: 'about', label: 'Philosophy' },
-                                        { id: 'rooms', label: 'Rooms' },
+                                        { id: 'rooms', label: 'Suites' },
                                         { id: 'dining', label: 'Dining' },
                                         { id: 'amenities', label: 'Amenities' },
                                         { id: 'gallery', label: 'Gallery' },
@@ -289,14 +295,14 @@
                         <div className="absolute right-0 top-0 bottom-0 w-3/4 max-w-[320px] bg-white p-8 flex flex-col justify-between">
                             <div className="space-y-8">
                                 <div className="flex justify-between items-center border-b pb-4">
-                                    <span className="font-serif-luxury text-lg font-bold tracking-wider">COSTA GAMA</span>
+                                    <span className="font-serif-luxury text-lg font-bold tracking-wider">COSTA GAMA HOME STAY FORT COCHIN</span>
                                     <button onClick={() => setMobileNavOpen(false)} className="p-2"><Icons.X /></button>
                                 </div>
                                 <nav className="flex flex-col space-y-4">
                                     {[
                                         { id: 'home', label: 'Home' },
                                         { id: 'about', label: 'Philosophy' },
-                                        { id: 'rooms', label: 'Rooms' },
+                                        { id: 'rooms', label: 'Suites' },
                                         { id: 'dining', label: 'Dining' },
                                         { id: 'amenities', label: 'Amenities' },
                                         { id: 'gallery', label: 'Gallery' },
@@ -321,10 +327,10 @@
                                     BOOK ROOM
                                 </button>
                                 <a 
-                                    href="tel:+914802727610" 
+                                    href="tel:+914842401122" 
                                     className="block w-full border border-luxury-300 text-center text-luxury-dark text-xs font-bold py-3.5 rounded-xl tracking-widest"
                                 >
-                                    CALL HOME STAY
+                                    CALL HOTEL
                                 </a>
                             </div>
                         </div>
@@ -336,7 +342,7 @@
                         <div className="absolute inset-0 select-none">
                             <img 
                                 src="images/hero.jpg" 
-                                alt="Costa Gama Home Stay Fort Cochin Facade" 
+                                alt="Costa Gama Home Stay Fort Cochin Kochi Facade" 
                                 className="w-full h-full object-cover opacity-45 scale-105 transform hover:scale-100 transition-transform duration-[8000ms]"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-luxury-dark via-transparent to-transparent" />
@@ -345,16 +351,16 @@
                         <div className="max-w-5xl mx-auto px-6 text-center relative z-10 space-y-8 mt-20">
                             <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 border border-white/20 rounded-full backdrop-blur-md">
                                 <Icons.Sparkles />
-                                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-luxury-200">Cozy Heritage by the River</span>
+                                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-luxury-200">Refined Kerala Luxury Stay</span>
                             </div>
 
                             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-serif-luxury text-white font-light leading-[1.1]">
-                                Experience Cozy Heritage <br />
-                                By The River in Historic <span className="italic font-normal text-luxury-100 gold-underline">Fort Cochin</span>
+                                Experience Timeless Comfort <br />
+                                in the Heart of <span className="italic font-normal text-luxury-100 gold-underline">Kochi</span>
                             </h1>
 
                             <p className="text-sm sm:text-lg text-luxury-200/90 font-light max-w-2xl mx-auto leading-relaxed">
-                                Nestled in the historic Fort Cochin area, Costa Gama Home Stay offers a tranquil retreat with homely comforts and panoramic river views. Guests enjoy traditional Kerala décor, a home-cooked breakfast, and personalized service.
+                                Elegant suites, exquisite local heritage seafood dining, and modern hospitality designed around your complete business and holiday needs.
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -387,15 +393,15 @@
                             {/* Headline block */}
                             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-20">
                                 <div className="lg:col-span-8 space-y-4">
-                                    <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">The Heritage Story</p>
+                                    <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">The Mansion Heritage</p>
                                     <h2 className="text-3xl sm:text-5xl font-serif-luxury text-luxury-dark font-light leading-tight">
-                                        Where Fort Cochin's History <br />
-                                        Meets <span className="italic">Homely Riverfront Comfort</span>
+                                        Where Ernakulam's Core <br />
+                                        Meets <span className="italic">Boutique Luxury Hospitality</span>
                                     </h2>
                                 </div>
                                 <div className="lg:col-span-4">
                                     <p className="text-sm text-luxury-600 font-light leading-relaxed">
-                                        Nestled in the historic Fort Cochin area, Costa Gama Home Stay offers a tranquil retreat with homely comforts and panoramic river views. Guests enjoy traditional Kerala décor, a home-cooked breakfast, and personalized service.
+                                        Perfectly situated on the crucial Post office Rd, Fort Kochi, Kochi, Kerala 682001, India, Costa Gama Home Stay Fort Cochin provides an architectural sanctuary designed around effortless corporate business efficiency and rich family traditions.
                                     </p>
                                 </div>
                             </div>
@@ -407,33 +413,33 @@
                                 <div className="relative group overflow-hidden rounded-3xl aspect-[4/3] shadow-lg border border-luxury-200">
                                     <img 
                                         src="images/hero2.jpg" 
-                                        alt="Welcoming Lobby Costa Gama" 
+                                        alt="Luxury Interior Lobby Costa Gama Home Stay Fort Cochin" 
                                         className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-[3s]" 
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60" />
                                     <div className="absolute bottom-6 left-6 text-white">
                                         <p className="text-[10px] uppercase tracking-widest font-bold text-luxury-200">Lobby & Lounges</p>
-                                        <h3 className="font-serif-luxury text-xl">The Welcoming Gateway to Comfort</h3>
+                                        <h3 className="font-serif-luxury text-xl">The Signature Warm Greeting</h3>
                                     </div>
                                 </div>
 
                                 {/* Content block 1 */}
                                 <div className="space-y-6">
                                     <h3 className="text-2xl sm:text-3xl font-serif-luxury font-light text-luxury-dark">
-                                        A Legacy of Warmth and <span className="italic">Personalized Service</span>
+                                        A Heritage of Care and <span className="italic">Tailored Warmth</span>
                                     </h3>
                                     <p className="text-sm text-luxury-600 font-light leading-relaxed">
-                                        At Costa Gama Home Stay, we pride ourselves on authentic Kerala ambiance and personalized service, ensuring every guest feels at home. Our prime location offers easy access to Fort Cochin's iconic attractions and serene river views.
+                                        Costa Gama Home Stay offers a welcoming and comfortable accommodation experience in the historic Fort Kochi area. Guests can enjoy well-appointed rooms with air conditioning and private bathrooms, some featuring balconies. With a focus on personalized service, the homestay provides amenities like free Wi-Fi, a garden, and tour assistance, ensuring a pleasant and memorable stay.
                                     </p>
                                     
                                     <div className="grid grid-cols-2 gap-6 pt-4">
                                         <div className="border-l-2 border-luxury-500 pl-4">
-                                            <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Authentic</p>
-                                            <p className="text-[10px] uppercase tracking-wider font-bold text-luxury-600 mt-1">Kerala Ambiance</p>
+                                            <p className="text-3xl font-serif-luxury font-bold text-luxury-500">24/7</p>
+                                            <p className="text-[10px] uppercase tracking-wider font-bold text-luxury-600 mt-1">Conscious Care & Reception</p>
                                         </div>
                                         <div className="border-l-2 border-luxury-500 pl-4">
-                                            <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Personalized</p>
-                                            <p className="text-[10px] uppercase tracking-wider font-bold text-luxury-600 mt-1">Guest Service</p>
+                                            <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Premium</p>
+                                            <p className="text-[10px] uppercase tracking-wider font-bold text-luxury-600 mt-1">Seafood Culinary Legacy</p>
                                         </div>
                                     </div>
                                 </div>
@@ -449,11 +455,11 @@
                             {/* Header */}
                             <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                                 <div className="space-y-3">
-                                    <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Accommodation Options</p>
+                                    <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Accommodation Lounge</p>
                                     <h2 className="text-3xl sm:text-5xl font-serif-luxury font-light text-luxury-dark">
-                                        Heritage Rooms & <span className="italic">River View Suites</span>
+                                        Classic Suites & <span className="italic">Luxury Chambers</span>
                                     </h2>
-                                    <p className="text-xs text-luxury-500 uppercase tracking-widest font-bold">Discover our range of comfortable rooms and suites, each with traditional Kerala décor, many offering stunning river views.</p>
+                                    <p className="text-xs text-luxury-500 uppercase tracking-widest font-bold">All rooms feature premium high speed Wi-Fi and safe parking guarantees</p>
                                 </div>
                             </div>
 
@@ -469,7 +475,7 @@
                                             <img 
                                                 src={room.image} 
                                                 alt={room.title} 
-                                                className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-1000" 
+                                                className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-1000"
                                             />
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
                                             <span className="absolute bottom-4 left-4 text-white font-serif-luxury text-xl font-medium tracking-wide bg-luxury-dark/65 px-4 py-1.5 rounded-full backdrop-blur-sm">
@@ -522,53 +528,53 @@
                                 
                                 {/* Dining text */}
                                 <div className="lg:col-span-5 space-y-8">
-                                    <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Culinary Journey</p>
+                                    <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Gastronomical Masterworks</p>
                                     <h2 className="text-3xl sm:text-5xl font-serif-luxury font-light text-luxury-dark leading-tight">
-                                        Authentic Local Cuisine <br />
-                                        At <span className="italic">Costa Gama Home Stay</span>
+                                        Legendary Cuisine <br />
+                                        By The <span className="italic">Costa Gama Home Stay Fort Cochin Chefs</span>
                                     </h2>
                                     <p className="text-sm text-luxury-600 font-light leading-relaxed">
-                                        Guests at Costa Gama Home Stay cherish our on-site restaurant serving local cuisine, especially the home-cooked breakfast that offers a true taste of Kerala.
+                                        Kochi residents and international visitors celebrate the exceptional seafood and traditional Kerala menus served daily in our multi-cuisine restaurant.
                                     </p>
 
                                     {/* Tabs to select menu focus */}
                                     <div className="flex gap-2 bg-luxury-100 p-1.5 rounded-full border border-luxury-200">
                                         <button 
-                                            onClick={() => setDiningTab('breakfast')}
-                                            className={`flex-1 text-center py-2 rounded-full text-xs font-bold tracking-wider transition ${diningTab === 'breakfast' ? 'bg-luxury-dark text-white' : 'text-luxury-600'}`}
+                                            onClick={() => setDiningTab('seafood')}
+                                            className={`flex-1 text-center py-2 rounded-full text-xs font-bold tracking-wider transition ${diningTab === 'seafood' ? 'bg-luxury-dark text-white' : 'text-luxury-600'}`}
                                         >
-                                            Home-Cooked Breakfast
+                                            Kochi Seafood
                                         </button>
                                         <button 
-                                            onClick={() => setDiningTab('local')}\
-                                            className={`flex-1 text-center py-2 rounded-full text-xs font-bold tracking-wider transition ${diningTab === 'local' ? 'bg-luxury-dark text-white' : 'text-luxury-600'}`}\
-                                        >\
-                                            Local Delicacies\
-                                        </button>\
-                                    </div>\
+                                            onClick={() => setDiningTab('local')}
+                                            className={`flex-1 text-center py-2 rounded-full text-xs font-bold tracking-wider transition ${diningTab === 'local' ? 'bg-luxury-dark text-white' : 'text-luxury-600'}`}
+                                        >
+                                            Traditional Meals
+                                        </button>
+                                    </div>
 
-                                    {diningTab === 'breakfast' ? (\
+                                    {diningTab === 'seafood' ? (
                                         <div className="space-y-3 bg-[#FCFBF9] p-6 rounded-2xl border border-luxury-300/30">
-                                            <h4 className="text-sm font-bold uppercase tracking-widest text-luxury-dark">Complimentary Breakfast</h4>
+                                            <h4 className="text-sm font-bold uppercase tracking-widest text-luxury-dark">Karimeen Pollichathu</h4>
                                             <p className="text-xs text-luxury-500 font-light leading-relaxed">
-                                                Enjoy a complimentary home-cooked breakfast with traditional Kerala specialties, prepared fresh daily.
+                                                Fresh local pearl spot fish cooked in rich traditional spices and slow steamed inside a plantain leaf. An authentic delicacy of the backwaters.
                                             </p>
                                         </div>
                                     ) : (
                                         <div className="space-y-3 bg-[#FCFBF9] p-6 rounded-2xl border border-luxury-300/30">
-                                            <h4 className="text-sm font-bold uppercase tracking-widest text-luxury-dark">Authentic Kerala Dishes</h4>
+                                            <h4 className="text-sm font-bold uppercase tracking-widest text-luxury-dark">Kerala Sadya Meals</h4>
                                             <p className="text-xs text-luxury-500 font-light leading-relaxed">
-                                                Savor a range of authentic Kerala dishes, crafted with local ingredients for a genuine culinary experience.
+                                                Experience the rich culinary landscape of Kerala with standard local rice, organic sambar, avial, and payasam varieties.
                                             </p>
                                         </div>
-                                    )}\
+                                    )}
 
                                     <div className="pt-2">
                                         <button 
                                             onClick={() => setBookingOpen(true)}
                                             className="text-xs font-bold text-luxury-700 hover:text-luxury-900 tracking-wider flex items-center gap-1 group"
                                         >
-                                            INQUIRE ABOUT DINING <Icons.ChevronRight />
+                                            RESERVE DINING SLOTS <Icons.ChevronRight />
                                         </button>
                                     </div>
                                 </div>
@@ -576,10 +582,10 @@
                                 {/* Dining Photos Grid */}
                                 <div className="lg:col-span-7 grid grid-cols-12 gap-4">
                                     <div className="col-span-7 rounded-2xl overflow-hidden aspect-[4/5] shadow-lg border border-luxury-200">
-                                        <img src="images/kerala-food.jpg" alt="Kerala Traditional Cuisine" className="w-full h-full object-cover" />
+                                        <img src="images/kerala-food.jpg" alt="Kerala Pearl Spot Seafood" className="w-full h-full object-cover" />
                                     </div>
                                     <div className="col-span-5 rounded-2xl overflow-hidden aspect-[1/1] shadow-lg border border-luxury-200 mt-12">
-                                        <img src="images/rest.jpg" alt="Dining atmosphere at Costa Gama Home Stay" className="w-full h-full object-cover" />
+                                        <img src="images/rest.jpg" alt="Luxury restaurant atmosphere" className="w-full h-full object-cover" />
                                     </div>
                                 </div>
 
@@ -593,26 +599,26 @@
                             
                             {/* Title */}
                             <div className="text-center max-w-2xl mx-auto mb-20 space-y-4">
-                                <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-400">Our Facilities</p>
+                                <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-400">Amenities Showcase</p>
                                 <h2 className="text-3xl sm:text-5xl font-serif-luxury font-light gold-gradient-text-light leading-tight">
-                                    Designed for <span className="italic">Homely Comfort</span>
+                                    Engineered for <span className="italic">Timeless Delight</span>
                                 </h2>
                                 <p className="text-xs sm:text-sm text-luxury-300 font-light">
-                                    We offer a thoughtful selection of services and amenities to ensure a comfortable and enjoyable stay in Fort Cochin.
+                                    Every service is crafted to support continuous convenience for business and family holidays.
                                 </p>
                             </div>
 
                             {/* Icons Grid */}
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                                 {[
-                                    { title: "Free Wi-Fi & Daily Housekeeping", desc: "High-speed internet and impeccable daily cleaning for your comfort.", icon: <Icons.Wifi /> },
-                                    { title: "Air Conditioning", desc: "Comfortable climate control in all rooms for a pleasant stay.", icon: <Icons.AC /> },
-                                    { title: "On-site Restaurant", desc: "Enjoy delicious local cuisine and home-cooked breakfast at our restaurant.", icon: <Icons.Utensils /> },
-                                    { title: "Concierge & Laundry Services", desc: "Personalized assistance and convenient laundry facilities.", icon: <Icons.Bell /> },
-                                    { title: "Private Garden & Terrace", desc: "Relax in our serene garden or on the terrace with river views.", icon: <Icons.MapPin /> },
-                                    { title: "Heritage Rooms & River View", desc: "Authentic Kerala decor with the option of panoramic river views.", icon: <Icons.Sparkles /> },
-                                    { title: "24/7 Front Desk", desc: "Our team is available round-the-clock for check-in, assistance, and queries.", icon: <Icons.Clock /> },
-                                    { title: "In-room Television", desc: "Entertainment options in your room for a relaxing evening.", icon: <Icons.Award /> }
+                                    { title: "Free Wi-Fi", desc: "Ultra high speed wireless networks tailored for corporate tasks.", icon: <Icons.Wifi /> },
+                                    { title: "Air Conditioning", desc: "Advanced in-room climate controls for tropical Kerala days.", icon: <Icons.AC /> },
+                                    { title: "Premium Restaurant", desc: "Special local traditional Kerala meals and Cochin seafood.", icon: <Icons.Utensils /> },
+                                    { title: "24/7 Room Service", desc: "Impeccable dining brought directly to your bedroom door.", icon: <Icons.Bell /> },
+                                    { title: "Valet Safe Parking", desc: "Spacious customer parking zones with 24-hour security supervision.", icon: <Icons.MapPin /> },
+                                    { title: "Banquet Halls", desc: "Vast local ballrooms perfectly suited for local families and events.", icon: <Icons.Award /> },
+                                    { title: "Safe Reception Desk", desc: "Continuous hospitality check-in, taxi booking, and tour assistance.", icon: <Icons.Clock /> },
+                                    { title: "Business Privileges", desc: "High-tech presentation facilities and executive lounge options.", icon: <Icons.Sparkles /> }
                                 ].map((amenity, i) => (
                                     <div key={i} className="glass-card-dark p-6 rounded-2xl border border-white/5 space-y-4">
                                         <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-luxury-400">
@@ -634,7 +640,7 @@
                             <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
                                 <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Visual Portfolio</p>
                                 <h2 className="text-3xl sm:text-5xl font-serif-luxury font-light text-luxury-dark">
-                                    Inside <span className="italic">Costa Gama Home Stay</span>
+                                    Inside <span className="italic">Costa Gama Home Stay Fort Cochin</span>
                                 </h2>
                             </div>
 
@@ -704,19 +710,19 @@
                             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-6">
                                 <div>
                                     <p className="text-3xl font-serif-luxury font-bold text-luxury-500">4.5★</p>
-                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Guest Rating</p>
+                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Google Rating</p>
                                 </div>
                                 <div>
-                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">320</p>
-                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Reviews</p>
+                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">100%</p>
+                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Hygienic Stay</p>
                                 </div>
                                 <div>
-                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Authentic</p>
-                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Kerala Ambiance</p>
+                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">95%</p>
+                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Repeat Guests</p>
                                 </div>
                                 <div>
-                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Excellent</p>
-                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Location</p>
+                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Legendary</p>
+                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Kerala Seafood</p>
                                 </div>
                             </div>
 
@@ -730,10 +736,10 @@
                                 Direct Booking Offer
                             </span>
                             <h2 className="text-3xl sm:text-5xl font-serif-luxury font-light leading-tight">
-                                Ready for Your <span className="italic font-normal text-luxury-300 gold-underline">Heritage Retreat?</span>
+                                Ready for Your <span className="italic font-normal text-luxury-300 gold-underline">Perfect Stay?</span>
                             </h2>
                             <p className="text-sm sm:text-base text-luxury-300 font-light max-w-xl mx-auto leading-relaxed">
-                                Book direct for personalized service and to experience the authentic charm of Fort Cochin with homely comforts and river views.
+                                Book direct on our portal or contact our front office directly to receive free high-speed breakfast and executive parking guarantees.
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -744,10 +750,10 @@
                                     RESERVE NOW
                                 </button>
                                 <a 
-                                    href="tel:+914802727610"
+                                    href="tel:+914842401122"
                                     className="w-full sm:w-auto border border-white/20 hover:bg-white/10 text-white font-semibold text-xs tracking-widest px-8 py-4.5 rounded-full transition"
                                 >
-                                    CALL HOME STAY OFFICE
+                                    CALL HOTEL OFFICE
                                 </a>
                             </div>
                         </div>
@@ -784,7 +790,7 @@
 
                                             <div className="space-y-2">
                                                 <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-600">Specific Requirements (Optional)</label>
-                                                <textarea rows="4" placeholder="Mention dates of stay, number of rooms, special food priorities, or event requirements..." className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition resize-none" />
+                                                <textarea rows="4" placeholder="Mention dates of stay, number of suites, special food priorities, or banquet requirements..." className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition resize-none" />
                                             </div>
 
                                             <button type="submit" className="w-full bg-luxury-dark hover:bg-luxury-700 text-white font-bold text-xs tracking-widest py-4.5 rounded-xl transition">
@@ -798,7 +804,7 @@
                                 <div className="lg:col-span-5 space-y-8 flex flex-col justify-between">
                                     <div className="space-y-6">
                                         <h3 className="text-2xl font-serif-luxury font-light text-luxury-dark">
-                                            Your Perfect <span className="italic">Fort Cochin Address</span>
+                                            The Perfect <span className="italic">Kochi Address</span>
                                         </h3>
                                         
                                         <div className="space-y-4">
@@ -807,10 +813,11 @@
                                                     📍
                                                 </div>
                                                 <div>
-                                                    <h4 className="text-[10px] uppercase tracking-widest font-bold text-luxury-600">Home Stay Location</h4>
+                                                    <h4 className="text-[10px] uppercase tracking-widest font-bold text-luxury-600">Mansion Location</h4>
                                                     <p className="text-sm text-luxury-800 mt-1 font-light leading-relaxed">
                                                         Costa Gama Home Stay Fort Cochin<br />
-                                                        Backwater Avenue, Fort Cochin, Ernakulam – 682016, Kerala, India
+                                                        Kochi - Kadavanthra Road, Kochi, Kochi,<br />
+                                                        Ernakulam, Kochi, Kerala 682017
                                                     </p>
                                                 </div>
                                             </div>
@@ -822,9 +829,9 @@
                                                 <div>
                                                     <h4 className="text-[10px] uppercase tracking-widest font-bold text-luxury-600">Hotline Numbers</h4>
                                                     <p className="text-sm text-luxury-800 mt-1 font-semibold">
-                                                        +91 480 272 7610
+                                                        +919995583333
                                                     </p>
-                                                    <p className="text-xs text-luxury-500 font-light mt-0.5">Contact us during Mon – Sun: 8:00 AM – 10:30 PM</p>
+                                                    <p className="text-xs text-luxury-500 font-light mt-0.5">Continuous 24-hour phone support</p>
                                                 </div>
                                             </div>
 
@@ -835,7 +842,7 @@
                                                 <div>
                                                     <h4 className="text-[10px] uppercase tracking-widest font-bold text-luxury-600">Email Enquiries</h4>
                                                     <p className="text-sm text-luxury-800 mt-1 font-light">
-                                                        info@costa-gama.com
+                                                        reservations@edasserymansion.com
                                                     </p>
                                                 </div>
                                             </div>
@@ -844,8 +851,8 @@
 
                                     {/* Action links */}
                                     <div className="flex gap-3 pt-4">
-                                        <a href="tel:+914802727610" className="flex-1 bg-luxury-100 hover:bg-luxury-200 text-luxury-dark text-xs font-bold py-4 px-6 rounded-full text-center transition flex items-center justify-center gap-1.5">
-                                            Call Home Stay
+                                        <a href="tel:+914842401122" className="flex-1 bg-luxury-100 hover:bg-luxury-200 text-luxury-dark text-xs font-bold py-4 px-6 rounded-full text-center transition flex items-center justify-center gap-1.5">
+                                            Call Hotel
                                         </a>
                                         <button onClick={triggerWhatsApp} className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-4 px-6 rounded-full text-center transition flex items-center justify-center gap-1.5">
                                             WhatsApp Stay
@@ -858,8 +865,8 @@
                             {/* Google Maps Embed Container */}
                             <div className="mt-16 rounded-3xl overflow-hidden border border-luxury-200 shadow-md h-[400px]">
                                 <iframe 
-                                    title="Costa Gama Home Stay Location Map"
-                                    src="https://maps.google.com/maps?q=9.9775,76.2592&hl=en&z=15&output=embed"
+                                    title="Hotel Costa Gama Home Stay Fort Cochin Location Map"
+                                    src="https://www.google.com/maps?q=Post%20office%20Rd%2C%20Fort%20Kochi%2C%20Kochi%2C%20Kerala%20682001%2C%20India&output=embed" 
                                     className="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-[1s]" 
                                     allowFullScreen="" 
                                     loading="lazy"
@@ -874,18 +881,19 @@
                         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                             
                             <div className="space-y-4">
-                                <span className="font-serif-luxury text-2xl tracking-wider text-white">COSTA GAMA</span>
+                                <span className="font-serif-luxury text-2xl tracking-wider text-white">COSTA GAMA HOME STAY FORT COCHIN</span>
                                 <p className="text-xs text-luxury-300 font-light leading-relaxed">
-                                    Costa Gama Home Stay in Fort Cochin offers a tranquil heritage retreat with homely comforts and panoramic river views, perfect for experiencing local charm and personalized service.
+                                    Costa Gama Home Stay Fort Cochin sets the standard for boutique hospitality on the Kochi-Kadavanthra corridor. Designed to combine business facilities with exceptional traditional Kerala dining.
                                 </p>
                             </div>
 
                             <div className="space-y-4">
-                                <h4 className="text-white text-xs font-bold uppercase tracking-widest">Our Rooms</h4>
+                                <h4 className="text-white text-xs font-bold uppercase tracking-widest">Our Service Suites</h4>
                                 <ul className="space-y-2 text-xs font-light text-luxury-300">
-                                    <li><a href="#rooms" className="hover:text-white transition">Standard Room</a></li>
-                                    <li><a href="#rooms" className="hover:text-white transition">Deluxe Room</a></li>
-                                    <li><a href="#rooms" className="hover:text-white transition">Suite</a></li>
+                                    <li><a href="#rooms" className="hover:text-white transition">Premium Rooms</a></li>
+                                    <li><a href="#rooms" className="hover:text-white transition">Executive Suites</a></li>
+                                    <li><a href="#rooms" className="hover:text-white transition">Family Interconnecting Rooms</a></li>
+                                    <li><a href="#rooms" className="hover:text-white transition">Deluxe Royal Accommodations</a></li>
                                 </ul>
                             </div>
 
@@ -894,174 +902,175 @@
                                 <ul className="space-y-2 text-xs font-light text-luxury-300">
                                     <li><a href="#home" className="hover:text-white transition">Home</a></li>
                                     <li><a href="#about" className="hover:text-white transition">Heritage & Philosophy</a></li>
-                                    <li><a href="#dining" className="hover:text-white transition">Dining Experience</a></li>
+                                    <li><a href="#dining" className="hover:text-white transition">Seafood Dining</a></li>
                                     <li><a href="#gallery" className="hover:text-white transition">Image Showcase</a></li>
                                 </ul>
                             </div>
 
                             <div className="space-y-4">
-                                <h4 className="text-white text-xs font-bold uppercase tracking-widest">Guest Information</h4>
+                                <h4 className="text-white text-xs font-bold uppercase tracking-widest">Kerala Heritage Care</h4>
                                 <p className="text-xs text-luxury-300 font-light leading-relaxed">
-                                    We are dedicated to providing an authentic Fort Cochin experience with personalized service, ensuring a memorable and comfortable heritage stay by the river.
+                                    As part of standard safety guidelines, we maintain thorough room sanitization and safe car parking. Group wedding banquets must be booked in advance.
                                 </p>
                             </div>
 
                         </div>
 
                         <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/5 text-center md:flex md:justify-between md:text-left text-xs text-luxury-400 font-light">
-                            <p>© {new Date().getFullYear()} Costa Gama Home Stay. All Rights Reserved.</p>
-                            <p className="mt-2 md:mt-0"> Fort Cochin, Ernakulam, Kerala</p>
+                            <p>© {new Date().getFullYear()} Costa Gama Home Stay Fort Cochin. All Rights Reserved.</p>
+                            <p className="mt-2 md:mt-0"> Kochi, Kochi, Ernakulam, Kerala</p>
                         </div>
                     </footer>
 
                     {/* INTERACTIVE BOOKING ENGINE MODAL */}
-                    {bookingOpen && (\
-                        <div className="fixed inset-0 z-50 overflow-y-auto flex items-center justify-center p-4">\
-                            <div className="fixed inset-0 bg-black/60 backdrop-blur-md transition-opacity" onClick={() => setBookingOpen(false)} />\
+                    {bookingOpen && (
+                        <div className="fixed inset-0 z-50 overflow-y-auto flex items-center justify-center p-4">
+                            <div className="fixed inset-0 bg-black/60 backdrop-blur-md transition-opacity" onClick={() => setBookingOpen(false)} />
 
-                            <div className="relative bg-[#FCFBF9] rounded-3xl overflow-hidden shadow-2xl border border-luxury-300/40 max-w-lg w-full z-10">\
-                                \
-                                <div className="bg-luxury-dark text-white p-6 flex justify-between items-center">\
-                                    <div>\
-                                        <h3 className="text-xl font-serif-luxury tracking-wide">Secure Your Stay</h3>\
-                                        <p className="text-[10px] text-luxury-300 uppercase tracking-widest mt-1">Direct booking guarantees complimentary breakfast</p>\
-                                    </div>\
-                                    <button onClick={() => setBookingOpen(false)} className="text-luxury-400 hover:text-white p-2">\
-                                        <Icons.X />\
-                                    </button>\
-                                </div>\
+                            <div className="relative bg-[#FCFBF9] rounded-3xl overflow-hidden shadow-2xl border border-luxury-300/40 max-w-lg w-full z-10">
+                                
+                                <div className="bg-luxury-dark text-white p-6 flex justify-between items-center">
+                                    <div>
+                                        <h3 className="text-xl font-serif-luxury tracking-wide">Secure Your Stay</h3>
+                                        <p className="text-[10px] text-luxury-300 uppercase tracking-widest mt-1">Direct booking guarantees complimentary breakfast</p>
+                                    </div>
+                                    <button onClick={() => setBookingOpen(false)} className="text-luxury-400 hover:text-white p-2">
+                                        <Icons.X />
+                                    </button>
+                                </div>
 
-                                <div className="p-8">\
-                                    {bookingSuccess ? (\
-                                        <div className="text-center py-12 space-y-4">\
-                                            <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto text-2xl">\
-                                                ✓\
-                                            </div>\
-                                            <h4 className="text-xl font-serif-luxury text-luxury-dark">Reservation Request Received</h4>\
-                                            <p className="text-sm text-luxury-500 font-light max-w-sm mx-auto">\
-                                                Thank you. Our reservations desk will contact you shortly to confirm your dates and specific room selections.\
-                                            </p>\
-                                        </div>\
-                                    ) : (\
-                                        <form onSubmit={submitBooking} className="space-y-4">\
-                                            \
-                                            <div className="space-y-1">\
-                                                <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Your Full Name</label>\
-                                                <input \
-                                                    type="text" \
-                                                    required\
-                                                    value={bookingForm.name}\
-                                                    onChange={e => setBookingForm({...bookingForm, name: e.target.value})}\
-                                                    placeholder="Enter your name"\
-                                                    className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition"\
-                                                />\
-                                            </div>\
-\
-                                            <div className="space-y-1">\
-                                                <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Contact Phone Number</label>\
-                                                <input \
-                                                    type="tel" \
-                                                    required\
-                                                    value={bookingForm.phone}\
-                                                    onChange={e => setBookingForm({...bookingForm, phone: e.target.value})}\
-                                                    placeholder="Phone Number"\
-                                                    className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition"\
-                                                />\
-                                            </div>\
-\
-                                            <div className="grid grid-cols-2 gap-4">\
-                                                <div className="space-y-1">\
-                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Check-In Date</label>\
-                                                    <input \
-                                                        type="date" \
-                                                        required\
-                                                        value={bookingForm.checkIn}\
-                                                        onChange={e => setBookingForm({...bookingForm, checkIn: e.target.value})}\
-                                                        className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-500 transition"\
-                                                    />\
-                                                </div>\
-\
-                                                <div className="space-y-1">\
-                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Check-Out Date</label>\
-                                                    <input \
-                                                        type="date" \
-                                                        required\
-                                                        value={bookingForm.checkOut}\
-                                                        onChange={e => setBookingForm({...bookingForm, checkOut: e.target.value})}\
-                                                        className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-500 transition"\
-                                                    />\
-                                                </div>\
-                                            </div>\
-\
-                                            <div className="grid grid-cols-2 gap-4">\
-                                                <div className="space-y-1">\
-                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Room Type</label>\
-                                                    <select \
-                                                        value={bookingForm.category}\
-                                                        onChange={e => setBookingForm({...bookingForm, category: e.target.value})}\
-                                                        className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-500 transition"\
-                                                    >\
-                                                        <option value="Standard Room">Standard Room</option>\
-                                                        <option value="Deluxe Room">Deluxe Room</option>\
-                                                        <option value="Suite">Suite</option>\
-                                                    </select>\
-                                                </div>\
-\
-                                                <div className="space-y-1">\
-                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Guests</label>\
-                                                    <select \
-                                                        value={bookingForm.guests}\
-                                                        onChange={e => setBookingForm({...bookingForm, guests: e.target.value})}\
-                                                        className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-500 transition"\
-                                                    >\
-                                                        <option value="1">1 Guest</option>\
-                                                        <option value="2">2 Guests</option>\
-                                                        <option value="3">3 Guests</option>\
-                                                        <option value="4+">Family (4+)</option>\
-                                                    </select>\
-                                                </div>\
-                                            </div>\
-\
-                                            <button \
-                                                type="submit"\
-                                                className="w-full bg-luxury-dark hover:bg-luxury-700 text-white font-bold text-xs tracking-widest py-4.5 rounded-xl transition"\
-                                            >\
-                                                CONFIRM RESERVATION REQUEST\
-                                            </button>\
-\
-                                            <div className="text-center pt-2">\
-                                                <p className="text-[10px] text-luxury-500">\
-                                                    Prefer phone support? <a href="tel:+914802727610" className="font-bold underline text-luxury-700">Call +91 480 272 7610</a>\
-                                                </p>\
-                                            </div>\
-                                        </form>\
-                                    )}\
-                                </div>\
-                            </div>\
-                        </div>\
-                    )}\
+                                <div className="p-8">
+                                    {bookingSuccess ? (
+                                        <div className="text-center py-12 space-y-4">
+                                            <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto text-2xl">
+                                                ✓
+                                            </div>
+                                            <h4 className="text-xl font-serif-luxury text-luxury-dark">Reservation Request Received</h4>
+                                            <p className="text-sm text-luxury-500 font-light max-w-sm mx-auto">
+                                                Thank you. Our reservations desk will contact you shortly to confirm your dates and specific suite selections.
+                                            </p>
+                                        </div>
+                                    ) : (
+                                        <form onSubmit={submitBooking} className="space-y-4">
+                                            
+                                            <div className="space-y-1">
+                                                <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Your Full Name</label>
+                                                <input 
+                                                    type="text" 
+                                                    required
+                                                    value={bookingForm.name}
+                                                    onChange={e => setBookingForm({...bookingForm, name: e.target.value})}
+                                                    placeholder="Enter your name"
+                                                    className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition"
+                                                />
+                                            </div>
 
-                    {/* PORTFOLIO LIGHTBOX PREVIEW */}\
-                    {lightboxOpen && (\
-                        <div className="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex items-center justify-center p-4">\
-                            <button \
-                                onClick={() => setLightboxOpen(false)}\
-                                className="absolute top-6 right-6 text-white hover:text-luxury-200 p-2 bg-white/5 rounded-full"\
-                            >\
-                                <Icons.X />\
-                            </button>\
-                            <div className="max-w-4xl w-full">\
-                                <img src={lightboxImg} alt="Home Stay Showcase Close-up" className="w-full max-h-[80vh] object-contain rounded-2xl border border-white/10" />\
-                            </div>\
-                        </div>\
-                    )}\
+                                            <div className="space-y-1">
+                                                <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Contact Phone Number</label>
+                                                <input 
+                                                    type="tel" 
+                                                    required
+                                                    value={bookingForm.phone}
+                                                    onChange={e => setBookingForm({...bookingForm, phone: e.target.value})}
+                                                    placeholder="Phone Number"
+                                                    className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition"
+                                                />
+                                            </div>
 
-                </div>\
-            );\
-        }\
+                                            <div className="grid grid-cols-2 gap-4">
+                                                <div className="space-y-1">
+                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Check-In Date</label>
+                                                    <input 
+                                                        type="date" 
+                                                        required
+                                                        value={bookingForm.checkIn}
+                                                        onChange={e => setBookingForm({...bookingForm, checkIn: e.target.value})}
+                                                        className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-500 transition"
+                                                    />
+                                                </div>
 
-        const root = ReactDOM.createRoot(document.getElementById('root'));\
-        root.render(<App />);\
-    </script>\
-</body>\
+                                                <div className="space-y-1">
+                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Check-Out Date</label>
+                                                    <input 
+                                                        type="date" 
+                                                        required
+                                                        value={bookingForm.checkOut}
+                                                        onChange={e => setBookingForm({...bookingForm, checkOut: e.target.value})}
+                                                        className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-500 transition"
+                                                    />
+                                                </div>
+                                            </div>
+
+                                            <div className="grid grid-cols-2 gap-4">
+                                                <div className="space-y-1">
+                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Suite Type</label>
+                                                    <select 
+                                                        value={bookingForm.category}
+                                                        onChange={e => setBookingForm({...bookingForm, category: e.target.value})}
+                                                        className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-500 transition"
+                                                    >
+                                                        <option value="Premium Suite">Premium Room</option>
+                                                        <option value="Executive Room">Executive Room</option>
+                                                        <option value="Family Room">Family Room</option>
+                                                        <option value="Deluxe Accommodation">Deluxe Suite</option>
+                                                    </select>
+                                                </div>
+
+                                                <div className="space-y-1">
+                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Guests</label>
+                                                    <select 
+                                                        value={bookingForm.guests}
+                                                        onChange={e => setBookingForm({...bookingForm, guests: e.target.value})}
+                                                        className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-500 transition"
+                                                    >
+                                                        <option value="1">1 Guest</option>
+                                                        <option value="2">2 Guests</option>
+                                                        <option value="3">3 Guests</option>
+                                                        <option value="4+">Family Suite (4+)</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <button 
+                                                type="submit"
+                                                className="w-full bg-luxury-dark hover:bg-luxury-700 text-white font-bold text-xs tracking-widest py-4.5 rounded-xl transition"
+                                            >
+                                                CONFIRM RESERVATION REQUEST
+                                            </button>
+
+                                            <div className="text-center pt-2">
+                                                <p className="text-[10px] text-luxury-500">
+                                                    Prefer phone support? <a href="tel:+914842401122" className="font-bold underline text-luxury-700">Call +919995583333</a>
+                                                </p>
+                                            </div>
+                                        </form>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* PORTFOLIO LIGHTBOX PREVIEW */}
+                    {lightboxOpen && (
+                        <div className="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex items-center justify-center p-4">
+                            <button 
+                                onClick={() => setLightboxOpen(false)}
+                                className="absolute top-6 right-6 text-white hover:text-luxury-200 p-2 bg-white/5 rounded-full"
+                            >
+                                <Icons.X />
+                            </button>
+                            <div className="max-w-4xl w-full">
+                                <img src={lightboxImg} alt="Hotel Suite Showcase Close-up" className="w-full max-h-[80vh] object-contain rounded-2xl border border-white/10" />
+                            </div>
+                        </div>
+                    )}
+
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
 </html>
