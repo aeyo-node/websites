@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Good Karma Inn | Resort Hotel in Ernakulam, Kerala</title>
+    <title>Good Karma Inn | Resort Hotel in Ernakulam</title>
     
     <!-- SEO Optimization -->
-    <meta name="description" content="Discover Good Karma Inn, a serene resort hotel in Ernakulam, Kerala. Experience comfort and relaxation during your stay.">
-    <meta name="keywords" content="Good Karma Inn, Resort Hotel Ernakulam, Resort Kerala, Accommodation Ernakulam, Tranquil Stay, Relaxing Getaway">
+    <meta name="description" content="Good Karma Inn is a resort hotel in Ernakulam, Kerala, offering a heritage-inspired stay with modern comforts. Located in the heart of Kochi, it is ideal for travelers seeking culture, convenience, and relaxation in one of Kerala's top destinations.">
+    <meta name="keywords" content="Edassery Mansion, Luxury Hotel Kochi, Hotel in Ernakulam, Business Hotel Kerala, Premium Stay Kaloor, Kerala Seafood Restaurant">
     
     <!-- Open Graph tags -->
     <meta property="og:title" content="Good Karma Inn | Ernakulam, Kerala">
-    <meta property="og:description" content="A serene resort hotel in the heart of Ernakulam. Experience comfort and relaxation during your stay.">
+    <meta property="og:description" content="Experience high-end hospitality, exquisite dining, and premium rooms in the center of Kochi.">
     <meta property="og:image" content="images/hero_cover.jpg">
     <meta property="og:type" content="website">
     
@@ -59,20 +59,22 @@
         "streetAddress": "Ernakulam",
         "addressLocality": "Ernakulam",
         "addressRegion": "Kerala",
+        "postalCode": "",
         "addressCountry": "IN"
       },
-      "telephone": "Not available",
+      "telephone": "+914842401122",
       "starRating": {
         "@type": "Rating",
-        "ratingValue": "4.0"
+        "ratingValue": "4.5"
       },
+      "priceRange": "₹3,500 - ₹9,000",
       "amenityFeature": [
         "Free Wi-Fi",
         "Air Conditioning",
-        "On-site Restaurant",
-        "24/7 Front Desk",
-        "Free Parking",
-        "Recreational facilities"
+        "Premium Seafood Restaurant",
+        "Banquet Facilities",
+        "24x7 Room Service",
+        "Valet Parking"
       ]
     }
     </script>
@@ -110,7 +112,7 @@
             const [mobileNavOpen, setMobileNavOpen] = useState(false);
             const [activeRoomFilter, setActiveRoomFilter] = useState('all');
             const [bookingOpen, setBookingOpen] = useState(false);
-            const [diningTab, setDiningTab] = useState('local');
+            const [diningTab, setDiningTab] = useState('seafood');
             const [reviewIdx, setReviewIdx] = useState(0);
             const [enquirySuccess, setEnquirySuccess] = useState(false);
             
@@ -120,7 +122,7 @@
 
             // Booking modal parameters
             const [bookingForm, setBookingForm] = useState({
-                checkIn: '', checkOut: '', category: 'Standard Room', guests: '2', name: '', phone: ''
+                checkIn: '', checkOut: '', category: 'Premium Suite', guests: '2', name: '', phone: ''
             });
             const [bookingSuccess, setBookingSuccess] = useState(false);
 
@@ -135,67 +137,67 @@
             // Data Definitions
             const rooms = [
                 {
-                    id: 'standard',
-                    title: 'Standard Room',
-                    desc: 'Comfortable and well-appointed rooms, offering a peaceful stay with essential amenities.',
-                    price: 'On Request',
-                    features: ['King Bed', 'City View', 'Free Wi-Fi', 'Air-Conditioning'],
+                    id: 'premium',
+                    title: 'Premium Room',
+                    desc: 'A stylishly appointed room offering spacious modern living zones, rich leather furnishings, and a premium workspace layout.',
+                    price: '₹3,499',
+                    features: ['King Bed', 'City View', 'Free High-speed Wi-Fi', 'Premium Bath Linens', 'Mini-fridge'],
                     image: 'images/room1.jpg'
                 },
                 {
-                    id: 'deluxe',
-                    title: 'Deluxe Room',
-                    desc: 'Spacious and elegantly designed rooms, perfect for relaxation and comfort.',
-                    price: 'On Request',
-                    features: ['King Bed', 'Garden View', 'Free Wi-Fi', 'Air-Conditioning', 'Minibar'],
+                    id: 'executive',
+                    title: 'Executive Room',
+                    desc: 'Designed specifically for the corporate traveler. Includes an expansive high-tech workspace, refined accents, and premium hospitality privileges.',
+                    price: '₹4,499',
+                    features: ['King Bed', 'Coffee Station', 'Express Laundry Access', 'High-Speed Wi-Fi', 'Luxury Lounge Chair'],
                     image: 'images/room3.jpg'
                 },
                 {
-                    id: 'suite',
-                    title: 'Suite',
-                    desc: 'Luxurious and expansive suites with separate living areas, ideal for extended stays.',
-                    price: 'On Request',
-                    features: ['Super King Bed', 'Separate Living Area', 'Premium Amenities', 'Free Wi-Fi', 'Air-Conditioning'],
+                    id: 'family',
+                    title: 'Family Room',
+                    desc: 'Spacious interconnecting or double-queen bedroom spaces crafted for ultimate peace, comfort, and direct proximity to Kochi family spots.',
+                    price: '₹5,999',
+                    features: ['2 Queen Beds', 'Living area', 'Kid-friendly Setup', 'Smart TV', 'Spacious Wardrobes'],
                     image: 'images/room4.jpg'
                 },
                 {
-                    id: 'villas',
-                    title: 'Villas',
-                    desc: 'Exclusive villas offering ultimate privacy and a serene escape with personalized services.',
-                    price: 'On Request',
-                    features: ['Private Terrace', 'Spacious Interiors', 'Exclusive Services', 'Free Wi-Fi', 'Air-Conditioning'],
+                    id: 'deluxe',
+                    title: 'Deluxe Suite',
+                    desc: 'The jewel of Edassery Mansion. Timeless luxury featuring a separated master parlor, classic Kerala wooden art finishes, and royal privileges.',
+                    price: '₹7,999',
+                    features: ['Super King Bed', 'Separated Lounge', 'Bathtub & Rain Shower', 'In-room Dining', 'VIP Welcome Platter'],
                     image: 'images/room6.jpg'
                 }
             ];
 
             const reviews = [
                 {
-                    quote: "A truly refreshing stay with a wonderful, calm atmosphere. Highly recommend for a peaceful getaway!",
-                    author: "Ranjit K.",
+                    quote: "A truly peaceful retreat in Ernakulam. The staff were very welcoming and the atmosphere was so relaxing.",
+                    author: "A Satisfied Guest",
                     role: "Leisure Traveler",
                     rating: 5
                 },
                 {
-                    quote: "The staff were incredibly welcoming and made our visit feel very special. Excellent service all around.",
-                    author: "Priya S.",
-                    role: "Business Guest",
+                    quote: "Enjoyed every moment of my stay. The serene surroundings made for a perfect getaway.",
+                    author: "Traveler's Choice",
+                    role: "Holidaymaker",
                     rating: 5
                 },
                 {
-                    quote: "Enjoyed the serene surroundings and the comfortable amenities. A perfect place to unwind and recharge.",
-                    author: "Vijay C.",
-                    role: "Family Vacation",
+                    quote: "Excellent service and a wonderful ambiance. A great place to unwind and experience Kerala hospitality.",
+                    author: "Happy Customer",
+                    role: "Relaxation Seeker",
                     rating: 5
                 }
             ];
 
             const gallery = [
-                { title: 'Deluxe Room Ambiance', desc: 'Crafted with elegant minimalist palettes and designer furniture.', img: 'images/Premium-Suite-Setting.jpg' },
-                { title: 'Modern Bathroom Design', desc: 'Pristine and well-maintained bathroom elements.', img: 'images/Executive-Wash-Oasis.jpg' },
-                { title: 'Resort Exterior View', desc: 'A tranquil architectural landmark in the heart of Ernakulam.', img: 'images/Facade.jpg' },
-                { title: 'Fine Dining Experience', desc: 'Featuring cozy warm lighting, authentic spices, and local heritage.', img: 'images/dining.jpg' },
-                { title: 'Conference Hall Setup', desc: 'A versatile hall perfect for corporate events and gatherings.', img: 'images/banquet.jpg' },
-                { title: 'Resort Swimming Pool', desc: 'Our inviting pool area for relaxation and rejuvenation.', img: 'images/seafood.jpg' }
+                { title: 'Premium Suite Setting', desc: 'Crafted with elegant minimalist palettes and designer furniture.', img: 'images/Premium-Suite-Setting.jpg' },
+                { title: 'Executive Wash Oasis', desc: 'Pristine marble and premium gold bathroom elements.', img: 'images/Executive-Wash-Oasis.jpg' },
+                { title: 'The Edassery Mansion Facade', desc: 'A premier architectural landmark on the Kaloor-Kadavanthra corridor.', img: 'images/Facade.jpg' },
+                { title: 'Multi-Cuisine Dining Space', desc: 'Featuring cozy warm lighting, authentic spices, and local heritage.', img: 'images/dining.jpg' },
+                { title: 'Elegant Wedding Banquet', desc: 'A vast, high-ceiling ballroom perfect for royal local wedding rituals.', img: 'images/banquet.jpg' },
+                { title: 'Traditional Seafood Treat', desc: 'Our legendary fresh pearl spot fish prepared with traditional red masalas.', img: 'images/seafood.jpg' }
             ];
 
             const submitBooking = (e) => {
@@ -209,7 +211,7 @@
 
             const triggerWhatsApp = () => {
                 const text = encodeURIComponent("Hello Good Karma Inn, I would like to inquire about room reservations.");
-                window.open(`https://wa.me/?text=${text}`, '_blank');
+                window.open(`https://wa.me/914842401122?text=${text}`, '_blank');
             };
 
             return (
@@ -222,7 +224,7 @@
                     {/* TOP STATUS BAR */}
                     <div className="bg-luxury-dark text-white/70 text-[10px] sm:text-xs py-2 px-6 flex justify-between items-center relative z-50 border-b border-white/5 tracking-wider">
                         <div className="flex gap-4 mx-auto sm:mx-0">
-                            <span className="flex items-center gap-1">📞 Not available</span>
+                            <span className="flex items-center gap-1">📞 +91 484 240 1122</span>
                             <span className="hidden sm:inline">📍 Ernakulam, Kerala, India</span>
                         </div>
                         <div className="hidden sm:flex items-center gap-4">
@@ -240,7 +242,7 @@
                                         GOOD KARMA INN
                                     </span>
                                     <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.3em] text-luxury-500 font-bold -mt-1">
-                                        Resort Hotel • Ernakulam
+                                        Resort Stay • Ernakulam
                                     </span>
                                 </a>
 
@@ -249,7 +251,7 @@
                                     {[
                                         { id: 'home', label: 'Home' },
                                         { id: 'about', label: 'Philosophy' },
-                                        { id: 'rooms', label: 'Rooms' },
+                                        { id: 'rooms', label: 'Suites' },
                                         { id: 'dining', label: 'Dining' },
                                         { id: 'amenities', label: 'Amenities' },
                                         { id: 'gallery', label: 'Gallery' },
@@ -300,7 +302,7 @@
                                     {[
                                         { id: 'home', label: 'Home' },
                                         { id: 'about', label: 'Philosophy' },
-                                        { id: 'rooms', label: 'Rooms' },
+                                        { id: 'rooms', label: 'Suites' },
                                         { id: 'dining', label: 'Dining' },
                                         { id: 'amenities', label: 'Amenities' },
                                         { id: 'gallery', label: 'Gallery' },
@@ -325,7 +327,7 @@
                                     BOOK ROOM
                                 </button>
                                 <a 
-                                    href="tel:" 
+                                    href="tel:+914842401122" 
                                     className="block w-full border border-luxury-300 text-center text-luxury-dark text-xs font-bold py-3.5 rounded-xl tracking-widest"
                                 >
                                     CALL HOTEL
@@ -340,7 +342,7 @@
                         <div className="absolute inset-0 select-none">
                             <img 
                                 src="images/hero.jpg" 
-                                alt="Good Karma Inn Ernakulam Facade" 
+                                alt="Edassery Mansion Kochi Facade" 
                                 className="w-full h-full object-cover opacity-45 scale-105 transform hover:scale-100 transition-transform duration-[8000ms]"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-luxury-dark via-transparent to-transparent" />
@@ -349,16 +351,16 @@
                         <div className="max-w-5xl mx-auto px-6 text-center relative z-10 space-y-8 mt-20">
                             <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 border border-white/20 rounded-full backdrop-blur-md">
                                 <Icons.Sparkles />
-                                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-luxury-200">Your Serene Escape in Ernakulam</span>
+                                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-luxury-200">Relaxing Resort Experience</span>
                             </div>
 
                             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-serif-luxury text-white font-light leading-[1.1]">
-                                Find Your Inner Peace <br />
-                                in the Heart of <span className="italic font-normal text-luxury-100 gold-underline">Ernakulam</span>
+                                Find Your Serenity <br />
+                                in Vibrant <span className="italic font-normal text-luxury-100 gold-underline">Ernakulam</span>
                             </h1>
 
                             <p className="text-sm sm:text-lg text-luxury-200/90 font-light max-w-2xl mx-auto leading-relaxed">
-                                Comfortable rooms, a tranquil ambiance, and thoughtful services await to make your stay in Ernakulam truly relaxing.
+                                A heritage retreat blending traditional architecture with modern hospitality, offering a comfortable and culturally rich stay in the heart of Ernakulam.
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -391,15 +393,15 @@
                             {/* Headline block */}
                             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-20">
                                 <div className="lg:col-span-8 space-y-4">
-                                    <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Our Resort Philosophy</p>
+                                    <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">The Inn Heritage</p>
                                     <h2 className="text-3xl sm:text-5xl font-serif-luxury text-luxury-dark font-light leading-tight">
-                                        Where Ernakulam's Vibrancy <br />
-                                        Meets <span className="italic">Serene Resort Hospitality</span>
+                                        Where Ernakulam's Spirit <br />
+                                        Meets <span className="italic">Tranquil Resort Hospitality</span>
                                     </h2>
                                 </div>
                                 <div className="lg:col-span-4">
                                     <p className="text-sm text-luxury-600 font-light leading-relaxed">
-                                        Good Karma Inn offers a peaceful retreat in Ernakulam, providing a perfect balance of comfort and a welcoming atmosphere for all guests.
+                                        Good Karma Inn provides a serene retreat in Ernakulam, blending comforting hospitality with a peaceful atmosphere. Ideal for travelers seeking relaxation and an authentic Kerala experience.
                                     </p>
                                 </div>
                             </div>
@@ -411,33 +413,33 @@
                                 <div className="relative group overflow-hidden rounded-3xl aspect-[4/3] shadow-lg border border-luxury-200">
                                     <img 
                                         src="images/hero2.jpg" 
-                                        alt="Welcoming Lobby at Good Karma Inn" 
+                                        alt="Luxury Interior Lobby Edassery" 
                                         className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-[3s]" 
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60" />
                                     <div className="absolute bottom-6 left-6 text-white">
                                         <p className="text-[10px] uppercase tracking-widest font-bold text-luxury-200">Lobby & Lounges</p>
-                                        <h3 className="font-serif-luxury text-xl">Your Serene Welcome</h3>
+                                        <h3 className="font-serif-luxury text-xl">The Signature Warm Greeting</h3>
                                     </div>
                                 </div>
 
                                 {/* Content block 1 */}
                                 <div className="space-y-6">
                                     <h3 className="text-2xl sm:text-3xl font-serif-luxury font-light text-luxury-dark">
-                                        A Heritage of Comfort and <span className="italic">Rejuvenating Amenities</span>
+                                        A Heritage of Care and <span className="italic">Tailored Warmth</span>
                                     </h3>
                                     <p className="text-sm text-luxury-600 font-light leading-relaxed">
-                                        At Good Karma Inn, we focus on creating a memorable stay with attentive service. Our location in Ernakulam offers convenient access to local sights and experiences.
+                                        Built and operated under the legendary standards of the Edassery family, we prioritize individualized guest services. Our location allows quick direct access to Kaloor Metro Station, Marine Drive backwaters, and Kaloor Stadium.
                                     </p>
                                     
                                     <div className="grid grid-cols-2 gap-6 pt-4">
                                         <div className="border-l-2 border-luxury-500 pl-4">
-                                            <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Personalized</p>
-                                            <p className="text-[10px] uppercase tracking-wider font-bold text-luxury-600 mt-1">Guest Services</p>
+                                            <p className="text-3xl font-serif-luxury font-bold text-luxury-500">24/7</p>
+                                            <p className="text-[10px] uppercase tracking-wider font-bold text-luxury-600 mt-1">Conscious Care & Reception</p>
                                         </div>
                                         <div className="border-l-2 border-luxury-500 pl-4">
-                                            <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Rejuvenating</p>
-                                            <p className="text-[10px] uppercase tracking-wider font-bold text-luxury-600 mt-1">Amenities & Activities</p>
+                                            <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Premium</p>
+                                            <p className="text-[10px] uppercase tracking-wider font-bold text-luxury-600 mt-1">Local Culinary Delights</p>
                                         </div>
                                     </div>
                                 </div>
@@ -453,11 +455,11 @@
                             {/* Header */}
                             <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                                 <div className="space-y-3">
-                                    <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Accommodation Options</p>
+                                    <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Accommodation Lounge</p>
                                     <h2 className="text-3xl sm:text-5xl font-serif-luxury font-light text-luxury-dark">
-                                        Elegant Rooms & <span className="italic">Luxury Suites</span>
+                                        Classic Suites & <span className="italic">Luxury Chambers</span>
                                     </h2>
-                                    <p className="text-xs text-luxury-500 uppercase tracking-widest font-bold">Discover our range of comfortable and luxurious accommodations, designed for your ultimate relaxation and convenience.</p>
+                                    <p className="text-xs text-luxury-500 uppercase tracking-widest font-bold">All rooms feature premium high speed Wi-Fi and safe parking guarantees</p>
                                 </div>
                             </div>
 
@@ -473,7 +475,7 @@
                                             <img 
                                                 src={room.image} 
                                                 alt={room.title} 
-                                                className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-1000" 
+                                                className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-1000"
                                             />
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
                                             <span className="absolute bottom-4 left-4 text-white font-serif-luxury text-xl font-medium tracking-wide bg-luxury-dark/65 px-4 py-1.5 rounded-full backdrop-blur-sm">
@@ -526,43 +528,43 @@
                                 
                                 {/* Dining text */}
                                 <div className="lg:col-span-5 space-y-8">
-                                    <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Culinary Excellence</p>
+                                    <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Gastronomical Masterworks</p>
                                     <h2 className="text-3xl sm:text-5xl font-serif-luxury font-light text-luxury-dark leading-tight">
                                         Exquisite Cuisine <br />
                                         By Our <span className="italic">Talented Chefs</span>
                                     </h2>
                                     <p className="text-sm text-luxury-600 font-light leading-relaxed">
-                                        Our fine dining restaurant presents a delectable menu, blending local Kerala flavors with international favorites, ensuring a memorable culinary experience for every palate.
+                                        Guests and visitors celebrate the exceptional local and traditional Kerala menus served daily in our multi-cuisine restaurant, offering a delightful culinary experience.
                                     </p>
 
                                     {/* Tabs to select menu focus */}
                                     <div className="flex gap-2 bg-luxury-100 p-1.5 rounded-full border border-luxury-200">
                                         <button 
+                                            onClick={() => setDiningTab('seafood')}
+                                            className={`flex-1 text-center py-2 rounded-full text-xs font-bold tracking-wider transition ${diningTab === 'seafood' ? 'bg-luxury-dark text-white' : 'text-luxury-600'}`}
+                                        >
+                                            Kochi Seafood
+                                        </button>
+                                        <button 
                                             onClick={() => setDiningTab('local')}
                                             className={`flex-1 text-center py-2 rounded-full text-xs font-bold tracking-wider transition ${diningTab === 'local' ? 'bg-luxury-dark text-white' : 'text-luxury-600'}`}
                                         >
-                                            Local Delicacies
-                                        </button>
-                                        <button 
-                                            onClick={() => setDiningTab('international')}
-                                            className={`flex-1 text-center py-2 rounded-full text-xs font-bold tracking-wider transition ${diningTab === 'international' ? 'bg-luxury-dark text-white' : 'text-luxury-600'}`}
-                                        >
-                                            International Flavors
+                                            Traditional Meals
                                         </button>
                                     </div>
 
-                                    {diningTab === 'local' ? (
+                                    {diningTab === 'seafood' ? (
                                         <div className="space-y-3 bg-[#FCFBF9] p-6 rounded-2xl border border-luxury-300/30">
-                                            <h4 className="text-sm font-bold uppercase tracking-widest text-luxury-dark">Kerala Traditional Thali</h4>
+                                            <h4 className="text-sm font-bold uppercase tracking-widest text-luxury-dark">Karimeen Pollichathu</h4>
                                             <p className="text-xs text-luxury-500 font-light leading-relaxed">
-                                                Experience the rich and diverse flavors of Kerala with our traditional thali meals, a balanced and authentic culinary journey reflecting local heritage.
+                                                Fresh local pearl spot fish cooked in rich traditional spices and slow steamed inside a plantain leaf. An authentic delicacy of the backwaters.
                                             </p>
                                         </div>
                                     ) : (
                                         <div className="space-y-3 bg-[#FCFBF9] p-6 rounded-2xl border border-luxury-300/30">
-                                            <h4 className="text-sm font-bold uppercase tracking-widest text-luxury-dark">Global Gastronomy</h4>
+                                            <h4 className="text-sm font-bold uppercase tracking-widest text-luxury-dark">Kerala Sadya Meals</h4>
                                             <p className="text-xs text-luxury-500 font-light leading-relaxed">
-                                                Explore a curated selection of international dishes prepared with finesse, catering to varied tastes and preferences from around the world.
+                                                Experience the rich culinary landscape of Kerala with standard local rice, organic sambar, avial, and payasam varieties.
                                             </p>
                                         </div>
                                     )}
@@ -580,7 +582,7 @@
                                 {/* Dining Photos Grid */}
                                 <div className="lg:col-span-7 grid grid-cols-12 gap-4">
                                     <div className="col-span-7 rounded-2xl overflow-hidden aspect-[4/5] shadow-lg border border-luxury-200">
-                                        <img src="images/kerala-food.jpg" alt="Kerala Traditional Cuisine" className="w-full h-full object-cover" />
+                                        <img src="images/kerala-food.jpg" alt="Kerala Pearl Spot Seafood" className="w-full h-full object-cover" />
                                     </div>
                                     <div className="col-span-5 rounded-2xl overflow-hidden aspect-[1/1] shadow-lg border border-luxury-200 mt-12">
                                         <img src="images/rest.jpg" alt="Luxury restaurant atmosphere" className="w-full h-full object-cover" />
@@ -597,26 +599,26 @@
                             
                             {/* Title */}
                             <div className="text-center max-w-2xl mx-auto mb-20 space-y-4">
-                                <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-400">Our Thoughtful Amenities</p>
+                                <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-400">Amenities Showcase</p>
                                 <h2 className="text-3xl sm:text-5xl font-serif-luxury font-light gold-gradient-text-light leading-tight">
-                                    Designed for <span className="italic">Ultimate Relaxation</span>
+                                    Engineered for <span className="italic">Timeless Delight</span>
                                 </h2>
                                 <p className="text-xs sm:text-sm text-luxury-300 font-light">
-                                    Every amenity is carefully chosen to enhance your stay, ensuring relaxation and convenience for all our guests.
+                                    Every service is crafted to support continuous convenience for business and family holidays.
                                 </p>
                             </div>
 
                             {/* Icons Grid */}
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                                 {[
-                                    { title: "Luxury Accommodation", desc: "Experience comfort and elegance in our diverse range of rooms, suites, and villas.", icon: <Icons.Sparkles /> },
-                                    { title: "Fine Dining Restaurant", desc: "Savor exquisite local and international cuisine prepared by our talented chefs.", icon: <Icons.Utensils /> },
-                                    { title: "Swimming Pool & Spa", desc: "Rejuvenate your body and mind with our inviting pool and serene spa services.", icon: <Icons.Award /> },
-                                    { title: "Business Facilities", desc: "Equipped conference and meeting rooms for your corporate needs.", icon: <Icons.Clock /> },
-                                    { title: "Recreational Activities", desc: "Engage in various activities designed for leisure and entertainment.", icon: <Icons.MapPin /> },
-                                    { title: "Free Wi-Fi", desc: "Stay connected with complimentary high-speed internet access throughout the resort.", icon: <Icons.Wifi /> },
-                                    { title: "Free Parking", desc: "Ample and secure parking space available for all our guests.", icon: <Icons.MapPin /> },
-                                    { title: "24/7 Front Desk", desc: "Our dedicated team is available around the clock to assist you.", icon: <Icons.Bell /> }
+                                    { title: "Free Wi-Fi", desc: "Ultra high speed wireless networks tailored for corporate tasks.", icon: <Icons.Wifi /> },
+                                    { title: "Air Conditioning", desc: "Advanced in-room climate controls for tropical Kerala days.", icon: <Icons.AC /> },
+                                    { title: "Premium Restaurant", desc: "Special local traditional Kerala meals and Cochin seafood.", icon: <Icons.Utensils /> },
+                                    { title: "24/7 Room Service", desc: "Impeccable dining brought directly to your bedroom door.", icon: <Icons.Bell /> },
+                                    { title: "Valet Safe Parking", desc: "Spacious customer parking zones with 24-hour security supervision.", icon: <Icons.MapPin /> },
+                                    { title: "Banquet Halls", desc: "Vast local ballrooms perfectly suited for local families and events.", icon: <Icons.Award /> },
+                                    { title: "Safe Reception Desk", desc: "Continuous hospitality check-in, taxi booking, and tour assistance.", icon: <Icons.Clock /> },
+                                    { title: "Business Privileges", desc: "High-tech presentation facilities and executive lounge options.", icon: <Icons.Sparkles /> }
                                 ].map((amenity, i) => (
                                     <div key={i} className="glass-card-dark p-6 rounded-2xl border border-white/5 space-y-4">
                                         <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-luxury-400">
@@ -638,7 +640,7 @@
                             <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
                                 <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Visual Portfolio</p>
                                 <h2 className="text-3xl sm:text-5xl font-serif-luxury font-light text-luxury-dark">
-                                    A Glimpse Inside <span className="italic">Good Karma Inn</span>
+                                    Inside <span className="italic">GOOD KARMA INN</span>
                                 </h2>
                             </div>
 
@@ -707,20 +709,20 @@
                             {/* Trust Rating Statistics */}
                             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-6">
                                 <div>
-                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">4.0★</p>
-                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Guest Rating</p>
+                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">4.5★</p>
+                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Google Rating</p>
                                 </div>
                                 <div>
-                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Refreshing</p>
-                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Stays</p>
+                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">100%</p>
+                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Hygienic Stay</p>
                                 </div>
                                 <div>
-                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Dedicated</p>
-                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Hospitality</p>
+                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">95%</p>
+                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Repeat Guests</p>
                                 </div>
                                 <div>
-                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Peaceful</p>
-                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Ambiance</p>
+                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Local</p>
+                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Delicacies</p>
                                 </div>
                             </div>
 
@@ -734,10 +736,10 @@
                                 Direct Booking Offer
                             </span>
                             <h2 className="text-3xl sm:text-5xl font-serif-luxury font-light leading-tight">
-                                Ready for Your <span className="italic font-normal text-luxury-300 gold-underline">Luxury Escape?</span>
+                                Ready for Your <span className="italic font-normal text-luxury-300 gold-underline">Peaceful Getaway?</span>
                             </h2>
                             <p className="text-sm sm:text-base text-luxury-300 font-light max-w-xl mx-auto leading-relaxed">
-                                Book your stay directly with us for a seamless experience and special benefits.
+                                Book direct on our portal or contact our front office directly to receive free high-speed breakfast and executive parking guarantees.
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -748,7 +750,7 @@
                                     RESERVE NOW
                                 </button>
                                 <a 
-                                    href="tel:"
+                                    href="tel:+914842401122"
                                     className="w-full sm:w-auto border border-white/20 hover:bg-white/10 text-white font-semibold text-xs tracking-widest px-8 py-4.5 rounded-full transition"
                                 >
                                     CALL HOTEL OFFICE
@@ -771,7 +773,7 @@
                                     
                                     {enquirySuccess ? (
                                         <div className="bg-emerald-50 border border-emerald-200 text-emerald-800 p-8 rounded-2xl text-center space-y-4">
-                                            <p className="text-sm font-light">Thank you! Your luxury resort enquiry has been transmitted directly to our reservation manager. We will contact you shortly.</p>
+                                            <p className="text-sm font-light">Thank you! Your luxury stay enquiry has been transmitted directly to our reservation manager. We will contact you shortly.</p>
                                         </div>
                                     ) : (
                                         <form onSubmit={(e) => { e.preventDefault(); setEnquirySuccess(true); }} className="space-y-6">
@@ -788,7 +790,7 @@
 
                                             <div className="space-y-2">
                                                 <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-600">Specific Requirements (Optional)</label>
-                                                <textarea rows="4" placeholder="Mention dates of stay, number of rooms, special food priorities, or conference requirements..." className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition resize-none" />
+                                                <textarea rows="4" placeholder="Mention dates of stay, number of suites, special food priorities, or banquet requirements..." className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition resize-none" />
                                             </div>
 
                                             <button type="submit" className="w-full bg-luxury-dark hover:bg-luxury-700 text-white font-bold text-xs tracking-widest py-4.5 rounded-xl transition">
@@ -802,7 +804,7 @@
                                 <div className="lg:col-span-5 space-y-8 flex flex-col justify-between">
                                     <div className="space-y-6">
                                         <h3 className="text-2xl font-serif-luxury font-light text-luxury-dark">
-                                            Your <span className="italic">Ernakulam Retreat</span> Address
+                                            The Perfect <span className="italic">Ernakulam Address</span>
                                         </h3>
                                         
                                         <div className="space-y-4">
@@ -811,7 +813,7 @@
                                                     📍
                                                 </div>
                                                 <div>
-                                                    <h4 className="text-[10px] uppercase tracking-widest font-bold text-luxury-600">Resort Location</h4>
+                                                    <h4 className="text-[10px] uppercase tracking-widest font-bold text-luxury-600">Inn Location</h4>
                                                     <p className="text-sm text-luxury-800 mt-1 font-light leading-relaxed">
                                                         Good Karma Inn<br />
                                                         Ernakulam, Kerala, India
@@ -826,9 +828,9 @@
                                                 <div>
                                                     <h4 className="text-[10px] uppercase tracking-widest font-bold text-luxury-600">Hotline Numbers</h4>
                                                     <p className="text-sm text-luxury-800 mt-1 font-semibold">
-                                                        Not available
+                                                        +91 484 240 1122
                                                     </p>
-                                                    <p className="text-xs text-luxury-500 font-light mt-0.5">Please contact us via our enquiry form.</p>
+                                                    <p className="text-xs text-luxury-500 font-light mt-0.5">Continuous 24-hour phone support</p>
                                                 </div>
                                             </div>
 
@@ -839,7 +841,7 @@
                                                 <div>
                                                     <h4 className="text-[10px] uppercase tracking-widest font-bold text-luxury-600">Email Enquiries</h4>
                                                     <p className="text-sm text-luxury-800 mt-1 font-light">
-                                                        Not available
+                                                        reservations@edasserymansion.com
                                                     </p>
                                                 </div>
                                             </div>
@@ -848,7 +850,7 @@
 
                                     {/* Action links */}
                                     <div className="flex gap-3 pt-4">
-                                        <a href="tel:" className="flex-1 bg-luxury-100 hover:bg-luxury-200 text-luxury-dark text-xs font-bold py-4 px-6 rounded-full text-center transition flex items-center justify-center gap-1.5">
+                                        <a href="tel:+914842401122" className="flex-1 bg-luxury-100 hover:bg-luxury-200 text-luxury-dark text-xs font-bold py-4 px-6 rounded-full text-center transition flex items-center justify-center gap-1.5">
                                             Call Hotel
                                         </a>
                                         <button onClick={triggerWhatsApp} className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-4 px-6 rounded-full text-center transition flex items-center justify-center gap-1.5">
@@ -862,8 +864,8 @@
                             {/* Google Maps Embed Container */}
                             <div className="mt-16 rounded-3xl overflow-hidden border border-luxury-200 shadow-md h-[400px]">
                                 <iframe 
-                                    title="Good Karma Inn Location Map"
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125697.57019818815!2d76.24278061448831!3d9.998495066927375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d52b5257375%3A0xcf4ddb994ee312c4!2sErnakulam%2C%20Kerala!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                                    title="Hotel Edassery Mansion Location Map"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.8653205792947!2d76.3007158!3d9.9839885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d30b6b745e1%3A0xdcc5b09efc5ad2e5!2sHotel%20Edassery%20Mansion%20premium!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
                                     className="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-[1s]" 
                                     allowFullScreen="" 
                                     loading="lazy"
@@ -880,17 +882,17 @@
                             <div className="space-y-4">
                                 <span className="font-serif-luxury text-2xl tracking-wider text-white">GOOD KARMA INN</span>
                                 <p className="text-xs text-luxury-300 font-light leading-relaxed">
-                                    Good Karma Inn is a serene resort hotel nestled in the vibrant city of Ernakulam, Kerala. It offers guests a harmonious blend of modern comfort, cultural charm, and rejuvenating amenities.
+                                    Good Karma Inn offers a peaceful resort experience in Ernakulam, focusing on tranquil stays and authentic Kerala hospitality. Ideal for relaxation and exploring the region.
                                 </p>
                             </div>
 
                             <div className="space-y-4">
-                                <h4 className="text-white text-xs font-bold uppercase tracking-widest">Our Accommodations</h4>
+                                <h4 className="text-white text-xs font-bold uppercase tracking-widest">Our Service Suites</h4>
                                 <ul className="space-y-2 text-xs font-light text-luxury-300">
-                                    <li><a href="#rooms" className="hover:text-white transition">Standard Rooms</a></li>
-                                    <li><a href="#rooms" className="hover:text-white transition">Deluxe Rooms</a></li>
-                                    <li><a href="#rooms" className="hover:text-white transition">Suites</a></li>
-                                    <li><a href="#rooms" className="hover:text-white transition">Villas</a></li>
+                                    <li><a href="#rooms" className="hover:text-white transition">Premium Rooms</a></li>
+                                    <li><a href="#rooms" className="hover:text-white transition">Executive Suites</a></li>
+                                    <li><a href="#rooms" className="hover:text-white transition">Family Interconnecting Rooms</a></li>
+                                    <li><a href="#rooms" className="hover:text-white transition">Deluxe Royal Accommodations</a></li>
                                 </ul>
                             </div>
 
@@ -898,16 +900,16 @@
                                 <h4 className="text-white text-xs font-bold uppercase tracking-widest">Quick Navigation</h4>
                                 <ul className="space-y-2 text-xs font-light text-luxury-300">
                                     <li><a href="#home" className="hover:text-white transition">Home</a></li>
-                                    <li><a href="#about" className="hover:text-white transition">Resort Philosophy</a></li>
-                                    <li><a href="#dining" className="hover:text-white transition">Dining Experience</a></li>
-                                    <li><a href="#gallery" className="hover:text-white transition">Image Gallery</a></li>
+                                    <li><a href="#about" className="hover:text-white transition">Heritage & Philosophy</a></li>
+                                    <li><a href="#dining" className="hover:text-white transition">Local Delicacies</a></li>
+                                    <li><a href="#gallery" className="hover:text-white transition">Image Showcase</a></li>
                                 </ul>
                             </div>
 
                             <div className="space-y-4">
-                                <h4 className="text-white text-xs font-bold uppercase tracking-widest">Guest Information</h4>
+                                <h4 className="text-white text-xs font-bold uppercase tracking-widest">Kerala Heritage Care</h4>
                                 <p className="text-xs text-luxury-300 font-light leading-relaxed">
-                                    We are committed to providing a memorable stay with personalized service. Our amenities are designed for your comfort and rejuvenation. Inquire today!
+                                    As part of standard safety guidelines, we maintain thorough room sanitization and safe car parking. Group wedding banquets must be booked in advance.
                                 </p>
                             </div>
 
@@ -920,154 +922,154 @@
                     </footer>
 
                     {/* INTERACTIVE BOOKING ENGINE MODAL */}
-                    {bookingOpen && (\
-                        <div className="fixed inset-0 z-50 overflow-y-auto flex items-center justify-center p-4">\
-                            <div className="fixed inset-0 bg-black/60 backdrop-blur-md transition-opacity" onClick={() => setBookingOpen(false)} />\
+                    {bookingOpen && (
+                        <div className="fixed inset-0 z-50 overflow-y-auto flex items-center justify-center p-4">
+                            <div className="fixed inset-0 bg-black/60 backdrop-blur-md transition-opacity" onClick={() => setBookingOpen(false)} />
 
-                            <div className="relative bg-[#FCFBF9] rounded-3xl overflow-hidden shadow-2xl border border-luxury-300/40 max-w-lg w-full z-10">\
-                                \
-                                <div className="bg-luxury-dark text-white p-6 flex justify-between items-center">\
-                                    <div>\
-                                        <h3 className="text-xl font-serif-luxury tracking-wide">Secure Your Stay</h3>\
-                                        <p className="text-[10px] text-luxury-300 uppercase tracking-widest mt-1">Direct booking guarantees complimentary breakfast</p>\
-                                    </div>\
-                                    <button onClick={() => setBookingOpen(false)} className="text-luxury-400 hover:text-white p-2">\
-                                        <Icons.X />\
-                                    </button>\
-                                </div>\
+                            <div className="relative bg-[#FCFBF9] rounded-3xl overflow-hidden shadow-2xl border border-luxury-300/40 max-w-lg w-full z-10">
+                                
+                                <div className="bg-luxury-dark text-white p-6 flex justify-between items-center">
+                                    <div>
+                                        <h3 className="text-xl font-serif-luxury tracking-wide">Secure Your Stay</h3>
+                                        <p className="text-[10px] text-luxury-300 uppercase tracking-widest mt-1">Direct booking guarantees complimentary breakfast</p>
+                                    </div>
+                                    <button onClick={() => setBookingOpen(false)} className="text-luxury-400 hover:text-white p-2">
+                                        <Icons.X />
+                                    </button>
+                                </div>
 
-                                <div className="p-8">\
-                                    {bookingSuccess ? (\
-                                        <div className="text-center py-12 space-y-4">\
-                                            <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto text-2xl">\
-                                                ✓\
-                                            </div>\
-                                            <h4 className="text-xl font-serif-luxury text-luxury-dark">Reservation Request Received</h4>\
-                                            <p className="text-sm text-luxury-500 font-light max-w-sm mx-auto">\
-                                                Thank you. Our reservations desk will contact you shortly to confirm your dates and specific room selections.\
-                                            </p>\
-                                        </div>\
-                                    ) : (\
-                                        <form onSubmit={submitBooking} className="space-y-4">\
-                                            \
-                                            <div className="space-y-1">\
-                                                <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Your Full Name</label>\
-                                                <input \
-                                                    type="text" \
-                                                    required\
-                                                    value={bookingForm.name}\
-                                                    onChange={e => setBookingForm({...bookingForm, name: e.target.value})}\
-                                                    placeholder="Enter your name"\
-                                                    className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition"\
-                                                />\
-                                            </div>\
-\
-                                            <div className="space-y-1">\
-                                                <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Contact Phone Number</label>\
-                                                <input \
-                                                    type="tel" \
-                                                    required\
-                                                    value={bookingForm.phone}\
-                                                    onChange={e => setBookingForm({...bookingForm, phone: e.target.value})}\
-                                                    placeholder="Phone Number"\
-                                                    className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition"\
-                                                />\
-                                            </div>\
-\
-                                            <div className="grid grid-cols-2 gap-4">\
-                                                <div className="space-y-1">\
-                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Check-In Date</label>\
-                                                    <input \
-                                                        type="date" \
-                                                        required\
-                                                        value={bookingForm.checkIn}\
-                                                        onChange={e => setBookingForm({...bookingForm, checkIn: e.target.value})}\
-                                                        className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-500 transition"\
-                                                    />\
-                                                </div>\
-\
-                                                <div className="space-y-1">\
-                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Check-Out Date</label>\
-                                                    <input \
-                                                        type="date" \
-                                                        required\
-                                                        value={bookingForm.checkOut}\
-                                                        onChange={e => setBookingForm({...bookingForm, checkOut: e.target.value})}\
-                                                        className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-500 transition"\
-                                                    />\
-                                                </div>\
-                                            </div>\
-\
-                                            <div className="grid grid-cols-2 gap-4">\
-                                                <div className="space-y-1">\
-                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Room Type</label>\
-                                                    <select \
-                                                        value={bookingForm.category}\
-                                                        onChange={e => setBookingForm({...bookingForm, category: e.target.value})}\
-                                                        className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-500 transition"\
-                                                    >\
-                                                        <option value="Standard Room">Standard Room</option>\
-                                                        <option value="Deluxe Room">Deluxe Room</option>\
-                                                        <option value="Suite">Suite</option>\
-                                                        <option value="Villas">Villas</option>\
-                                                    </select>\
-                                                </div>\
-\
-                                                <div className="space-y-1">\
-                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Guests</label>\
-                                                    <select \
-                                                        value={bookingForm.guests}\
-                                                        onChange={e => setBookingForm({...bookingForm, guests: e.target.value})}\
-                                                        className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-500 transition"\
-                                                    >\
-                                                        <option value="1">1 Guest</option>\
-                                                        <option value="2">2 Guests</option>\
-                                                        <option value="3">3 Guests</option>\
-                                                        <option value="4+">Family (4+)</option>\
-                                                    </select>\
-                                                </div>\
-                                            </div>\
-\
-                                            <button \
-                                                type="submit"\
-                                                className="w-full bg-luxury-dark hover:bg-luxury-700 text-white font-bold text-xs tracking-widest py-4.5 rounded-xl transition"\
-                                            >\
-                                                CONFIRM RESERVATION REQUEST\
-                                            </button>\
-\
-                                            <div className="text-center pt-2">\
-                                                <p className="text-[10px] text-luxury-500">\
-                                                    Prefer phone support? <a href="tel:" className="font-bold underline text-luxury-700">Contact hotel for details</a>\
-                                                </p>\
-                                            </div>\
-                                        </form>\
-                                    )}\
-                                </div>\
-                            </div>\
-                        </div>\
-                    )}\
+                                <div className="p-8">
+                                    {bookingSuccess ? (
+                                        <div className="text-center py-12 space-y-4">
+                                            <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto text-2xl">
+                                                ✓
+                                            </div>
+                                            <h4 className="text-xl font-serif-luxury text-luxury-dark">Reservation Request Received</h4>
+                                            <p className="text-sm text-luxury-500 font-light max-w-sm mx-auto">
+                                                Thank you. Our reservations desk will contact you shortly to confirm your dates and specific suite selections.
+                                            </p>
+                                        </div>
+                                    ) : (
+                                        <form onSubmit={submitBooking} className="space-y-4">
+                                            
+                                            <div className="space-y-1">
+                                                <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Your Full Name</label>
+                                                <input 
+                                                    type="text" 
+                                                    required
+                                                    value={bookingForm.name}
+                                                    onChange={e => setBookingForm({...bookingForm, name: e.target.value})}
+                                                    placeholder="Enter your name"
+                                                    className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition"
+                                                />
+                                            </div>
 
-                    {/* PORTFOLIO LIGHTBOX PREVIEW */}\
-                    {lightboxOpen && (\
-                        <div className="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex items-center justify-center p-4">\
-                            <button \
-                                onClick={() => setLightboxOpen(false)}\
-                                className="absolute top-6 right-6 text-white hover:text-luxury-200 p-2 bg-white/5 rounded-full"\
-                            >\
-                                <Icons.X />\
-                            </button>\
-                            <div className="max-w-4xl w-full">\
-                                <img src={lightboxImg} alt="Resort Showcase Close-up" className="w-full max-h-[80vh] object-contain rounded-2xl border border-white/10" />\
-                            </div>\
-                        </div>\
-                    )}\
+                                            <div className="space-y-1">
+                                                <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Contact Phone Number</label>
+                                                <input 
+                                                    type="tel" 
+                                                    required
+                                                    value={bookingForm.phone}
+                                                    onChange={e => setBookingForm({...bookingForm, phone: e.target.value})}
+                                                    placeholder="Phone Number"
+                                                    className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition"
+                                                />
+                                            </div>
 
-                </div>\
-            );\
-        }\
+                                            <div className="grid grid-cols-2 gap-4">
+                                                <div className="space-y-1">
+                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Check-In Date</label>
+                                                    <input 
+                                                        type="date" 
+                                                        required
+                                                        value={bookingForm.checkIn}
+                                                        onChange={e => setBookingForm({...bookingForm, checkIn: e.target.value})}
+                                                        className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-500 transition"
+                                                    />
+                                                </div>
 
-        const root = ReactDOM.createRoot(document.getElementById('root'));\
-        root.render(<App />);\
-    </script>\
-</body>\
+                                                <div className="space-y-1">
+                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Check-Out Date</label>
+                                                    <input 
+                                                        type="date" 
+                                                        required
+                                                        value={bookingForm.checkOut}
+                                                        onChange={e => setBookingForm({...bookingForm, checkOut: e.target.value})}
+                                                        className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-500 transition"
+                                                    />
+                                                </div>
+                                            </div>
+
+                                            <div className="grid grid-cols-2 gap-4">
+                                                <div className="space-y-1">
+                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Suite Type</label>
+                                                    <select 
+                                                        value={bookingForm.category}
+                                                        onChange={e => setBookingForm({...bookingForm, category: e.target.value})}
+                                                        className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-500 transition"
+                                                    >
+                                                        <option value="Premium Suite">Premium Room</option>
+                                                        <option value="Executive Room">Executive Room</option>
+                                                        <option value="Family Room">Family Room</option>
+                                                        <option value="Deluxe Accommodation">Deluxe Suite</option>
+                                                    </select>
+                                                </div>
+
+                                                <div className="space-y-1">
+                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Guests</label>
+                                                    <select 
+                                                        value={bookingForm.guests}
+                                                        onChange={e => setBookingForm({...bookingForm, guests: e.target.value})}
+                                                        className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-500 transition"
+                                                    >
+                                                        <option value="1">1 Guest</option>
+                                                        <option value="2">2 Guests</option>
+                                                        <option value="3">3 Guests</option>
+                                                        <option value="4+">Family Suite (4+)</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <button 
+                                                type="submit"
+                                                className="w-full bg-luxury-dark hover:bg-luxury-700 text-white font-bold text-xs tracking-widest py-4.5 rounded-xl transition"
+                                            >
+                                                CONFIRM RESERVATION REQUEST
+                                            </button>
+
+                                            <div className="text-center pt-2">
+                                                <p className="text-[10px] text-luxury-500">
+                                                    Prefer phone support? <a href="tel:+914842401122" className="font-bold underline text-luxury-700">Call +91 484 240 1122</a>
+                                                </p>
+                                            </div>
+                                        </form>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+                    <!-- PORTFOLIO LIGHTBOX PREVIEW -->
+                    {lightboxOpen && (
+                        <div className="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex items-center justify-center p-4">
+                            <button 
+                                onClick={() => setLightboxOpen(false)}
+                                className="absolute top-6 right-6 text-white hover:text-luxury-200 p-2 bg-white/5 rounded-full"
+                            >
+                                <Icons.X />
+                            </button>
+                            <div className="max-w-4xl w-full">
+                                <img src={lightboxImg} alt="Hotel Suite Showcase Close-up" className="w-full max-h-[80vh] object-contain rounded-2xl border border-white/10" />
+                            </div>
+                        </div>
+                    )}
+
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
 </html>
