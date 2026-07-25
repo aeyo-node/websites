@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uniro Hotels & Appartments in Ernakulam | Luxury Resort Hotel</title>
+    <title>Uniro Hotels & Appartments | Resort Hotel in Ernakulam</title>
     
     <!-- SEO Optimization -->
-    <meta name="description" content="Experience the ultimate in comfort and relaxation at Uniro Hotels & Appartments, a premier resort hotel in Ernakulam, Kerala. Our luxurious rooms, modern amenities, and breathtaking views make us the perfect choice for business and leisure travelers.">
-    <meta name="keywords" content="Uniro Hotels & Appartments, Resort Hotel Ernakulam, Luxury Hotel Kerala, Apartments Ernakulam">
+    <meta name="description" content="Experience exceptional stays and warm hospitality at Uniro Hotels & Appartments, Ernakulam. Comfortable rooms, excellent dining, and modern amenities await.">
+    <meta name="keywords" content="Edassery Mansion, Luxury Hotel Kochi, Hotel in Ernakulam, Business Hotel Kerala, Premium Stay Kaloor, Kerala Seafood Restaurant">
     
     <!-- Open Graph tags -->
-    <meta property="og:title" content="Uniro Hotels & Appartments in Ernakulam | Luxury Resort Hotel">
-    <meta property="og:description" content="Experience the ultimate in comfort and relaxation at Uniro Hotels & Appartments, a premier resort hotel in Ernakulam, Kerala. Our luxurious rooms, modern amenities, and breathtaking views make us the perfect choice for business and leisure travelers.">
+    <meta property="og:title" content="Uniro Hotels & Appartments | Ernakulam">
+    <meta property="og:description" content="Experience exceptional stays, excellent dining, and comfortable rooms in Ernakulam.">
     <meta property="og:image" content="images/hero_cover.jpg">
     <meta property="og:type" content="website">
     
@@ -59,7 +59,7 @@
         "streetAddress": "Ernakulam",
         "addressLocality": "Ernakulam",
         "addressRegion": "Kerala",
-        "postalCode": "682017",
+        "postalCode": "",
         "addressCountry": "IN"
       },
       "telephone": "+914842401122",
@@ -70,15 +70,11 @@
       "priceRange": "₹3,500 - ₹9,000",
       "amenityFeature": [
         "Free Wi-Fi",
-        "Air conditioning",
-        "Restaurant and bar",
-        "Event spaces",
+        "Air Conditioning",
+        "Premium Seafood Restaurant",
+        "Banquet Facilities",
         "24x7 Room Service",
-        "Valet Parking",
-        "Fitness center",
-        "Swimming pool",
-        "Flat-screen TV",
-        "Minibar"
+        "Valet Parking"
       ]
     }
     </script>
@@ -116,7 +112,7 @@
             const [mobileNavOpen, setMobileNavOpen] = useState(false);
             const [activeRoomFilter, setActiveRoomFilter] = useState('all');
             const [bookingOpen, setBookingOpen] = useState(false);
-            const [diningTab, setDiningTab] = useState('international');
+            const [diningTab, setDiningTab] = useState('seafood');
             const [reviewIdx, setReviewIdx] = useState(0);
             const [enquirySuccess, setEnquirySuccess] = useState(false);
             
@@ -126,7 +122,7 @@
 
             // Booking modal parameters
             const [bookingForm, setBookingForm] = useState({
-                checkIn: '', checkOut: '', category: 'Deluxe Room', guests: '2', name: '', phone: ''
+                checkIn: '', checkOut: '', category: 'Premium Suite', guests: '2', name: '', phone: ''
             });
             const [bookingSuccess, setBookingSuccess] = useState(false);
 
@@ -141,35 +137,35 @@
             // Data Definitions
             const rooms = [
                 {
-                    id: 'deluxe',
-                    title: 'Deluxe Room',
-                    desc: 'A comfortable and spacious room, elegantly designed for relaxation and convenience.',
+                    id: 'premium',
+                    title: 'Premium Room',
+                    desc: 'A stylishly appointed room offering spacious modern living zones, rich leather furnishings, and a premium workspace layout.',
                     price: '₹3,499',
-                    features: ['King Bed', 'Modern Decor', 'Free Wi-Fi', 'Flat-screen TV', 'Minibar'],
+                    features: ['King Bed', 'City View', 'Free High-speed Wi-Fi', 'Premium Bath Linens', 'Mini-fridge'],
                     image: 'images/room1.jpg'
                 },
                 {
-                    id: 'apartment',
-                    title: 'Apartment',
-                    desc: 'Spacious and well-appointed, our apartments offer a home-away-from-home experience with separate living areas and kitchenettes.',
+                    id: 'executive',
+                    title: 'Executive Room',
+                    desc: 'Designed specifically for the corporate traveler. Includes an expansive high-tech workspace, refined accents, and premium hospitality privileges.',
                     price: '₹4,499',
-                    features: ['Separate Living Area', 'Kitchenette (select units)', 'Free Wi-Fi', 'Flat-screen TV', 'Minibar'],
+                    features: ['King Bed', 'Coffee Station', 'Express Laundry Access', 'High-Speed Wi-Fi', 'Luxury Lounge Chair'],
                     image: 'images/room3.jpg'
                 },
                 {
-                    id: 'executive-suite',
-                    title: 'Executive Suite',
-                    desc: 'Our Executive Suites provide generous space, luxurious furnishings, and exceptional views for an indulgent stay.',
+                    id: 'family',
+                    title: 'Family Room',
+                    desc: 'Spacious interconnecting or double-queen bedroom spaces crafted for ultimate peace, comfort, and direct proximity to Kochi family spots.',
                     price: '₹5,999',
-                    features: ['King Bed', 'Separate Lounge', 'Panoramic Views', 'Free Wi-Fi', 'Minibar'],
+                    features: ['2 Queen Beds', 'Living area', 'Kid-friendly Setup', 'Smart TV', 'Spacious Wardrobes'],
                     image: 'images/room4.jpg'
                 },
                 {
-                    id: 'presidential-suite',
-                    title: 'Presidential Suite',
-                    desc: 'The pinnacle of luxury at Uniro, featuring an expansive master parlor, exquisite design, and personalized butler service.',
+                    id: 'deluxe',
+                    title: 'Deluxe Suite',
+                    desc: 'The jewel of Edassery Mansion. Timeless luxury featuring a separated master parlor, classic Kerala wooden art finishes, and royal privileges.',
                     price: '₹7,999',
-                    features: ['Super King Bed', 'Private Balcony', 'Jacuzzi & Rain Shower', 'Dedicated Butler Service', 'VIP Welcome Platter'],
+                    features: ['Super King Bed', 'Separated Lounge', 'Bathtub & Rain Shower', 'In-room Dining', 'VIP Welcome Platter'],
                     image: 'images/room6.jpg'
                 }
             ];
@@ -196,12 +192,12 @@
             ];
 
             const gallery = [
-                { title: 'Deluxe Room Setting', desc: 'Crafted with elegant minimalist palettes and designer furniture.', img: 'images/Premium-Suite-Setting.jpg' },
-                { title: 'Apartment Wash Oasis', desc: 'Pristine marble and premium bathroom elements.', img: 'images/Executive-Wash-Oasis.jpg' },
-                { title: 'The Uniro Hotels Facade', desc: 'A premier architectural landmark in Ernakulam.', img: 'images/Facade.jpg' },
+                { title: 'Premium Suite Setting', desc: 'Crafted with elegant minimalist palettes and designer furniture.', img: 'images/Premium-Suite-Setting.jpg' },
+                { title: 'Executive Wash Oasis', desc: 'Pristine marble and premium gold bathroom elements.', img: 'images/Executive-Wash-Oasis.jpg' },
+                { title: 'The Edassery Mansion Facade', desc: 'A premier architectural landmark on the Kaloor-Kadavanthra corridor.', img: 'images/Facade.jpg' },
                 { title: 'Multi-Cuisine Dining Space', desc: 'Featuring cozy warm lighting, authentic spices, and local heritage.', img: 'images/dining.jpg' },
-                { title: 'Elegant Wedding Banquet', desc: 'A vast, high-ceiling ballroom perfect for local wedding rituals.', img: 'images/banquet.jpg' },
-                { title: 'Resort Dining Experience', desc: 'Our diverse menu, prepared with fresh, local ingredients.', img: 'images/seafood.jpg' }
+                { title: 'Elegant Wedding Banquet', desc: 'A vast, high-ceiling ballroom perfect for royal local wedding rituals.', img: 'images/banquet.jpg' },
+                { title: 'Traditional Seafood Treat', desc: 'Our legendary fresh pearl spot fish prepared with traditional red masalas.', img: 'images/seafood.jpg' }
             ];
 
             const submitBooking = (e) => {
@@ -246,7 +242,7 @@
                                         UNIRO HOTELS
                                     </span>
                                     <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.3em] text-luxury-500 font-bold -mt-1">
-                                        Resort & Appartments • Ernakulam
+                                        Resort Stay • Ernakulam
                                     </span>
                                 </a>
 
@@ -255,7 +251,7 @@
                                     {[
                                         { id: 'home', label: 'Home' },
                                         { id: 'about', label: 'Philosophy' },
-                                        { id: 'rooms', label: 'Accommodations' },
+                                        { id: 'rooms', label: 'Suites' },
                                         { id: 'dining', label: 'Dining' },
                                         { id: 'amenities', label: 'Amenities' },
                                         { id: 'gallery', label: 'Gallery' },
@@ -306,7 +302,7 @@
                                     {[
                                         { id: 'home', label: 'Home' },
                                         { id: 'about', label: 'Philosophy' },
-                                        { id: 'rooms', label: 'Accommodations' },
+                                        { id: 'rooms', label: 'Suites' },
                                         { id: 'dining', label: 'Dining' },
                                         { id: 'amenities', label: 'Amenities' },
                                         { id: 'gallery', label: 'Gallery' },
@@ -346,7 +342,7 @@
                         <div className="absolute inset-0 select-none">
                             <img 
                                 src="images/hero.jpg" 
-                                alt="Uniro Hotels & Appartments Facade" 
+                                alt="Edassery Mansion Kochi Facade" 
                                 className="w-full h-full object-cover opacity-45 scale-105 transform hover:scale-100 transition-transform duration-[8000ms]"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-luxury-dark via-transparent to-transparent" />
@@ -355,16 +351,16 @@
                         <div className="max-w-5xl mx-auto px-6 text-center relative z-10 space-y-8 mt-20">
                             <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 border border-white/20 rounded-full backdrop-blur-md">
                                 <Icons.Sparkles />
-                                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-luxury-200">Comfort and Relaxation Resort</span>
+                                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-luxury-200">Refined Kerala Luxury Stay</span>
                             </div>
 
                             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-serif-luxury text-white font-light leading-[1.1]">
-                                Experience Unmatched Comfort <br />
-                                in the Heart of <span className="italic font-normal text-luxury-100 gold-underline">Ernakulam</span>
+                                Your Perfect Retreat <br />
+                                In the Heart of <span className="italic font-normal text-luxury-100 gold-underline">Ernakulam</span>
                             </h1>
 
                             <p className="text-sm sm:text-lg text-luxury-200/90 font-light max-w-2xl mx-auto leading-relaxed">
-                                Luxurious rooms, elegant apartments, and modern amenities designed for your ultimate relaxation and convenience.
+                                Comfortable rooms, excellent dining, and modern hospitality designed around your complete leisure and business needs.
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -378,7 +374,7 @@
                                     href="#rooms"
                                     className="w-full sm:w-auto border border-white/35 hover:border-white text-white font-semibold text-xs tracking-widest px-8 py-4.5 rounded-full transition-all duration-300 hover:bg-white/5"
                                 >
-                                    EXPLORE ACCOMMODATIONS
+                                    EXPLORE ROOMS
                                 </a>
                             </div>
                         </div>
@@ -397,15 +393,15 @@
                             {/* Headline block */}
                             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-20">
                                 <div className="lg:col-span-8 space-y-4">
-                                    <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Our Philosophy</p>
+                                    <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">The Mansion Heritage</p>
                                     <h2 className="text-3xl sm:text-5xl font-serif-luxury text-luxury-dark font-light leading-tight">
-                                        Where Ernakulam's Beauty <br />
-                                        Meets <span className="italic">Resort Hospitality</span>
+                                        Where Ernakulam's Charm <br />
+                                        Meets <span className="italic">Exceptional Resort Hospitality</span>
                                     </h2>
                                 </div>
                                 <div className="lg:col-span-4">
                                     <p className="text-sm text-luxury-600 font-light leading-relaxed">
-                                        Uniro Hotels & Appartments offers a serene escape, providing luxurious rooms and apartments ideal for both business and leisure travelers.
+                                        Uniro Hotels & Appartments provides a comfortable stay designed for relaxation and enjoyment in Ernakulam, catering to both leisure and business travelers.
                                     </p>
                                 </div>
                             </div>
@@ -417,23 +413,23 @@
                                 <div className="relative group overflow-hidden rounded-3xl aspect-[4/3] shadow-lg border border-luxury-200">
                                     <img 
                                         src="images/hero2.jpg" 
-                                        alt="Luxury Interior Lobby Uniro" 
+                                        alt="Luxury Interior Lobby Edassery" 
                                         className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-[3s]" 
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60" />
                                     <div className="absolute bottom-6 left-6 text-white">
                                         <p className="text-[10px] uppercase tracking-widest font-bold text-luxury-200">Lobby & Lounges</p>
-                                        <h3 className="font-serif-luxury text-xl">Your Serene Welcome</h3>
+                                        <h3 className="font-serif-luxury text-xl">The Signature Warm Greeting</h3>
                                     </div>
                                 </div>
 
                                 {/* Content block 1 */}
                                 <div className="space-y-6">
                                     <h3 className="text-2xl sm:text-3xl font-serif-luxury font-light text-luxury-dark">
-                                        A Commitment to <span className="italic">Personalized Comfort</span>
+                                        A Heritage of Care and <span className="italic">Tailored Warmth</span>
                                     </h3>
                                     <p className="text-sm text-luxury-600 font-light leading-relaxed">
-                                        At Uniro, we pride ourselves on exceptional customer service and ensuring a memorable stay. Our convenient location in Ernakulam makes us an ideal base for exploring the region.
+                                        We prioritize individualized guest services, ensuring a pleasant and memorable stay for every visitor. Our convenient location in Ernakulam offers easy access to local attractions.
                                     </p>
                                     
                                     <div className="grid grid-cols-2 gap-6 pt-4">
@@ -442,8 +438,8 @@
                                             <p className="text-[10px] uppercase tracking-wider font-bold text-luxury-600 mt-1">Conscious Care & Reception</p>
                                         </div>
                                         <div className="border-l-2 border-luxury-500 pl-4">
-                                            <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Exceptional</p>
-                                            <p className="text-[10px] uppercase tracking-wider font-bold text-luxury-600 mt-1">Resort Amenities</p>
+                                            <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Premium</p>
+                                            <p className="text-[10px] uppercase tracking-wider font-bold text-luxury-600 mt-1">Seafood Culinary Legacy</p>
                                         </div>
                                     </div>
                                 </div>
@@ -461,9 +457,9 @@
                                 <div className="space-y-3">
                                     <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Accommodation Lounge</p>
                                     <h2 className="text-3xl sm:text-5xl font-serif-luxury font-light text-luxury-dark">
-                                        Deluxe Rooms & <span className="italic">Modern Apartments</span>
+                                        Classic Suites & <span className="italic">Luxury Chambers</span>
                                     </h2>
-                                    <p className="text-xs text-luxury-500 uppercase tracking-widest font-bold">All accommodations feature complimentary Wi-Fi and premium amenities</p>
+                                    <p className="text-xs text-luxury-500 uppercase tracking-widest font-bold">All rooms feature premium high speed Wi-Fi and safe parking guarantees</p>
                                 </div>
                             </div>
 
@@ -532,43 +528,43 @@
                                 
                                 {/* Dining text */}
                                 <div className="lg:col-span-5 space-y-8">
-                                    <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Culinary Excellence</p>
+                                    <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Gastronomical Masterworks</p>
                                     <h2 className="text-3xl sm:text-5xl font-serif-luxury font-light text-luxury-dark leading-tight">
-                                        Exquisite Dining <br />
-                                        By The <span className="italic">Uniro Chefs</span>
+                                        Exceptional Cuisine <br />
+                                        By Our <span className="italic">Talented Chefs</span>
                                     </h2>
                                     <p className="text-sm text-luxury-600 font-light leading-relaxed">
-                                        Guests and locals alike savor the diverse and delicious cuisine served daily in our restaurant and bar.
+                                        Guests and visitors alike celebrate the excellent local and international menus served daily in our multi-cuisine restaurant.
                                     </p>
 
                                     {/* Tabs to select menu focus */}
                                     <div className="flex gap-2 bg-luxury-100 p-1.5 rounded-full border border-luxury-200">
                                         <button 
-                                            onClick={() => setDiningTab('international')}
-                                            className={`flex-1 text-center py-2 rounded-full text-xs font-bold tracking-wider transition ${diningTab === 'international' ? 'bg-luxury-dark text-white' : 'text-luxury-600'}`}
+                                            onClick={() => setDiningTab('seafood')}
+                                            className={`flex-1 text-center py-2 rounded-full text-xs font-bold tracking-wider transition ${diningTab === 'seafood' ? 'bg-luxury-dark text-white' : 'text-luxury-600'}`}
                                         >
-                                            International Cuisine
+                                            Kochi Seafood
                                         </button>
                                         <button 
-                                            onClick={() => setDiningTab('local')}\
+                                            onClick={() => setDiningTab('local')}
                                             className={`flex-1 text-center py-2 rounded-full text-xs font-bold tracking-wider transition ${diningTab === 'local' ? 'bg-luxury-dark text-white' : 'text-luxury-600'}`}
                                         >
-                                            Local Delicacies
+                                            Traditional Meals
                                         </button>
                                     </div>
 
-                                    {diningTab === 'international' ? (
+                                    {diningTab === 'seafood' ? (
                                         <div className="space-y-3 bg-[#FCFBF9] p-6 rounded-2xl border border-luxury-300/30">
-                                            <h4 className="text-sm font-bold uppercase tracking-widest text-luxury-dark">Signature Fusion Dish</h4>
+                                            <h4 className="text-sm font-bold uppercase tracking-widest text-luxury-dark">Karimeen Pollichathu</h4>
                                             <p className="text-xs text-luxury-500 font-light leading-relaxed">
-                                                Our signature dish, a delightful fusion of local ingredients and international culinary techniques.
+                                                Fresh local pearl spot fish cooked in rich traditional spices and slow steamed inside a plantain leaf. An authentic delicacy of the backwaters.
                                             </p>
                                         </div>
                                     ) : (
                                         <div className="space-y-3 bg-[#FCFBF9] p-6 rounded-2xl border border-luxury-300/30">
-                                            <h4 className="text-sm font-bold uppercase tracking-widest text-luxury-dark">Regional Specialties</h4>
+                                            <h4 className="text-sm font-bold uppercase tracking-widest text-luxury-dark">Kerala Sadya Meals</h4>
                                             <p className="text-xs text-luxury-500 font-light leading-relaxed">
-                                                Explore a variety of regional specialties prepared with authentic flavors and fresh, local produce.
+                                                Experience the rich culinary landscape of Kerala with standard local rice, organic sambar, avial, and payasam varieties.
                                             </p>
                                         </div>
                                     )}
@@ -578,7 +574,7 @@
                                             onClick={() => setBookingOpen(true)}
                                             className="text-xs font-bold text-luxury-700 hover:text-luxury-900 tracking-wider flex items-center gap-1 group"
                                         >
-                                            MAKE DINING RESERVATIONS <Icons.ChevronRight />
+                                            RESERVE DINING SLOTS <Icons.ChevronRight />
                                         </button>
                                     </div>
                                 </div>
@@ -586,7 +582,7 @@
                                 {/* Dining Photos Grid */}
                                 <div className="lg:col-span-7 grid grid-cols-12 gap-4">
                                     <div className="col-span-7 rounded-2xl overflow-hidden aspect-[4/5] shadow-lg border border-luxury-200">
-                                        <img src="images/kerala-food.jpg" alt="Exquisite Resort Cuisine" className="w-full h-full object-cover" />
+                                        <img src="images/kerala-food.jpg" alt="Kerala Pearl Spot Seafood" className="w-full h-full object-cover" />
                                     </div>
                                     <div className="col-span-5 rounded-2xl overflow-hidden aspect-[1/1] shadow-lg border border-luxury-200 mt-12">
                                         <img src="images/rest.jpg" alt="Luxury restaurant atmosphere" className="w-full h-full object-cover" />
@@ -603,26 +599,26 @@
                             
                             {/* Title */}
                             <div className="text-center max-w-2xl mx-auto mb-20 space-y-4">
-                                <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-400">Our Facilities</p>
+                                <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-400">Amenities Showcase</p>
                                 <h2 className="text-3xl sm:text-5xl font-serif-luxury font-light gold-gradient-text-light leading-tight">
-                                    Designed for <span className="italic">Your Comfort and Enjoyment</span>
+                                    Engineered for <span className="italic">Timeless Delight</span>
                                 </h2>
                                 <p className="text-xs sm:text-sm text-luxury-300 font-light">
-                                    Every amenity is provided to ensure a relaxing and productive stay for all our guests.
+                                    Every service is crafted to support continuous convenience for business and family holidays.
                                 </p>
                             </div>
 
                             {/* Icons Grid */}
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                                 {[
-                                    { title: "Free Wi-Fi", desc: "High-speed wireless internet available throughout the property.", icon: <Icons.Wifi /> },
-                                    { title: "Air conditioning", desc: "Individual climate control in all rooms and public areas.", icon: <Icons.AC /> },
-                                    { title: "Restaurant & Bar", desc: "Enjoy a diverse menu of dishes and refreshing beverages.", icon: <Icons.Utensils /> },
+                                    { title: "Free Wi-Fi", desc: "Ultra high speed wireless networks tailored for corporate tasks.", icon: <Icons.Wifi /> },
+                                    { title: "Air Conditioning", desc: "Advanced in-room climate controls for tropical Kerala days.", icon: <Icons.AC /> },
+                                    { title: "Premium Restaurant", desc: "Special local traditional Kerala meals and Cochin seafood.", icon: <Icons.Utensils /> },
                                     { title: "24/7 Room Service", desc: "Impeccable dining brought directly to your bedroom door.", icon: <Icons.Bell /> },
                                     { title: "Valet Safe Parking", desc: "Spacious customer parking zones with 24-hour security supervision.", icon: <Icons.MapPin /> },
-                                    { title: "Event Spaces", desc: "Versatile venues for corporate meetings, weddings, and special occasions.", icon: <Icons.Award /> },
-                                    { title: "Fitness Center", desc: "Stay active with our state-of-the-art gym equipment.", icon: <Icons.Clock /> },
-                                    { title: "Swimming Pool", desc: "Relax and refresh in our beautifully designed swimming pool.", icon: <Icons.Sparkles /> }
+                                    { title: "Banquet Halls", desc: "Vast local ballrooms perfectly suited for local families and events.", icon: <Icons.Award /> },
+                                    { title: "Safe Reception Desk", desc: "Continuous hospitality check-in, taxi booking, and tour assistance.", icon: <Icons.Clock /> },
+                                    { title: "Business Privileges", desc: "High-tech presentation facilities and executive lounge options.", icon: <Icons.Sparkles /> }
                                 ].map((amenity, i) => (
                                     <div key={i} className="glass-card-dark p-6 rounded-2xl border border-white/5 space-y-4">
                                         <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-luxury-400">
@@ -644,7 +640,7 @@
                             <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
                                 <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Visual Portfolio</p>
                                 <h2 className="text-3xl sm:text-5xl font-serif-luxury font-light text-luxury-dark">
-                                    Explore <span className="italic">Uniro Hotels</span>
+                                    Inside <span className="italic">Uniro Hotels & Appartments</span>
                                 </h2>
                             </div>
 
@@ -677,14 +673,14 @@
                     {/* TESTIMONIALS CAROUSEL */}
                     <section id="reviews" className="py-24 bg-[#FAF5EE] border-t border-b border-luxury-300/30 relative">
                         <div className="max-w-5xl mx-auto px-6 text-center space-y-12">
-                            <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Guest Testimonials</p>
+                            <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Verified Client Feedback</p>
                             
                             {/* Quote Slide */}
                             <div className="glass-card p-10 sm:p-16 rounded-3xl border border-luxury-300/50 relative shadow-md">
                                 <span className="absolute top-4 right-8 font-serif text-[120px] text-luxury-300/20 select-none pointer-events-none">“</span>
                                 <div className="space-y-6">
                                     <div className="flex justify-center gap-1">
-                                        {[...Array(reviews[reviewIdx].rating)].map((_, i) => <Icons.Star key={i} />)}\
+                                        {[...Array(reviews[reviewIdx].rating)].map((_, i) => <Icons.Star key={i} />)}
                                     </div>
                                     <p className="text-lg sm:text-2xl font-serif-luxury italic text-luxury-dark leading-relaxed font-light">
                                         "{reviews[reviewIdx].quote}"
@@ -725,8 +721,8 @@
                                     <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Repeat Guests</p>
                                 </div>
                                 <div>
-                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Exceptional</p>
-                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Comfort</p>
+                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Legendary</p>
+                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Kerala Seafood</p>
                                 </div>
                             </div>
 
@@ -737,13 +733,13 @@
                     <section className="py-24 bg-luxury-dark text-white relative overflow-hidden">
                         <div className="max-w-5xl mx-auto px-6 text-center space-y-8 relative z-10">
                             <span className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-300 bg-white/5 border border-white/10 px-4 py-2 rounded-full inline-block">
-                                Exclusive Online Offer
+                                Direct Booking Offer
                             </span>
                             <h2 className="text-3xl sm:text-5xl font-serif-luxury font-light leading-tight">
-                                Ready for Your <span className="italic font-normal text-luxury-300 gold-underline">Ultimate Getaway?</span>
+                                Ready for Your <span className="italic font-normal text-luxury-300 gold-underline">Perfect Stay?</span>
                             </h2>
                             <p className="text-sm sm:text-base text-luxury-300 font-light max-w-xl mx-auto leading-relaxed">
-                                Book directly on our website to ensure the best rates and exclusive benefits for your stay.
+                                Book direct on our portal or contact our front office directly to receive free high-speed breakfast and executive parking guarantees.
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -757,7 +753,7 @@
                                     href="tel:+914842401122"
                                     className="w-full sm:w-auto border border-white/20 hover:bg-white/10 text-white font-semibold text-xs tracking-widest px-8 py-4.5 rounded-full transition"
                                 >
-                                    CONTACT US
+                                    CALL HOTEL OFFICE
                                 </a>
                             </div>
                         </div>
@@ -777,7 +773,7 @@
                                     
                                     {enquirySuccess ? (
                                         <div className="bg-emerald-50 border border-emerald-200 text-emerald-800 p-8 rounded-2xl text-center space-y-4">
-                                            <p className="text-sm font-light">Thank you! Your enquiry has been received and our team will contact you shortly.</p>
+                                            <p className="text-sm font-light">Thank you! Your luxury stay enquiry has been transmitted directly to our reservation manager. We will contact you shortly.</p>
                                         </div>
                                     ) : (
                                         <form onSubmit={(e) => { e.preventDefault(); setEnquirySuccess(true); }} className="space-y-6">
@@ -794,7 +790,7 @@
 
                                             <div className="space-y-2">
                                                 <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-600">Specific Requirements (Optional)</label>
-                                                <textarea rows="4" placeholder="Mention dates of stay, number of suites, special food priorities, or event requirements..." className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition resize-none" />
+                                                <textarea rows="4" placeholder="Mention dates of stay, number of suites, special food priorities, or banquet requirements..." className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition resize-none" />
                                             </div>
 
                                             <button type="submit" className="w-full bg-luxury-dark hover:bg-luxury-700 text-white font-bold text-xs tracking-widest py-4.5 rounded-xl transition">
@@ -808,7 +804,7 @@
                                 <div className="lg:col-span-5 space-y-8 flex flex-col justify-between">
                                     <div className="space-y-6">
                                         <h3 className="text-2xl font-serif-luxury font-light text-luxury-dark">
-                                            Your Perfect <span className="italic">Ernakulam Escape</span>
+                                            The Perfect <span className="italic">Kochi Address</span>
                                         </h3>
                                         
                                         <div className="space-y-4">
@@ -817,7 +813,7 @@
                                                     📍
                                                 </div>
                                                 <div>
-                                                    <h4 className="text-[10px] uppercase tracking-widest font-bold text-luxury-600">Our Location</h4>
+                                                    <h4 className="text-[10px] uppercase tracking-widest font-bold text-luxury-600">Mansion Location</h4>
                                                     <p className="text-sm text-luxury-800 mt-1 font-light leading-relaxed">
                                                         Uniro Hotels & Appartments<br />
                                                         Ernakulam, Kerala
@@ -830,7 +826,7 @@
                                                     📞
                                                 </div>
                                                 <div>
-                                                    <h4 className="text-[10px] uppercase tracking-widest font-bold text-luxury-600">Contact Numbers</h4>
+                                                    <h4 className="text-[10px] uppercase tracking-widest font-bold text-luxury-600">Hotline Numbers</h4>
                                                     <p className="text-sm text-luxury-800 mt-1 font-semibold">
                                                         +91 484 240 1122
                                                     </p>
@@ -886,17 +882,17 @@
                             <div className="space-y-4">
                                 <span className="font-serif-luxury text-2xl tracking-wider text-white">UNIRO HOTELS</span>
                                 <p className="text-xs text-luxury-300 font-light leading-relaxed">
-                                    Uniro Hotels & Appartments offers a premier resort experience in Ernakulam, providing luxurious rooms, modern amenities, and breathtaking views for an unforgettable stay.
+                                    Uniro Hotels & Appartments offers a comfortable resort stay in Ernakulam. Designed to provide excellent facilities with great dining, suitable for all travelers.
                                 </p>
                             </div>
 
                             <div className="space-y-4">
-                                <h4 className="text-white text-xs font-bold uppercase tracking-widest">Our Accommodations</h4>
+                                <h4 className="text-white text-xs font-bold uppercase tracking-widest">Our Service Suites</h4>
                                 <ul className="space-y-2 text-xs font-light text-luxury-300">
-                                    <li><a href="#rooms" className="hover:text-white transition">Deluxe Rooms</a></li>
-                                    <li><a href="#rooms" className="hover:text-white transition">Apartments</a></li>
+                                    <li><a href="#rooms" className="hover:text-white transition">Premium Rooms</a></li>
                                     <li><a href="#rooms" className="hover:text-white transition">Executive Suites</a></li>
-                                    <li><a href="#rooms" className="hover:text-white transition">Presidential Suites</a></li>
+                                    <li><a href="#rooms" className="hover:text-white transition">Family Interconnecting Rooms</a></li>
+                                    <li><a href="#rooms" className="hover:text-white transition">Deluxe Royal Accommodations</a></li>
                                 </ul>
                             </div>
 
@@ -904,16 +900,16 @@
                                 <h4 className="text-white text-xs font-bold uppercase tracking-widest">Quick Navigation</h4>
                                 <ul className="space-y-2 text-xs font-light text-luxury-300">
                                     <li><a href="#home" className="hover:text-white transition">Home</a></li>
-                                    <li><a href="#about" className="hover:text-white transition">About Uniro</a></li>
-                                    <li><a href="#dining" className="hover:text-white transition">Dining & Bar</a></li>
+                                    <li><a href="#about" className="hover:text-white transition">Heritage & Philosophy</a></li>
+                                    <li><a href="#dining" className="hover:text-white transition">Seafood Dining</a></li>
                                     <li><a href="#gallery" className="hover:text-white transition">Image Showcase</a></li>
                                 </ul>
                             </div>
 
                             <div className="space-y-4">
-                                <h4 className="text-white text-xs font-bold uppercase tracking-widest">Guest Care & Policies</h4>
+                                <h4 className="text-white text-xs font-bold uppercase tracking-widest">Kerala Heritage Care</h4>
                                 <p className="text-xs text-luxury-300 font-light leading-relaxed">
-                                    We are committed to providing a safe and comfortable environment, with meticulous room sanitization and secure parking for all guests.
+                                    As part of standard safety guidelines, we maintain thorough room sanitization and safe car parking. Group wedding banquets must be booked in advance.
                                 </p>
                             </div>
 
@@ -950,7 +946,7 @@
                                             </div>
                                             <h4 className="text-xl font-serif-luxury text-luxury-dark">Reservation Request Received</h4>
                                             <p className="text-sm text-luxury-500 font-light max-w-sm mx-auto">
-                                                Thank you. Our reservations desk will contact you shortly to confirm your dates and specific accommodation selections.
+                                                Thank you. Our reservations desk will contact you shortly to confirm your dates and specific suite selections.
                                             </p>
                                         </div>
                                     ) : (
@@ -1006,16 +1002,16 @@
 
                                             <div className="grid grid-cols-2 gap-4">
                                                 <div className="space-y-1">
-                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Accommodation Type</label>
+                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Suite Type</label>
                                                     <select 
                                                         value={bookingForm.category}
                                                         onChange={e => setBookingForm({...bookingForm, category: e.target.value})}
                                                         className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-500 transition"
                                                     >
-                                                        <option value="Deluxe Room">Deluxe Room</option>
-                                                        <option value="Apartment">Apartment</option>
-                                                        <option value="Executive Suite">Executive Suite</option>
-                                                        <option value="Presidential Suite">Presidential Suite</option>
+                                                        <option value="Premium Suite">Premium Room</option>
+                                                        <option value="Executive Room">Executive Room</option>
+                                                        <option value="Family Room">Family Room</option>
+                                                        <option value="Deluxe Accommodation">Deluxe Suite</option>
                                                     </select>
                                                 </div>
 
@@ -1029,7 +1025,7 @@
                                                         <option value="1">1 Guest</option>
                                                         <option value="2">2 Guests</option>
                                                         <option value="3">3 Guests</option>
-                                                        <option value="4+">Family / Group (4+)</option>
+                                                        <option value="4+">Family Suite (4+)</option>
                                                     </select>
                                                 </div>
                                             </div>
