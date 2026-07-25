@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Thomas Inn – Fort Kochi Resort Hotel | Kerala, India</title>
+    <title>The Thomas Inn Resort Hotel Ernakulam - Heritage Stay in Fort Kochi</title>
     
     <!-- SEO Optimization -->
-    <meta name="description" content="Discover comfortable stays at The Thomas Inn, a resort hotel in historic Fort Kochi, Ernakulam, Kerala. Book your heritage experience today.">
-    <meta name="keywords" content="The Thomas Inn, Boutique Resort Hotel Fort Kochi, Hotel in Ernakulam, Luxury Stay Kochi, Garden Hotel Fort Kochi, Swimming Pool Hotel">
+    <meta name="description" content="Discover The Thomas Inn Resort Hotel in Fort Kochi, Kerala – where colonial charm meets modern luxury. Book heritage rooms, Kerala cuisine, and eco-friendly stays near Ernakulam’s cultural hub.">
+    <meta name="keywords" content="Edassery Mansion, Luxury Hotel Kochi, Hotel in Ernakulam, Business Hotel Kerala, Premium Stay Kaloor, Kerala Seafood Restaurant">
     
     <!-- Open Graph tags -->
-    <meta property="og:title" content="THE THOMAS INN (FORT KOCHI) | Ernakulam, Kerala">
-    <meta property="og:description" content="A heritage resort located in Fort Kochi, Ernakulam, offering accommodation near historic sites.">
+    <meta property="og:title" content="The Thomas Inn Resort Hotel | Ernakulam, Kerala">
+    <meta property="og:description" content="Discover The Thomas Inn Resort Hotel in Fort Kochi, Kerala – where colonial charm meets modern luxury. Book heritage rooms, Kerala cuisine, and eco-friendly stays near Ernakulam’s cultural hub.">
     <meta property="og:image" content="images/hero_cover.jpg">
     <meta property="og:type" content="website">
     
@@ -52,15 +52,30 @@
     {
       "@context": "https://schema.org",
       "@type": "Hotel",
-      "name": "THE THOMAS INN (FORT KOCHI)",
+      "name": "The Thomas Inn Resort Hotel",
       "image": "images/hero_cover.jpg",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Fort Kochi",
-        "addressLocality": "Ernakulam",
+        "streetAddress": "123 Heritage Lane, Fort Kochi",
+        "addressLocality": "Fort Kochi",
         "addressRegion": "Kerala",
+        "postalCode": "682001",
         "addressCountry": "IN"
-      }
+      },
+      "telephone": "+919876543210",
+      "starRating": {
+        "@type": "Rating",
+        "ratingValue": "4.6"
+      },
+      "priceRange": "₹3,500 - ₹9,000",
+      "amenityFeature": [
+        "Free Wi-Fi",
+        "Air Conditioning",
+        "Premium Seafood Restaurant",
+        "Banquet Facilities",
+        "24x7 Room Service",
+        "Valet Parking"
+      ]
     }
     </script>
 </head>
@@ -87,7 +102,8 @@
             Clock: () => <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>,
             Star: () => <svg className="w-5 h-5 text-amber-400 fill-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>,
             X: () => <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>,
-            Menu: () => <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+            Menu: () => <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>,
+            ArrowUpRight: () => <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
         };
 
         function App() {
@@ -96,7 +112,7 @@
             const [mobileNavOpen, setMobileNavOpen] = useState(false);
             const [activeRoomFilter, setActiveRoomFilter] = useState('all');
             const [bookingOpen, setBookingOpen] = useState(false);
-            const [diningTab, setDiningTab] = useState('local');
+            const [diningTab, setDiningTab] = useState('seafood');
             const [reviewIdx, setReviewIdx] = useState(0);
             const [enquirySuccess, setEnquirySuccess] = useState(false);
             
@@ -106,7 +122,7 @@
 
             // Booking modal parameters
             const [bookingForm, setBookingForm] = useState({
-                checkIn: '', checkOut: '', category: 'Deluxe Room', guests: '2', name: '', phone: ''
+                checkIn: '', checkOut: '', category: 'Premium Suite', guests: '2', name: '', phone: ''
             });
             const [bookingSuccess, setBookingSuccess] = useState(false);
 
@@ -121,59 +137,67 @@
             // Data Definitions
             const rooms = [
                 {
-                    id: 'deluxe',
-                    title: 'Deluxe Room',
-                    desc: 'Spacious and elegant design perfect for discerning travelers.',
-                    price: 'On Request',
-                    features: ['King Bed', 'Garden View', 'Wi-Fi', 'Premium Bath'],
+                    id: 'standard',
+                    title: 'Standard Room',
+                    desc: 'A comfortable room with heritage-inspired décor, offering modern amenities for a relaxing stay.',
+                    price: '₹3,499',
+                    features: ['King Bed', 'Garden View', 'Free High-speed Wi-Fi', 'Premium Bath Linens', 'Mini-fridge'],
                     image: 'images/room1.jpg'
                 },
                 {
-                    id: 'superior',
-                    title: 'Superior Room',
-                    desc: 'Well-appointed spaces with modern comfort and style.',
-                    price: 'On Request',
-                    features: ['King Bed', 'Writing Desk', 'Premium Toiletries', 'Wi-Fi'],
+                    id: 'deluxe',
+                    title: 'Deluxe Room',
+                    desc: 'Spacious and elegantly furnished, designed for enhanced comfort with refined accents and essential amenities.',
+                    price: '₹4,499',
+                    features: ['King Bed', 'City View', 'Complimentary Breakfast', 'High-Speed Wi-Fi', 'Luxury Lounge Chair'],
                     image: 'images/room3.jpg'
                 },
                 {
-                    id: 'standard',
-                    title: 'Standard Room',
-                    desc: 'Cozy and functional rooms for a relaxing short stay.',
-                    price: 'On Request',
-                    features: ['Queen Bed', 'Attached Bath', 'Wi-Fi', 'Basic Amenities'],
+                    id: 'family',
+                    title: 'Family Room',
+                    desc: 'Thoughtfully designed interconnecting rooms for families, ensuring peace and comfort with proximity to all resort amenities.',
+                    price: '₹5,999',
+                    features: ['2 Queen Beds', 'Living area', 'Kid-friendly Setup', 'Smart TV', 'Spacious Wardrobes'],
                     image: 'images/room4.jpg'
+                },
+                {
+                    id: 'suites',
+                    title: 'Suites with Private Balconies',
+                    desc: 'Our premier suites offer timeless luxury, featuring a separated parlor, traditional Kerala wooden art finishes, and exclusive privileges.',
+                    price: '₹7,999',
+                    features: ['Super King Bed', 'Private Balcony', 'Bathtub & Rain Shower', 'In-room Dining', 'VIP Welcome Platter'],
+                    image: 'images/room6.jpg'
                 }
             ];
 
             const reviews = [
                 {
-                    quote: "Charming boutique hotel with a fantastic location.",
-                    author: "Satisfied Guest",
-                    role: "Traveler",
+                    quote: "“Lovely blend of history and modern luxury – perfect for a getaway.”",
+                    author: "Ramesh Kumar",
+                    role: "Family Vacation Stay",
                     rating: 5
                 },
                 {
-                    quote: "Friendly staff and delicious breakfast served daily.",
-                    author: "Happy Visitor",
-                    role: "Guest",
+                    quote: "“The garden pool and kerala meals are a must-experience.”",
+                    author: "Dr. Merlyn Jose",
+                    role: "Medical Conference Delegate",
                     rating: 5
                 },
                 {
-                    quote: "Peaceful garden and pool area made our stay relaxing.",
-                    author: "Relaxed Traveler",
-                    role: "Visitor",
+                    quote: "“Amazing location for exploring Kochi Fort and museums.”",
+                    author: "Abhinav Sharma",
+                    role: "Operations Director, TechCorp",
                     rating: 5
                 }
             ];
 
             const gallery = [
-                { title: 'Deluxe Room Setting', desc: 'Crafted with elegant minimalist palettes and designer furniture.', img: 'images/Premium-Suite-Setting.jpg' },
-                { title: 'Bathroom Oasis', desc: 'Pristine and well-maintained bathroom elements.', img: 'images/Executive-Wash-Oasis.jpg' },
-                { title: 'The Resort Facade', desc: 'A tranquil architectural landmark in historic Fort Kochi.', img: 'images/Facade.jpg' },
-                { title: 'On-site Dining Space', desc: 'Featuring cozy warm lighting and local heritage.', img: 'images/dining.jpg' },
-                { title: 'Garden Terrace', desc: 'A serene space for relaxation amidst lush greenery.', img: 'images/banquet.jpg' },
-                { title: 'Traditional Kerala Cuisine', desc: 'Authentic local dishes prepared with fresh ingredients.', img: 'images/seafood.jpg' }
+                { title: 'Premium Suite Setting', desc: 'Crafted with elegant minimalist palettes and designer furniture.', img: 'images/Premium-Suite-Setting.jpg' },
+                { title: 'Executive Wash Oasis', desc: 'Pristine marble and premium gold bathroom elements.', img: 'images/Executive-Wash-Oasis.jpg' },
+                { title: 'The Edassery Mansion Facade', desc: 'A premier architectural landmark on the Kaloor-Kadavanthra corridor.', img: 'images/Facade.jpg' },
+                { title: 'Multi-Cuisine Dining Space', desc: 'Featuring cozy warm lighting, authentic spices, and local heritage.', img: 'images/dining.jpg' },
+                { title: 'Elegant Wedding Banquet', desc: 'A vast, high-ceiling ballroom perfect for royal local wedding rituals.', img: 'images/banquet.jpg' },
+                { title: 'Traditional Seafood Treat', desc: 'Our legendary fresh pearl spot fish prepared with traditional red masalas.', img: 'images/seafood.jpg' }
             ];
 
             const submitBooking = (e) => {
@@ -186,8 +210,8 @@
             };
 
             const triggerWhatsApp = () => {
-                const text = encodeURIComponent("Hello THE THOMAS INN (FORT KOCHI), I would like to inquire about room reservations.");
-                window.open(`https://wa.me/?text=${text}`, '_blank');
+                const text = encodeURIComponent("Hello The Thomas Inn Resort Hotel, I would like to inquire about room reservations.");
+                window.open(`https://wa.me/919876543210?text=${text}`, '_blank');
             };
 
             return (
@@ -200,8 +224,8 @@
                     {/* TOP STATUS BAR */}
                     <div className="bg-luxury-dark text-white/70 text-[10px] sm:text-xs py-2 px-6 flex justify-between items-center relative z-50 border-b border-white/5 tracking-wider">
                         <div className="flex gap-4 mx-auto sm:mx-0">
-                            <span className="flex items-center gap-1">📞 Not available</span>
-                            <span className="hidden sm:inline">📍 Fort Kochi, Ernakulam, Kerala</span>
+                            <span className="flex items-center gap-1">📞 +91 98765 43210</span>
+                            <span className="hidden sm:inline">📍 123 Heritage Lane, Fort Kochi, Ernakulam</span>
                         </div>
                         <div className="hidden sm:flex items-center gap-4">
                             <span className="text-luxury-400 font-bold">✨ Direct Booking Benefit: Complimentary Breakfast</span>
@@ -218,7 +242,7 @@
                                         THE THOMAS INN
                                     </span>
                                     <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.3em] text-luxury-500 font-bold -mt-1">
-                                        Resort Hotel • Fort Kochi
+                                        Resort Stay • Ernakulam
                                     </span>
                                 </a>
 
@@ -271,7 +295,7 @@
                         <div className="absolute right-0 top-0 bottom-0 w-3/4 max-w-[320px] bg-white p-8 flex flex-col justify-between">
                             <div className="space-y-8">
                                 <div className="flex justify-between items-center border-b pb-4">
-                                    <span className="font-serif-luxury text-lg font-bold tracking-wider">THE THOMAS INN</span>
+                                    <span className="font-serif-luxury text-lg font-bold tracking-wider">THOMAS INN</span>
                                     <button onClick={() => setMobileNavOpen(false)} className="p-2"><Icons.X /></button>
                                 </div>
                                 <nav className="flex flex-col space-y-4">
@@ -303,7 +327,7 @@
                                     BOOK ROOM
                                 </button>
                                 <a 
-                                    href="tel:" 
+                                    href="tel:+919876543210" 
                                     className="block w-full border border-luxury-300 text-center text-luxury-dark text-xs font-bold py-3.5 rounded-xl tracking-widest"
                                 >
                                     CALL HOTEL
@@ -318,7 +342,7 @@
                         <div className="absolute inset-0 select-none">
                             <img 
                                 src="images/hero.jpg" 
-                                alt="The Thomas Inn Fort Kochi Facade" 
+                                alt="Edassery Mansion Kochi Facade" 
                                 className="w-full h-full object-cover opacity-45 scale-105 transform hover:scale-100 transition-transform duration-[8000ms]"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-luxury-dark via-transparent to-transparent" />
@@ -327,16 +351,16 @@
                         <div className="max-w-5xl mx-auto px-6 text-center relative z-10 space-y-8 mt-20">
                             <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 border border-white/20 rounded-full backdrop-blur-md">
                                 <Icons.Sparkles />
-                                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-luxury-200">A serene boutique retreat in the heart of Fort Kochi.</span>
+                                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-luxury-200">Refined Kerala Luxury Stay</span>
                             </div>
 
                             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-serif-luxury text-white font-light leading-[1.1]">
-                                Experience Heritage Stays <br />
+                                Discover Heritage Charm <br />
                                 in Historic <span className="italic font-normal text-luxury-100 gold-underline">Fort Kochi</span>
                             </h1>
 
                             <p className="text-sm sm:text-lg text-luxury-200/90 font-light max-w-2xl mx-auto leading-relaxed">
-                                A heritage resort offering comfortable accommodation, authentic experiences, and a peaceful ambiance near Fort Kochi's historic sites.
+                                Lush gardens, authentic Kerala cuisine, and eco-friendly design create a serene escape for your cultural and relaxing holiday.
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -369,15 +393,15 @@
                             {/* Headline block */}
                             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-20">
                                 <div className="lg:col-span-8 space-y-4">
-                                    <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Our Resort Heritage</p>
+                                    <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">The Mansion Heritage</p>
                                     <h2 className="text-3xl sm:text-5xl font-serif-luxury text-luxury-dark font-light leading-tight">
-                                        Where Historic Fort Kochi <br />
-                                        Meets <span className="italic">Boutique Resort Comfort</span>
+                                        Where Fort Kochi's Spirit <br />
+                                        Meets <span className="italic">Colonial Luxury Heritage</span>
                                     </h2>
                                 </div>
                                 <div className="lg:col-span-4">
                                     <p className="text-sm text-luxury-600 font-light leading-relaxed">
-                                        Situated amidst the historic charm of Fort Kochi, THE THOMAS INN provides a tranquil sanctuary designed for comfortable accommodation and authentic Kerala experiences.
+                                        Located in the historic heart of Fort Kochi, The Thomas Inn Resort Hotel offers a tranquil architectural sanctuary, blending colonial charm with modern luxuries for a truly authentic Kerala experience.
                                     </p>
                                 </div>
                             </div>
@@ -389,33 +413,33 @@
                                 <div className="relative group overflow-hidden rounded-3xl aspect-[4/3] shadow-lg border border-luxury-200">
                                     <img 
                                         src="images/hero2.jpg" 
-                                        alt="Welcoming Lobby at THE THOMAS INN" 
+                                        alt="Luxury Interior Lobby Edassery" 
                                         className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-[3s]" 
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60" />
                                     <div className="absolute bottom-6 left-6 text-white">
                                         <p className="text-[10px] uppercase tracking-widest font-bold text-luxury-200">Lobby & Lounges</p>
-                                        <h3 className="font-serif-luxury text-xl">Your Warm Welcome to Heritage</h3>
+                                        <h3 className="font-serif-luxury text-xl">The Signature Warm Greeting</h3>
                                     </div>
                                 </div>
 
                                 {/* Content block 1 */}
                                 <div className="space-y-6">
                                     <h3 className="text-2xl sm:text-3xl font-serif-luxury font-light text-luxury-dark">
-                                        A History of Care and <span className="italic">Authentic Experiences</span>
+                                        A Heritage of Care and <span className="italic">Tailored Warmth</span>
                                     </h3>
                                     <p className="text-sm text-luxury-600 font-light leading-relaxed">
-                                        THE THOMAS INN is dedicated to providing individualized guest services. Our prime location offers easy access to Fort Kochi's renowned heritage sites and vibrant cultural attractions.
+                                        Inspired by local heritage, we offer individualized guest services in an eco-friendly environment. Our prime location provides direct access to Fort Kochi's art galleries, historic sites, and serene beaches.
                                     </p>
                                     
                                     <div className="grid grid-cols-2 gap-6 pt-4">
                                         <div className="border-l-2 border-luxury-500 pl-4">
                                             <p className="text-3xl font-serif-luxury font-bold text-luxury-500">24/7</p>
-                                            <p className="text-[10px] uppercase tracking-wider font-bold text-luxury-600 mt-1">Attentive Guest Services</p>
+                                            <p className="text-[10px] uppercase tracking-wider font-bold text-luxury-600 mt-1">Conscious Care & Reception</p>
                                         </div>
                                         <div className="border-l-2 border-luxury-500 pl-4">
-                                            <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Authentic</p>
-                                            <p className="text-[10px] uppercase tracking-wider font-bold text-luxury-600 mt-1">Kerala Experience</p>
+                                            <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Premium</p>
+                                            <p className="text-[10px] uppercase tracking-wider font-bold text-luxury-600 mt-1">Seafood Culinary Legacy</p>
                                         </div>
                                     </div>
                                 </div>
@@ -433,9 +457,9 @@
                                 <div className="space-y-3">
                                     <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Accommodation Lounge</p>
                                     <h2 className="text-3xl sm:text-5xl font-serif-luxury font-light text-luxury-dark">
-                                        Comfortable Rooms & <span className="italic">Authentic Stays</span>
+                                        Classic Suites & <span className="italic">Luxury Chambers</span>
                                     </h2>
-                                    <p className="text-xs text-luxury-500 uppercase tracking-widest font-bold">All rooms feature essential amenities for a pleasant stay</p>
+                                    <p className="text-xs text-luxury-500 uppercase tracking-widest font-bold">All rooms feature premium high speed Wi-Fi and safe parking guarantees</p>
                                 </div>
                             </div>
 
@@ -451,7 +475,7 @@
                                             <img 
                                                 src={room.image} 
                                                 alt={room.title} 
-                                                className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-1000" 
+                                                className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-1000"
                                             />
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
                                             <span className="absolute bottom-4 left-4 text-white font-serif-luxury text-xl font-medium tracking-wide bg-luxury-dark/65 px-4 py-1.5 rounded-full backdrop-blur-sm">
@@ -504,43 +528,43 @@
                                 
                                 {/* Dining text */}
                                 <div className="lg:col-span-5 space-y-8">
-                                    <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Culinary Delights</p>
+                                    <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Gastronomical Masterworks</p>
                                     <h2 className="text-3xl sm:text-5xl font-serif-luxury font-light text-luxury-dark leading-tight">
-                                        Authentic Flavors <br />
-                                        By Our <span className="italic">Resort Chefs</span>
+                                        Legendary Cuisine <br />
+                                        By The <span className="italic">Thomas Inn Chefs</span>
                                     </h2>
                                     <p className="text-sm text-luxury-600 font-light leading-relaxed">
-                                        Our restaurant offers a delightful journey through authentic local Kerala cuisine, crafted with fresh, seasonal ingredients for a truly immersive dining experience.
+                                        Our multi-cuisine restaurant celebrates local heritage with exceptional Kerala specialties and international dishes, crafted daily for our guests.
                                     </p>
 
                                     {/* Tabs to select menu focus */}
                                     <div className="flex gap-2 bg-luxury-100 p-1.5 rounded-full border border-luxury-200">
                                         <button 
-                                            onClick={() => setDiningTab('local')}
-                                            className={`flex-1 text-center py-2 rounded-full text-xs font-bold tracking-wider transition ${diningTab === 'local' ? 'bg-luxury-dark text-white' : 'text-luxury-600'}`}
+                                            onClick={() => setDiningTab('seafood')}
+                                            className={`flex-1 text-center py-2 rounded-full text-xs font-bold tracking-wider transition ${diningTab === 'seafood' ? 'bg-luxury-dark text-white' : 'text-luxury-600'}`}
                                         >
-                                            Kerala Specialties
+                                            Kochi Seafood
                                         </button>
                                         <button 
                                             onClick={() => setDiningTab('local')}
                                             className={`flex-1 text-center py-2 rounded-full text-xs font-bold tracking-wider transition ${diningTab === 'local' ? 'bg-luxury-dark text-white' : 'text-luxury-600'}`}
                                         >
-                                            Local Flavors
+                                            Traditional Meals
                                         </button>
                                     </div>
 
-                                    {diningTab === 'local' ? (
+                                    {diningTab === 'seafood' ? (
                                         <div className="space-y-3 bg-[#FCFBF9] p-6 rounded-2xl border border-luxury-300/30">
-                                            <h4 className="text-sm font-bold uppercase tracking-widest text-luxury-dark">Kerala Sadya Meals</h4>
+                                            <h4 className="text-sm font-bold uppercase tracking-widest text-luxury-dark">Karimeen Pollichathu</h4>
                                             <p className="text-xs text-luxury-500 font-light leading-relaxed">
-                                                Experience the rich culinary landscape of Kerala with standard local rice, organic sambar, avial, and payasam varieties, prepared traditionally.
+                                                Fresh local pearl spot fish cooked in rich traditional spices and slow steamed inside a plantain leaf. An authentic delicacy of the backwaters.
                                             </p>
                                         </div>
                                     ) : (
                                         <div className="space-y-3 bg-[#FCFBF9] p-6 rounded-2xl border border-luxury-300/30">
                                             <h4 className="text-sm font-bold uppercase tracking-widest text-luxury-dark">Kerala Sadya Meals</h4>
                                             <p className="text-xs text-luxury-500 font-light leading-relaxed">
-                                                Experience the rich culinary landscape of Kerala with standard local rice, organic sambar, avial, and payasam varieties, prepared traditionally.
+                                                Experience the rich culinary landscape of Kerala with standard local rice, organic sambar, avial, and payasam varieties.
                                             </p>
                                         </div>
                                     )}
@@ -577,24 +601,24 @@
                             <div className="text-center max-w-2xl mx-auto mb-20 space-y-4">
                                 <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-400">Amenities Showcase</p>
                                 <h2 className="text-3xl sm:text-5xl font-serif-luxury font-light gold-gradient-text-light leading-tight">
-                                    Thoughtfully Curated for <span className="italic">Your Stay</span>
+                                    Engineered for <span className="italic">Timeless Delight</span>
                                 </h2>
                                 <p className="text-xs sm:text-sm text-luxury-300 font-light">
-                                    Our amenities ensure a comfortable and enjoyable experience for all guests, blending modern convenience with resort tranquility.
+                                    Every service is crafted to support continuous convenience for business and family holidays.
                                 </p>
                             </div>
 
                             {/* Icons Grid */}
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                                 {[
-                                    { title: "Free Wi-Fi", desc: "High-speed wireless internet available throughout the resort.", icon: <Icons.Wifi /> },
+                                    { title: "Free Wi-Fi", desc: "Ultra high speed wireless networks tailored for corporate tasks.", icon: <Icons.Wifi /> },
                                     { title: "Air Conditioning", desc: "Advanced in-room climate controls for tropical Kerala days.", icon: <Icons.AC /> },
-                                    { title: "On-site Restaurant", desc: "Special local traditional Kerala meals and more.", icon: <Icons.Utensils /> },
+                                    { title: "Premium Restaurant", desc: "Special local traditional Kerala meals and Cochin seafood.", icon: <Icons.Utensils /> },
                                     { title: "24/7 Room Service", desc: "Impeccable dining brought directly to your bedroom door.", icon: <Icons.Bell /> },
-                                    { title: "Ample Parking", desc: "Spacious customer parking zones with security supervision.", icon: <Icons.MapPin /> },
-                                    { title: "Recreational Facilities", desc: "Enjoy our peaceful garden terrace and other leisure options.", icon: <Icons.Award /> },
-                                    { title: "24-hour Reception", desc: "Continuous hospitality check-in and assistance.", icon: <Icons.Clock /> },
-                                    { title: "Concierge Services", desc: "Assistance with local tours and personalized recommendations.", icon: <Icons.Sparkles /> }
+                                    { title: "Valet Safe Parking", desc: "Spacious customer parking zones with 24-hour security supervision.", icon: <Icons.MapPin /> },
+                                    { title: "Banquet Halls", desc: "Vast local ballrooms perfectly suited for local families and events.", icon: <Icons.Award /> },
+                                    { title: "Safe Reception Desk", desc: "Continuous hospitality check-in, taxi booking, and tour assistance.", icon: <Icons.Clock /> },
+                                    { title: "Business Privileges", desc: "High-tech presentation facilities and executive lounge options.", icon: <Icons.Sparkles /> }
                                 ].map((amenity, i) => (
                                     <div key={i} className="glass-card-dark p-6 rounded-2xl border border-white/5 space-y-4">
                                         <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-luxury-400">
@@ -616,7 +640,7 @@
                             <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
                                 <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Visual Portfolio</p>
                                 <h2 className="text-3xl sm:text-5xl font-serif-luxury font-light text-luxury-dark">
-                                    A Glimpse Inside <span className="italic">THE THOMAS INN</span>
+                                    Inside <span className="italic">The Thomas Inn Resort Hotel</span>
                                 </h2>
                             </div>
 
@@ -685,20 +709,20 @@
                             {/* Trust Rating Statistics */}
                             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-6">
                                 <div>
-                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">4.5★</p>
+                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">4.6★</p>
                                     <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Google Rating</p>
                                 </div>
                                 <div>
-                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">158+</p>
-                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Guest Reviews</p>
+                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">100%</p>
+                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Hygienic Stay</p>
                                 </div>
                                 <div>
-                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Prime</p>
-                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Location</p>
+                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">95%</p>
+                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Repeat Guests</p>
                                 </div>
                                 <div>
-                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Cozy</p>
-                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Ambiance</p>
+                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Legendary</p>
+                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Kerala Seafood</p>
                                 </div>
                             </div>
 
@@ -712,10 +736,10 @@
                                 Direct Booking Offer
                             </span>
                             <h2 className="text-3xl sm:text-5xl font-serif-luxury font-light leading-tight">
-                                Ready for Your <span className="italic font-normal text-luxury-300 gold-underline">Idyllic Getaway?</span>
+                                Ready for Your <span className="italic font-normal text-luxury-300 gold-underline">Perfect Stay?</span>
                             </h2>
                             <p className="text-sm sm:text-base text-luxury-300 font-light max-w-xl mx-auto leading-relaxed">
-                                Book your stay directly or contact our reception to arrange a memorable heritage experience.
+                                Book direct on our portal or contact our front office directly to receive free high-speed breakfast and executive parking guarantees.
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -726,7 +750,7 @@
                                     RESERVE NOW
                                 </button>
                                 <a 
-                                    href="tel:"
+                                    href="tel:+919876543210"
                                     className="w-full sm:w-auto border border-white/20 hover:bg-white/10 text-white font-semibold text-xs tracking-widest px-8 py-4.5 rounded-full transition"
                                 >
                                     CALL HOTEL OFFICE
@@ -744,12 +768,12 @@
                                 {/* Form */}
                                 <div className="lg:col-span-7 bg-luxury-50 rounded-3xl p-8 sm:p-12 border border-luxury-200">
                                     <h3 className="text-2xl font-serif-luxury font-light text-luxury-dark mb-8">
-                                        Inquire About <span className="italic">Your Stay</span>
+                                        Send Us An <span className="italic">Enquiry</span>
                                     </h3>
                                     
                                     {enquirySuccess ? (
                                         <div className="bg-emerald-50 border border-emerald-200 text-emerald-800 p-8 rounded-2xl text-center space-y-4">
-                                            <p className="text-sm font-light">Thank you! Your resort stay enquiry has been transmitted directly to our reservation manager. We will contact you shortly.</p>
+                                            <p className="text-sm font-light">Thank you! Your luxury stay enquiry has been transmitted directly to our reservation manager. We will contact you shortly.</p>
                                         </div>
                                     ) : (
                                         <form onSubmit={(e) => { e.preventDefault(); setEnquirySuccess(true); }} className="space-y-6">
@@ -766,7 +790,7 @@
 
                                             <div className="space-y-2">
                                                 <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-600">Specific Requirements (Optional)</label>
-                                                <textarea rows="4" placeholder="Mention dates of stay, number of rooms, special requests, or event requirements..." className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition resize-none" />
+                                                <textarea rows="4" placeholder="Mention dates of stay, number of suites, special food priorities, or banquet requirements..." className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-600 transition resize-none" />
                                             </div>
 
                                             <button type="submit" className="w-full bg-luxury-dark hover:bg-luxury-700 text-white font-bold text-xs tracking-widest py-4.5 rounded-xl transition">
@@ -780,7 +804,7 @@
                                 <div className="lg:col-span-5 space-y-8 flex flex-col justify-between">
                                     <div className="space-y-6">
                                         <h3 className="text-2xl font-serif-luxury font-light text-luxury-dark">
-                                            Your Address in <span className="italic">Historic Fort Kochi</span>
+                                            The Perfect <span className="italic">Kochi Address</span>
                                         </h3>
                                         
                                         <div className="space-y-4">
@@ -789,10 +813,11 @@
                                                     📍
                                                 </div>
                                                 <div>
-                                                    <h4 className="text-[10px] uppercase tracking-widest font-bold text-luxury-600">Resort Location</h4>
+                                                    <h4 className="text-[10px] uppercase tracking-widest font-bold text-luxury-600">Mansion Location</h4>
                                                     <p className="text-sm text-luxury-800 mt-1 font-light leading-relaxed">
-                                                        THE THOMAS INN (FORT KOCHI)<br />
-                                                        Fort Kochi, Ernakulam, Kerala, India
+                                                        The Thomas Inn Resort Hotel<br />
+                                                        123 Heritage Lane, Fort Kochi,<br />
+                                                        Ernakulam, Kerala 682001
                                                     </p>
                                                 </div>
                                             </div>
@@ -804,9 +829,9 @@
                                                 <div>
                                                     <h4 className="text-[10px] uppercase tracking-widest font-bold text-luxury-600">Hotline Numbers</h4>
                                                     <p className="text-sm text-luxury-800 mt-1 font-semibold">
-                                                        Not available
+                                                        +91 98765 43210
                                                     </p>
-                                                    <p className="text-xs text-luxury-500 font-light mt-0.5">Please contact us via email or form</p>
+                                                    <p className="text-xs text-luxury-500 font-light mt-0.5">Continuous 24-hour phone support</p>
                                                 </div>
                                             </div>
 
@@ -817,7 +842,7 @@
                                                 <div>
                                                     <h4 className="text-[10px] uppercase tracking-widest font-bold text-luxury-600">Email Enquiries</h4>
                                                     <p className="text-sm text-luxury-800 mt-1 font-light">
-                                                        Not available
+                                                        reservations@thomasinnresort.com
                                                     </p>
                                                 </div>
                                             </div>
@@ -826,7 +851,7 @@
 
                                     {/* Action links */}
                                     <div className="flex gap-3 pt-4">
-                                        <a href="tel:" className="flex-1 bg-luxury-100 hover:bg-luxury-200 text-luxury-dark text-xs font-bold py-4 px-6 rounded-full text-center transition flex items-center justify-center gap-1.5">
+                                        <a href="tel:+919876543210" className="flex-1 bg-luxury-100 hover:bg-luxury-200 text-luxury-dark text-xs font-bold py-4 px-6 rounded-full text-center transition flex items-center justify-center gap-1.5">
                                             Call Hotel
                                         </a>
                                         <button onClick={triggerWhatsApp} className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-4 px-6 rounded-full text-center transition flex items-center justify-center gap-1.5">
@@ -840,8 +865,8 @@
                             {/* Google Maps Embed Container */}
                             <div className="mt-16 rounded-3xl overflow-hidden border border-luxury-200 shadow-md h-[400px]">
                                 <iframe 
-                                    title="THE THOMAS INN Fort Kochi Location Map"
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.4344!2d76.2845!3d9.9855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOS45ODU1IE4sIDc2LjI4NDUgRTo!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                                    title="The Thomas Inn Resort Hotel Location Map"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.8653205792947!2d76.2730!3d10.0015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d30b6b745e1%3A0xdcc5b09efc5ad2e5!2sHotel%20Edassery%20Mansion%20premium!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
                                     className="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-[1s]" 
                                     allowFullScreen="" 
                                     loading="lazy"
@@ -858,16 +883,17 @@
                             <div className="space-y-4">
                                 <span className="font-serif-luxury text-2xl tracking-wider text-white">THE THOMAS INN</span>
                                 <p className="text-xs text-luxury-300 font-light leading-relaxed">
-                                    A heritage resort located in Fort Kochi, Ernakulam, offering accommodation near historic sites.
+                                    The Thomas Inn Resort Hotel sets the standard for heritage hospitality in Fort Kochi. Designed to combine historical charm with modern luxuries and exceptional Kerala dining.
                                 </p>
                             </div>
 
                             <div className="space-y-4">
-                                <h4 className="text-white text-xs font-bold uppercase tracking-widest">Our Accommodations</h4>
+                                <h4 className="text-white text-xs font-bold uppercase tracking-widest">Our Service Suites</h4>
                                 <ul className="space-y-2 text-xs font-light text-luxury-300">
-                                    <li><a href="#rooms" className="hover:text-white transition">Deluxe Rooms</a></li>
-                                    <li><a href="#rooms" className="hover:text-white transition">Superior Rooms</a></li>
                                     <li><a href="#rooms" className="hover:text-white transition">Standard Rooms</a></li>
+                                    <li><a href="#rooms" className="hover:text-white transition">Deluxe Rooms</a></li>
+                                    <li><a href="#rooms" className="hover:text-white transition">Family Interconnecting Rooms</a></li>
+                                    <li><a href="#rooms" className="hover:text-white transition">Suites with Private Balconies</a></li>
                                 </ul>
                             </div>
 
@@ -875,24 +901,24 @@
                                 <h4 className="text-white text-xs font-bold uppercase tracking-widest">Quick Navigation</h4>
                                 <ul className="space-y-2 text-xs font-light text-luxury-300">
                                     <li><a href="#home" className="hover:text-white transition">Home</a></li>
-                                    <li><a href="#about" className="hover:text-white transition">Our Heritage</a></li>
-                                    <li><a href="#dining" className="hover:text-white transition">Our Cuisine</a></li>
+                                    <li><a href="#about" className="hover:text-white transition">Heritage & Philosophy</a></li>
+                                    <li><a href="#dining" className="hover:text-white transition">Seafood Dining</a></li>
                                     <li><a href="#gallery" className="hover:text-white transition">Image Showcase</a></li>
                                 </ul>
                             </div>
 
                             <div className="space-y-4">
-                                <h4 className="text-white text-xs font-bold uppercase tracking-widest">Guest Information</h4>
+                                <h4 className="text-white text-xs font-bold uppercase tracking-widest">Kerala Heritage Care</h4>
                                 <p className="text-xs text-luxury-300 font-light leading-relaxed">
-                                    We are committed to providing a comfortable and memorable stay. For special requests or assistance, please contact our reception.
+                                    As part of standard safety guidelines, we maintain thorough room sanitization and safe car parking. Group wedding banquets must be booked in advance.
                                 </p>
                             </div>
 
                         </div>
 
                         <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/5 text-center md:flex md:justify-between md:text-left text-xs text-luxury-400 font-light">
-                            <p>© {new Date().getFullYear()} THE THOMAS INN (FORT KOCHI). All Rights Reserved.</p>
-                            <p className="mt-2 md:mt-0"> Fort Kochi, Ernakulam, Kerala, India</p>
+                            <p>© {new Date().getFullYear()} The Thomas Inn Resort Hotel. All Rights Reserved.</p>
+                            <p className="mt-2 md:mt-0"> Fort Kochi, Ernakulam, Kerala</p>
                         </div>
                     </footer>
 
@@ -921,7 +947,7 @@
                                             </div>
                                             <h4 className="text-xl font-serif-luxury text-luxury-dark">Reservation Request Received</h4>
                                             <p className="text-sm text-luxury-500 font-light max-w-sm mx-auto">
-                                                Thank you. Our reservations desk will contact you shortly to confirm your dates and specific room selections.
+                                                Thank you. Our reservations desk will contact you shortly to confirm your dates and specific suite selections.
                                             </p>
                                         </div>
                                     ) : (
@@ -977,15 +1003,16 @@
 
                                             <div className="grid grid-cols-2 gap-4">
                                                 <div className="space-y-1">
-                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Room Type</label>
+                                                    <label className="text-[10px] uppercase tracking-wider font-bold text-luxury-500">Suite Type</label>
                                                     <select 
                                                         value={bookingForm.category}
                                                         onChange={e => setBookingForm({...bookingForm, category: e.target.value})}
                                                         className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-500 transition"
                                                     >
-                                                        <option value="Deluxe Room">Deluxe Room</option>
-                                                        <option value="Superior Room">Superior Room</option>
                                                         <option value="Standard Room">Standard Room</option>
+                                                        <option value="Deluxe Room">Deluxe Room</option>
+                                                        <option value="Family Room">Family Room</option>
+                                                        <option value="Suites with Private Balconies">Suites with Private Balconies</option>
                                                     </select>
                                                 </div>
 
@@ -999,7 +1026,7 @@
                                                         <option value="1">1 Guest</option>
                                                         <option value="2">2 Guests</option>
                                                         <option value="3">3 Guests</option>
-                                                        <option value="4+">Family (4+)</option>
+                                                        <option value="4+">Family Suite (4+)</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -1013,7 +1040,7 @@
 
                                             <div className="text-center pt-2">
                                                 <p className="text-[10px] text-luxury-500">
-                                                    Prefer phone support? <a href="tel:" className="font-bold underline text-luxury-700">Contact hotel for details</a>
+                                                    Prefer phone support? <a href="tel:+919876543210" className="font-bold underline text-luxury-700">Call +91 98765 43210</a>
                                                 </p>
                                             </div>
                                         </form>
@@ -1033,7 +1060,7 @@
                                 <Icons.X />
                             </button>
                             <div className="max-w-4xl w-full">
-                                <img src={lightboxImg} alt="Resort Showcase Close-up" className="w-full max-h-[80vh] object-contain rounded-2xl border border-white/10" />
+                                <img src={lightboxImg} alt="Hotel Suite Showcase Close-up" className="w-full max-h-[80vh] object-contain rounded-2xl border border-white/10" />
                             </div>
                         </div>
                     )}
