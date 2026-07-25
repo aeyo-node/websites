@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cochin Home Stay | Resort hotel in Ernakulam, Kerala</title>
+    <title>Hotel Edassery Mansion Premium | Luxury Hotel in Kochi, Ernakulam</title>
     
     <!-- SEO Optimization -->
-    <meta name="description" content="Cochin Home Stay is a resort hotel in Ernakulam, Kerala, offering a comfortable stay for travelers in the Kochi metropolitan area.">
+    <meta name="description" content="Immerse yourself in timeless luxury and authentic Kerala hospitality at Hotel Edassery Mansion Premium, Kathrikadavu, Kochi. Elegant suites, multi-cuisine dining, and modern amenities await.">
     <meta name="keywords" content="Edassery Mansion, Luxury Hotel Kochi, Hotel in Ernakulam, Business Hotel Kerala, Premium Stay Kaloor, Kerala Seafood Restaurant">
     
     <!-- Open Graph tags -->
-    <meta property="og:title" content="Cochin Home Stay | Resort hotel in Ernakulam, Kerala">
-    <meta property="og:description" content="Cochin Home Stay is a resort hotel in Ernakulam, Kerala, offering a comfortable stay for travelers in the Kochi metropolitan area.">
+    <meta property="og:title" content="Hotel Edassery Mansion Premium | Ernakulam, Kerala">
+    <meta property="og:description" content="Experience high-end hospitality, exquisite dining, and premium rooms in the center of Kochi.">
     <meta property="og:image" content="images/hero_cover.jpg">
     <meta property="og:type" content="website">
     
@@ -52,14 +52,14 @@
     {
       "@context": "https://schema.org",
       "@type": "Hotel",
-      "name": "Cochin Home Stay",
+      "name": "Hotel Edassery Mansion Premium",
       "image": "images/hero_cover.jpg",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Ernakulam",
-        "addressLocality": "Ernakulam",
+        "streetAddress": "Kaloor - Kadavanthra Road, Kathrikadavu, Kaloor",
+        "addressLocality": "Ernakulam, Kochi",
         "addressRegion": "Kerala",
-        "postalCode": "",
+        "postalCode": "682017",
         "addressCountry": "IN"
       },
       "telephone": "+914842401122",
@@ -137,17 +137,17 @@
             // Data Definitions
             const rooms = [
                 {
-                    id: 'standard',
-                    title: 'Standard Room',
-                    desc: 'A comfortable room offering essential modern conveniences for a relaxing stay.',
+                    id: 'premium',
+                    title: 'Premium Room',
+                    desc: 'A stylishly appointed room offering spacious modern living zones, rich leather furnishings, and a premium workspace layout.',
                     price: '₹3,499',
-                    features: ['King Bed', 'City View', 'Free High-speed Wi-Fi', 'Private Bathroom', 'Work Desk'],
+                    features: ['King Bed', 'City View', 'Free High-speed Wi-Fi', 'Premium Bath Linens', 'Mini-fridge'],
                     image: 'images/room1.jpg'
                 },
                 {
-                    id: 'deluxe',
-                    title: 'Deluxe Room',
-                    desc: 'An upgraded room offering more space and enhanced amenities for a truly comfortable experience.',
+                    id: 'executive',
+                    title: 'Executive Room',
+                    desc: 'Designed specifically for the corporate traveler. Includes an expansive high-tech workspace, refined accents, and premium hospitality privileges.',
                     price: '₹4,499',
                     features: ['King Bed', 'Coffee Station', 'Express Laundry Access', 'High-Speed Wi-Fi', 'Luxury Lounge Chair'],
                     image: 'images/room3.jpg'
@@ -155,15 +155,15 @@
                 {
                     id: 'family',
                     title: 'Family Room',
-                    desc: 'Spacious interconnecting or double-queen bedroom spaces crafted for ultimate peace, comfort, and direct proximity to Ernakulam family spots.',
+                    desc: 'Spacious interconnecting or double-queen bedroom spaces crafted for ultimate peace, comfort, and direct proximity to Kochi family spots.',
                     price: '₹5,999',
                     features: ['2 Queen Beds', 'Living area', 'Kid-friendly Setup', 'Smart TV', 'Spacious Wardrobes'],
                     image: 'images/room4.jpg'
                 },
                 {
-                    id: 'suite',
-                    title: 'Suite',
-                    desc: 'Our spacious suite offers elevated comfort and privacy, perfect for extended stays.',
+                    id: 'deluxe',
+                    title: 'Deluxe Suite',
+                    desc: 'The jewel of Edassery Mansion. Timeless luxury featuring a separated master parlor, classic Kerala wooden art finishes, and royal privileges.',
                     price: '₹7,999',
                     features: ['Super King Bed', 'Separated Lounge', 'Bathtub & Rain Shower', 'In-room Dining', 'VIP Welcome Platter'],
                     image: 'images/room6.jpg'
@@ -172,21 +172,21 @@
 
             const reviews = [
                 {
-                    quote: "A truly peaceful retreat in Ernakulam. The staff were very welcoming and the atmosphere was so relaxing.",
-                    author: "A Satisfied Guest",
-                    role: "Leisure Traveler",
+                    quote: "The rooms are incredibly spacious and exceptionally clean. We loved their traditional Kerala seafood at the restaurant. Highly recommend their authentic Karimeen Pollichathu!",
+                    author: "Ramesh Kumar",
+                    role: "Family Vacation Stay",
                     rating: 5
                 },
                 {
-                    quote: "Enjoyed every moment of my stay. The serene surroundings made for a perfect getaway.",
-                    author: "Traveler's Choice",
-                    role: "Holidaymaker",
+                    quote: "Perfect central location in Kochi at Kathrikadavu. Close to both Kaloor and Kadavanthra. Outstanding hospitality which is a true trademark of the Edassery heritage.",
+                    author: "Dr. Merlyn Jose",
+                    role: "Medical Conference Delegate",
                     rating: 5
                 },
                 {
-                    quote: "Excellent service and a wonderful ambiance. A great place to unwind and experience Kerala hospitality.",
-                    author: "Happy Customer",
-                    role: "Relaxation Seeker",
+                    quote: "We hosted our corporate regional meetup in their banquet hall and it was a seamless experience. Flawless audio-visuals, delicious catering, and polite executive helpers.",
+                    author: "Abhinav Sharma",
+                    role: "Operations Director, TechCorp",
                     rating: 5
                 }
             ];
@@ -210,7 +210,7 @@
             };
 
             const triggerWhatsApp = () => {
-                const text = encodeURIComponent("Hello Cochin Home Stay, I would like to inquire about room reservations.");
+                const text = encodeURIComponent("Hello Edassery Mansion Premium, I would like to inquire about room reservations.");
                 window.open(`https://wa.me/914842401122?text=${text}`, '_blank');
             };
 
@@ -225,7 +225,7 @@
                     <div className="bg-luxury-dark text-white/70 text-[10px] sm:text-xs py-2 px-6 flex justify-between items-center relative z-50 border-b border-white/5 tracking-wider">
                         <div className="flex gap-4 mx-auto sm:mx-0">
                             <span className="flex items-center gap-1">📞 +91 484 240 1122</span>
-                            <span className="hidden sm:inline">📍 Ernakulam, Kerala, India</span>
+                            <span className="hidden sm:inline">📍 Kaloor - Kadavanthra Rd, Kathrikadavu, Kochi</span>
                         </div>
                         <div className="hidden sm:flex items-center gap-4">
                             <span className="text-luxury-400 font-bold">✨ Direct Booking Benefit: Complimentary Breakfast</span>
@@ -239,10 +239,10 @@
                                 {/* Brand Logo */}
                                 <a href="#home" className="flex flex-col">
                                     <span className="font-serif-luxury text-xl sm:text-2xl font-bold tracking-widest text-luxury-dark">
-                                        COCHIN HOME STAY
+                                        EDASSERY MANSION
                                     </span>
                                     <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.3em] text-luxury-500 font-bold -mt-1">
-                                        Resort Stay • Ernakulam
+                                        Premium Stay • Kochi
                                     </span>
                                 </a>
 
@@ -295,7 +295,7 @@
                         <div className="absolute right-0 top-0 bottom-0 w-3/4 max-w-[320px] bg-white p-8 flex flex-col justify-between">
                             <div className="space-y-8">
                                 <div className="flex justify-between items-center border-b pb-4">
-                                    <span className="font-serif-luxury text-lg font-bold tracking-wider">COCHIN HOME STAY</span>
+                                    <span className="font-serif-luxury text-lg font-bold tracking-wider">EDASSERY</span>
                                     <button onClick={() => setMobileNavOpen(false)} className="p-2"><Icons.X /></button>
                                 </div>
                                 <nav className="flex flex-col space-y-4">
@@ -351,16 +351,16 @@
                         <div className="max-w-5xl mx-auto px-6 text-center relative z-10 space-y-8 mt-20">
                             <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 border border-white/20 rounded-full backdrop-blur-md">
                                 <Icons.Sparkles />
-                                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-luxury-200">A peaceful retreat in the heart of Ernakulam</span>
+                                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-luxury-200">Refined Kerala Luxury Stay</span>
                             </div>
 
                             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-serif-luxury text-white font-light leading-[1.1]">
-                                Discover a Peaceful Stay <br />
-                                in <span className="italic font-normal text-luxury-100 gold-underline">Ernakulam, Kerala</span>
+                                Experience Timeless Comfort <br />
+                                in the Heart of <span className="italic font-normal text-luxury-100 gold-underline">Kochi</span>
                             </h1>
 
                             <p className="text-sm sm:text-lg text-luxury-200/90 font-light max-w-2xl mx-auto leading-relaxed">
-                                Cochin Home Stay is a resort hotel located in Ernakulam, offering a comfortable stay with resort-style amenities. It caters to both leisure and business travelers exploring the Kochi metropolitan area in Kerala, India.
+                                Elegant suites, exquisite local heritage seafood dining, and modern hospitality designed around your complete business and holiday needs.
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -393,15 +393,15 @@
                             {/* Headline block */}
                             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-20">
                                 <div className="lg:col-span-8 space-y-4">
-                                    <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">The Home Stay Experience</p>
+                                    <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">The Mansion Heritage</p>
                                     <h2 className="text-3xl sm:text-5xl font-serif-luxury text-luxury-dark font-light leading-tight">
-                                        Where Ernakulam's Charm <br />
-                                        Meets <span className="italic">Peaceful Resort Stays</span>
+                                        Where Ernakulam's Core <br />
+                                        Meets <span className="italic">Boutique Luxury Hospitality</span>
                                     </h2>
                                 </div>
                                 <div className="lg:col-span-4">
                                     <p className="text-sm text-luxury-600 font-light leading-relaxed">
-                                        Cochin Home Stay is a resort hotel located in Ernakulam, offering a comfortable stay with resort-style amenities. It caters to both leisure and business travelers exploring the Kochi metropolitan area in Kerala, India.
+                                        Perfectly situated on the crucial Kaloor-Kadavanthra corridor at Kathrikadavu, Hotel Edassery Mansion Premium provides an architectural sanctuary designed around effortless corporate business efficiency and rich family traditions.
                                     </p>
                                 </div>
                             </div>
@@ -429,7 +429,7 @@
                                         A Heritage of Care and <span className="italic">Tailored Warmth</span>
                                     </h3>
                                     <p className="text-sm text-luxury-600 font-light leading-relaxed">
-                                        We prioritize individualized guest services, ensuring a warm and memorable stay for every visitor. Our convenient location in Ernakulam makes it an ideal base for exploring the region.
+                                        Built and operated under the legendary standards of the Edassery family, we prioritize individualized guest services. Our location allows quick direct access to Kaloor Metro Station, Marine Drive backwaters, and Kaloor Stadium.
                                     </p>
                                     
                                     <div className="grid grid-cols-2 gap-6 pt-4">
@@ -438,8 +438,8 @@
                                             <p className="text-[10px] uppercase tracking-wider font-bold text-luxury-600 mt-1">Conscious Care & Reception</p>
                                         </div>
                                         <div className="border-l-2 border-luxury-500 pl-4">
-                                            <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Essential</p>
-                                            <p className="text-[10px] uppercase tracking-wider font-bold text-luxury-600 mt-1">Modern Conveniences</p>
+                                            <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Premium</p>
+                                            <p className="text-[10px] uppercase tracking-wider font-bold text-luxury-600 mt-1">Seafood Culinary Legacy</p>
                                         </div>
                                     </div>
                                 </div>
@@ -457,9 +457,9 @@
                                 <div className="space-y-3">
                                     <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Accommodation Lounge</p>
                                     <h2 className="text-3xl sm:text-5xl font-serif-luxury font-light text-luxury-dark">
-                                        Comfortable <span className="italic">Rooms & Suites</span>
+                                        Classic Suites & <span className="italic">Luxury Chambers</span>
                                     </h2>
-                                    <p className="text-xs text-luxury-500 uppercase tracking-widest font-bold">All rooms feature Air Conditioning, Television, and En-suite Bathrooms</p>
+                                    <p className="text-xs text-luxury-500 uppercase tracking-widest font-bold">All rooms feature premium high speed Wi-Fi and safe parking guarantees</p>
                                 </div>
                             </div>
 
@@ -530,11 +530,11 @@
                                 <div className="lg:col-span-5 space-y-8">
                                     <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Gastronomical Masterworks</p>
                                     <h2 className="text-3xl sm:text-5xl font-serif-luxury font-light text-luxury-dark leading-tight">
-                                        Delicious Cuisine <br />
-                                        By Our <span className="italic">Talented Chefs</span>
+                                        Legendary Cuisine <br />
+                                        By The <span className="italic">Edassery Chefs</span>
                                     </h2>
                                     <p className="text-sm text-luxury-600 font-light leading-relaxed">
-                                        Our multi-cuisine restaurant serves a delightful array of local traditional Kerala dishes and other culinary favorites daily.
+                                        Kochi residents and international visitors celebrate the exceptional seafood and traditional Kerala menus served daily in our multi-cuisine restaurant.
                                     </p>
 
                                     {/* Tabs to select menu focus */}
@@ -604,21 +604,21 @@
                                     Engineered for <span className="italic">Timeless Delight</span>
                                 </h2>
                                 <p className="text-xs sm:text-sm text-luxury-300 font-light">
-                                    Enjoy a relaxing stay with all essential modern conveniences and quality hospitality services.
+                                    Every service is crafted to support continuous convenience for business and family holidays.
                                 </p>
                             </div>
 
                             {/* Icons Grid */}
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                                 {[
-                                    { title: "Free Wi-Fi", desc: "Free high-speed wireless networks for all guests.", icon: <Icons.Wifi /> },
-                                    { title: "Air Conditioning", desc: "Advanced in-room climate controls for your comfort.", icon: <Icons.AC /> },
-                                    { title: "Dining Options", desc: "Offering a variety of local and traditional dishes for an exquisite dining experience.", icon: <Icons.Utensils /> },
-                                    { title: "Room Service", desc: "Convenient service for dining delivered right to your room.", icon: <Icons.Bell /> },
-                                    { title: "Parking", desc: "Ample and secure parking available for all guests.", icon: <Icons.MapPin /> },
+                                    { title: "Free Wi-Fi", desc: "Ultra high speed wireless networks tailored for corporate tasks.", icon: <Icons.Wifi /> },
+                                    { title: "Air Conditioning", desc: "Advanced in-room climate controls for tropical Kerala days.", icon: <Icons.AC /> },
+                                    { title: "Premium Restaurant", desc: "Special local traditional Kerala meals and Cochin seafood.", icon: <Icons.Utensils /> },
+                                    { title: "24/7 Room Service", desc: "Impeccable dining brought directly to your bedroom door.", icon: <Icons.Bell /> },
+                                    { title: "Valet Safe Parking", desc: "Spacious customer parking zones with 24-hour security supervision.", icon: <Icons.MapPin /> },
                                     { title: "Banquet Halls", desc: "Vast local ballrooms perfectly suited for local families and events.", icon: <Icons.Award /> },
-                                    { title: "24/7 Front Desk", desc: "Continuous hospitality for check-in, assistance, and local recommendations.", icon: <Icons.Clock /> },
-                                    { title: "Daily Housekeeping", desc: "Ensuring a pristine and comfortable environment throughout your stay.", icon: <Icons.Sparkles /> }
+                                    { title: "Safe Reception Desk", desc: "Continuous hospitality check-in, taxi booking, and tour assistance.", icon: <Icons.Clock /> },
+                                    { title: "Business Privileges", desc: "High-tech presentation facilities and executive lounge options.", icon: <Icons.Sparkles /> }
                                 ].map((amenity, i) => (
                                     <div key={i} className="glass-card-dark p-6 rounded-2xl border border-white/5 space-y-4">
                                         <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-luxury-400">
@@ -640,7 +640,7 @@
                             <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
                                 <p className="text-xs uppercase tracking-[0.25em] font-bold text-luxury-500">Visual Portfolio</p>
                                 <h2 className="text-3xl sm:text-5xl font-serif-luxury font-light text-luxury-dark">
-                                    Inside <span className="italic">COCHIN HOME STAY</span>
+                                    Inside <span className="italic">Edassery Mansion</span>
                                 </h2>
                             </div>
 
@@ -721,8 +721,8 @@
                                     <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Repeat Guests</p>
                                 </div>
                                 <div>
-                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Resort</p>
-                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Comfort</p>
+                                    <p className="text-3xl font-serif-luxury font-bold text-luxury-500">Legendary</p>
+                                    <p className="text-[10px] uppercase tracking-wider text-luxury-500 mt-1">Kerala Seafood</p>
                                 </div>
                             </div>
 
@@ -736,10 +736,10 @@
                                 Direct Booking Offer
                             </span>
                             <h2 className="text-3xl sm:text-5xl font-serif-luxury font-light leading-tight">
-                                Ready for Your <span className="italic font-normal text-luxury-300 gold-underline">Peaceful Getaway?</span>
+                                Ready for Your <span className="italic font-normal text-luxury-300 gold-underline">Perfect Stay?</span>
                             </h2>
                             <p className="text-sm sm:text-base text-luxury-300 font-light max-w-xl mx-auto leading-relaxed">
-                                Book direct or contact our front office for a relaxing stay with comfortable accommodations and quality hospitality.
+                                Book direct on our portal or contact our front office directly to receive free high-speed breakfast and executive parking guarantees.
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -804,7 +804,7 @@
                                 <div className="lg:col-span-5 space-y-8 flex flex-col justify-between">
                                     <div className="space-y-6">
                                         <h3 className="text-2xl font-serif-luxury font-light text-luxury-dark">
-                                            The Perfect <span className="italic">Ernakulam Address</span>
+                                            The Perfect <span className="italic">Kochi Address</span>
                                         </h3>
                                         
                                         <div className="space-y-4">
@@ -813,10 +813,11 @@
                                                     📍
                                                 </div>
                                                 <div>
-                                                    <h4 className="text-[10px] uppercase tracking-widest font-bold text-luxury-600">Home Stay Location</h4>
+                                                    <h4 className="text-[10px] uppercase tracking-widest font-bold text-luxury-600">Mansion Location</h4>
                                                     <p className="text-sm text-luxury-800 mt-1 font-light leading-relaxed">
-                                                        Cochin Home Stay<br />
-                                                        Ernakulam, Kerala, India
+                                                        Hotel Edassery Mansion Premium<br />
+                                                        Kaloor - Kadavanthra Road, Kathrikadavu, Kaloor,<br />
+                                                        Ernakulam, Kochi, Kerala 682017
                                                     </p>
                                                 </div>
                                             </div>
@@ -880,19 +881,19 @@
                         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                             
                             <div className="space-y-4">
-                                <span className="font-serif-luxury text-2xl tracking-wider text-white">COCHIN HOME STAY</span>
+                                <span className="font-serif-luxury text-2xl tracking-wider text-white">EDASSERY MANSION</span>
                                 <p className="text-xs text-luxury-300 font-light leading-relaxed">
-                                    Cochin Home Stay offers a peaceful resort experience in Ernakulam, focusing on tranquil stays and authentic Kerala hospitality. Ideal for relaxation and exploring the region.
+                                    Hotel Edassery Mansion Premium sets the standard for boutique hospitality on the Kaloor-Kadavanthra corridor. Designed to combine business facilities with exceptional traditional Kerala dining.
                                 </p>
                             </div>
 
                             <div className="space-y-4">
                                 <h4 className="text-white text-xs font-bold uppercase tracking-widest">Our Service Suites</h4>
                                 <ul className="space-y-2 text-xs font-light text-luxury-300">
-                                    <li><a href="#rooms" className="hover:text-white transition">Standard Rooms</a></li>
-                                    <li><a href="#rooms" className="hover:text-white transition">Deluxe Rooms</a></li>
-                                    <li><a href="#rooms" className="hover:text-white transition">Family Rooms</a></li>
-                                    <li><a href="#rooms" className="hover:text-white transition">Suites</a></li>
+                                    <li><a href="#rooms" className="hover:text-white transition">Premium Rooms</a></li>
+                                    <li><a href="#rooms" className="hover:text-white transition">Executive Suites</a></li>
+                                    <li><a href="#rooms" className="hover:text-white transition">Family Interconnecting Rooms</a></li>
+                                    <li><a href="#rooms" className="hover:text-white transition">Deluxe Royal Accommodations</a></li>
                                 </ul>
                             </div>
 
@@ -901,7 +902,7 @@
                                 <ul className="space-y-2 text-xs font-light text-luxury-300">
                                     <li><a href="#home" className="hover:text-white transition">Home</a></li>
                                     <li><a href="#about" className="hover:text-white transition">Heritage & Philosophy</a></li>
-                                    <li><a href="#dining" className="hover:text-white transition">Local Delicacies</a></li>
+                                    <li><a href="#dining" className="hover:text-white transition">Seafood Dining</a></li>
                                     <li><a href="#gallery" className="hover:text-white transition">Image Showcase</a></li>
                                 </ul>
                             </div>
@@ -916,8 +917,8 @@
                         </div>
 
                         <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/5 text-center md:flex md:justify-between md:text-left text-xs text-luxury-400 font-light">
-                            <p>© {new Date().getFullYear()} Cochin Home Stay. All Rights Reserved.</p>
-                            <p className="mt-2 md:mt-0"> Ernakulam, Kerala, India</p>
+                            <p>© {new Date().getFullYear()} Hotel Edassery Mansion Premium. All Rights Reserved.</p>
+                            <p className="mt-2 md:mt-0"> Kathrikadavu, Kaloor, Ernakulam, Kerala</p>
                         </div>
                     </footer>
 
@@ -1008,10 +1009,10 @@
                                                         onChange={e => setBookingForm({...bookingForm, category: e.target.value})}
                                                         className="w-full bg-white border border-luxury-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-luxury-500 transition"
                                                     >
-                                                        <option value="Standard Room">Standard Room</option>
-                                                        <option value="Deluxe Room">Deluxe Room</option>
+                                                        <option value="Premium Suite">Premium Room</option>
+                                                        <option value="Executive Room">Executive Room</option>
                                                         <option value="Family Room">Family Room</option>
-                                                        <option value="Suite">Suite</option>
+                                                        <option value="Deluxe Accommodation">Deluxe Suite</option>
                                                     </select>
                                                 </div>
 
