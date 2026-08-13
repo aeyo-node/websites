@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHAKTHI | Premium Fitness Assessment & Athletic Studio</title>
+    <meta name="description" content="Know your body, movement, recovery, and training readiness with SHAKTHI's personalized assessment suite in Kazhakkuttam.">
+    
+    <!-- Premium Fonts: Inter & Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Manrope', 'sans-serif'],
+                    },
+                    colors: {
+                        spartan: {
+                            DEFAULT: '#19E68C', // Subtle Spartan Green Accent
+                            darkBg: '#0B0B0C',  // Near-black charcoal
+                            surface: '#141416', // Dark graphite
+                            cardBg: '#1A1A1E',
+                            textWhite: '#F5F5F7',
+                            textMuted: '#A1A1A6',
+                            border: 'rgba(255, 255, 255, 0.08)',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-spartan-darkBg text-spartan-textWhite antialiased selection:bg-spartan selection:text-black">
+
+    <!-- Screen Preloader -->
+    <div id="loader" class="fixed inset-0 bg-[#0B0B0C] z-[100] flex flex-col justify-center items-center transition-opacity duration-700">
+        <div class="text-2xl font-bold font-display tracking-tight text-spartan-textWhite mb-4">
+            SHAKTHI<span class="text-spartan">--></span>
+        </div>
+        <div class="h-[1px] w-32 bg-white/10 relative overflow-hidden rounded-full">
+            <div id="loader-progress" class="absolute left-0 top-0 h-full w-0 bg-spartan transition-all duration-500 ease-out"></div>
+        </div>
+    </div>
+
+    <!-- Floating Navigation Bar -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4 px-4 lg:px-12">
+        <div class="max-w-7xl mx-auto backdrop-blur-xl bg-[#141416]/80 border border-white/10 rounded-full px-6 py-3 flex justify-between items-center shadow-2xl">
+            <a href="#" class="text-lg font-extrabold font-display tracking-tight text-white">
+                SHAKTHI<span class="text-spartan">--></span>
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8 text-xs font-medium tracking-wide text-spartan-textMuted">
+                <a href="#assessment" class="hover:text-white transition-colors">Assessment</a>
+                <a href="#training" class="hover:text-white transition-colors">Departments</a>
+                <a href="#equipment" class="hover:text-white transition-colors">Equipment</a>
+                <a href="#reviews" class="hover:text-white transition-colors">Reviews</a>
+                <a href="#location" class="hover:text-white transition-colors">Location</a>
+            </div>
+
+            <div class="flex items-center space-x-3">
+                <a href="#assessment" class="bg-white text-black text-xs font-semibold px-5 py-2.5 rounded-full hover:bg-spartan hover:text-black transition-all">
+                    Start Assessment
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden text-white p-1" aria-label="Toggle Menu">
+                    <i data-lucide="menu" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-4 right-4 bg-[#141416]/95 backdrop-blur-2xl border border-white/10 rounded-3xl p-6 shadow-2xl transition-all">
+            <div class="flex flex-col space-y-4 text-sm font-medium text-spartan-textMuted">
+                <a href="#assessment" class="mobile-link hover:text-white">Fitness Assessment</a>
+                <a href="#training" class="mobile-link hover:text-white">Training Departments</a>
+                <a href="#equipment" class="mobile-link hover:text-white">Equipment Zone</a>
+                <a href="#reviews" class="mobile-link hover:text-white">Member Reviews</a>
+                <a href="#location" class="mobile-link hover:text-white">Studio Location</a>
+                <a href="tel:+918089550018" class="bg-spartan text-black text-center py-3 rounded-full text-xs font-semibold">
+                    Call +918904290773
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FIXED FULL-SCREEN HERO SECTION -->
+    <section class="relative min-h-screen flex items-center justify-start overflow-hidden pt-36 pb-20 lg:pt-40 lg:pb-24">
+        <!-- Background Video & Fallback Image Layer -->
+        <div class="absolute inset-0 z-0 overflow-hidden bg-[#0B0B0C]">
+            <video autoplay loop muted playsinline poster="images/hero_gym.jpg" class="w-full h-full object-cover filter brightness-[0.4] contrast-125">
+                <!-- User adds their video here -->
+                <source src="images/hero_video.mp4" type="video/mp4">
+            </video>
+            <!-- Gradient Overlay Masks to guarantee text readability -->
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0B0B0C] via-[#0B0B0C]/60 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-[#0B0B0C]/80 via-transparent to-transparent"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full">
+            <div class="max-w-2xl space-y-6">
+                <div class="inline-flex items-center space-x-2 bg-white/5 border border-white/10 px-3.5 py-1.5 rounded-full backdrop-blur-md">
+                    <span class="w-2 h-2 rounded-full bg-spartan animate-pulse"></span>
+                    <span class="text-[11px] font-semibold tracking-widest text-spartan uppercase">SHAKTHI ASSESSMENT PLATFORM</span>
+                </div>
+
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold font-display tracking-tight text-white leading-[1.05]">
+                    KNOW YOUR BODY.<br>
+                    <span class="text-spartan-textMuted font-light">BUILD YOUR POTENTIAL.</span>
+                </h1>
+
+                <p class="text-sm sm:text-base text-spartan-textMuted font-normal leading-relaxed max-w-lg">
+                    A personalized fitness assessment that helps you understand your body composition, movement quality, recovery, and training readiness.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                    <a href="#assessment" class="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-white text-black font-semibold text-xs tracking-wide hover:bg-spartan transition-all">
+                        Start Assessment <span class="ml-2">→</span>
+                    </a>
+                    <a href="#training" class="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-transparent border border-white/20 text-white font-semibold text-xs tracking-wide hover:border-white transition-all">
+                        Explore Departments
+                    </a>
+                </div>
+
+                <!-- Scroll Indicator -->
+                <div class="pt-8 flex items-center space-x-3 text-[11px] text-spartan-textMuted tracking-widest font-mono">
+                    <span>SCROLL TO EXPLORE</span>
+                    <span class="w-8 h-[1px] bg-white/20"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 1: YOUR HEALTH, UNDERSTOOD -->
+    <section class="py-24 lg:py-32 bg-[#0B0B0C] border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="max-w-3xl mb-16 space-y-4">
+                <p class="text-xs font-semibold tracking-[0.2em] text-spartan uppercase">THE ASSESSMENTS</p>
+                <h2 class="text-3xl sm:text-5xl font-extrabold font-display tracking-tight text-white leading-tight">
+                    YOUR HEALTH, UNDERSTOOD.
+                </h2>
+                <p class="text-base text-spartan-textMuted font-normal leading-relaxed">
+                    Most people know their weight. Very few know their readiness, movement quality, or true recovery rate.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="space-y-3 border-t border-white/10 pt-6">
+                    <span class="text-xs font-mono text-spartan">01</span>
+                    <h3 class="text-xl font-bold font-display text-white">Body</h3>
+                    <p class="text-xs text-spartan-textMuted leading-relaxed">Body composition, BMI, and ideal weight parameters.</p>
+                </div>
+
+                <div class="space-y-3 border-t border-white/10 pt-6">
+                    <span class="text-xs font-mono text-spartan">02</span>
+                    <h3 class="text-xl font-bold font-display text-white">Readiness</h3>
+                    <p class="text-xs text-spartan-textMuted leading-relaxed">Daily energy, muscle soreness, and cardiovascular readiness score.</p>
+                </div>
+
+                <div class="space-y-3 border-t border-white/10 pt-6">
+                    <span class="text-xs font-mono text-spartan">03</span>
+                    <h3 class="text-xl font-bold font-display text-white">Movement</h3>
+                    <p class="text-xs text-spartan-textMuted leading-relaxed">Mobility, shoulder overhead reach, and functional strength balance.</p>
+                </div>
+
+                <div class="space-y-3 border-t border-white/10 pt-6">
+                    <span class="text-xs font-mono text-spartan">04</span>
+                    <h3 class="text-xl font-bold font-display text-white">Recovery</h3>
+                    <p class="text-xs text-spartan-textMuted leading-relaxed">Sleep quality, weekly stress loads, and rest optimization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: INTERACTIVE ASSESSMENT ENGINE -->
+    <section id="assessment" class="py-24 lg:py-32 bg-[#141416] border-b border-white/5">
+        <div class="max-w-5xl mx-auto px-6 lg:px-12">
+            
+            <!-- Assessment Stepper Navigation -->
+            <div class="flex justify-between items-center mb-12 border-b border-white/10 pb-4 overflow-x-auto gap-4 scrollbar-none">
+                <button onclick="goToStep(1)" id="step-nav-1" class="step-nav-btn step-active text-xs font-semibold text-white flex items-center space-x-2 shrink-0">
+                    <span class="w-2 h-2 rounded-full bg-spartan"></span>
+                    <span>1. Body Composition</span>
+                </button>
+                <button onclick="goToStep(2)" id="step-nav-2" class="step-nav-btn text-xs font-semibold text-spartan-textMuted hover:text-white flex items-center space-x-2 shrink-0">
+                    <span class="w-2 h-2 rounded-full bg-white/20"></span>
+                    <span>2. Readiness Score</span>
+                </button>
+                <button onclick="goToStep(3)" id="step-nav-3" class="step-nav-btn text-xs font-semibold text-spartan-textMuted hover:text-white flex items-center space-x-2 shrink-0">
+                    <span class="w-2 h-2 rounded-full bg-white/20"></span>
+                    <span>3. Movement Screen</span>
+                </button>
+                <button onclick="goToStep(4)" id="step-nav-4" class="step-nav-btn text-xs font-semibold text-spartan-textMuted hover:text-white flex items-center space-x-2 shrink-0">
+                    <span class="w-2 h-2 rounded-full bg-white/20"></span>
+                    <span>4. Recovery Screen</span>
+                </button>
+                <button onclick="goToStep(5)" id="step-nav-5" class="step-nav-btn text-xs font-semibold text-spartan-textMuted hover:text-white flex items-center space-x-2 shrink-0">
+                    <span class="w-2 h-2 rounded-full bg-white/20"></span>
+                    <span>5. 30-Day Plan</span>
+                </button>
+            </div>
+
+            <!-- STEP 1: BODY COMPOSITION -->
+            <div id="step-1" class="step-content space-y-10">
+                <div class="space-y-1">
+                    <h3 class="text-2xl sm:text-3xl font-extrabold font-display text-white">Tell us about you</h3>
+                    <p class="text-xs sm:text-sm text-spartan-textMuted">We calculate your healthy body mass parameters based on height and weight.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                    <div class="space-y-6">
+                        <!-- Gender Selection -->
+                        <div class="space-y-2">
+                            <label class="text-xs font-medium text-spartan-textMuted">Gender</label>
+                            <div class="flex space-x-3">
+                                <button type="button" onclick="setGender('male')" id="g-male" class="gender-btn btn-active px-5 py-2.5 rounded-xl border border-spartan text-xs font-semibold text-white">Male</button>
+                                <button type="button" onclick="setGender('female')" id="g-female" class="gender-btn px-5 py-2.5 rounded-xl border border-white/10 text-xs font-semibold text-spartan-textMuted hover:text-white">Female</button>
+                                <button type="button" onclick="setGender('other')" id="g-other" class="gender-btn px-5 py-2.5 rounded-xl border border-white/10 text-xs font-semibold text-spartan-textMuted hover:text-white">Other</button>
+                            </div>
+                        </div>
+
+                        <!-- Height Slider -->
+                        <div class="space-y-2">
+                            <div class="flex justify-between text-xs font-medium">
+                                <span class="text-spartan-textMuted">Height</span>
+                                <span id="height-disp" class="text-white font-bold">180 cm</span>
+                            </div>
+                            <input type="range" id="height-slider" min="140" max="210" value="180" class="custom-slider w-full" oninput="calculateAll()">
+                        </div>
+
+                        <!-- Weight Slider -->
+                        <div class="space-y-2">
+                            <div class="flex justify-between text-xs font-medium">
+                                <span class="text-spartan-textMuted">Weight</span>
+                                <span id="weight-disp" class="text-white font-bold">70.5 kg</span>
+                            </div>
+                            <input type="range" id="weight-slider" min="40" max="140" value="70.5" step="0.5" class="custom-slider w-full" oninput="calculateAll()">
+                        </div>
+                    </div>
+
+                    <!-- Clean Output Card -->
+                    <div class="bg-[#1A1A1E] border border-white/10 p-8 rounded-3xl space-y-5 text-center sm:text-left">
+                        <span class="text-xs font-medium text-spartan-textMuted">Calculated BMI Score</span>
+                        <div id="bmi-val" class="text-5xl font-extrabold font-display text-white">21.73</div>
+                        <div id="bmi-label" class="text-xs font-semibold text-spartan">Healthy Weight Range</div>
+                        <p id="bmi-range" class="text-xs text-spartan-textMuted pt-4 border-t border-white/10">
+                            Target healthy weight for your height: <strong class="text-white">59.9 kg — 81.0 kg</strong>
+                        </p>
+                        <button onclick="goToStep(2)" class="w-full py-3 rounded-xl bg-white text-black text-xs font-semibold hover:bg-spartan transition-all">
+                            Next: Training Readiness →
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="step-2" class="step-content hidden space-y-10">
+                <div class="space-y-1">
+                    <h3 class="text-2xl sm:text-3xl font-extrabold font-display text-white">How ready are you to train today?</h3>
+                    <p class="text-xs sm:text-sm text-spartan-textMuted">A 30-second check of your energy, recovery, and heart rate parameters.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                    <div class="space-y-5">
+                        <div class="space-y-2">
+                            <div class="flex justify-between text-xs font-medium">
+                                <span class="text-spartan-textMuted">Sleep Duration (Last Night)</span>
+                                <span id="sleep-val" class="text-white font-semibold">7.5 Hours</span>
+                            </div>
+                            <input type="range" id="sleep-slider" min="4" max="10" step="0.5" value="7.5" class="custom-slider w-full" oninput="calculateAll()">
+                        </div>
+
+                        <div class="space-y-2">
+                            <div class="flex justify-between text-xs font-medium">
+                                <span class="text-spartan-textMuted">Energy Level (1 to 10)</span>
+                                <span id="energy-val" class="text-white font-semibold">7 / 10</span>
+                            </div>
+                            <input type="range" id="energy-slider" min="1" max="10" value="7" class="custom-slider w-full" oninput="calculateAll()">
+                        </div>
+
+                        <div class="space-y-2">
+                            <div class="flex justify-between text-xs font-medium">
+                                <span class="text-spartan-textMuted">Muscle Soreness (0 to 10)</span>
+                                <span id="soreness-val" class="text-white font-semibold">3 / 10</span>
+                            </div>
+                            <input type="range" id="soreness-slider" min="0" max="10" value="3" class="custom-slider w-full" oninput="calculateAll()">
+                        </div>
+
+                        <div class="space-y-2">
+                            <div class="flex justify-between text-xs font-medium">
+                                <span class="text-spartan-textMuted">Resting Heart Rate</span>
+                                <span id="rhr-val" class="text-white font-semibold">65 BPM</span>
+                            </div>
+                            <input type="range" id="rhr-slider" min="45" max="110" value="65" class="custom-slider w-full" oninput="calculateAll()">
+                        </div>
+                    </div>
+
+                    <!-- Circular Progress Display -->
+                    <div class="bg-[#1A1A1E] border border-white/10 p-8 rounded-3xl flex flex-col items-center text-center space-y-5">
+                        <span class="text-xs font-medium text-spartan-textMuted">Readiness Index</span>
+                        <div class="relative w-32 h-32 flex items-center justify-center">
+                            <svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="42" stroke="rgba(255,255,255,0.08)" stroke-width="6" fill="transparent"></circle>
+                                <circle id="readiness-ring" cx="50" cy="50" r="42" stroke="#19E68C" stroke-width="6" fill="transparent" stroke-dasharray="263.8" stroke-dashoffset="52" stroke-linecap="round" class="transition-all duration-700"></circle>
+                            </svg>
+                            <span id="readiness-score" class="absolute text-3xl font-extrabold font-display text-white">80</span>
+                        </div>
+                        <div class="space-y-1">
+                            <div id="readiness-tag" class="text-xs font-semibold text-spartan">High Readiness</div>
+                            <p id="readiness-rec" class="text-xs text-spartan-textMuted leading-relaxed">Your indicators look strong. You're ready for a full workout.</p>
+                        </div>
+                        <div class="flex space-x-3 w-full">
+                            <button onclick="goToStep(1)" class="w-1/3 py-2.5 rounded-xl border border-white/10 text-xs font-medium text-spartan-textMuted hover:text-white">Back</button>
+                            <button onclick="goToStep(3)" class="w-2/3 py-2.5 rounded-xl bg-white text-black text-xs font-semibold hover:bg-spartan transition-all">Next: Movement →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 3: MOVEMENT SCREEN -->
+            <div id="step-3" class="step-content hidden space-y-10">
+                <div class="space-y-1">
+                    <h3 class="text-2xl sm:text-3xl font-extrabold font-display text-white">How well does your body move?</h3>
+                    <p class="text-xs sm:text-sm text-spartan-textMuted">Complete a few simple movement checks to identify your mobility opportunities.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                    <div class="space-y-5">
+                        <div class="space-y-2">
+                            <label class="text-xs font-medium text-spartan-textMuted">Deep Squat (Below parallel with heels flat?)</label>
+                            <div class="flex space-x-2">
+                                <button type="button" onclick="setOpt('squat', 'yes')" id="sq-yes" class="opt-btn squat-opt opt-active px-4 py-2 rounded-xl border border-spartan text-xs font-medium text-white">Yes</button>
+                                <button type="button" onclick="setOpt('squat', 'diff')" id="sq-diff" class="opt-btn squat-opt px-4 py-2 rounded-xl border border-white/10 text-xs font-medium text-spartan-textMuted hover:text-white">With difficulty</button>
+                                <button type="button" onclick="setOpt('squat', 'no')" id="sq-no" class="opt-btn squat-opt px-4 py-2 rounded-xl border border-white/10 text-xs font-medium text-spartan-textMuted hover:text-white">No</button>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-xs font-medium text-spartan-textMuted">Shoulder Overhead Reach (Without back arching?)</label>
+                            <div class="flex space-x-2">
+                                <button type="button" onclick="setOpt('shoulder', 'yes')" id="sh-yes" class="opt-btn shoulder-opt opt-active px-4 py-2 rounded-xl border border-spartan text-xs font-medium text-white">Yes</button>
+                                <button type="button" onclick="setOpt('shoulder', 'lim')" id="sh-lim" class="opt-btn shoulder-opt px-4 py-2 rounded-xl border border-white/10 text-xs font-medium text-spartan-textMuted hover:text-white">Limited</button>
+                                <button type="button" onclick="setOpt('shoulder', 'no')" id="sh-no" class="opt-btn shoulder-opt px-4 py-2 rounded-xl border border-white/10 text-xs font-medium text-spartan-textMuted hover:text-white">No</button>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <div class="flex justify-between text-xs font-medium">
+                                <span class="text-spartan-textMuted">Clean Push-Ups Capacity</span>
+                                <span id="pushup-disp" class="text-white font-semibold">20 Reps</span>
+                            </div>
+                            <input type="range" id="pushup-slider" min="0" max="50" value="20" class="custom-slider w-full" oninput="calculateAll()">
+                        </div>
+                    </div>
+
+                    <div class="bg-[#1A1A1E] border border-white/10 p-8 rounded-3xl space-y-5">
+                        <div class="flex justify-between items-baseline">
+                            <span class="text-xs font-medium text-spartan-textMuted">Movement Score</span>
+                            <span id="movement-score" class="text-3xl font-extrabold font-display text-white">78 / 100</span>
+                        </div>
+                        <div class="space-y-3 pt-2">
+                            <div>
+                                <div class="flex justify-between text-xs text-spartan-textMuted mb-1">
+                                    <span>Lower Body Mobility</span>
+                                    <span id="mb-lower-val">80%</span>
+                                </div>
+                                <div class="h-1 w-full bg-white/10 rounded-full overflow-hidden">
+                                    <div id="mb-lower-bar" class="h-full bg-spartan w-[80%] transition-all"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs text-spartan-textMuted mb-1">
+                                    <span>Upper Body Mobility</span>
+                                    <span id="mb-upper-val">75%</span>
+                                </div>
+                                <div class="h-1 w-full bg-white/10 rounded-full overflow-hidden">
+                                    <div id="mb-upper-bar" class="h-full bg-white/80 w-[75%] transition-all"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-3 border-t border-white/10">
+                            <span class="text-xs font-semibold text-spartan">Biggest Opportunity</span>
+                            <p id="movement-opp" class="text-xs text-spartan-textMuted mt-1">Hip and ankle mobility integration</p>
+                        </div>
+                        <div class="flex space-x-3 w-full">
+                            <button onclick="goToStep(2)" class="w-1/3 py-2.5 rounded-xl border border-white/10 text-xs font-medium text-spartan-textMuted hover:text-white">Back</button>
+                            <button onclick="goToStep(4)" class="w-2/3 py-2.5 rounded-xl bg-white text-black text-xs font-semibold hover:bg-spartan transition-all">Next: Recovery →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 4: RECOVERY SCREEN -->
+            <div id="step-4" class="step-content hidden space-y-10">
+                <div class="space-y-1">
+                    <h3 class="text-2xl sm:text-3xl font-extrabold font-display text-white">How well are you recovering?</h3>
+                    <p class="text-xs sm:text-sm text-spartan-textMuted">Your training is only as effective as your body's ability to adapt and rest.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                    <div class="space-y-5">
+                        <div class="space-y-2">
+                            <label class="text-xs font-medium text-spartan-textMuted">How have you been feeling lately?</label>
+                            <div class="flex space-x-2">
+                                <button type="button" onclick="setOpt('feel', 'great')" id="fl-great" class="opt-btn feel-opt opt-active px-3.5 py-2 rounded-xl border border-spartan text-xs font-medium text-white">Great</button>
+                                <button type="button" onclick="setOpt('feel', 'good')" id="fl-good" class="opt-btn feel-opt px-3.5 py-2 rounded-xl border border-white/10 text-xs font-medium text-spartan-textMuted hover:text-white">Good</button>
+                                <button type="button" onclick="setOpt('feel', 'okay')" id="fl-okay" class="opt-btn feel-opt px-3.5 py-2 rounded-xl border border-white/10 text-xs font-medium text-spartan-textMuted hover:text-white">Okay</button>
+                                <button type="button" onclick="setOpt('feel', 'drained')" id="fl-drained" class="opt-btn feel-opt px-3.5 py-2 rounded-xl border border-white/10 text-xs font-medium text-spartan-textMuted hover:text-white">Drained</button>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <div class="flex justify-between text-xs font-medium">
+                                <span class="text-spartan-textMuted">Weekly Stress Level</span>
+                                <span id="stress-val" class="text-white font-semibold">4 / 10</span>
+                            </div>
+                            <input type="range" id="stress-slider" min="1" max="10" value="4" class="custom-slider w-full" oninput="calculateAll()">
+                        </div>
+                    </div>
+
+                    <div class="bg-[#1A1A1E] border border-white/10 p-8 rounded-3xl space-y-5">
+                        <div class="flex justify-between items-baseline">
+                            <span class="text-xs font-medium text-spartan-textMuted">Recovery Index</span>
+                            <span id="recovery-score" class="text-3xl font-extrabold font-display text-white">74 / 100</span>
+                        </div>
+                        <div class="space-y-1">
+                            <span class="text-xs font-semibold text-spartan">Status</span>
+                            <p id="recovery-status" class="text-xs text-spartan-textMuted">Balanced recovery indicators. Maintain current sleep consistency.</p>
+                        </div>
+                        <div class="flex space-x-3 w-full pt-2">
+                            <button onclick="goToStep(3)" class="w-1/3 py-2.5 rounded-xl border border-white/10 text-xs font-medium text-spartan-textMuted hover:text-white">Back</button>
+                            <button onclick="goToStep(5)" class="w-2/3 py-2.5 rounded-xl bg-spartan text-black text-xs font-semibold hover:bg-opacity-90 transition-all">Generate 30-Day Plan →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 5: PERSONAL 30-DAY -->NESS PLAN -->
+            <div id="step-5" class="step-content hidden space-y-10">
+                <div class="space-y-1 border-b border-white/10 pb-6">
+                    <p class="text-xs font-semibold tracking-[0.2em] text-spartan uppercase">YOUR -->NESS PROFILE</p>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold font-display text-white">YOUR NEXT 30 DAYS.</h3>
+                    <p class="text-xs sm:text-sm text-spartan-textMuted">A training direction built around your current assessment scores.</p>
+                </div>
+
+                <!-- Scores Breakdown Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
+                    <div class="bg-[#1A1A1E] p-4 rounded-2xl border border-white/5 space-y-1">
+                        <span class="text-[11px] text-spartan-textMuted">Body Composition</span>
+                        <div id="summary-bmi" class="text-base font-bold text-white">21.7 BMI</div>
+                    </div>
+                    <div class="bg-[#1A1A1E] p-4 rounded-2xl border border-white/5 space-y-1">
+                        <span class="text-[11px] text-spartan-textMuted">Readiness</span>
+                        <div id="summary-readiness" class="text-base font-bold text-spartan">80 / 100</div>
+                    </div>
+                    <div class="bg-[#1A1A1E] p-4 rounded-2xl border border-white/5 space-y-1">
+                        <span class="text-[11px] text-spartan-textMuted">Movement</span>
+                        <div id="summary-movement" class="text-base font-bold text-white">78 / 100</div>
+                    </div>
+                    <div class="bg-[#1A1A1E] p-4 rounded-2xl border border-white/5 space-y-1">
+                        <span class="text-[11px] text-spartan-textMuted">Recovery</span>
+                        <div id="summary-recovery" class="text-base font-bold text-white">74 / 100</div>
+                    </div>
+                    <div class="col-span-2 md:col-span-1 bg-white text-black p-4 rounded-2xl space-y-1">
+                        <span class="text-[11px] text-black/60 font-semibold uppercase">Overall Score</span>
+                        <div id="summary-master" class="text-xl font-extrabold font-display">78</div>
+                    </div>
+                </div>
+
+                <!-- Identified Opportunity Box -->
+                <div class="bg-[#1A1A1E] border border-white/10 p-6 rounded-2xl space-y-2">
+                    <span class="text-xs font-semibold text-spartan">Primary Opportunity</span>
+                    <h4 id="opp-headline" class="text-base font-bold text-white">Build cardiovascular endurance and hip mobility</h4>
+                    <p id="opp-desc" class="text-xs text-spartan-textMuted leading-relaxed">Your results suggest that integrating mobility warm-ups prior to strength loading will yield the best long-term results.</p>
+                </div>
+
+                <!-- 4-Week Horizontal Timeline -->
+                <div class="space-y-4">
+                    <h4 class="text-lg font-bold font-display text-white">30-Day Training Roadmap</h4>
+                    <div class="flex space-x-2 border-b border-white/10 pb-3">
+                        <button onclick="setWeek(1)" id="w-1" class="week-btn w-active text-xs font-semibold px-4 py-2 rounded-xl border border-spartan text-white">Week 01: Foundation</button>
+                        <button onclick="setWeek(2)" id="w-2" class="week-btn text-xs font-semibold px-4 py-2 rounded-xl border border-white/10 text-spartan-textMuted hover:text-white">Week 02: Build</button>
+                        <button onclick="setWeek(3)" id="w-3" class="week-btn text-xs font-semibold px-4 py-2 rounded-xl border border-white/10 text-spartan-textMuted hover:text-white">Week 03: Progress</button>
+                        <button onclick="setWeek(4)" id="w-4" class="week-btn text-xs font-semibold px-4 py-2 rounded-xl border border-white/10 text-spartan-textMuted hover:text-white">Week 04: Perform</button>
+                    </div>
+
+                    <div id="days-accordion" class="space-y-2">
+                        <!-- Populated dynamically via JS -->
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-4 pt-4 border-t border-white/10">
+                    <p class="text-xs text-spartan-textMuted">This assessment is a general wellness screen and not a medical diagnosis.</p>
+                    <a href="tel:+918089550018" class="px-7 py-3 rounded-full bg-spartan text-black font-semibold text-xs hover:bg-opacity-90 transition-all">
+                        Book a Free Trial Session
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 3: DEPARTMENTS / "TRAIN WITH PURPOSE" INTERACTIVE CARDS -->
+    <section id="training" class="py-24 lg:py-32 bg-[#0B0B0C] border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            
+            <div class="max-w-2xl mb-12 space-y-3">
+                <p class="text-xs font-semibold tracking-[0.2em] text-spartan uppercase">SHAKTHI DEPARTMENTS</p>
+                <h2 class="text-3xl sm:text-5xl font-extrabold font-display tracking-tight text-white leading-tight">
+                    TRAIN WITH PURPOSE.
+                </h2>
+                <p class="text-sm sm:text-base text-spartan-textMuted font-normal leading-relaxed">
+                    Structured training across specialized fitness disciplines. Explore our specialized departments below.
+                </p>
+            </div>
+
+            <!-- Interactive Department Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Card 1: Endurance -->
+                <div class="group relative rounded-3xl overflow-hidden border border-white/10 bg-[#141416] h-[380px] flex flex-col justify-end p-8 transition-all duration-500 hover:border-spartan/50">
+                    <img src="images/endurance.jpg" alt="Endurance & Cardio" class="absolute inset-0 w-full h-full object-cover filter brightness-[0.45] group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0B0B0C] via-[#0B0B0C]/40 to-transparent"></div>
+                    <div class="relative z-10 space-y-2">
+                        <span class="text-[10px] font-mono text-spartan uppercase tracking-widest">01 / ENDURANCE</span>
+                        <h3 class="text-2xl font-bold font-display text-white">Endurance & VO2 Peak</h3>
+                        <p class="text-xs text-spartan-textMuted leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">
+                            Intervallic conditioning, cardio platforms, and stamina building designed for cardiorespiratory adaptation.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Strength & Bodybuilding -->
+                <div class="group relative rounded-3xl overflow-hidden border border-white/10 bg-[#141416] h-[380px] flex flex-col justify-end p-8 transition-all duration-500 hover:border-spartan/50">
+                    <img src="images/bodybuilding.jpg" alt="Strength & Bodybuilding" class="absolute inset-0 w-full h-full object-cover filter brightness-[0.45] group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0B0B0C] via-[#0B0B0C]/40 to-transparent"></div>
+                    <div class="relative z-10 space-y-2">
+                        <span class="text-[10px] font-mono text-spartan uppercase tracking-widest">02 / HYPERTROPHY</span>
+                        <h3 class="text-2xl font-bold font-display text-white">Strength & Bodybuilding</h3>
+                        <p class="text-xs text-spartan-textMuted leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">
+                            Barbell compound platforms, calibrated plate stack machines, and progressive overload protocols.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Functional Athleticism -->
+                <div class="group relative rounded-3xl overflow-hidden border border-white/10 bg-[#141416] h-[380px] flex flex-col justify-end p-8 transition-all duration-500 hover:border-spartan/50">
+                    <img src="images/athleticism.jpg" alt="Functional Fitness" class="absolute inset-0 w-full h-full object-cover filter brightness-[0.45] group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0B0B0C] via-[#0B0B0C]/40 to-transparent"></div>
+                    <div class="relative z-10 space-y-2">
+                        <span class="text-[10px] font-mono text-spartan uppercase tracking-widest">03 / FUNCTIONAL</span>
+                        <h3 class="text-2xl font-bold font-display text-white">Functional Athleticism</h3>
+                        <p class="text-xs text-spartan-textMuted leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">
+                            Agility drills, kettlebell work, and core stability systems for multi-directional real-world movement.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 4: Mobility & Recovery -->
+                <div class="group relative rounded-3xl overflow-hidden border border-white/10 bg-[#141416] h-[380px] flex flex-col justify-end p-8 transition-all duration-500 hover:border-spartan/50">
+                    <img src="images/recover.jpg" alt="Recovery & Mobility" class="absolute inset-0 w-full h-full object-cover filter brightness-[0.45] group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0B0B0C] via-[#0B0B0C]/40 to-transparent"></div>
+                    <div class="relative z-10 space-y-2">
+                        <span class="text-[10px] font-mono text-spartan uppercase tracking-widest">04 / RECOVERY</span>
+                        <h3 class="text-2xl font-bold font-display text-white">Mobility & Active Recovery</h3>
+                        <p class="text-xs text-spartan-textMuted leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">
+                            Thoracic reaches, foam rolling protocols, and climate-controlled decompression environments.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 5: Personal Coaching -->
+                <div class="group relative rounded-3xl overflow-hidden border border-white/10 bg-[#141416] h-[380px] flex flex-col justify-end p-8 transition-all duration-500 hover:border-spartan/50 lg:col-span-2">
+                    <img src="images/personalized2.jpg" alt="Personal Coaching" class="absolute inset-0 w-full h-full object-cover filter brightness-[0.45] group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0B0B0C] via-[#0B0B0C]/40 to-transparent"></div>
+                    <div class="relative z-10 space-y-2">
+                        <span class="text-[10px] font-mono text-spartan uppercase tracking-widest">05 / COACHING</span>
+                        <h3 class="text-2xl font-bold font-display text-white">Personalized Trainer Guidance</h3>
+                        <p class="text-xs text-spartan-textMuted leading-relaxed max-w-xl opacity-80 group-hover:opacity-100 transition-opacity">
+                            1-on-1 certified coaching directly calibrated against your assessment scores for biomechanical form correction and goal execution.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: EQUIPMENT -->
+    <section id="equipment" class="py-24 lg:py-32 bg-[#141416] border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="max-w-2xl mb-12 space-y-3">
+                <p class="text-xs font-semibold tracking-[0.2em] text-spartan uppercase">INFRASTRUCTURE</p>
+                <h2 class="text-3xl sm:text-5xl font-extrabold font-display text-white">BUILT FOR SERIOUS TRAINING.</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-[#1A1A1E] p-6 rounded-2xl border border-white/5 space-y-2 hover:border-white/20 transition-all">
+                    <span class="text-xs font-mono text-spartan">01</span>
+                    <h4 class="text-lg font-bold text-white">Strength</h4>
+                    <p class="text-xs text-spartan-textMuted leading-relaxed">Calibrated plates, Olympic bars, and squat racks.</p>
+                </div>
+                <div class="bg-[#1A1A1E] p-6 rounded-2xl border border-white/5 space-y-2 hover:border-white/20 transition-all">
+                    <span class="text-xs font-mono text-spartan">02</span>
+                    <h4 class="text-lg font-bold text-white">Conditioning</h4>
+                    <p class="text-xs text-spartan-textMuted leading-relaxed">Cardiovascular machinery and intervallic stations.</p>
+                </div>
+                <div class="bg-[#1A1A1E] p-6 rounded-2xl border border-white/5 space-y-2 hover:border-white/20 transition-all">
+                    <span class="text-xs font-mono text-spartan">03</span>
+                    <h4 class="text-lg font-bold text-white">Functional</h4>
+                    <p class="text-xs text-spartan-textMuted leading-relaxed">Spacious rubberized floor for unhindered movement.</p>
+                </div>
+                <div class="bg-[#1A1A1E] p-6 rounded-2xl border border-white/5 space-y-2 hover:border-white/20 transition-all">
+                    <span class="text-xs font-mono text-spartan">04</span>
+                    <h4 class="text-lg font-bold text-white">Recovery</h4>
+                    <p class="text-xs text-spartan-textMuted leading-relaxed">Full climate control for uncompromised stamina.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: EDITORIAL REVIEWS -->
+    <section id="reviews" class="py-24 lg:py-32 bg-[#0B0B0C] border-b border-white/5">
+        <div class="max-w-4xl mx-auto px-6 lg:px-12 text-center space-y-10">
+            <p class="text-xs font-semibold tracking-[0.2em] text-spartan uppercase">MEMBER REVIEWS</p>
+            <h2 class="text-3xl sm:text-5xl font-extrabold font-display text-white">WHAT OUR MEMBERS SAY.</h2>
+
+            <div class="space-y-4">
+                <p id="review-quote" class="text-lg sm:text-2xl font-light text-white italic leading-relaxed">
+                    "Clean environment, great equipment, and a very positive vibe. Spacious workout area and knowledgeable trainers."
+                </p>
+                <div class="text-xs font-semibold text-spartan uppercase tracking-wider">— Verified Google Review (4.9★ across 448+ reviews)</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: LOCATION & HOURS -->
+    <section id="location" class="py-24 lg:py-32 bg-[#141416] border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-5 space-y-6">
+                <p class="text-xs font-semibold tracking-[0.2em] text-spartan uppercase">STUDIO LOCATION</p>
+                <h2 class="text-3xl sm:text-5xl font-extrabold font-display text-white">COME TRAIN WITH US.</h2>
+                
+                <div class="space-y-2 text-xs sm:text-sm text-spartan-textMuted font-normal">
+                    <p>Chittumala</p>
+                    <p class="text-white font-semibold">Monday — Saturday: 06:00 AM — 11:00 PM</p>
+                    <p><a href="tel:+918089550018" class="text-spartan hover:underline">+918904290773</a></p>
+                </div>
+
+                <a href="https://maps.google.com/?cid=12143003050186989408" target="_blank" class="inline-block px-7 py-3 rounded-full bg-white text-black text-xs font-semibold hover:bg-spartan transition-all">
+                    Get Directions on Google Maps
+                </a>
+            </div>
+
+            <div class="lg:col-span-7 h-[340px] rounded-3xl overflow-hidden border border-white/10 relative">
+                <iframe 
+                    src="https://www.google.com/maps?q=Chittumala&output=embed" 
+                    class="w-full h-full border-0 grayscale invert opacity-70" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- MINIMAL FOOTER -->
+    <footer class="bg-[#0B0B0C] py-10 border-t border-white/5 text-spartan-textMuted text-xs">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+            <div class="font-bold text-white text-sm">SHAKTHI<span class="text-spartan">--></span></div>
+            <div class="flex space-x-6">
+                <a href="#assessment" class="hover:text-white transition-colors">Assessment</a>
+                <a href="#training" class="hover:text-white transition-colors">Departments</a>
+                <a href="#equipment" class="hover:text-white transition-colors">Equipment</a>
+                <a href="#location" class="hover:text-white transition-colors">Location</a>
+            </div>
+            <p>© 2025 SHAKTHI. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE ENGINE -->
+    <script>
+        lucide.createIcons();
+
+        // Screen Preloader
+        window.addEventListener('load', () => {
+            const bar = document.getElementById('loader-progress');
+            const loader = document.getElementById('loader');
+            bar.style.width = '100%';
+            setTimeout(() => {
+                loader.classList.add('opacity-0', 'pointer-events-none');
+            }, 300);
+        });
+
+        // Mobile Menu
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        document.querySelectorAll('.mobile-link').forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+        // Assessment State Store
+        const state = {
+            gender: 'male',
+            height: 180,
+            weight: 70.5,
+            bmi: 21.73,
+            sleep: 7.5,
+            energy: 7,
+            soreness: 3,
+            rhr: 65,
+            readiness: 80,
+            squat: 'yes',
+            shoulder: 'yes',
+            pushups: 20,
+            movement: 78,
+            feel: 'great',
+            stress: 4,
+            recovery: 74,
+            master: 78,
+            currentWeek: 1
+        };
+
+        // Step Navigation
+        function goToStep(stepNum) {
+            document.querySelectorAll('.step-content').forEach(el => el.classList.add('hidden'));
+            document.getElementById(`step-${stepNum}`).classList.remove('hidden');
+
+            document.querySelectorAll('.step-nav-btn').forEach((btn, idx) => {
+                if (idx + 1 === stepNum) {
+                    btn.classList.add('step-active', 'text-white');
+                    btn.classList.remove('text-spartan-textMuted');
+                    btn.querySelector('span').className = "w-2 h-2 rounded-full bg-spartan";
+                } else {
+                    btn.classList.remove('step-active', 'text-white');
+                    btn.classList.add('text-spartan-textMuted');
+                    btn.querySelector('span').className = "w-2 h-2 rounded-full bg-white/20";
+                }
+            });
+
+            if (stepNum === 5) render30DayPlan();
+            document.getElementById('assessment').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function setGender(g) {
+            state.gender = g;
+            document.querySelectorAll('.gender-btn').forEach(b => {
+                b.classList.remove('btn-active', 'border-spartan', 'text-white');
+                b.classList.add('border-white/10', 'text-spartan-textMuted');
+            });
+            document.getElementById(`g-${g}`).classList.add('btn-active', 'border-spartan', 'text-white');
+            calculateAll();
+        }
+
+        function setOpt(type, val) {
+            state[type] = val;
+            document.querySelectorAll(`.${type}-opt`).forEach(b => {
+                b.classList.remove('opt-active', 'border-spartan', 'text-white');
+                b.classList.add('border-white/10', 'text-spartan-textMuted');
+            });
+            event.target.classList.add('opt-active', 'border-spartan', 'text-white');
+            calculateAll();
+        }
+
+        function calculateAll() {
+            // BMI
+            const h = parseFloat(document.getElementById('height-slider').value);
+            const w = parseFloat(document.getElementById('weight-slider').value);
+            state.height = h; state.weight = w;
+            document.getElementById('height-disp').innerText = `${Math.round(h)} cm`;
+            document.getElementById('weight-disp').innerText = `${w.toFixed(1)} kg`;
+
+            const hM = h / 100;
+            state.bmi = w / (hM * hM);
+            document.getElementById('bmi-val').innerText = state.bmi.toFixed(2);
+
+            // Readiness
+            state.sleep = parseFloat(document.getElementById('sleep-slider').value);
+            state.energy = parseInt(document.getElementById('energy-slider').value);
+            state.soreness = parseInt(document.getElementById('soreness-slider').value);
+            state.rhr = parseInt(document.getElementById('rhr-slider').value);
+
+            document.getElementById('sleep-val').innerText = `${state.sleep} Hours`;
+            document.getElementById('energy-val').innerText = `${state.energy} / 10`;
+            document.getElementById('soreness-val').innerText = `${state.soreness} / 10`;
+            document.getElementById('rhr-val').innerText = `${state.rhr} BPM`;
+
+            let r = 50 + (state.sleep - 7) * 5 + (state.energy - 5) * 4 - state.soreness * 2.5;
+            state.readiness = Math.min(100, Math.max(10, Math.round(r)));
+            document.getElementById('readiness-score').innerText = state.readiness;
+            document.getElementById('readiness-ring').style.strokeDashoffset = 263.8 - (state.readiness / 100) * 263.8;
+
+            // Movement
+            state.pushups = parseInt(document.getElementById('pushup-slider').value);
+            document.getElementById('pushup-disp').innerText = `${state.pushups} Reps`;
+
+            let lower = state.squat === 'yes' ? 85 : 50;
+            let upper = state.shoulder === 'yes' ? 80 : 50;
+            document.getElementById('mb-lower-val').innerText = `${lower}%`;
+            document.getElementById('mb-lower-bar').style.width = `${lower}%`;
+            document.getElementById('mb-upper-val').innerText = `${upper}%`;
+            document.getElementById('mb-upper-bar').style.width = `${upper}%`;
+
+            state.movement = Math.round((lower + upper + Math.min(100, state.pushups * 2)) / 3);
+            document.getElementById('movement-score').innerText = `${state.movement} / 100`;
+
+            // Recovery
+            state.stress = parseInt(document.getElementById('stress-slider').value);
+            document.getElementById('stress-val').innerText = `${state.stress} / 10`;
+            state.recovery = Math.round((10 - state.stress) * 5 + (state.sleep / 8) * 50);
+            document.getElementById('recovery-score').innerText = `${state.recovery} / 100`;
+
+            // Master
+            state.master = Math.round((state.readiness + state.movement + state.recovery) / 3);
+        }
+
+        calculateAll();
+
+        function setWeek(wNum) {
+            state.currentWeek = wNum;
+            document.querySelectorAll('.week-btn').forEach((b, idx) => {
+                if (idx + 1 === wNum) {
+                    b.classList.add('w-active', 'border-spartan', 'text-white');
+                    b.classList.remove('border-white/10', 'text-spartan-textMuted');
+                } else {
+                    b.classList.remove('w-active', 'border-spartan', 'text-white');
+                    b.classList.add('border-white/10', 'text-spartan-textMuted');
+                }
+            });
+            render30DayPlan();
+        }
+
+        function render30DayPlan() {
+            document.getElementById('summary-bmi').innerText = `${state.bmi.toFixed(1)} BMI`;
+            document.getElementById('summary-readiness').innerText = `${state.readiness} / 100`;
+            document.getElementById('summary-movement').innerText = `${state.movement} / 100`;
+            document.getElementById('summary-recovery').innerText = `${state.recovery} / 100`;
+            document.getElementById('summary-master').innerText = state.master;
+
+            const daysContainer = document.getElementById('days-accordion');
+            daysContainer.innerHTML = '';
+
+            const startDay = (state.currentWeek - 1) * 7 + 1;
+            const routines = [
+                { day: 'Monday', title: 'Strength + Mobility Integration', dur: '45 min' },
+                { day: 'Tuesday', title: 'Zone 2 Cardiovascular Endurance', dur: '30 min' },
+                { day: 'Wednesday', title: 'Upper Body Hypertrophy', dur: '45 min' },
+                { day: 'Thursday', title: 'Active Recovery & Hydration', dur: '20 min' },
+                { day: 'Friday', title: 'Lower Body Compound Force', dur: '50 min' },
+                { day: 'Saturday', title: 'Intervallic Conditioning', dur: '35 min' },
+                { day: 'Sunday', title: 'Complete Rest & Sleep Focus', dur: '—' }
+            ];
+
+            routines.forEach((r, idx) => {
+                const dNum = startDay + idx;
+                const row = document.createElement('div');
+                row.className = "bg-[#1A1A1E] p-4 rounded-2xl border border-white/5 flex justify-between items-center text-xs";
+                row.innerHTML = `
+                    <div class="flex items-center space-x-4">
+                        <span class="font-mono text-spartan font-bold">DAY ${dNum < 10 ? '0' + dNum : dNum}</span>
+                        <span class="font-bold text-white">${r.day} — ${r.title}</span>
+                    </div>
+                    <span class="text-spartan-textMuted font-mono">${r.dur}</span>
+                `;
+                daysContainer.appendChild(row);
+            });
+        }
+    </script>
+</body>
+</html>
